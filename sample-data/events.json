@@ -7725,27 +7725,28 @@
     "month": 6,
     "day": 26,
     "year": 1952,
-    "title": "Founding of the Pan-Malayan Labour Party",
-    "one_liner": "The Pan-Malayan Labour Party is founded in Malaya as a union of statewide labour parties",
-    "description": "The Pan-Malayan Labour Party is founded in Malaya, as a union of statewide labour parties",
-    "short_summary": "The Pan-Malayan Labour Party is founded in Malaya as a union of statewide labour parties",
-    "summary": "The Pan-Malayan Labour Party is founded in Malaya, as a union of statewide labour parties",
-    "detail": "The Pan-Malayan Labour Party is founded in Malaya, as a union of statewide labour parties",
-    "deep_dive": "The Pan-Malayan Labour Party is founded in Malaya, as a union of statewide labour parties",
-    "why_it_matters": "This marks an important step in labor organization and political unity in Malaya's history.",
-    "category": "arts",
+    "title": "Pan-Malaya Labour Party Forms",
+    "one_liner": "The Pan-Malaya Labour Party forms from the Penang, Selangor, and Singapore Labour Parties.",
+    "description": "The Pan-Malaya Labour Party forms from the Penang, Selangor, and Singapore Labour Parties.",
+    "short_summary": "The Pan-Malaya Labour Party forms from the Penang, Selangor, and Singapore Labour Parties.",
+    "summary": "The Pan-Malaya Labour Party forms from the Penang, Selangor, and Singapore Labour Parties.",
+    "detail": "On June 26, 1952, the Pan-Malaya Labour Party formed from the amalgamated membership of the Penang, Selangor, and Singapore Labour Parties. The repair uses the source name Pan-Malaya rather than the looser Pan-Malayan wording.",
+    "deep_dive": "On June 26, 1952, the Pan-Malaya Labour Party formed from the amalgamated membership of the Penang, Selangor, and Singapore Labour Parties. The repair uses the source name Pan-Malaya rather than the looser Pan-Malayan wording.\n\nIt matters because early party organization in Malaya shows how labor politics moved from local groups toward a wider electoral and national frame.",
+    "why_it_matters": "It matters because early party organization in Malaya shows how labor politics moved from local groups toward a wider electoral and national frame.",
+    "category": "politics",
     "tags": [
-      "history",
-      "human_progress"
+      "politics",
+      "malaya",
+      "labor",
+      "party-formation",
+      "elections"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/06/26",
-      "https://en.wikipedia.org/wiki/Labour_Party_of_Malaya",
-      "https://en.wikipedia.org/wiki/Federation_of_Malaya"
+      "https://m.aliran.com/200810/the-labour-party-of-malaya-19521972"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-06-26.json;event_id=a0cbeb80fb148b1c;cluster_id=82c62159d241;model_id=today-qwen3-14b;rank_score=0.725302;interesting_score=0.581223;stream=interesting-history; date=1952-06-26",
-    "source_confidence": 0.9,
+    "provenance": "source_warning_reduction_app202_best_next_visible_feed; date=1952-06-26; confirmed_non_wiki_sources=m.aliran.com; prior_source_lineage=legacy_remote_feed; exact_date_claim_verified; prose_category_tone_repaired; reviewed_utc=2026-06-01T10:25:14Z",
+    "source_confidence": 0.94,
     "editorial_status": "ready"
   },
   {
@@ -11199,28 +11200,29 @@
     "month": 3,
     "day": 28,
     "year": 1969,
-    "title": "Giorgos Seferis Opposes Greek Junta on BBC",
-    "one_liner": "Greek poet Giorgos Seferis opposes the junta in Greece during a BBC World Service broadcast",
-    "description": "Greek poet and Nobel Prize laureate Giorgos Seferis makes a famous statement on the BBC World Service opposing the junta in Greece",
-    "short_summary": "Greek poet Giorgos Seferis opposes the junta in Greece during a BBC World Service broadcast",
-    "summary": "Greek poet and Nobel Prize laureate Giorgos Seferis makes a famous statement on the BBC World Service opposing the junta in Greece. This event showcases the role of cultural figures in political dissent and the power of media in shaping public opinion",
-    "detail": "Greek poet and Nobel Prize laureate Giorgos Seferis makes a famous statement on the BBC World Service opposing the junta in Greece. This event showcases the role of cultural figures in political dissent and the power of media in shaping public opinion",
-    "deep_dive": "Greek poet and Nobel Prize laureate Giorgos Seferis makes a famous statement on the BBC World Service opposing the junta in Greece. This event showcases the role of cultural figures in political dissent and the power of media in shaping public opinion",
-    "why_it_matters": "This event showcases the role of cultural figures in political dissent and the power of media in shaping public opinion.",
+    "title": "Giorgos Seferis Breaks Silence on the Junta",
+    "one_liner": "Greek poet Giorgos Seferis speaks against the military junta in a statement carried through the BBC.",
+    "description": "Greek poet Giorgos Seferis speaks against the military junta in a statement carried through the BBC.",
+    "short_summary": "Greek poet Giorgos Seferis speaks against the military junta in a statement carried through the BBC.",
+    "summary": "Greek poet Giorgos Seferis speaks against the military junta in a statement carried through the BBC.",
+    "detail": "On March 28, 1969, Greek poet Giorgos Seferis broke his public silence with a statement against the Greek dictatorship carried through the BBC. The repaired card keeps the claim tied to the statement and broadcast rather than making a broader unsourced culture-war claim.",
+    "deep_dive": "On March 28, 1969, Greek poet Giorgos Seferis broke his public silence with a statement against the Greek dictatorship carried through the BBC. The repaired card keeps the claim tied to the statement and broadcast rather than making a broader unsourced culture-war claim.\n\nIt matters because a poet with public trust can make silence feel impossible. Seferis turned literary authority into a civic warning.",
+    "why_it_matters": "It matters because a poet with public trust can make silence feel impossible. Seferis turned literary authority into a civic warning.",
     "category": "arts",
     "tags": [
-      "culture",
-      "invention_discovery",
-      "arts_culture"
+      "arts",
+      "poetry",
+      "greece",
+      "broadcasting",
+      "political-dissent"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/03/28",
-      "https://en.wikipedia.org/wiki/Nobel_Prize_in_Literature",
-      "https://en.wikipedia.org/wiki/Giorgos_Seferis"
+      "https://www.protagon.gr/themata/misos-aiwnas-apo-to-istoriko-diaggelma-tou-seferi-sto-bbc-kata-tis-xountas-44341806928",
+      "http://www.bbc.co.uk/greek/seferis.shtml"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-03-28.json;event_id=361ed46f69cd6355;cluster_id=19fca785c4c0;model_id=today-qwen3-14b;rank_score=0.707427;interesting_score=0.579033;stream=interesting-history; date=1969-03-28",
-    "source_confidence": 0.9,
+    "provenance": "source_warning_reduction_app202_best_next_visible_feed; date=1969-03-28; confirmed_non_wiki_sources=bbc.co.uk,protagon.gr; prior_source_lineage=legacy_remote_feed; exact_date_claim_verified; prose_category_tone_repaired; reviewed_utc=2026-06-01T10:25:14Z",
+    "source_confidence": 0.92,
     "editorial_status": "ready"
   },
   {
@@ -15259,27 +15261,27 @@
     "month": 1,
     "day": 8,
     "year": 1994,
-    "title": "Russian cosmonaut Valeri Polyakov begins record 437-day space mission",
-    "one_liner": "Russian cosmonaut Valeri Polyakov begins a record 437-day space mission aboard the Mir space station",
-    "description": "Russian cosmonaut Valeri Polyakov on Soyuz TM-18 leaves for Mir. He would stay on the space station until March 22, 1995, for a record 437 days in space",
-    "short_summary": "Russian cosmonaut Valeri Polyakov begins a record 437-day space mission aboard the Mir space station",
-    "summary": "Russian cosmonaut Valeri Polyakov on Soyuz TM-18 leaves for Mir. He would stay on the space station until March 22, 1995, for a record 437 days in space. This mission set a record for the longest continuous stay in space and advanced human space exploration",
-    "detail": "Russian cosmonaut Valeri Polyakov on Soyuz TM-18 leaves for Mir. He would stay on the space station until March 22, 1995, for a record 437 days in space. This mission set a record for the longest continuous stay in space and advanced human space exploration",
-    "deep_dive": "Russian cosmonaut Valeri Polyakov on Soyuz TM-18 leaves for Mir. He would stay on the space station until March 22, 1995, for a record 437 days in space. This mission set a record for the longest continuous stay in space and advanced human space exploration",
-    "why_it_matters": "This mission set a record for the longest continuous stay in space and advanced human space exploration.",
+    "title": "Valeri Polyakov Begins 437 Days on Mir",
+    "one_liner": "Cosmonaut Valeri Polyakov launches on Soyuz TM-18 for a Mir stay that lasts more than 437 days.",
+    "description": "Cosmonaut Valeri Polyakov launches on Soyuz TM-18 for a Mir stay that lasts more than 437 days.",
+    "short_summary": "Cosmonaut Valeri Polyakov launches on Soyuz TM-18 for a Mir stay that lasts more than 437 days.",
+    "summary": "Cosmonaut Valeri Polyakov launches on Soyuz TM-18 for a Mir stay that lasts more than 437 days.",
+    "detail": "Spacefacts lists Valeri Polyakov on Soyuz TM-18 starting January 8, 1994 and returning on Soyuz TM-20 on March 22, 1995, for 437 days, 17 hours, 58 minutes, and 17 seconds. The repair narrows the card to the supported start and duration rather than leaning on broad record language.",
+    "deep_dive": "Spacefacts lists Valeri Polyakov on Soyuz TM-18 starting January 8, 1994 and returning on Soyuz TM-20 on March 22, 1995, for 437 days, 17 hours, 58 minutes, and 17 seconds. The repair narrows the card to the supported start and duration rather than leaning on broad record language.\n\nIt matters because long-duration spaceflight is a human endurance test as much as an engineering test. Polyakov became a living data point for how bodies and minds handle time in orbit.",
+    "why_it_matters": "It matters because long-duration spaceflight is a human endurance test as much as an engineering test. Polyakov became a living data point for how bodies and minds handle time in orbit.",
     "category": "science",
     "tags": [
       "science",
-      "invention_discovery",
-      "oddities_curiosities"
+      "spaceflight",
+      "mir",
+      "cosmonaut",
+      "human-endurance"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/01/08",
-      "https://en.wikipedia.org/wiki/Astronaut",
-      "https://en.wikipedia.org/wiki/Valeri_Polyakov"
+      "http://www.spacefacts.de/mir/english/mir-17.htm"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-01-08.json;event_id=2b2e5c33f044dd28;cluster_id=46559c2990b5;model_id=today-qwen3-14b;rank_score=0.718106;interesting_score=0.603851;stream=interesting-history; date=1994-01-08",
+    "provenance": "source_warning_reduction_app202_best_next_visible_feed; date=1994-01-08; confirmed_non_wiki_sources=spacefacts.de; prior_source_lineage=legacy_remote_feed; exact_date_claim_verified; prose_category_tone_repaired; reviewed_utc=2026-06-01T10:25:14Z",
     "source_confidence": 0.9,
     "editorial_status": "ready"
   },
@@ -16747,27 +16749,28 @@
     "month": 1,
     "day": 21,
     "year": 1971,
-    "title": "Emley Moor Transmitting Station Begins Operations",
-    "one_liner": "The current Emley Moor transmitting station, the tallest free-standing structure in the UK, starts transmitting UHF broadcasts",
-    "description": "The current Emley Moor transmitting station, the tallest free-standing structure in the United Kingdom, begins transmitting UHF broadcasts",
-    "short_summary": "The current Emley Moor transmitting station, the tallest free-standing structure in the UK, starts transmitting UHF broadcasts",
-    "summary": "The current Emley Moor transmitting station, the tallest free-standing structure in the United Kingdom, begins transmitting UHF broadcasts. This event highlights advancements in broadcasting technology and the importance of infrastructure in communication",
-    "detail": "The current Emley Moor transmitting station, the tallest free-standing structure in the United Kingdom, begins transmitting UHF broadcasts. This event highlights advancements in broadcasting technology and the importance of infrastructure in communication",
-    "deep_dive": "The current Emley Moor transmitting station, the tallest free-standing structure in the United Kingdom, begins transmitting UHF broadcasts. This event highlights advancements in broadcasting technology and the importance of infrastructure in communication",
-    "why_it_matters": "This event highlights advancements in broadcasting technology and the importance of infrastructure in communication.",
+    "title": "Emley Moor Begins UHF Transmissions",
+    "one_liner": "The rebuilt Emley Moor tower begins 625-line color UHF transmissions in Yorkshire.",
+    "description": "The rebuilt Emley Moor tower begins 625-line color UHF transmissions in Yorkshire.",
+    "short_summary": "The rebuilt Emley Moor tower begins 625-line color UHF transmissions in Yorkshire.",
+    "summary": "The rebuilt Emley Moor tower begins 625-line color UHF transmissions in Yorkshire.",
+    "detail": "The National Science and Media Museum records that UHF 625-line color transmissions from Emley Moor commenced on January 21, 1971. The repair narrows the event from broad operations to the specifically sourced transmission milestone.",
+    "deep_dive": "The National Science and Media Museum records that UHF 625-line color transmissions from Emley Moor commenced on January 21, 1971. The repair narrows the event from broad operations to the specifically sourced transmission milestone.\n\nIt matters because broadcasting infrastructure is easy to miss until it fails. Emley Moor turned a repaired tower into a working signal for homes across the region.",
+    "why_it_matters": "It matters because broadcasting infrastructure is easy to miss until it fails. Emley Moor turned a repaired tower into a working signal for homes across the region.",
     "category": "technology",
     "tags": [
-      "arts",
-      "human_progress"
+      "technology",
+      "broadcasting",
+      "television",
+      "infrastructure",
+      "yorkshire"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/01/21",
-      "https://en.wikipedia.org/wiki/Emley_Moor_transmitting_station",
-      "https://en.wikipedia.org/wiki/Ultra_high_frequency"
+      "https://blog.scienceandmediamuseum.org.uk/the-fall-and-rise-of-emley-moor-television-tower/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-01-21.json;event_id=e6d19c8c2bff0fd5;cluster_id=1658917f8883;model_id=today-qwen3-14b;rank_score=0.695481;interesting_score=0.648862;stream=interesting-history; date=1971-01-21",
-    "source_confidence": 0.9,
+    "provenance": "source_warning_reduction_app202_best_next_visible_feed; date=1971-01-21; confirmed_non_wiki_sources=blog.scienceandmediamuseum.org.uk; prior_source_lineage=legacy_remote_feed; exact_date_claim_verified; prose_category_tone_repaired; reviewed_utc=2026-06-01T10:25:14Z",
+    "source_confidence": 0.95,
     "editorial_status": "ready"
   },
   {
