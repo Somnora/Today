@@ -14166,27 +14166,28 @@
     "month": 2,
     "day": 26,
     "year": 1914,
-    "title": "HMHS Britannic is launched in Belfast",
-    "one_liner": "HMHS Britannic, sister to the RMS Titanic, is launched at Harland and Wolff shipyard in Belfast",
-    "description": "HMHS Britannic, sister to the RMS Titanic, is launched at Harland and Wolff shipyard in Belfast",
-    "short_summary": "HMHS Britannic, sister to the RMS Titanic, is launched at Harland and Wolff shipyard in Belfast",
-    "summary": "HMHS Britannic, sister to the RMS Titanic, is launched at Harland and Wolff shipyard in Belfast. As the sister ship to the Titanic, the Britannic represents a significant moment in maritime history and engineering",
-    "detail": "HMHS Britannic, sister to the RMS Titanic, is launched at Harland and Wolff shipyard in Belfast. As the sister ship to the Titanic, the Britannic represents a significant moment in maritime history and engineering",
-    "deep_dive": "HMHS Britannic, sister to the RMS Titanic, is launched at Harland and Wolff shipyard in Belfast. As the sister ship to the Titanic, the Britannic represents a significant moment in maritime history and engineering",
-    "why_it_matters": "As the sister ship to the Titanic, the Britannic represents a significant moment in maritime history and engineering.",
+    "title": "HMHS Britannic Is Launched",
+    "one_liner": "The Britannic, sister ship to the Titanic, is launched before World War I later turns it into a hospital ship.",
+    "description": "The Britannic, sister ship to the Titanic, is launched before World War I later turns it into a hospital ship.",
+    "short_summary": "The Britannic, sister ship to the Titanic, is launched before World War I later turns it into a hospital ship.",
+    "summary": "The Britannic, sister ship to the Titanic, is launched before World War I later turns it into a hospital ship.",
+    "detail": "Britannica records that after the hull was completed, the Britannic was launched on February 26, 1914. The source also notes that the ship was later requisitioned as a hospital ship in 1915.",
+    "deep_dive": "Britannica records that after the hull was completed, the Britannic was launched on February 26, 1914. The source also notes that the ship was later requisitioned as a hospital ship in 1915.\n\nIt matters because the launch sits at the edge of two eras: ocean-liner ambition before the war, and a vessel soon redirected into wartime medicine.",
+    "why_it_matters": "It matters because the launch sits at the edge of two eras: ocean-liner ambition before the war, and a vessel soon redirected into wartime medicine.",
     "category": "technology",
     "tags": [
-      "history",
-      "invention_discovery"
+      "technology",
+      "maritime",
+      "shipbuilding",
+      "world-war-i",
+      "medicine"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/02/26",
-      "https://en.wikipedia.org/wiki/HMHS_Britannic",
-      "https://en.wikipedia.org/wiki/Titanic"
+      "https://www.britannica.com/topic/Britannic"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-02-26.json;event_id=ef73492d2edaaa5d;cluster_id=5d618ec92572;model_id=today-qwen3-14b;rank_score=0.689298;interesting_score=0.621719;stream=interesting-history; date=1914-02-26",
-    "source_confidence": 0.9,
+    "provenance": "source_warning_reduction_app201_best_next_visible_feed; date=1914-02-26; confirmed_non_wiki_sources=britannica.com; prior_source_lineage=legacy_remote_feed; exact_date_claim_verified; prose_category_tone_repaired; reviewed_utc=2026-06-01T09:57:51Z",
+    "source_confidence": 0.98,
     "editorial_status": "ready"
   },
   {
@@ -15091,27 +15092,28 @@
     "month": 1,
     "day": 6,
     "year": 1994,
-    "title": "Nancy Kerrigan Attack During U.S. Figure Skating Championships",
-    "one_liner": "U.S. figure skater Nancy Kerrigan is attacked and injured by an assailant hired by her rival Tonya Harding's ex-husband",
-    "description": "U.S. figure skater Nancy Kerrigan is attacked and injured by an assailant hired by her rival Tonya Harding's ex-husband during the U.S. Figure Skating Championships",
-    "short_summary": "U.S. figure skater Nancy Kerrigan is attacked and injured by an assailant hired by her rival Tonya Harding's ex-husband",
-    "summary": "U.S. figure skater Nancy Kerrigan is attacked and injured by an assailant hired by her rival Tonya Harding's ex-husband during the U.S. Figure Skating Championships. This event became a major scandal in sports history and raised awareness about athlete safety and integrity",
-    "detail": "U.S. figure skater Nancy Kerrigan is attacked and injured by an assailant hired by her rival Tonya Harding's ex-husband during the U.S. Figure Skating Championships. This event became a major scandal in sports history and raised awareness about athlete safety and integrity",
-    "deep_dive": "U.S. figure skater Nancy Kerrigan is attacked and injured by an assailant hired by her rival Tonya Harding's ex-husband during the U.S. Figure Skating Championships. This event became a major scandal in sports history and raised awareness about athlete safety and integrity",
-    "why_it_matters": "This event became a major scandal in sports history and raised awareness about athlete safety and integrity.",
-    "category": "politics",
+    "title": "Nancy Kerrigan Is Attacked at Olympic Trials",
+    "one_liner": "Figure skater Nancy Kerrigan is attacked during the U.S. Olympic trials, turning a sports rivalry into a criminal case.",
+    "description": "Figure skater Nancy Kerrigan is attacked during the U.S. Olympic trials, turning a sports rivalry into a criminal case.",
+    "short_summary": "Figure skater Nancy Kerrigan is attacked during the U.S. Olympic trials, turning a sports rivalry into a criminal case.",
+    "summary": "Figure skater Nancy Kerrigan is attacked during the U.S. Olympic trials, turning a sports rivalry into a criminal case.",
+    "detail": "UPI later described Jeff Gillooly being sentenced for his role in the January 6 attack on Nancy Kerrigan. The repaired card keeps the focus on the attack itself and removes the unsourced claim that the assailant was hired by Tonya Harding's ex-husband.",
+    "deep_dive": "UPI later described Jeff Gillooly being sentenced for his role in the January 6 attack on Nancy Kerrigan. The repaired card keeps the focus on the attack itself and removes the unsourced claim that the assailant was hired by Tonya Harding's ex-husband.\n\nIt matters because the moment became a defining sports scandal, but the safer framing is about violence, investigation, and accountability rather than tabloid certainty.",
+    "why_it_matters": "It matters because the moment became a defining sports scandal, but the safer framing is about violence, investigation, and accountability rather than tabloid certainty.",
+    "category": "sports",
     "tags": [
       "sports",
-      "general_history"
+      "figure-skating",
+      "crime",
+      "olympics",
+      "investigation"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/01/06",
-      "https://en.wikipedia.org/wiki/Nancy_Kerrigan",
-      "https://en.wikipedia.org/wiki/Assault_of_Nancy_Kerrigan"
+      "https://www.upi.com/Archives/1994/07/13/Gillooly-sentenced-in-Kerrigan-attack/5068774072000/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-01-06.json;event_id=524a4eca40f9036d;cluster_id=ba39353e8638;model_id=today-qwen3-14b;rank_score=0.559112;interesting_score=0.566514;stream=interesting-history; date=1994-01-06",
-    "source_confidence": 0.9,
+    "provenance": "source_warning_reduction_app201_best_next_visible_feed; date=1994-01-06; confirmed_non_wiki_sources=upi.com; prior_source_lineage=legacy_remote_feed; exact_date_claim_verified; prose_category_tone_repaired; reviewed_utc=2026-06-01T09:57:51Z",
+    "source_confidence": 0.98,
     "editorial_status": "ready"
   },
   {
@@ -16271,27 +16273,28 @@
     "month": 1,
     "day": 17,
     "year": 1950,
-    "title": "The Great Brink's Robbery",
-    "one_liner": "Eleven thieves steal over $2 million from Brink's offices in Boston in what became known as the Great Brink's Robbery",
-    "description": "The Great Brink's Robbery: Eleven thieves steal more than $2 million from an armored car company's offices in Boston",
-    "short_summary": "Eleven thieves steal over $2 million from Brink's offices in Boston in what became known as the Great Brink's Robbery",
-    "summary": "The Great Brink's Robbery: Eleven thieves steal more than $2 million from an armored car company's offices in Boston. This was one of the largest heists in U.S. history and remains a notable event in criminal history",
-    "detail": "The Great Brink's Robbery: Eleven thieves steal more than $2 million from an armored car company's offices in Boston. This was one of the largest heists in U.S. history and remains a notable event in criminal history",
-    "deep_dive": "The Great Brink's Robbery: Eleven thieves steal more than $2 million from an armored car company's offices in Boston. This was one of the largest heists in U.S. history and remains a notable event in criminal history",
-    "why_it_matters": "This was one of the largest heists in U.S. history and remains a notable event in criminal history.",
+    "title": "Great Brink's Robbery Hits Boston",
+    "one_liner": "Disguised robbers seize cash, checks, and securities from Brink's offices in Boston, setting off a long FBI investigation.",
+    "description": "Disguised robbers seize cash, checks, and securities from Brink's offices in Boston, setting off a long FBI investigation.",
+    "short_summary": "Disguised robbers seize cash, checks, and securities from Brink's offices in Boston, setting off a long FBI investigation.",
+    "summary": "Disguised robbers seize cash, checks, and securities from Brink's offices in Boston, setting off a long FBI investigation.",
+    "detail": "On January 17, 1950, employees at Brink's in Boston were closing for the day when armed, disguised men surprised them and took sacks of cash, checks, and other material from the company safe. The FBI later called the case the Great Brink's Robbery.",
+    "deep_dive": "On January 17, 1950, employees at Brink's in Boston were closing for the day when armed, disguised men surprised them and took sacks of cash, checks, and other material from the company safe. The FBI later called the case the Great Brink's Robbery.\n\nIt matters because the story is less about a glamorous heist than about evidence, informants, and the slow work needed to solve a carefully planned crime.",
+    "why_it_matters": "It matters because the story is less about a glamorous heist than about evidence, informants, and the slow work needed to solve a carefully planned crime.",
     "category": "history",
     "tags": [
       "history",
-      "general_history"
+      "crime",
+      "fbi",
+      "boston",
+      "investigation"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/01/17",
-      "https://en.wikipedia.org/wiki/Great_Brink's_Robbery",
-      "https://en.wikipedia.org/wiki/Boston"
+      "https://www.fbi.gov/history/famous-cases/brinks-robbery"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-01-17.json;event_id=3a6147588cfd468a;cluster_id=dd4578189cac;model_id=today-qwen3-14b;rank_score=0.566793;interesting_score=0.561775;stream=interesting-history; date=1950-01-17",
-    "source_confidence": 0.9,
+    "provenance": "source_warning_reduction_app201_best_next_visible_feed; date=1950-01-17; confirmed_non_wiki_sources=fbi.gov; prior_source_lineage=legacy_remote_feed; exact_date_claim_verified; prose_category_tone_repaired; reviewed_utc=2026-06-01T09:57:51Z",
+    "source_confidence": 0.98,
     "editorial_status": "ready"
   },
   {
@@ -16355,27 +16358,28 @@
     "month": 1,
     "day": 18,
     "year": 2012,
-    "title": "Over 115,000 websites protest SOPA and PIPA",
-    "one_liner": "Websites across the US shut down in protest against the Stop Online Piracy Act and Protect IP Act, citing free speech concerns",
-    "description": "More than 115,000 websites engage in an online protest against the Stop Online Piracy Act and the Protect IP Act in the US. The websites involved viewed the laws as infringing on the right to free speech and many of them temporarily shut down in protest",
-    "short_summary": "Websites across the US shut down in protest against the Stop Online Piracy Act and Protect IP Act, citing free speech concerns",
-    "summary": "More than 115,000 websites engage in an online protest against the Stop Online Piracy Act and the Protect IP Act in the US. The websites involved viewed the laws as infringing on the right to free speech and many of them temporarily shut down in protest. This mass online protest highlighted the importance of free speech and internet freedom in the digital age",
-    "detail": "More than 115,000 websites engage in an online protest against the Stop Online Piracy Act and the Protect IP Act in the US. The websites involved viewed the laws as infringing on the right to free speech and many of them temporarily shut down in protest. This mass online protest highlighted the importance of free speech and internet freedom in the digital age",
-    "deep_dive": "More than 115,000 websites engage in an online protest against the Stop Online Piracy Act and the Protect IP Act in the US. The websites involved viewed the laws as infringing on the right to free speech and many of them temporarily shut down in protest. This mass online protest highlighted the importance of free speech and internet freedom in the digital age",
-    "why_it_matters": "This mass online protest highlighted the importance of free speech and internet freedom in the digital age.",
+    "title": "SOPA and PIPA Blackout Shows Web Power",
+    "one_liner": "Internet users and major sites protest SOPA and PIPA, flooding Congress with opposition to the anti-piracy bills.",
+    "description": "Internet users and major sites protest SOPA and PIPA, flooding Congress with opposition to the anti-piracy bills.",
+    "short_summary": "Internet users and major sites protest SOPA and PIPA, flooding Congress with opposition to the anti-piracy bills.",
+    "summary": "Internet users and major sites protest SOPA and PIPA, flooding Congress with opposition to the anti-piracy bills.",
+    "detail": "On January 18, 2012, the Electronic Frontier Foundation described the Internet Blackout day as a wake-up call against SOPA and PIPA. EFF reported more than 1 million messages to Congress through its action center and more than 4.5 million signatures on Google's petition.",
+    "deep_dive": "On January 18, 2012, the Electronic Frontier Foundation described the Internet Blackout day as a wake-up call against SOPA and PIPA. EFF reported more than 1 million messages to Congress through its action center and more than 4.5 million signatures on Google's petition.\n\nIt matters because online infrastructure became civic infrastructure for a day. The protest showed that internet policy could move from specialist debate into public pressure fast.",
+    "why_it_matters": "It matters because online infrastructure became civic infrastructure for a day. The protest showed that internet policy could move from specialist debate into public pressure fast.",
     "category": "technology",
     "tags": [
       "technology",
-      "human_progress"
+      "internet",
+      "civil-liberties",
+      "copyright",
+      "protest"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/01/18",
-      "https://en.wikipedia.org/wiki/Protests_against_SOPA_and_PIPA",
-      "https://en.wikipedia.org/wiki/Stop_Online_Piracy_Act"
+      "https://www.eff.org/deeplinks/2012/01/thank-you-internet-and-fight-continues"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-01-18.json;event_id=b3b841858ac47288;cluster_id=d486a71e9e75;model_id=today-qwen3-14b;rank_score=0.727051;interesting_score=0.587567;stream=interesting-history; date=2012-01-18",
-    "source_confidence": 0.9,
+    "provenance": "source_warning_reduction_app201_best_next_visible_feed; date=2012-01-18; confirmed_non_wiki_sources=eff.org; prior_source_lineage=legacy_remote_feed; exact_date_claim_verified; prose_category_tone_repaired; reviewed_utc=2026-06-01T09:57:51Z",
+    "source_confidence": 0.98,
     "editorial_status": "ready"
   },
   {
