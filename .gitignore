@@ -1,0 +1,60 @@
+# macOS
+.DS_Store
+*/.DS_Store
+
+# Xcode local state and build output
+DerivedData/
+.derived-device/
+build/
+*.xcresult
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Xcode user-specific files
+*.xcuserstate
+xcuserdata/
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# Local editor/agent scratch
+.env
+.env.*
+*.pem
+*.p8
+*.key
+*.mobileprovision
+fastlane/report.xml
+fastlane/screenshots/
+fastlane/test_output/
+.claude/
+.openclaw/
+.hermes/
+
+# Today local data snapshots and generated backups
+Data/RobEditorialMVP/
+sample-data/backups/
+sample-data/*.bak*
+sample-data/*.backup*
+sample-data/events.backup-before-*.json
+sample-data/events.before-*.json
+Today.xcodeproj/**/*.bak-*
+Today.xcodeproj/**/*.backup*
+docs/**/*.bak-*
+docs/*audit*.md
+
+# Visual QA and generated marketing/image explorations kept outside source control
+screenshots/
+docs/app-store-screenshots/
+docs/icon-concepts/
+docs/release-assets/
