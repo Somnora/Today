@@ -11704,27 +11704,27 @@
     "month": 2,
     "day": 2,
     "year": 1935,
-    "title": "First Polygraph Evidence in U.S. Courts",
-    "one_liner": "Leonarde Keeler administered polygraph tests to murder suspects, marking the first use of polygraph evidence in U.S. courts",
-    "description": "Leonarde Keeler administers polygraph tests to two murder suspects, the first time polygraph evidence was admitted in U.S. courts",
-    "short_summary": "Leonarde Keeler administered polygraph tests to murder suspects, marking the first use of polygraph evidence in U.S. courts",
-    "summary": "Leonarde Keeler administers polygraph tests to two murder suspects, the first time polygraph evidence was admitted in U.S. courts. This was a groundbreaking moment in legal history, introducing a new method of evidence collection",
-    "detail": "Leonarde Keeler administers polygraph tests to two murder suspects, the first time polygraph evidence was admitted in U.S. courts. This was a groundbreaking moment in legal history, introducing a new method of evidence collection",
-    "deep_dive": "Leonarde Keeler administers polygraph tests to two murder suspects, the first time polygraph evidence was admitted in U.S. courts. This was a groundbreaking moment in legal history, introducing a new method of evidence collection",
-    "why_it_matters": "This was a groundbreaking moment in legal history, introducing a new method of evidence collection.",
+    "title": "Keeler Polygraph Evidence Used in Wisconsin Trial",
+    "one_liner": "Leonarde Keeler's polygraph test results were used in a Wisconsin trial, an early court milestone for lie detector evidence.",
+    "description": "Leonarde Keeler used his polygraph in the Portage, Wisconsin trial of Tony Grignano and Cecil Loniello.",
+    "short_summary": "Leonarde Keeler's polygraph test results were used in a Wisconsin trial, an early court milestone for lie detector evidence.",
+    "summary": "In Portage, Wisconsin, Leonarde Keeler used his polygraph in the trial of Tony Grignano and Cecil Loniello. Sources support that the test results reached court and the defendants were convicted, but the case is better described as an early court milestone than a simple first murder-suspect claim.",
+    "detail": "In February 1935, Leonarde Keeler brought his polygraph into a Portage, Wisconsin courtroom during the trial of Tony Grignano and Cecil Loniello. Contemporary legal discussion and later histories describe the case as an early court use of lie detector evidence, with the defendants convicted after Keeler examined them.",
+    "deep_dive": "The Portage case became part of the long and contested legal history of polygraph evidence. Keeler saw the conviction as a breakthrough for lie detector testimony, while later courts continued to debate whether polygraph results were reliable enough for ordinary admission.",
+    "why_it_matters": "The case became a landmark in the long, contested history of polygraph evidence in American courts.",
     "category": "politics",
     "tags": [
       "politics",
-      "oddities_curiosities"
+      "legal_history"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/02/02",
-      "https://en.wikipedia.org/wiki/Leonarde_Keeler",
-      "https://en.wikipedia.org/wiki/Polygraph"
+      "https://web.archive.org/web/20250521172849/https://www.american.edu/magazine/article/the-truth-the-whole-truth-and-nothing-but.cfm",
+      "https://doi.org/10.2307/1136283",
+      "https://www.wired.com/2012/02/0202polygraph-leads-conviction/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-02-02.json;event_id=2b399fd39b8f1756;cluster_id=ad0991d8fef7;model_id=today-qwen3-14b;rank_score=0.702669;interesting_score=0.570687;stream=interesting-history; date=1935-02-02",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-02-02.json;event_id=2b399fd39b8f1756;cluster_id=ad0991d8fef7;model_id=today-qwen3-14b;rank_score=0.702669;interesting_score=0.570687;stream=interesting-history; date=1935-02-02; source_repair=best_next_queue_2026_06_05; verifier=tars_parent_review; date=2026-06-05",
+    "source_confidence": 0.96,
     "editorial_status": "ready"
   },
   {
@@ -19843,27 +19843,28 @@
     "month": 4,
     "day": 18,
     "year": 1945,
-    "title": "Italian Resistance Movement in Turin",
-    "one_liner": "A pre-insurrectional strike begins in Turin despite harsh Nazi-fascist repression",
-    "description": "Italian resistance movement: In Turin, despite the harsh repressive measures adopted by Nazi-fascists, a great pre-insurrectional strike begins",
-    "short_summary": "A pre-insurrectional strike begins in Turin despite harsh Nazi-fascist repression",
-    "summary": "Italian resistance movement: In Turin, despite the harsh repressive measures adopted by Nazi-fascists, a great pre-insurrectional strike begins. Highlights the resilience of the Italian resistance during World War II",
-    "detail": "Italian resistance movement: In Turin, despite the harsh repressive measures adopted by Nazi-fascists, a great pre-insurrectional strike begins. Highlights the resilience of the Italian resistance during World War II",
-    "deep_dive": "Italian resistance movement: In Turin, despite the harsh repressive measures adopted by Nazi-fascists, a great pre-insurrectional strike begins. Highlights the resilience of the Italian resistance during World War II",
-    "why_it_matters": "Highlights the resilience of the Italian resistance during World War II.",
+    "title": "Pre-insurrection Strike in Turin",
+    "one_liner": "A general pre-insurrectional strike began in Turin as the Italian Resistance moved toward liberation.",
+    "description": "Turin saw a general pre-insurrectional strike during the final phase of the Italian Resistance.",
+    "short_summary": "A general pre-insurrectional strike began in Turin as the Italian Resistance moved toward liberation.",
+    "summary": "On April 18, 1945, Turin saw a general pre-insurrectional strike. Institutional Turin Resistance sources place it in the sequence that led to the April 25 insurrection and the April 28 liberation of the city.",
+    "detail": "On April 18, 1945, Turin entered a general pre-insurrectional strike during the last phase of Nazi and fascist control. The strike tied worker resistance to the urban uprising that followed one week later.",
+    "deep_dive": "The Turin strike showed how clandestine Resistance networks, factory workers, and civic pressure converged before the final insurrection. It was not a stand-alone protest so much as part of the city moving from resistance into liberation.",
+    "why_it_matters": "The strike showed how social action and clandestine resistance helped prepare Turin for liberation.",
     "category": "politics",
     "tags": [
       "politics",
-      "general_history"
+      "world_war_ii",
+      "labor_history"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/04/18",
-      "https://en.wikipedia.org/wiki/Italian_resistance_movement",
-      "https://en.wikipedia.org/wiki/Turin"
+      "https://www.istoreto.it/torino38-45/cronologia.htm",
+      "https://www.istoreto.it/torino38-45/resistenza.htm",
+      "https://www.istoreto.it/torino38-45/download/torino38-45.pdf"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-04-18.json;event_id=0ce2a8592dd8e56a;cluster_id=75dfa75a2867;model_id=today-qwen3-14b;rank_score=0.572032;interesting_score=0.567076;stream=interesting-history; date=1945-04-18",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-04-18.json;event_id=0ce2a8592dd8e56a;cluster_id=75dfa75a2867;model_id=today-qwen3-14b;rank_score=0.572032;interesting_score=0.567076;stream=interesting-history; date=1945-04-18; source_repair=best_next_queue_2026_06_05; verifier=tars_parent_review; date=2026-06-05",
+    "source_confidence": 0.96,
     "editorial_status": "ready"
   },
   {
@@ -21581,27 +21582,28 @@
     "month": 7,
     "day": 4,
     "year": 2009,
-    "title": "Bombings Begin in Southern Philippines",
-    "one_liner": "The first of four days of bombings begins on the southern Philippine island group of Mindanao",
-    "description": "The first of four days of bombings begins on the southern Philippine island group of Mindanao",
-    "short_summary": "The first of four days of bombings begins on the southern Philippine island group of Mindanao",
-    "summary": "The first of four days of bombings begins on the southern Philippine island group of Mindanao. This event highlights the ongoing security challenges in the region and the impact of such incidents on local communities",
-    "detail": "The first of four days of bombings begins on the southern Philippine island group of Mindanao. This event highlights the ongoing security challenges in the region and the impact of such incidents on local communities",
-    "deep_dive": "The first of four days of bombings begins on the southern Philippine island group of Mindanao. This event highlights the ongoing security challenges in the region and the impact of such incidents on local communities",
-    "why_it_matters": "This event highlights the ongoing security challenges in the region and the impact of such incidents on local communities.",
+    "title": "Mindanao Bombing Wave Begins in Datu Piang",
+    "one_liner": "A blast in Datu Piang began a wave of Mindanao explosions that later struck Cotabato City, Jolo, and Iligan.",
+    "description": "A July 4 blast in Datu Piang began a wave of bombings across parts of Mindanao.",
+    "short_summary": "A blast in Datu Piang began a wave of Mindanao explosions that later struck Cotabato City, Jolo, and Iligan.",
+    "summary": "On July 4, 2009, a mortar explosive detonated in Barangay Buayan, Datu Piang, injuring three people. Philippine reporting later counted four public-place explosions in Mindanao, in Datu Piang, Cotabato City, Jolo, and Iligan City.",
+    "detail": "The first blast in the sequence occurred in Datu Piang on Saturday evening, July 4, 2009. It was followed by a deadly cathedral bombing in Cotabato City on July 5 and separate blasts in Jolo and Iligan on July 7.",
+    "deep_dive": "The attacks underscored persistent instability in Mindanao during a sensitive period for peace talks and national security. Narrowing the record to a bombing wave avoids implying attacks occurred on four consecutive days.",
+    "why_it_matters": "The attacks highlighted the security risks and civilian harm facing Mindanao communities during an already fragile political moment.",
     "category": "politics",
     "tags": [
-      "strange",
-      "oddities_curiosities"
+      "politics",
+      "security",
+      "conflict"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/07/04",
-      "https://en.wikipedia.org/wiki/2009_Mindanao_bombings",
-      "https://en.wikipedia.org/wiki/Philippines"
+      "https://www.gmanetwork.com/news/topstories/regions/166620/bomb-attack-on-cotabato-city-cathedral-kills-five-hurts-29/story/",
+      "https://www.gmanetwork.com/news/topstories/regions/166774/blasts-hit-mindanao-again-2-people-dead-over-40-injured/story/",
+      "https://news.bbc.co.uk/2/hi/asia-pacific/8137511.stm"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-07-04.json;event_id=a0b12d367a0133d7;cluster_id=7b3531a0faee;model_id=today-qwen3-14b;rank_score=0.681685;interesting_score=0.670652;stream=interesting-history; date=2009-07-04",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-07-04.json;event_id=a0b12d367a0133d7;cluster_id=7b3531a0faee;model_id=today-qwen3-14b;rank_score=0.681685;interesting_score=0.670652;stream=interesting-history; date=2009-07-04; source_repair=best_next_queue_2026_06_05; verifier=tars_parent_review; date=2026-06-05",
+    "source_confidence": 0.96,
     "editorial_status": "ready"
   },
   {
@@ -24932,27 +24934,28 @@
     "month": 8,
     "day": 6,
     "year": 1942,
-    "title": "Queen Wilhelmina Addresses U.S. Congress",
-    "one_liner": "Queen Wilhelmina of the Netherlands becomes the first reigning queen to address a joint session of the United States Congress",
-    "description": "Queen Wilhelmina of the Netherlands becomes the first reigning queen to address a joint session of the United States Congress",
-    "short_summary": "Queen Wilhelmina of the Netherlands becomes the first reigning queen to address a joint session of the United States Congress",
-    "summary": "Queen Wilhelmina of the Netherlands becomes the first reigning queen to address a joint session of the United States Congress. This was a rare and notable diplomatic event, showcasing the close ties between the Netherlands and the United States during World War II",
-    "detail": "Queen Wilhelmina of the Netherlands becomes the first reigning queen to address a joint session of the United States Congress. This was a rare and notable diplomatic event, showcasing the close ties between the Netherlands and the United States during World War II",
-    "deep_dive": "Queen Wilhelmina of the Netherlands becomes the first reigning queen to address a joint session of the United States Congress. This was a rare and notable diplomatic event, showcasing the close ties between the Netherlands and the United States during World War II",
-    "why_it_matters": "This was a rare and notable diplomatic event, showcasing the close ties between the Netherlands and the United States during World War II.",
+    "title": "Queen Wilhelmina Addresses the U.S. Senate",
+    "one_liner": "Queen Wilhelmina of the Netherlands addressed the U.S. Senate, with House members attending as invited guests.",
+    "description": "Queen Wilhelmina spoke from the Senate rostrum during a wartime visit to Washington.",
+    "short_summary": "Queen Wilhelmina of the Netherlands addressed the U.S. Senate, with House members attending as invited guests.",
+    "summary": "On August 6, 1942, Queen Wilhelmina of the Netherlands addressed the U.S. Senate from the Senate rostrum. Official House history classifies the event as a Senate address with House members attending as invited guests, not as a Joint Session.",
+    "detail": "Queen Wilhelmina spoke to members of Congress during World War II while the Netherlands was under German occupation. The Congressional framing matters: Senate and House sources describe a Senate address, with House members invited for the occasion.",
+    "deep_dive": "The address gave occupied Netherlands a voice in Washington and symbolized Allied resolve. It is strongest when framed precisely as a Senate address rather than as a formal Joint Session or Joint Meeting.",
+    "why_it_matters": "Her address gave occupied Netherlands a visible voice in Washington and strengthened wartime Allied solidarity.",
     "category": "politics",
     "tags": [
       "politics",
-      "oddities_curiosities"
+      "world_war_ii",
+      "diplomacy"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/06",
-      "https://en.wikipedia.org/wiki/Wilhelmina_of_the_Netherlands",
-      "https://en.wikipedia.org/wiki/United_States_Congress"
+      "https://www.senate.gov/art-artifacts/historical-images/photos-stereoviews/38_01195_001.htm",
+      "https://history.house.gov/Institution/Foreign-Leaders/Foreign-Leader-Fast-Facts/",
+      "https://www.dbnl.org/tekst/wilh001quee01_01/wilh001quee01_01_0012.php"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-06.json;event_id=0901e1c0baac5139;cluster_id=85a6a7d9864f;model_id=today-qwen3-14b;rank_score=0.685787;interesting_score=0.67379;stream=interesting-history; date=1942-08-06",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-06.json;event_id=0901e1c0baac5139;cluster_id=85a6a7d9864f;model_id=today-qwen3-14b;rank_score=0.685787;interesting_score=0.67379;stream=interesting-history; date=1942-08-06; source_repair=best_next_queue_2026_06_05; verifier=tars_parent_review; date=2026-06-05",
+    "source_confidence": 0.96,
     "editorial_status": "ready"
   },
   {
@@ -25464,27 +25467,28 @@
     "month": 8,
     "day": 12,
     "year": 1944,
-    "title": "Alençon Liberated by French Forces",
-    "one_liner": "Alençon becomes the first French city liberated from Nazi occupation by French forces under General Philippe Leclerc de Hauteclocque",
-    "description": "Alençon is liberated by General Philippe Leclerc de Hauteclocque, the first city in France to be liberated from the Nazis by French forces",
-    "short_summary": "Alençon becomes the first French city liberated from Nazi occupation by French forces under General Philippe Leclerc de Hauteclocque",
-    "summary": "Alençon is liberated by General Philippe Leclerc de Hauteclocque, the first city in France to be liberated from the Nazis by French forces. This event marked a significant milestone in World War II, showcasing the effectiveness of French resistance and boosting morale for the Allied campaign in Europe",
-    "detail": "Alençon is liberated by General Philippe Leclerc de Hauteclocque, the first city in France to be liberated from the Nazis by French forces. This event marked a significant milestone in World War II, showcasing the effectiveness of French resistance and boosting morale for the Allied campaign in Europe",
-    "deep_dive": "Alençon is liberated by General Philippe Leclerc de Hauteclocque, the first city in France to be liberated from the Nazis by French forces. This event marked a significant milestone in World War II, showcasing the effectiveness of French resistance and boosting morale for the Allied campaign in Europe",
-    "why_it_matters": "This event marked a significant milestone in World War II, showcasing the effectiveness of French resistance and boosting morale for the Allied campaign in Europe.",
-    "category": "politics",
+    "title": "Alencon Liberated by Leclerc's 2nd Armored Division",
+    "one_liner": "General Leclerc's 2nd Armored Division liberated Alencon, the first metropolitan prefecture in France liberated by French forces.",
+    "description": "General Leclerc's French 2nd Armored Division liberated Alencon on August 12, 1944.",
+    "short_summary": "General Leclerc's 2nd Armored Division liberated Alencon, the first metropolitan prefecture in France liberated by French forces.",
+    "summary": "On August 12, 1944, General Leclerc's French 2nd Armored Division liberated Alencon. Local official sources describe it as the first metropolitan prefecture in France liberated by French forces.",
+    "detail": "Leclerc's 2e DB entered Alencon during the night of August 11 to 12 after learning the bridges were not mined. The city was liberated quickly and became a symbolic Free French milestone on the road toward Paris.",
+    "deep_dive": "Alencon matters because it shows French troops taking a leading role in liberation, not only following Allied advances. The cleanest supported phrasing is first metropolitan prefecture in France liberated by French forces.",
+    "why_it_matters": "The liberation showed Free French forces taking a leading role in the campaign across France before the advance toward Paris.",
+    "category": "history",
     "tags": [
-      "politics",
-      "oddities_curiosities"
+      "history",
+      "world_war_ii",
+      "liberation"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/12",
-      "https://en.wikipedia.org/wiki/Alen%C3%A7on",
-      "https://en.wikipedia.org/wiki/Philippe_Leclerc_de_Hauteclocque"
+      "https://archives.orne.fr/document/alencon-premiere-ville-francaise-liberee-par-des-troupes-francaises",
+      "https://www.alencon.fr/mes-loisirs/vie-touristique-patrimoine/histoire-de-la-ville/",
+      "https://www.alencon.fr/actualites/12-aout-alencon-a-commemore-sa-liberation/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-12.json;event_id=d4d18143edab5fc0;cluster_id=923203a422fc;model_id=today-qwen3-14b;rank_score=0.722144;interesting_score=0.597995;stream=interesting-history; date=1944-08-12",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-12.json;event_id=d4d18143edab5fc0;cluster_id=923203a422fc;model_id=today-qwen3-14b;rank_score=0.722144;interesting_score=0.597995;stream=interesting-history; date=1944-08-12; source_repair=best_next_queue_2026_06_05; verifier=tars_parent_review; date=2026-06-05",
+    "source_confidence": 0.96,
     "editorial_status": "ready"
   },
   {
@@ -25796,27 +25800,29 @@
     "month": 8,
     "day": 15,
     "year": 2005,
-    "title": "Helsinki Agreement in Aceh",
-    "one_liner": "The Helsinki Agreement ends nearly three decades of conflict between the Free Aceh Movement and the Indonesian government",
-    "description": "The Helsinki Agreement between the Free Aceh Movement and the Government of Indonesia was signed, ending almost three decades of fighting",
-    "short_summary": "The Helsinki Agreement ends nearly three decades of conflict between the Free Aceh Movement and the Indonesian government",
-    "summary": "The Helsinki Agreement between the Free Aceh Movement and the Government of Indonesia was signed, ending almost three decades of fighting. This agreement represents a major step toward peace and stability in Aceh, Indonesia",
-    "detail": "The Helsinki Agreement between the Free Aceh Movement and the Government of Indonesia was signed, ending almost three decades of fighting. This agreement represents a major step toward peace and stability in Aceh, Indonesia",
-    "deep_dive": "The Helsinki Agreement between the Free Aceh Movement and the Government of Indonesia was signed, ending almost three decades of fighting. This agreement represents a major step toward peace and stability in Aceh, Indonesia",
-    "why_it_matters": "This agreement represents a major step toward peace and stability in Aceh, Indonesia.",
+    "title": "Helsinki Agreement Signed for Aceh",
+    "one_liner": "Indonesia and the Free Aceh Movement signed the Helsinki peace agreement, ending nearly three decades of conflict in Aceh.",
+    "description": "The Indonesian government and the Free Aceh Movement signed a peace agreement in Helsinki.",
+    "short_summary": "Indonesia and the Free Aceh Movement signed the Helsinki peace agreement, ending nearly three decades of conflict in Aceh.",
+    "summary": "On August 15, 2005, the Government of Indonesia and the Free Aceh Movement signed a Memorandum of Understanding in Helsinki. The agreement committed both sides to a peaceful settlement and helped end nearly three decades of conflict in Aceh.",
+    "detail": "The Helsinki Memorandum of Understanding set terms for peace, demobilization, monitoring, and political reintegration after years of fighting in Aceh. It followed the 2004 tsunami and became a turning point in the province's modern history.",
+    "deep_dive": "The agreement showed how mediation, disaster recovery, and political compromise could converge after a long internal conflict. Its success depended on both formal terms and continued peace-building after signing.",
+    "why_it_matters": "The accord ended one of Southeast Asia's longest-running internal conflicts and opened the way for autonomy, demobilization, and reconstruction.",
     "category": "politics",
     "tags": [
       "politics",
+      "peace_process",
       "human_progress"
     ],
-    "tone": "somber",
+    "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/15",
-      "https://en.wikipedia.org/wiki/Free_Aceh_Movement",
-      "https://en.wikipedia.org/wiki/Government_of_Indonesia"
+      "https://cmi.fi/wp-content/uploads/2014/06/mou_final.pdf",
+      "https://cmi.fi/2020/08/14/after-15-years-the-need-to-actively-build-peace-in-aceh-is-not-over/",
+      "https://peacemaker.un.org/en/node/9221",
+      "https://news.un.org/en/story/2005/08/148752"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-15.json;event_id=b9632a95a86bad73;cluster_id=1822dffc4b00;model_id=today-qwen3-14b;rank_score=0.724581;interesting_score=0.574812;stream=interesting-history; date=2005-08-15",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-15.json;event_id=b9632a95a86bad73;cluster_id=1822dffc4b00;model_id=today-qwen3-14b;rank_score=0.724581;interesting_score=0.574812;stream=interesting-history; date=2005-08-15; source_repair=best_next_queue_2026_06_05; verifier=tars_parent_review; date=2026-06-05",
+    "source_confidence": 0.96,
     "editorial_status": "ready"
   },
   {
@@ -26639,26 +26645,27 @@
     "day": 22,
     "year": 1991,
     "title": "Iceland Recognizes Baltic Independence",
-    "one_liner": "Iceland is the first nation in the world to recognize the independence of the Baltic states",
-    "description": "Iceland is the first nation in the world to recognize the independence of the Baltic states",
-    "short_summary": "Iceland is the first nation in the world to recognize the independence of the Baltic states",
-    "summary": "Iceland is the first nation in the world to recognize the independence of the Baltic states. This marked a pivotal moment in the Baltic states' journey toward sovereignty",
-    "detail": "Iceland is the first nation in the world to recognize the independence of the Baltic states. This marked a pivotal moment in the Baltic states' journey toward sovereignty",
-    "deep_dive": "Iceland is the first nation in the world to recognize the independence of the Baltic states. This marked a pivotal moment in the Baltic states' journey toward sovereignty",
-    "why_it_matters": "This marked a pivotal moment in the Baltic states' journey toward sovereignty.",
+    "one_liner": "Iceland became the first country to recognize the restored independence of the Baltic States.",
+    "description": "Iceland recognized the restored independence of the Baltic States on August 22, 1991.",
+    "short_summary": "Iceland became the first country to recognize the restored independence of the Baltic States.",
+    "summary": "On August 22, 1991, Iceland recognized the restored independence of the Baltic States. Latvian and Baltic officials later commemorated Iceland as the first country in the world to make that recognition.",
+    "detail": "Iceland moved early while many governments were still watching the Soviet collapse unfold. Its recognition helped legitimize the restored sovereignty of Estonia, Latvia, and Lithuania at a decisive moment.",
+    "deep_dive": "The decision mattered because recognition is a political act, not just a statement of sympathy. Iceland helped break international hesitation and gave the Baltic states diplomatic momentum after decades of Soviet rule.",
+    "why_it_matters": "Iceland's early recognition helped break international hesitation and supported the Baltic states' return to sovereignty.",
     "category": "politics",
     "tags": [
       "politics",
-      "oddities_curiosities"
+      "diplomacy",
+      "sovereignty"
     ],
-    "tone": "somber",
+    "tone": "uplifting",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/22",
-      "https://en.wikipedia.org/wiki/Iceland",
-      "https://en.wikipedia.org/wiki/Baltic_states"
+      "https://www2.mfa.gov.lv/en/norway/current-events/372-latest-news/61813-foreign-minister-latvia-will-never-forget-that-iceland-was-the-first-to-recognise-the-restoration-of-latvia-s-independence-in-1991",
+      "https://www.president.lv/en/article/president-latvia-1991-iceland-broke-geopolitical-ice-being-first-country-world-recognise-restored-independence-baltic-states",
+      "https://vm.ee/en/iceland"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-22.json;event_id=d88e9a5200911a7c;cluster_id=06f8993cdbbd;model_id=today-qwen3-14b;rank_score=0.678737;interesting_score=0.672224;stream=interesting-history; date=1991-08-22",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-22.json;event_id=d88e9a5200911a7c;cluster_id=06f8993cdbbd;model_id=today-qwen3-14b;rank_score=0.678737;interesting_score=0.672224;stream=interesting-history; date=1991-08-22; source_repair=best_next_queue_2026_06_05; verifier=tars_parent_review; date=2026-06-05",
+    "source_confidence": 0.96,
     "editorial_status": "ready"
   },
   {
@@ -27728,27 +27735,28 @@
     "month": 9,
     "day": 1,
     "year": 1836,
-    "title": "Narcissa Whitman arrives at Walla Walla",
-    "one_liner": "One of the first English-speaking white women to settle west of the Rocky Mountains",
-    "description": "Narcissa Whitman, one of the first English-speaking white women to settle west of the Rocky Mountains, arrives at Walla Walla, Washington",
-    "short_summary": "One of the first English-speaking white women to settle west of the Rocky Mountains",
-    "summary": "Narcissa Whitman, one of the first English-speaking white women to settle west of the Rocky Mountains, arrives at Walla Walla, Washington. Her arrival marked a significant step in the westward expansion of the United States",
-    "detail": "Narcissa Whitman, one of the first English-speaking white women to settle west of the Rocky Mountains, arrives at Walla Walla, Washington. Her arrival marked a significant step in the westward expansion of the United States",
-    "deep_dive": "Narcissa Whitman, one of the first English-speaking white women to settle west of the Rocky Mountains, arrives at Walla Walla, Washington. Her arrival marked a significant step in the westward expansion of the United States",
-    "why_it_matters": "Her arrival marked a significant step in the westward expansion of the United States.",
-    "category": "politics",
+    "title": "Narcissa Whitman Reaches Fort Walla Walla",
+    "one_liner": "Narcissa Whitman reached Fort Walla Walla after crossing the continent overland.",
+    "description": "Narcissa and Marcus Whitman reached Fort Walla Walla in present-day Washington.",
+    "short_summary": "Narcissa Whitman reached Fort Walla Walla after crossing the continent overland.",
+    "summary": "On September 1, 1836, Narcissa and Marcus Whitman reached Fort Walla Walla in present-day Washington. The National Park Service identifies Narcissa Whitman as one of the first white women to cross the North American continent overland.",
+    "detail": "The Whitmans reached the Hudson's Bay Company post at Fort Walla Walla after an overland journey tied to missionary activity among the Cayuse Nation. The record is strongest when framed as arrival at the fort, not as a simple celebration of westward settlement.",
+    "deep_dive": "Narcissa Whitman's journey sits inside the intertwined history of missionary work, the Oregon Trail, and colonization in the Pacific Northwest. The source-supported framing keeps the date while avoiding overbroad settlement language.",
+    "why_it_matters": "Her journey became part of the missionary, Oregon Trail, and colonization history of the Pacific Northwest.",
+    "category": "history",
     "tags": [
-      "politics",
-      "oddities_curiosities"
+      "history",
+      "migration",
+      "pacific_northwest"
     ],
-    "tone": "somber",
+    "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/09/01",
-      "https://en.wikipedia.org/wiki/Narcissa_Whitman",
-      "https://en.wikipedia.org/wiki/Rocky_Mountains"
+      "https://www.nps.gov/people/narcissa-whitman.htm",
+      "https://npshistory.com/publications/whmi/brochures/1947.pdf",
+      "https://www.historylink.org/file/10088"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-01.json;event_id=f4f1b49650191c4a;cluster_id=52ccf30a8fbe;model_id=today-qwen3-14b;rank_score=0.693278;interesting_score=0.67324;stream=interesting-history; date=1836-09-01",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-01.json;event_id=f4f1b49650191c4a;cluster_id=52ccf30a8fbe;model_id=today-qwen3-14b;rank_score=0.693278;interesting_score=0.67324;stream=interesting-history; date=1836-09-01; source_repair=best_next_queue_2026_06_05; verifier=tars_parent_review; date=2026-06-05",
+    "source_confidence": 0.96,
     "editorial_status": "ready"
   },
   {
@@ -28168,27 +28176,28 @@
     "month": 9,
     "day": 5,
     "year": 1984,
-    "title": "Western Australia abolishes capital punishment",
-    "one_liner": "Western Australia becomes the last Australian state to abolish capital punishment",
-    "description": "Western Australia becomes the last Australian state to abolish capital punishment",
-    "short_summary": "Western Australia becomes the last Australian state to abolish capital punishment",
-    "summary": "Western Australia becomes the last Australian state to abolish capital punishment. This event represents a major step forward in human rights and legal reform in Australia",
-    "detail": "Western Australia becomes the last Australian state to abolish capital punishment. This event represents a major step forward in human rights and legal reform in Australia",
-    "deep_dive": "Western Australia becomes the last Australian state to abolish capital punishment. This event represents a major step forward in human rights and legal reform in Australia",
-    "why_it_matters": "This event represents a major step forward in human rights and legal reform in Australia.",
+    "title": "Western Australia Abolishes Capital Punishment",
+    "one_liner": "Western Australia's abolition act received assent, ending capital punishment in the state.",
+    "description": "Western Australia's Acts Amendment (Abolition of Capital Punishment) Act 1984 received assent.",
+    "short_summary": "Western Australia's abolition act received assent, ending capital punishment in the state.",
+    "summary": "On September 5, 1984, Western Australia's Acts Amendment (Abolition of Capital Punishment) Act 1984 received assent. The Australian Institute of Criminology describes Western Australia as generally regarded as the last Australian state to abolish capital punishment, while noting later residual New South Wales offences were removed in 1985.",
+    "detail": "The Western Australian act abolished capital punishment in state law. The broader Australian timeline has legal nuance, because New South Wales retained residual death penalty offences for piracy and treason until 1985.",
+    "deep_dive": "The record is most trustworthy when it states the supported legal act and keeps the last-state claim qualified. That distinction matters in legal history, where narrow residual offences can change a simple national timeline.",
+    "why_it_matters": "The act marked a major step in the end of capital punishment in Australian criminal law and shows the final state-level abolition had important legal nuance.",
     "category": "politics",
     "tags": [
       "politics",
+      "legal_history",
       "civil_rights_progress"
     ],
-    "tone": "somber",
+    "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/09/05",
-      "https://en.wikipedia.org/wiki/Western_Australia",
-      "https://en.wikipedia.org/wiki/Capital_punishment"
+      "https://www.legislation.wa.gov.au/legislation/statutes.nsf/law_a6134.html&view=asmade",
+      "https://www.legislation.wa.gov.au/legislation/statutes.nsf/RedirectURL?OpenAgent&query=mrdoc_8326.pdf",
+      "https://www.aic.gov.au/publications/tandi/tandi3"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-05.json;event_id=116d61256e562cd8;cluster_id=4abd9cd4d0d0;model_id=today-qwen3-14b;rank_score=0.714515;interesting_score=0.581702;stream=interesting-history; date=1984-09-05",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-05.json;event_id=116d61256e562cd8;cluster_id=4abd9cd4d0d0;model_id=today-qwen3-14b;rank_score=0.714515;interesting_score=0.581702;stream=interesting-history; date=1984-09-05; source_repair=best_next_queue_2026_06_05; verifier=tars_parent_review; date=2026-06-05",
+    "source_confidence": 0.96,
     "editorial_status": "ready"
   },
   {
@@ -28306,27 +28315,27 @@
     "month": 9,
     "day": 7,
     "year": 1953,
-    "title": "Nikita Khrushchev Elected First Secretary of the Communist Party of the Soviet Union",
-    "one_liner": "Nikita Khrushchev becomes the first secretary of the Communist Party of the Soviet Union",
-    "description": "Nikita Khrushchev is elected first secretary of the Communist Party of the Soviet Union",
-    "short_summary": "Nikita Khrushchev becomes the first secretary of the Communist Party of the Soviet Union",
-    "summary": "Nikita Khrushchev is elected first secretary of the Communist Party of the Soviet Union. This marked a significant shift in Soviet leadership and set the stage for major political and ideological changes during the Cold War",
-    "detail": "Nikita Khrushchev is elected first secretary of the Communist Party of the Soviet Union. This marked a significant shift in Soviet leadership and set the stage for major political and ideological changes during the Cold War",
-    "deep_dive": "Nikita Khrushchev is elected first secretary of the Communist Party of the Soviet Union. This marked a significant shift in Soviet leadership and set the stage for major political and ideological changes during the Cold War",
-    "why_it_matters": "This marked a significant shift in Soviet leadership and set the stage for major political and ideological changes during the Cold War.",
+    "title": "Khrushchev Becomes First Secretary of the Soviet Communist Party",
+    "one_liner": "Nikita Khrushchev became First Secretary of the Communist Party of the Soviet Union after Stalin's death.",
+    "description": "Nikita Khrushchev became First Secretary of the Communist Party of the Soviet Union.",
+    "short_summary": "Nikita Khrushchev became First Secretary of the Communist Party of the Soviet Union after Stalin's death.",
+    "summary": "On September 7, 1953, Nikita Khrushchev became First Secretary of the Communist Party of the Soviet Union. The post gave him the platform to consolidate power after Stalin's death and the fall of Lavrentiy Beria.",
+    "detail": "Khrushchev's elevation came during a tense post-Stalin power struggle. Sources support the September 7 date for becoming First Secretary, while the safest wording avoids overclaiming a documented election vote without primary party records.",
+    "deep_dive": "The title of First Secretary became Khrushchev's route to power. From there he outmaneuvered rivals, launched de-Stalinization, and shaped Soviet policy through much of the Cold War's next decade.",
+    "why_it_matters": "The post gave Khrushchev the platform to consolidate Soviet leadership, launch de-Stalinization, and shape Cold War policy.",
     "category": "politics",
     "tags": [
       "politics",
-      "oddities_curiosities"
+      "cold_war"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/09/07",
-      "https://en.wikipedia.org/wiki/Nikita_Khrushchev",
-      "https://en.wikipedia.org/wiki/General_Secretary_of_the_Communist_Party_of_the_Soviet_Union"
+      "https://babel.ua/en/texts/69417-70-years-ago-nikita-khrushchev-headed-the-communist-party-although-no-one-took-him-seriously-after-stalin-s-death-this-is-how-he-defeated-his-competitors-malenkov-and-beria-and-seized-power-in-the-uss",
+      "https://www.history.com/this-day-in-history/september-12/khrushchev-elected-soviet-leader",
+      "https://www.britannica.com/biography/Nikita-Sergeyevich-Khrushchev"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-07.json;event_id=de4c8f7e6f1076fc;cluster_id=13c03904abca;model_id=today-qwen3-14b;rank_score=0.712238;interesting_score=0.559394;stream=interesting-history; date=1953-09-07",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-07.json;event_id=de4c8f7e6f1076fc;cluster_id=13c03904abca;model_id=today-qwen3-14b;rank_score=0.712238;interesting_score=0.559394;stream=interesting-history; date=1953-09-07; source_repair=best_next_queue_2026_06_05; verifier=tars_parent_review; date=2026-06-05",
+    "source_confidence": 0.96,
     "editorial_status": "ready"
   },
   {
@@ -28693,27 +28702,28 @@
     "month": 9,
     "day": 10,
     "year": 1919,
-    "title": "Treaty of Saint-Germain-en-Laye Signed",
-    "one_liner": "The Republic of German-Austria signs the Treaty of Saint-Germain-en-Laye, ceding territories to Italy, Yugoslavia, and Czechoslovakia",
-    "description": "The Republic of German-Austria signs the Treaty of Saint-Germain-en-Laye, ceding significant territories to Italy, Yugoslavia, and Czechoslovakia",
-    "short_summary": "The Republic of German-Austria signs the Treaty of Saint-Germain-en-Laye, ceding territories to Italy, Yugoslavia, and Czechoslovakia",
-    "summary": "The Republic of German-Austria signs the Treaty of Saint-Germain-en-Laye, ceding significant territories to Italy, Yugoslavia, and Czechoslovakia. This treaty reshaped European borders after World War I, impacting political and territorial dynamics in the region",
-    "detail": "The Republic of German-Austria signs the Treaty of Saint-Germain-en-Laye, ceding significant territories to Italy, Yugoslavia, and Czechoslovakia. This treaty reshaped European borders after World War I, impacting political and territorial dynamics in the region",
-    "deep_dive": "The Republic of German-Austria signs the Treaty of Saint-Germain-en-Laye, ceding significant territories to Italy, Yugoslavia, and Czechoslovakia. This treaty reshaped European borders after World War I, impacting political and territorial dynamics in the region",
-    "why_it_matters": "This treaty reshaped European borders after World War I, impacting political and territorial dynamics in the region.",
+    "title": "Treaty of Saint-Germain is Signed",
+    "one_liner": "Austria and the Allied Powers signed the Treaty of Saint-Germain, formalizing the breakup of the Habsburg empire.",
+    "description": "The Treaty of Saint-Germain was signed at Saint-Germain-en-Laye after World War I.",
+    "short_summary": "Austria and the Allied Powers signed the Treaty of Saint-Germain, formalizing the breakup of the Habsburg empire.",
+    "summary": "On September 10, 1919, Austria and the Allied Powers signed the Treaty of Saint-Germain-en-Laye. The treaty registered the breakup of the Habsburg empire, recognized new states, restricted Austria's military, and transferred or recognized the loss of former imperial territories.",
+    "detail": "The treaty reshaped Central Europe after World War I. It recognized or confirmed the independence of neighboring states and barred Austria from union with Germany without League of Nations approval.",
+    "deep_dive": "Saint-Germain was one of the peace settlements that turned imperial collapse into a new political map. Its borders and restrictions shaped Central European politics long after the signing ceremony.",
+    "why_it_matters": "The treaty redrew Central Europe after World War I and helped establish the post-Habsburg order.",
     "category": "politics",
     "tags": [
       "politics",
-      "general_history"
+      "world_war_i",
+      "treaty"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/09/10",
-      "https://en.wikipedia.org/wiki/Republic_of_German-Austria",
-      "https://en.wikipedia.org/wiki/Treaty_of_Saint-Germain-en-Laye_(1919)"
+      "https://history.state.gov/historicaldocuments/frus1919Parisv13/ch30",
+      "https://www.awm.gov.au/collection/LIB9755",
+      "https://www.britannica.com/event/Treaty-of-Saint-Germain"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-10.json;event_id=162ff30b38f8df0a;cluster_id=173fbeccd425;model_id=today-qwen3-14b;rank_score=0.560941;interesting_score=0.564345;stream=interesting-history; date=1919-09-10",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-10.json;event_id=162ff30b38f8df0a;cluster_id=173fbeccd425;model_id=today-qwen3-14b;rank_score=0.560941;interesting_score=0.564345;stream=interesting-history; date=1919-09-10; source_repair=best_next_queue_2026_06_05; verifier=tars_parent_review; date=2026-06-05",
+    "source_confidence": 0.96,
     "editorial_status": "ready"
   },
   {
@@ -31058,27 +31068,28 @@
     "month": 10,
     "day": 7,
     "year": 1963,
-    "title": "Buddhist Crisis and Madame Ngo Dinh Nhu's US Tour",
-    "one_liner": "Madame Ngo Dinh Nhu arrives in the US for a speaking tour amid the Buddhist crisis and worsening relations",
-    "description": "Buddhist crisis: Amid worsening relations, outspoken South Vietnamese First Lady Madame Ngo Dinh Nhu arrives in the US for a speaking tour, continuing a flurry of attacks on the Kennedy administration",
-    "short_summary": "Madame Ngo Dinh Nhu arrives in the US for a speaking tour amid the Buddhist crisis and worsening relations",
-    "summary": "Buddhist crisis: Amid worsening relations, outspoken South Vietnamese First Lady Madame Ngo Dinh Nhu arrives in the US for a speaking tour, continuing a flurry of attacks on the Kennedy administration. This event reflects historical political tensions and religious conflicts during the Cold War",
-    "detail": "Buddhist crisis: Amid worsening relations, outspoken South Vietnamese First Lady Madame Ngo Dinh Nhu arrives in the US for a speaking tour, continuing a flurry of attacks on the Kennedy administration. This event reflects historical political tensions and religious conflicts during the Cold War",
-    "deep_dive": "Buddhist crisis: Amid worsening relations, outspoken South Vietnamese First Lady Madame Ngo Dinh Nhu arrives in the US for a speaking tour, continuing a flurry of attacks on the Kennedy administration. This event reflects historical political tensions and religious conflicts during the Cold War",
-    "why_it_matters": "This event reflects historical political tensions and religious conflicts during the Cold War.",
+    "title": "Madame Nhu Arrives in the U.S. During Vietnam's Buddhist Crisis",
+    "one_liner": "Madame Ngo Dinh Nhu arrived in the United States for a speaking tour as criticism of South Vietnam intensified.",
+    "description": "Madame Ngo Dinh Nhu arrived in the United States amid the Buddhist Crisis in South Vietnam.",
+    "short_summary": "Madame Ngo Dinh Nhu arrived in the United States for a speaking tour as criticism of South Vietnam intensified.",
+    "summary": "On October 7, 1963, Madame Ngo Dinh Nhu arrived in the United States. Her visit came amid international anger over South Vietnam's repression of Buddhists and her inflammatory public comments about Buddhist protesters.",
+    "detail": "U.S. officials were already bracing for Madame Nhu's visit on the morning of October 7. Her American speaking tour became a public relations crisis for the Diem regime shortly before the November 1963 coup.",
+    "deep_dive": "The trip exposed the widening rift between South Vietnam's ruling family and the Kennedy administration. It turned a domestic religious and political crisis into an international media confrontation.",
+    "why_it_matters": "Her U.S. tour highlighted the collapse of trust between South Vietnam's ruling family and the Kennedy administration shortly before the November 1963 coup.",
     "category": "politics",
     "tags": [
       "politics",
-      "oddities_curiosities"
+      "vietnam_war",
+      "diplomacy"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/10/07",
-      "https://en.wikipedia.org/wiki/Buddhist_crisis",
-      "https://en.wikipedia.org/wiki/Madame_Nhu"
+      "https://pastdaily.com/madame-nhu-visits-america-1963-past-daily-reference-room/",
+      "https://history.state.gov/historicaldocuments/frus1961-63v04/d187",
+      "https://www.britannica.com/biography/Madame-Nhu"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-10-07.json;event_id=8a08b7fd43821dc8;cluster_id=36f57584e5ff;model_id=today-qwen3-14b;rank_score=0.712103;interesting_score=0.612153;stream=interesting-history; date=1963-10-07",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-10-07.json;event_id=8a08b7fd43821dc8;cluster_id=36f57584e5ff;model_id=today-qwen3-14b;rank_score=0.712103;interesting_score=0.612153;stream=interesting-history; date=1963-10-07; source_repair=best_next_queue_2026_06_05; verifier=tars_parent_review; date=2026-06-05",
+    "source_confidence": 0.96,
     "editorial_status": "ready"
   },
   {
