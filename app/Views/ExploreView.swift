@@ -314,6 +314,7 @@ struct ExploreView: View {
             )
             .shadow(color: Color("AccentWarm").opacity(0.06), radius: 6, x: 0, y: 3)
         }
+        .accessibilityLabel("Choose \(title)")
     }
 
     private func categoryChip(title: String, systemImage: String, selected: Bool, action: @escaping () -> Void) -> some View {
@@ -355,6 +356,7 @@ struct ExploreView: View {
                 )
         }
         .buttonStyle(.plain)
+        .accessibilityLabel(selected ? "\(title), selected" : title)
     }
 
     private var daysInSelectedMonth: Int {

@@ -32,6 +32,10 @@ class DataStore: ObservableObject {
         }
     }
 
+    var representedDateCount: Int {
+        Set(allEvents.map { dateKey(month: $0.month, day: $0.day) }).count
+    }
+
     func eventsFor(month: Int, day: Int, tonePreference: TonePreference = .balanced, category: EventCategory? = nil) -> [HistoricalEvent] {
         let key = dateKey(month: month, day: day)
         let dated = eventsByDate[key] ?? []

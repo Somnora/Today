@@ -30,6 +30,10 @@ struct EventCardView: View {
         }
     }
 
+    private var cardAccessibilityLabel: String {
+        "\(event.title), \(event.dateString), \(event.category.displayName). \(event.summary)"
+    }
+
     var body: some View {
         VStack(alignment: .leading, spacing: metrics.cardStackSpacing) {
             headerRow
@@ -60,6 +64,9 @@ struct EventCardView: View {
         .shadow(color: Color.black.opacity(0.05), radius: 1.5, x: 0, y: 1)
         .shadow(color: toneAccent.opacity(0.16), radius: 22, x: 0, y: 12)
         .contentShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel(cardAccessibilityLabel)
+        .accessibilityHint("Opens the full almanac entry")
     }
 
     private var cardSurface: some View {

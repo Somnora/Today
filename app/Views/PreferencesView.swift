@@ -130,7 +130,13 @@ struct PreferencesView: View {
             sectionLabel("Library")
 
             VStack(spacing: 0) {
-                statRow(title: "Events in library", value: "\(dataStore.allEvents.count)", systemImage: "rectangle.stack")
+                statRow(title: "Ready to read", value: "\(dataStore.allEvents.count)", systemImage: "rectangle.stack")
+
+                Divider()
+                    .background(Color("AccentWarm").opacity(0.10))
+                    .padding(.leading, 18)
+
+                statRow(title: "Dates covered", value: "\(dataStore.representedDateCount)", systemImage: "calendar")
 
                 Divider()
                     .background(Color("AccentWarm").opacity(0.10))
@@ -147,7 +153,7 @@ struct PreferencesView: View {
             sectionLabel("About Today")
 
             VStack(spacing: 14) {
-                Text("Today keeps reading preferences and card reactions on this device. The historical collection is bundled with the app and can be refreshed in a future update.")
+                Text("Today keeps reading preferences and card reactions on this device. The historical collection is bundled with the app, filtered for publishable records, and refreshed through app updates.")
                     .font(.system(size: metrics.cardSummarySize, weight: .regular, design: .serif))
                     .foregroundStyle(Color("TextSecondary"))
                     .lineSpacing(metrics.cardSummaryLineSpacing - 1)
@@ -219,7 +225,7 @@ struct PreferencesView: View {
         case .compact:
             return "Tighter type and trim margins for more cards on each screen."
         case .standard:
-            return "The original editorial baseline — calm spacing and a familiar measure."
+            return "The original editorial baseline, with calm spacing and a familiar measure."
         case .comfortable:
             return "A little more breathing room and slightly larger reading type."
         }

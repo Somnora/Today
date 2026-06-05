@@ -12,6 +12,7 @@
 		3D07199E8782E2CB54C766EE /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F1CE1B62E91E5B4D35DA66 /* UserPreferences.swift */; };
 		4507128BFAE09D4A54176E64 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D37F381CBCADA2D0748DC1 /* DataStore.swift */; };
 		4DE6D5B9BB1C60CB7EBF66B5 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E93F1EB0CBDC627A6AAFFF /* DataLoader.swift */; };
+		4DE6D5B9BB1C60CB7EBF66C6 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E93F1EB0CBDC627A6AAFFF /* DataLoader.swift */; };
 		5D5810E80D2891EA88F31D59 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334F00753166A13DD0EAB76A /* DataModels.swift */; };
 		668BC9F885657D8D7D75ED13 /* EventCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7960AB62F25E5FB52D303E1C /* EventCardView.swift */; };
 		A8B7C6D5E4F30219384756AB /* ReadingMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1F2B3C4E60718293A4B5D /* ReadingMetrics.swift */; };
@@ -29,6 +30,7 @@
 		DBDD76BA81F1798DC9EAF79A /* TodayFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F82BF47E044250DF2F526D /* TodayFeedView.swift */; };
 		E0363615A2A2AE64CEB6A357 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FDEF1405684A9A2B23DA4D /* PreferencesView.swift */; };
 		EBD813265E28AFACB5DFFF6F /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E54721DD14082FA53FE1A39 /* events.json */; };
+		EBD813265E28AFACB5DFFF70 /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E54721DD14082FA53FE1A39 /* events.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -327,6 +329,7 @@
 			files = (
 				953517F9E58E6E9A702A3A37 /* Assets.xcassets in Resources */,
 				D1E2F30415263748596A7B8C /* PrivacyInfo.xcprivacy in Resources */,
+				EBD813265E28AFACB5DFFF70 /* events.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +342,7 @@
 			files = (
 				0EBD0C1D359976736EB532EC /* TodayWidget.swift in Sources */,
 				69D1430EACB38ED2C518B1CD /* DataModels.swift in Sources */,
+				4DE6D5B9BB1C60CB7EBF66C6 /* DataLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

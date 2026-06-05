@@ -27,9 +27,17 @@ class DataLoader {
     static func filterByTone(_ events: [HistoricalEvent], preference: TonePreference) -> [HistoricalEvent] {
         switch preference {
         case .uplifting:
-            return events.filter { $0.tone == .uplifting }
+            let uplifting = events.filter { $0.tone == .uplifting }
+            if !uplifting.isEmpty {
+                return uplifting
+            }
+            return filterByTone(events, preference: .balanced)
         case .balanced:
-            return events.filter { $0.tone != .somber || $0.category == .history || $0.category == .politics }
+            let balanced = events.filter { $0.tone != .somber || $0.category == .history || $0.category == .politics }
+            if !balanced.isEmpty {
+                return balanced
+            }
+            return events
         case .unflinching:
             let somber = events.filter { $0.tone == .somber }
             if !somber.isEmpty {

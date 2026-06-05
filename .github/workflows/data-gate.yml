@@ -21,3 +21,6 @@ jobs:
 
       - name: Validate sample-data/events.json
         run: python3 .github/scripts/validate_events.py
+
+      - name: Validate runtime contracts
+        run: python3 .github/scripts/validate_runtime_contracts.py

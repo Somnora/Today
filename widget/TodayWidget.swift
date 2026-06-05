@@ -34,13 +34,34 @@ struct TodayWidgetProvider: AppIntentTimelineProvider {
     }
 
     func snapshot(for configuration: TodayWidgetConfigurationIntent, in context: Context) async -> TodayWidgetEntry {
-        TodayWidgetEntry(date: Date(), event: placeholderEvent, density: configuration.density)
+        TodayWidgetEntry(date: Date(), event: context.isPreview ? placeholderEvent : await loadWidgetEvent(), density: configuration.density)
     }
 
     func timeline(for configuration: TodayWidgetConfigurationIntent, in context: Context) async -> Timeline<TodayWidgetEntry> {
-        let entry = TodayWidgetEntry(date: Date(), event: placeholderEvent, density: configuration.density)
+        let entry = TodayWidgetEntry(date: Date(), event: await loadWidgetEvent(), density: configuration.density)
         let tomorrow = Calendar.current.startOfDay(for: Date().addingTimeInterval(86_400))
         return Timeline(entries: [entry], policy: .after(tomorrow))
+    }
+
+    private func loadWidgetEvent(date: Date = Date()) async -> HistoricalEvent? {
+        let result = await DataLoader.loadEvents()
+        let components = Calendar.current.dateComponents([.month, .day], from: date)
+        guard let month = components.month, let day = components.day else {
+            return result.events.first
+        }
+
+        let dated = result.events.filter { $0.matches(month: month, day: day) }
+        let preferred = DataLoader.filterByTone(dated, preference: .balanced)
+        return preferred.sorted(by: sortForDisplay).first ?? result.events.sorted(by: sortForDisplay).first
+    }
+
+    private func sortForDisplay(_ left: HistoricalEvent, _ right: HistoricalEvent) -> Bool {
+        let leftYear = left.year ?? 0
+        let rightYear = right.year ?? 0
+        if leftYear == rightYear {
+            return left.title < right.title
+        }
+        return leftYear < rightYear
     }
 
     private var placeholderEvent: HistoricalEvent {
