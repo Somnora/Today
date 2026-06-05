@@ -38,8 +38,10 @@ struct TodayWidgetProvider: AppIntentTimelineProvider {
     }
 
     func timeline(for configuration: TodayWidgetConfigurationIntent, in context: Context) async -> Timeline<TodayWidgetEntry> {
-        let entry = TodayWidgetEntry(date: Date(), event: await loadWidgetEvent(), density: configuration.density)
-        let tomorrow = Calendar.current.startOfDay(for: Date().addingTimeInterval(86_400))
+        let now = Date()
+        let entry = TodayWidgetEntry(date: now, event: await loadWidgetEvent(date: now), density: configuration.density)
+        let startOfToday = Calendar.current.startOfDay(for: now)
+        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: startOfToday) ?? now.addingTimeInterval(24 * 60 * 60)
         return Timeline(entries: [entry], policy: .after(tomorrow))
     }
 

@@ -12,7 +12,7 @@ class DataStore: ObservableObject {
     private var eventsByDate: [String: [HistoricalEvent]] = [:]
 
     func loadEvents() async {
-        guard allEvents.isEmpty else { return }
+        guard allEvents.isEmpty || loadIssue != nil else { return }
 
         isLoading = true
         error = nil

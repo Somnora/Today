@@ -11,6 +11,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 EVENTS_PATH = ROOT / "sample-data" / "events.json"
 PROJECT_PATH = ROOT / "Today.xcodeproj" / "project.pbxproj"
+CONTENT_VIEW_PATH = ROOT / "app" / "ContentView.swift"
+DATA_MODELS_PATH = ROOT / "app" / "Models" / "DataModels.swift"
+THUMBS_STORE_PATH = ROOT / "app" / "Storage" / "ThumbsStore.swift"
+WIDGET_PATH = ROOT / "widget" / "TodayWidget.swift"
 FILTERED_STATUSES = {"duplicate", "weak_event", "defer"}
 
 
@@ -26,12 +30,45 @@ def load_events() -> list[dict]:
 
 
 def is_publishable(event: dict) -> bool:
-    status = str(event.get("editorial_status") or "").strip().lower()
-    return status not in FILTERED_STATUSES
+    return normalized_status(event) not in FILTERED_STATUSES
 
 
 def normalized_value(event: dict, key: str) -> str:
     return str(event.get(key) or "").strip().lower()
+
+
+def normalized_status(event: dict) -> str:
+    return normalized_value(event, "editorial_status").replace(" ", "_").replace("-", "_")
+
+
+def normalized_category(event: dict) -> str:
+    raw = (
+        normalized_value(event, "category")
+        .replace(" ", "")
+        .replace("_", "")
+        .replace("-", "")
+        .replace("/", "")
+    )
+    aliases = {
+        "art": "arts",
+        "artculture": "arts",
+        "artsandculture": "arts",
+        "births": "birth",
+        "born": "birth",
+        "deaths": "death",
+        "died": "death",
+        "sport": "sports",
+        "athletics": "sports",
+        "interesting": "strange",
+        "odd": "strange",
+        "oddity": "strange",
+        "oddities": "strange",
+        "curiosity": "strange",
+        "curiosities": "strange",
+        "civilrights": "culture",
+        "humanity": "culture",
+    }
+    return aliases.get(raw, raw)
 
 
 def balanced(events: list[dict]) -> list[dict]:
@@ -39,7 +76,7 @@ def balanced(events: list[dict]) -> list[dict]:
         event
         for event in events
         if normalized_value(event, "tone") != "somber"
-        or normalized_value(event, "category") in {"history", "politics"}
+        or normalized_category(event) in {"history", "politics"}
     ]
 
 
@@ -72,6 +109,32 @@ def validate_data_contract(events: list[dict]) -> list[str]:
             if not tone_filtered(dated, preference):
                 month, day = key
                 errors.append(f"{preference} policy returned no events for {month:02d}-{day:02d}")
+
+    return errors
+
+
+def validate_app_code_contracts() -> list[str]:
+    errors: list[str] = []
+    content_view = CONTENT_VIEW_PATH.read_text()
+    data_models = DATA_MODELS_PATH.read_text()
+    thumbs_store = THUMBS_STORE_PATH.read_text()
+    widget = WIDGET_PATH.read_text()
+
+    if ".onOpenURL" not in content_view or "today://today" not in content_view:
+        errors.append("ContentView must handle the today://today widget URL explicitly")
+
+    if "addingTimeInterval(86_400)" in widget:
+        errors.append("widget timeline refresh must use Calendar date arithmetic instead of a fixed 86,400 second interval")
+
+    if "boundedMonthName" not in data_models or "monthSymbols[max(0, month - 1)]" in data_models:
+        errors.append("HistoricalEvent date labels must clamp invalid month values without indexing monthSymbols directly")
+
+    if "@MainActor" not in thumbs_store:
+        errors.append("ThumbsStore must stay on the main actor for AppStorage and ObservableObject updates")
+    if "@Published private(set) var reactions" not in thumbs_store:
+        errors.append("ThumbsStore reactions must be published with private write access")
+    if "normalizedEventID" not in thumbs_store or "guard !trimmed.isEmpty" not in thumbs_store:
+        errors.append("ThumbsStore must ignore blank event IDs before writing reactions")
 
     return errors
 
@@ -157,6 +220,7 @@ def main() -> int:
     errors = []
     errors.extend(validate_data_contract(events))
     errors.extend(validate_widget_bundle_contract())
+    errors.extend(validate_app_code_contracts())
 
     if errors:
         print("runtime contract validation failed:")

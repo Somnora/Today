@@ -130,6 +130,14 @@ struct PreferencesView: View {
             sectionLabel("Library")
 
             VStack(spacing: 0) {
+                if let loadIssue = dataStore.loadIssue {
+                    statRow(title: "Collection state", value: loadIssue.shortStatus, systemImage: "exclamationmark.triangle")
+
+                    Divider()
+                        .background(Color("AccentWarm").opacity(0.10))
+                        .padding(.leading, 18)
+                }
+
                 statRow(title: "Ready to read", value: "\(dataStore.allEvents.count)", systemImage: "rectangle.stack")
 
                 Divider()

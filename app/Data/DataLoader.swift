@@ -110,6 +110,17 @@ enum EventLoadIssue: LocalizedError, Equatable {
             return "Today could not open its built-in collection. A short offline note is available while the collection is restored."
         }
     }
+
+    var shortStatus: String {
+        switch self {
+        case .missingCollection:
+            return "Offline note active"
+        case .invalidCollection:
+            return "Collection check needed"
+        case .emptyCollection:
+            return "Offline note active"
+        }
+    }
 }
 
 extension EventsData {

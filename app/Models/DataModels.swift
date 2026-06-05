@@ -58,16 +58,21 @@ struct HistoricalEvent: Identifiable, Codable, Hashable {
     }
 
     var dateString: String {
-        let monthName = Calendar.current.monthSymbols[max(0, month - 1)]
         if let year {
-            return "\(monthName) \(day), \(year)"
+            return "\(boundedMonthName) \(day), \(year)"
         }
-        return "\(monthName) \(day)"
+        return "\(boundedMonthName) \(day)"
     }
 
     var monthDayString: String {
-        let monthName = Calendar.current.monthSymbols[max(0, month - 1)]
-        return "\(monthName) \(day)"
+        "\(boundedMonthName) \(day)"
+    }
+
+    private var boundedMonthName: String {
+        let monthSymbols = Calendar.current.monthSymbols
+        guard !monthSymbols.isEmpty else { return "Month" }
+        let index = min(max(month - 1, 0), monthSymbols.count - 1)
+        return monthSymbols[index]
     }
 
     var yearLabel: String {

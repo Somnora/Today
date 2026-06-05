@@ -1,47 +1,42 @@
 import Foundation
 import SwiftUI
 
-/// Manages thumbs up/down reactions for events
+@MainActor
 class ThumbsStore: ObservableObject {
     @AppStorage("eventReactions") private var reactionsData: String = "{}"
-
-    private var reactions: [String: Reaction] = [:]
+    @Published private(set) var reactions: [String: Reaction] = [:]
 
     init() {
         loadReactions()
     }
 
-    /// Get reaction for an event
     func reactionFor(eventID: String) -> Reaction? {
-        reactions[eventID]
+        guard let eventID = normalizedEventID(eventID) else { return nil }
+        return reactions[eventID]
     }
 
-    /// Set reaction for an event
     func setReaction(_ reaction: Reaction, for eventID: String) {
+        guard let eventID = normalizedEventID(eventID) else { return }
         reactions[eventID] = reaction
         saveReactions()
-        objectWillChange.send()
     }
 
-    /// Remove reaction for an event
     func removeReaction(for eventID: String) {
+        guard let eventID = normalizedEventID(eventID) else { return }
         reactions.removeValue(forKey: eventID)
         saveReactions()
-        objectWillChange.send()
     }
 
-    /// Toggle thumbs up
     func toggleThumbsUp(for eventID: String) {
-        if reactions[eventID] == .thumbsUp {
+        if reactionFor(eventID: eventID) == .thumbsUp {
             removeReaction(for: eventID)
         } else {
             setReaction(.thumbsUp, for: eventID)
         }
     }
 
-    /// Toggle thumbs down
     func toggleThumbsDown(for eventID: String) {
-        if reactions[eventID] == .thumbsDown {
+        if reactionFor(eventID: eventID) == .thumbsDown {
             removeReaction(for: eventID)
         } else {
             setReaction(.thumbsDown, for: eventID)
@@ -51,17 +46,33 @@ class ThumbsStore: ObservableObject {
     private func loadReactions() {
         guard let data = reactionsData.data(using: .utf8),
               let decoded = try? JSONDecoder().decode([String: Reaction].self, from: data) else {
+            reactions = [:]
+            saveReactions()
             return
         }
-        reactions = decoded
+
+        reactions = decoded.reduce(into: [:]) { cleaned, pair in
+            guard let eventID = normalizedEventID(pair.key) else { return }
+            cleaned[eventID] = pair.value
+        }
+        saveReactions()
     }
 
     private func saveReactions() {
-        guard let data = try? JSONEncoder().encode(reactions),
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = [.sortedKeys]
+
+        guard let data = try? encoder.encode(reactions),
               let string = String(data: data, encoding: .utf8) else {
             return
         }
         reactionsData = string
+    }
+
+    private func normalizedEventID(_ eventID: String) -> String? {
+        let trimmed = eventID.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return nil }
+        return trimmed
     }
 }
 

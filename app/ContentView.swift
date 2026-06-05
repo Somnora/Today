@@ -25,8 +25,28 @@ struct ContentView: View {
                 .tag(2)
         }
         .accentColor(Color("AccentWarm"))
+        .onOpenURL(perform: handleDeepLink)
         .task {
             await dataStore.loadEvents()
+        }
+    }
+
+    private func handleDeepLink(_ url: URL) {
+        if url.absoluteString == "today://today" {
+            selectedTab = 0
+            return
+        }
+
+        guard url.scheme?.lowercased() == "today" else { return }
+        switch url.host?.lowercased() {
+        case "today", nil:
+            selectedTab = 0
+        case "explore":
+            selectedTab = 1
+        case "preferences", "settings":
+            selectedTab = 2
+        default:
+            break
         }
     }
 }

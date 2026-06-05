@@ -120,6 +120,7 @@ struct ExploreView: View {
             HStack(spacing: 12) {
                 selectorMenu(
                     title: Calendar.current.monthSymbols[selectedMonth - 1],
+                    accessibilityLabel: "Choose month",
                     options: Array(1...12),
                     formatter: { Calendar.current.monthSymbols[$0 - 1] },
                     selection: $selectedMonth
@@ -127,6 +128,7 @@ struct ExploreView: View {
 
                 selectorMenu(
                     title: "\(selectedDay)",
+                    accessibilityLabel: "Choose day",
                     options: Array(1...daysInSelectedMonth),
                     formatter: { "\($0)" },
                     selection: $selectedDay
@@ -247,6 +249,7 @@ struct ExploreView: View {
                                     selectedDay = suggestion.day
                                     selectedCategory = nil
                                 }
+                                .accessibilityLabel("Jump to \(suggestion.shortLabel)")
                                 .font(.system(size: 12, weight: .semibold, design: .rounded))
                                 .foregroundStyle(Color("AccentWarm"))
                                 .padding(.horizontal, 11)
@@ -286,7 +289,7 @@ struct ExploreView: View {
         }
     }
 
-    private func selectorMenu(title: String, options: [Int], formatter: @escaping (Int) -> String, selection: Binding<Int>) -> some View {
+    private func selectorMenu(title: String, accessibilityLabel: String, options: [Int], formatter: @escaping (Int) -> String, selection: Binding<Int>) -> some View {
         Menu {
             ForEach(options, id: \.self) { value in
                 Button(formatter(value)) {
@@ -314,7 +317,8 @@ struct ExploreView: View {
             )
             .shadow(color: Color("AccentWarm").opacity(0.06), radius: 6, x: 0, y: 3)
         }
-        .accessibilityLabel("Choose \(title)")
+        .accessibilityLabel(accessibilityLabel)
+        .accessibilityValue(title)
     }
 
     private func categoryChip(title: String, systemImage: String, selected: Bool, action: @escaping () -> Void) -> some View {
@@ -356,7 +360,8 @@ struct ExploreView: View {
                 )
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(selected ? "\(title), selected" : title)
+        .accessibilityLabel(title)
+        .accessibilityAddTraits(selected ? .isSelected : [])
     }
 
     private var daysInSelectedMonth: Int {
