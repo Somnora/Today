@@ -11,8 +11,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 EVENTS_PATH = ROOT / "sample-data" / "events.json"
 PROJECT_PATH = ROOT / "Today.xcodeproj" / "project.pbxproj"
+INFO_PLIST_PATH = ROOT / "app" / "Info.plist"
 CONTENT_VIEW_PATH = ROOT / "app" / "ContentView.swift"
 DATA_MODELS_PATH = ROOT / "app" / "Models" / "DataModels.swift"
+EXPLORE_VIEW_PATH = ROOT / "app" / "Views" / "ExploreView.swift"
+PREFERENCES_VIEW_PATH = ROOT / "app" / "Views" / "PreferencesView.swift"
 THUMBS_STORE_PATH = ROOT / "app" / "Storage" / "ThumbsStore.swift"
 WIDGET_PATH = ROOT / "widget" / "TodayWidget.swift"
 FILTERED_STATUSES = {"duplicate", "weak_event", "defer"}
@@ -117,11 +120,23 @@ def validate_app_code_contracts() -> list[str]:
     errors: list[str] = []
     content_view = CONTENT_VIEW_PATH.read_text()
     data_models = DATA_MODELS_PATH.read_text()
+    explore_view = EXPLORE_VIEW_PATH.read_text()
+    info_plist = INFO_PLIST_PATH.read_text()
+    preferences_view = PREFERENCES_VIEW_PATH.read_text()
+    project = PROJECT_PATH.read_text()
     thumbs_store = THUMBS_STORE_PATH.read_text()
     widget = WIDGET_PATH.read_text()
 
     if ".onOpenURL" not in content_view or "today://today" not in content_view:
         errors.append("ContentView must handle the today://today widget URL explicitly")
+    if "INFOPLIST_FILE = app/Info.plist;" not in project:
+        errors.append("Today target must use app/Info.plist so custom URL schemes are bundled")
+    if "<string>today</string>" not in info_plist or "CFBundleURLTypes" not in info_plist:
+        errors.append("app Info.plist must register the today URL scheme for widget and deep link routing")
+    if "components.year = 2024" not in explore_view or "components.year = 2026" in explore_view:
+        errors.append("Explore date picker and suggestion labels must use a leap year so Feb 29 records remain reachable")
+    if "CFBundleShortVersionString" not in preferences_view or "v1.0" in preferences_view:
+        errors.append("Preferences version label must be derived from the app bundle version")
 
     if "addingTimeInterval(86_400)" in widget:
         errors.append("widget timeline refresh must use Calendar date arithmetic instead of a fixed 86,400 second interval")

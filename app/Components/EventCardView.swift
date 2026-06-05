@@ -147,6 +147,8 @@ struct EventCardView: View {
                 .font(.system(size: 10.5, weight: .semibold, design: .rounded))
                 .tracking(1.4)
                 .foregroundStyle(toneAccent)
+                .lineLimit(1)
+                .minimumScaleFactor(0.82)
         }
         .padding(.horizontal, 11)
         .padding(.vertical, 6)
@@ -234,43 +236,62 @@ struct EventCardView: View {
     }
 
     private var footerRow: some View {
-        HStack(spacing: 10) {
-            if let currentReaction {
-                Label(
-                    currentReaction == .thumbsUp ? "Kept" : "Passed",
-                    systemImage: currentReaction == .thumbsUp ? "hand.thumbsup.fill" : "hand.thumbsdown.fill"
-                )
-                    .font(.system(size: 12, weight: .semibold, design: .rounded))
-                    .foregroundStyle(currentReaction == .thumbsUp ? toneAccent : Color("TextTertiary"))
-            } else if let tag = event.primaryDisplayTag {
-                Text(tag)
-                    .font(.system(size: 12, weight: .medium, design: .rounded))
-                    .foregroundStyle(Color("TextTertiary"))
-                    .lineLimit(1)
+        ViewThatFits(in: .horizontal) {
+            HStack(spacing: 10) {
+                footerLeadingContent
+
+                Spacer()
+
+                readEntryPill
             }
 
-            Spacer()
-
-            HStack(spacing: 6) {
-                Text("Read entry")
-                    .font(.system(size: 12, weight: .semibold, design: .rounded))
-                    .foregroundStyle(toneAccent)
-
-                Image(systemName: "chevron.right")
-                    .font(.system(size: 10, weight: .semibold))
-                    .foregroundStyle(toneAccent)
+            VStack(alignment: .leading, spacing: 12) {
+                footerLeadingContent
+                readEntryPill
             }
-            .padding(.horizontal, 11)
-            .padding(.vertical, 6)
-            .background(
-                Capsule()
-                    .fill(toneAccent.opacity(0.10))
-            )
-            .overlay(
-                Capsule()
-                    .stroke(toneAccent.opacity(0.22), lineWidth: 0.5)
-            )
         }
+    }
+
+    @ViewBuilder
+    private var footerLeadingContent: some View {
+        if let currentReaction {
+            Label(
+                currentReaction == .thumbsUp ? "Kept" : "Passed",
+                systemImage: currentReaction == .thumbsUp ? "hand.thumbsup.fill" : "hand.thumbsdown.fill"
+            )
+                .font(.system(size: 12, weight: .semibold, design: .rounded))
+                .foregroundStyle(currentReaction == .thumbsUp ? toneAccent : Color("TextTertiary"))
+        } else if let tag = event.primaryDisplayTag {
+            Text(tag)
+                .font(.system(size: 12, weight: .medium, design: .rounded))
+                .foregroundStyle(Color("TextTertiary"))
+                .lineLimit(1)
+                .truncationMode(.tail)
+        }
+    }
+
+    private var readEntryPill: some View {
+        HStack(spacing: 6) {
+            Text("Read entry")
+                .font(.system(size: 12, weight: .semibold, design: .rounded))
+                .foregroundStyle(toneAccent)
+                .lineLimit(1)
+                .minimumScaleFactor(0.88)
+
+            Image(systemName: "chevron.right")
+                .font(.system(size: 10, weight: .semibold))
+                .foregroundStyle(toneAccent)
+        }
+        .padding(.horizontal, 11)
+        .padding(.vertical, 6)
+        .background(
+            Capsule()
+                .fill(toneAccent.opacity(0.10))
+        )
+        .overlay(
+            Capsule()
+                .stroke(toneAccent.opacity(0.22), lineWidth: 0.5)
+        )
     }
 }
 

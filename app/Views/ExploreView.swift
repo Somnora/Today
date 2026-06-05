@@ -117,25 +117,19 @@ struct ExploreView: View {
                 .foregroundStyle(Color("TextSecondary"))
                 .lineSpacing(4)
 
-            HStack(spacing: 12) {
-                selectorMenu(
-                    title: Calendar.current.monthSymbols[selectedMonth - 1],
-                    accessibilityLabel: "Choose month",
-                    options: Array(1...12),
-                    formatter: { Calendar.current.monthSymbols[$0 - 1] },
-                    selection: $selectedMonth
-                )
+            ViewThatFits(in: .horizontal) {
+                HStack(spacing: 12) {
+                    monthSelector
+                    daySelector
+                }
 
-                selectorMenu(
-                    title: "\(selectedDay)",
-                    accessibilityLabel: "Choose day",
-                    options: Array(1...daysInSelectedMonth),
-                    formatter: { "\($0)" },
-                    selection: $selectedDay
-                )
+                VStack(alignment: .leading, spacing: 12) {
+                    monthSelector
+                    daySelector
+                }
             }
 
-            Text("\(events.count) \(events.count == 1 ? "piece" : "pieces") for this date")
+            Text(resultCountLabel)
                 .font(.system(size: 13, weight: .medium, design: .rounded))
                 .foregroundStyle(Color("TextSecondary"))
         }
@@ -205,79 +199,24 @@ struct ExploreView: View {
 
     private var resultsSection: some View {
         Group {
-            if events.isEmpty {
-                VStack(spacing: 16) {
-                    HStack(spacing: 8) {
-                        Rectangle()
-                            .fill(Color("AccentWarm").opacity(0.30))
-                            .frame(width: 24, height: 0.6)
-                        Image(systemName: "diamond.fill")
-                            .font(.system(size: 4))
-                            .foregroundStyle(Color("AccentWarm").opacity(0.55))
-                        Rectangle()
-                            .fill(Color("AccentWarm").opacity(0.30))
-                            .frame(width: 24, height: 0.6)
+            if dataStore.isLoading {
+                loadingState
+            } else if let loadIssue = dataStore.loadIssue, dataStore.allEvents.isEmpty {
+                collectionNotice(loadIssue)
+            } else if events.isEmpty {
+                LazyVStack(spacing: 18) {
+                    if let loadIssue = dataStore.loadIssue {
+                        collectionNotice(loadIssue)
                     }
 
-                    ZStack {
-                        Circle()
-                            .fill(Color("AccentWarm").opacity(0.08))
-                            .frame(width: 64, height: 64)
-
-                        Image(systemName: "calendar.badge.exclamationmark")
-                            .font(.system(size: 28, weight: .light))
-                            .foregroundStyle(Color("AccentWarm"))
-                    }
-
-                    VStack(spacing: 6) {
-                        Text("Nothing surfaced here yet")
-                            .font(.system(size: 17, weight: .semibold, design: .serif))
-                            .foregroundStyle(Color("TextPrimary"))
-
-                        Text("Try another date, or let the category rail breathe a little wider.")
-                            .font(.system(size: 14, weight: .regular, design: .serif))
-                            .foregroundStyle(Color("TextSecondary"))
-                            .multilineTextAlignment(.center)
-                            .lineSpacing(3)
-                    }
-
-                    if !suggestedDates.isEmpty {
-                        HStack(spacing: 8) {
-                            ForEach(suggestedDates) { suggestion in
-                                Button(suggestion.shortLabel) {
-                                    selectedMonth = suggestion.month
-                                    selectedDay = suggestion.day
-                                    selectedCategory = nil
-                                }
-                                .accessibilityLabel("Jump to \(suggestion.shortLabel)")
-                                .font(.system(size: 12, weight: .semibold, design: .rounded))
-                                .foregroundStyle(Color("AccentWarm"))
-                                .padding(.horizontal, 11)
-                                .padding(.vertical, 7)
-                                .background(Color("AccentWarm").opacity(0.10), in: Capsule())
-                                .overlay(
-                                    Capsule()
-                                        .stroke(Color("AccentWarm").opacity(0.22), lineWidth: 0.5)
-                                )
-                            }
-                        }
-                        .padding(.top, 6)
-                    }
+                    emptyResultsState
                 }
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 44)
-                .padding(.horizontal, 24)
-                .background(
-                    RoundedRectangle(cornerRadius: 24, style: .continuous)
-                        .fill(Color("CardBackground"))
-                )
-                .overlay(
-                    RoundedRectangle(cornerRadius: 24, style: .continuous)
-                        .strokeBorder(Color("AccentWarm").opacity(0.14), lineWidth: 0.6)
-                )
-                .shadow(color: Color("AccentWarm").opacity(0.08), radius: 14, x: 0, y: 6)
             } else {
                 LazyVStack(spacing: 18) {
+                    if let loadIssue = dataStore.loadIssue {
+                        collectionNotice(loadIssue)
+                    }
+
                     ForEach(events) { event in
                         NavigationLink(value: event) {
                             EventCardView(event: event)
@@ -287,6 +226,169 @@ struct ExploreView: View {
                 }
             }
         }
+    }
+
+    private var emptyResultsState: some View {
+        VStack(spacing: 16) {
+            HStack(spacing: 8) {
+                Rectangle()
+                    .fill(Color("AccentWarm").opacity(0.30))
+                    .frame(width: 24, height: 0.6)
+                Image(systemName: "diamond.fill")
+                    .font(.system(size: 4))
+                    .foregroundStyle(Color("AccentWarm").opacity(0.55))
+                Rectangle()
+                    .fill(Color("AccentWarm").opacity(0.30))
+                    .frame(width: 24, height: 0.6)
+            }
+
+            ZStack {
+                Circle()
+                    .fill(Color("AccentWarm").opacity(0.08))
+                    .frame(width: 64, height: 64)
+
+                Image(systemName: "calendar.badge.exclamationmark")
+                    .font(.system(size: 28, weight: .light))
+                    .foregroundStyle(Color("AccentWarm"))
+            }
+
+            VStack(spacing: 6) {
+                Text("Nothing surfaced here yet")
+                    .font(.system(size: 17, weight: .semibold, design: .serif))
+                    .foregroundStyle(Color("TextPrimary"))
+
+                Text("Try another date, or let the category rail breathe a little wider.")
+                    .font(.system(size: 14, weight: .regular, design: .serif))
+                    .foregroundStyle(Color("TextSecondary"))
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(3)
+            }
+
+            if !suggestedDates.isEmpty {
+                ViewThatFits(in: .horizontal) {
+                    HStack(spacing: 8) {
+                        ForEach(suggestedDates) { suggestion in
+                            suggestionDateButton(suggestion)
+                        }
+                    }
+
+                    VStack(spacing: 8) {
+                        ForEach(suggestedDates) { suggestion in
+                            suggestionDateButton(suggestion)
+                        }
+                    }
+                }
+                .padding(.top, 6)
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 44)
+        .padding(.horizontal, 24)
+        .background(
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
+                .fill(Color("CardBackground"))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
+                .strokeBorder(Color("AccentWarm").opacity(0.14), lineWidth: 0.6)
+        )
+        .shadow(color: Color("AccentWarm").opacity(0.08), radius: 14, x: 0, y: 6)
+    }
+
+    private var resultCountLabel: String {
+        if dataStore.isLoading {
+            return "Opening the archive"
+        }
+
+        return "\(events.count) \(events.count == 1 ? "piece" : "pieces") for this date"
+    }
+
+    private var loadingState: some View {
+        VStack(spacing: 16) {
+            ProgressView()
+                .tint(Color("AccentWarm"))
+                .scaleEffect(0.9)
+
+            VStack(spacing: 6) {
+                Text("Opening the archive")
+                    .font(.system(size: 17, weight: .semibold, design: .serif))
+                    .foregroundStyle(Color("TextPrimary"))
+
+                Text("The date index is coming into view.")
+                    .font(.system(size: 14, weight: .regular, design: .serif))
+                    .italic()
+                    .foregroundStyle(Color("TextSecondary"))
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 44)
+        .padding(.horizontal, 24)
+        .background(Color("CardBackground"), in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
+                .strokeBorder(Color("AccentWarm").opacity(0.14), lineWidth: 0.6)
+        )
+        .shadow(color: Color("AccentWarm").opacity(0.08), radius: 14, x: 0, y: 6)
+    }
+
+    private func collectionNotice(_ issue: EventLoadIssue) -> some View {
+        HStack(alignment: .top, spacing: 12) {
+            Image(systemName: "exclamationmark.triangle")
+                .font(.system(size: 18, weight: .semibold))
+                .foregroundStyle(Color("AccentWarm"))
+
+            Text(issue.localizedDescription)
+                .font(.system(size: 14, weight: .regular, design: .serif))
+                .foregroundStyle(Color("TextSecondary"))
+                .lineSpacing(3)
+
+            Spacer(minLength: 0)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(16)
+        .background(Color("CardBackground"), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .stroke(Color("AccentWarm").opacity(0.12), lineWidth: 1)
+        )
+    }
+
+    private var monthSelector: some View {
+        selectorMenu(
+            title: Calendar.current.monthSymbols[selectedMonth - 1],
+            accessibilityLabel: "Choose month",
+            options: Array(1...12),
+            formatter: { Calendar.current.monthSymbols[$0 - 1] },
+            selection: $selectedMonth
+        )
+    }
+
+    private var daySelector: some View {
+        selectorMenu(
+            title: "\(selectedDay)",
+            accessibilityLabel: "Choose day",
+            options: Array(1...daysInSelectedMonth),
+            formatter: { "\($0)" },
+            selection: $selectedDay
+        )
+    }
+
+    private func suggestionDateButton(_ suggestion: DateSuggestion) -> some View {
+        Button(suggestion.shortLabel) {
+            selectedMonth = suggestion.month
+            selectedDay = suggestion.day
+            selectedCategory = nil
+        }
+        .accessibilityLabel("Jump to \(suggestion.shortLabel)")
+        .font(.system(size: 12, weight: .semibold, design: .rounded))
+        .foregroundStyle(Color("AccentWarm"))
+        .padding(.horizontal, 11)
+        .padding(.vertical, 7)
+        .background(Color("AccentWarm").opacity(0.10), in: Capsule())
+        .overlay(
+            Capsule()
+                .stroke(Color("AccentWarm").opacity(0.22), lineWidth: 0.5)
+        )
     }
 
     private func selectorMenu(title: String, accessibilityLabel: String, options: [Int], formatter: @escaping (Int) -> String, selection: Binding<Int>) -> some View {
@@ -366,7 +468,7 @@ struct ExploreView: View {
 
     private var daysInSelectedMonth: Int {
         var components = DateComponents()
-        components.year = Calendar.current.component(.year, from: Date())
+        components.year = 2024
         components.month = selectedMonth
         components.day = 1
 
@@ -399,7 +501,7 @@ private struct DateSuggestion: Hashable, Identifiable {
         formatter.dateFormat = "MMM d"
 
         var components = DateComponents()
-        components.year = 2026
+        components.year = 2024
         components.month = month
         components.day = day
 

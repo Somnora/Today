@@ -3,6 +3,7 @@ import SwiftUI
 struct PreferencesView: View {
     @EnvironmentObject var preferences: UserPreferences
     @EnvironmentObject var dataStore: DataStore
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     private var metrics: ReadingMetrics {
         ReadingMetrics(density: preferences.currentReadingDensity)
@@ -76,15 +77,7 @@ struct PreferencesView: View {
             sectionLabel("Reading Tone")
 
             VStack(alignment: .leading, spacing: 14) {
-                Picker("Mode", selection: Binding(
-                    get: { preferences.currentTonePreference },
-                    set: { preferences.currentTonePreference = $0 }
-                )) {
-                    ForEach(TonePreference.allCases, id: \.self) { tone in
-                        Text(tone.rawValue).tag(tone)
-                    }
-                }
-                .pickerStyle(.segmented)
+                tonePicker
 
                 Text(footerText)
                     .font(.system(size: 13, weight: .regular, design: .serif))
@@ -103,15 +96,7 @@ struct PreferencesView: View {
             sectionLabel("Reading Size")
 
             VStack(alignment: .leading, spacing: 14) {
-                Picker("Reading Size", selection: Binding(
-                    get: { preferences.currentReadingDensity },
-                    set: { preferences.currentReadingDensity = $0 }
-                )) {
-                    ForEach(ReadingDensity.allCases) { density in
-                        Text(density.rawValue).tag(density)
-                    }
-                }
-                .pickerStyle(.segmented)
+                densityPicker
 
                 Text(densityFooterText)
                     .font(.system(size: 13, weight: .regular, design: .serif))
@@ -171,7 +156,7 @@ struct PreferencesView: View {
                     .fill(Color("AccentWarm").opacity(0.18))
                     .frame(height: 0.5)
 
-                Text("Made with care · v1.0")
+                Text("Made with care · v\(appVersion)")
                     .font(.system(size: 12, weight: .medium, design: .rounded))
                     .tracking(1.2)
                     .foregroundStyle(Color("TextTertiary"))
@@ -209,12 +194,60 @@ struct PreferencesView: View {
         .shadow(color: Color("AccentWarm").opacity(0.10), radius: 16, x: 0, y: 8)
     }
 
+    @ViewBuilder
+    private var tonePicker: some View {
+        if dynamicTypeSize.isAccessibilitySize {
+            tonePickerControl
+                .pickerStyle(.inline)
+        } else {
+            tonePickerControl
+                .pickerStyle(.segmented)
+        }
+    }
+
+    private var tonePickerControl: some View {
+        Picker("Mode", selection: Binding(
+            get: { preferences.currentTonePreference },
+            set: { preferences.currentTonePreference = $0 }
+        )) {
+            ForEach(TonePreference.allCases, id: \.self) { tone in
+                Text(tone.rawValue).tag(tone)
+            }
+        }
+    }
+
+    @ViewBuilder
+    private var densityPicker: some View {
+        if dynamicTypeSize.isAccessibilitySize {
+            densityPickerControl
+                .pickerStyle(.inline)
+        } else {
+            densityPickerControl
+                .pickerStyle(.segmented)
+        }
+    }
+
+    private var densityPickerControl: some View {
+        Picker("Reading Size", selection: Binding(
+            get: { preferences.currentReadingDensity },
+            set: { preferences.currentReadingDensity = $0 }
+        )) {
+            ForEach(ReadingDensity.allCases) { density in
+                Text(density.rawValue).tag(density)
+            }
+        }
+    }
+
     private func sectionLabel(_ text: String) -> some View {
         Text(text.uppercased())
             .font(.system(size: 11, weight: .semibold, design: .rounded))
             .tracking(1.4)
             .foregroundStyle(Color("TextTertiary"))
             .padding(.leading, 4)
+    }
+
+    private var appVersion: String {
+        Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.1"
     }
 
     private var footerText: String {

@@ -151,11 +151,14 @@ struct TodayWidgetEntryView: View {
                 .foregroundStyle(.primary)
                 .lineLimit(widgetMetrics.smallTitleLineLimit)
                 .lineSpacing(widgetMetrics.smallTitleLineSpacing)
+                .minimumScaleFactor(0.82)
 
             Text(event.category.displayName.uppercased())
                 .font(.system(size: widgetMetrics.smallMetaSize - 1, weight: .semibold, design: .rounded))
                 .tracking(1.2)
                 .foregroundStyle(.secondary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.82)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         .padding(widgetMetrics.smallPadding)
@@ -169,24 +172,30 @@ struct TodayWidgetEntryView: View {
                     .tracking(1.2)
                     .foregroundStyle(.secondary)
                     .labelStyle(.titleAndIcon)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.82)
 
                 Spacer()
 
                 Text(event.yearLabel)
                     .font(.system(size: widgetMetrics.mediumMetaSize, weight: .semibold, design: .serif))
                     .foregroundStyle(.primary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.82)
             }
 
             Text(event.title)
                 .font(.system(size: widgetMetrics.mediumTitleSize, weight: .semibold, design: .serif))
                 .foregroundStyle(.primary)
                 .lineLimit(2)
+                .minimumScaleFactor(0.86)
 
             Text(event.summary)
                 .font(.system(size: widgetMetrics.mediumSummarySize, weight: .regular, design: .serif))
                 .foregroundStyle(.secondary)
                 .lineLimit(widgetMetrics.mediumSummaryLineLimit)
                 .lineSpacing(widgetMetrics.mediumSummaryLineSpacing)
+                .minimumScaleFactor(0.90)
 
             Spacer(minLength: 0)
 
@@ -199,6 +208,8 @@ struct TodayWidgetEntryView: View {
                     .font(.system(size: widgetMetrics.mediumDateSize - 1, weight: .semibold, design: .rounded))
                     .tracking(1.2)
                     .foregroundStyle(.secondary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.82)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
