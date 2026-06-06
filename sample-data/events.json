@@ -14678,27 +14678,28 @@
     "month": 1,
     "day": 2,
     "year": 2022,
-    "title": "Kazakhstan Protests Over LPG Price Hike",
-    "one_liner": "Nationwide protests erupt in Kazakhstan due to a sudden increase in liquefied petroleum gas prices, resulting in 238 deaths and thousands injured",
-    "description": "Massive nationwide protests and unrest break out in Kazakhstan over the sudden increase of liquefied petroleum gas prices, leading to 238 people dead and thousands injured by January 11",
-    "short_summary": "Nationwide protests erupt in Kazakhstan due to a sudden increase in liquefied petroleum gas prices, resulting in 238 deaths and thousands injured",
-    "summary": "Massive nationwide protests and unrest break out in Kazakhstan over the sudden increase of liquefied petroleum gas prices, leading to 238 people dead and thousands injured by January 11. This event highlights the social and political impact of economic policies and the potential for civil unrest in response to sudden price changes",
-    "detail": "Massive nationwide protests and unrest break out in Kazakhstan over the sudden increase of liquefied petroleum gas prices, leading to 238 people dead and thousands injured by January 11. This event highlights the social and political impact of economic policies and the potential for civil unrest in response to sudden price changes",
-    "deep_dive": "Massive nationwide protests and unrest break out in Kazakhstan over the sudden increase of liquefied petroleum gas prices, leading to 238 people dead and thousands injured by January 11. This event highlights the social and political impact of economic policies and the potential for civil unrest in response to sudden price changes",
-    "why_it_matters": "This event highlights the social and political impact of economic policies and the potential for civil unrest in response to sudden price changes.",
+    "title": "Kazakhstan LPG Price Protests Begin",
+    "one_liner": "Fuel-price protests in Zhanaozen began the unrest that soon spread across Kazakhstan.",
+    "description": "Protests over higher fuel prices began in Zhanaozen and quickly spread across Kazakhstan.",
+    "short_summary": "Fuel-price protests in Zhanaozen began the unrest that soon spread across Kazakhstan.",
+    "summary": "On January 2, 2022, hundreds of people in Zhanaozen began protesting higher fuel prices. The unrest quickly spread across Kazakhstan, and later official reporting counted 238 deaths and 5,149 injuries during the January events.",
+    "detail": "The first protests centered on liquefied petroleum gas prices in western Kazakhstan. Within days, the unrest had expanded into a national crisis over prices, inequality, political power, and the state response.",
+    "deep_dive": "The unrest became Kazakhstan's most serious post-independence crisis. It exposed anger over living costs and inequality while prompting a major security crackdown.",
+    "why_it_matters": "The protests opened a national crisis over cost of living, political power, and state violence in Kazakhstan.",
     "category": "politics",
     "tags": [
       "politics",
-      "general_history"
+      "protests",
+      "kazakhstan",
+      "central_asia"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/01/02",
-      "https://en.wikipedia.org/wiki/2022_Kazakh_unrest",
-      "https://en.wikipedia.org/wiki/Kazakhstan"
+      "https://www.hrw.org/world-report/2023/country-chapters/kazakhstan",
+      "https://astanatimes.com/2023/01/january-events-on-video-prosecutor-generals-office-releases-documentary-with-chronology-of-events-that-shook-kazakhstan/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-01-02.json;event_id=99ef6dbc1fd277d7;cluster_id=b6bb109663a2;model_id=today-qwen3-14b;rank_score=0.573565;interesting_score=0.574193;stream=interesting-history; date=2022-01-02",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=best_next_queue_pass2_2026_06_06; date=2022-01-02; prior_source_lineage=legacy_remote_feed; confirmed_non_wiki_sources=hrw.org,astanatimes.com; reviewed_utc=2026-06-06T07:12:00Z",
+    "source_confidence": 0.96,
     "editorial_status": "ready"
   },
   {
@@ -16304,27 +16305,29 @@
     "month": 1,
     "day": 17,
     "year": 2013,
-    "title": "Shahzad Luqman Murdered by Golden Dawn",
-    "one_liner": "Shahzad Luqman is murdered by members of Golden Dawn in Athens, prompting new measures against race-based attacks",
-    "description": "Shahzad Luqman is murdered by members of Golden Dawn in Petralona, Athens, leading the creation of new measures to combat race-based attacks in Greece",
-    "short_summary": "Shahzad Luqman is murdered by members of Golden Dawn in Athens, prompting new measures against race-based attacks",
-    "summary": "Shahzad Luqman is murdered by members of Golden Dawn in Petralona, Athens, leading the creation of new measures to combat race-based attacks in Greece. This incident highlighted the rise of far-right violence and spurred policy changes to combat racial discrimination in Greece",
-    "detail": "Shahzad Luqman is murdered by members of Golden Dawn in Petralona, Athens, leading the creation of new measures to combat race-based attacks in Greece. This incident highlighted the rise of far-right violence and spurred policy changes to combat racial discrimination in Greece",
-    "deep_dive": "Shahzad Luqman is murdered by members of Golden Dawn in Petralona, Athens, leading the creation of new measures to combat race-based attacks in Greece. This incident highlighted the rise of far-right violence and spurred policy changes to combat racial discrimination in Greece",
-    "why_it_matters": "This incident highlighted the rise of far-right violence and spurred policy changes to combat racial discrimination in Greece.",
+    "title": "Shehzad Luqman Murdered in Athens",
+    "one_liner": "Shehzad Luqman was murdered in Athens in a racist attack later tied to Greece's reckoning with Golden Dawn violence.",
+    "description": "Shehzad Luqman, a Pakistani worker, was murdered in Petralona, Athens.",
+    "short_summary": "Shehzad Luqman was murdered in Athens in a racist attack later tied to Greece's reckoning with Golden Dawn violence.",
+    "summary": "On January 17, 2013, Shehzad Luqman, a 27-year-old Pakistani worker, was murdered in Petralona, Athens. A court later recognized racist motive in the case, and Golden Dawn-linked evidence placed the killing inside Greece's broader confrontation with far-right violence.",
+    "detail": "Luqman was cycling to work when he was killed. The case became a landmark racist-motive murder tied to public scrutiny of Golden Dawn-linked violence in Greece.",
+    "deep_dive": "The murder became a landmark in documenting racist violence in Greece. It drew attention to far-right networks and to the legal recognition of hate as a motive in violent crime.",
+    "why_it_matters": "The case became a landmark in public and legal scrutiny of racist violence in Greece.",
     "category": "politics",
     "tags": [
-      "sports",
-      "general_history"
+      "politics",
+      "civil_rights",
+      "greece",
+      "hate_crime"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/01/17",
-      "https://en.wikipedia.org/wiki/Murder_of_Shahzad_Luqman",
-      "https://en.wikipedia.org/wiki/Golden_Dawn_(Greece)"
+      "https://rvrn.org/en/the-recognition-of-racist-motive-in-the-case-of-shehzad-luqmans-murder/",
+      "https://rvrn.org/el/the-murder-of-shehzad-luqman-was-a-hate-crime/",
+      "https://goldendawnwatch.org/media/ypothesi-sachzat-loykman-to-kinitro-itan-ratsistiko/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-01-17.json;event_id=d65805ffdafc57b8;cluster_id=9519483b6b5f;model_id=today-qwen3-14b;rank_score=0.563981;interesting_score=0.565827;stream=interesting-history; date=2013-01-17",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=best_next_queue_pass2_2026_06_06; date=2013-01-17; prior_source_lineage=legacy_remote_feed; confirmed_non_wiki_sources=rvrn.org,rvrn.org,goldendawnwatch.org; reviewed_utc=2026-06-06T07:12:00Z",
+    "source_confidence": 0.95,
     "editorial_status": "ready"
   },
   {
@@ -17412,27 +17415,28 @@
     "month": 1,
     "day": 27,
     "year": 2023,
-    "title": "Protests and public outrage spark across the U.S",
-    "one_liner": "Protests erupt nationwide after videos show Memphis officers assaulting Tyre Nichols during a traffic stop, leading to his death",
-    "description": "Protests and public outrage spark across the U.S. after the release of multiple videos by the Memphis Police Department showing officers punching, kicking, and pepper spraying Tyre Nichols as a result of running away from a traffic stop, which resulted him dying in the hospital three days later after the incident",
-    "short_summary": "Protests erupt nationwide after videos show Memphis officers assaulting Tyre Nichols during a traffic stop, leading to his death",
-    "summary": "Protests and public outrage spark across the U.S. after the release of multiple videos by the Memphis Police Department showing officers punching, kicking, and pepper spraying Tyre Nichols as a result of running away from a traffic stop, which resulted him dying in the hospital three days later after the incident. The incident highlights ongoing issues of police brutality and racial injustice in the U.S",
-    "detail": "Protests and public outrage spark across the U.S. after the release of multiple videos by the Memphis Police Department showing officers punching, kicking, and pepper spraying Tyre Nichols as a result of running away from a traffic stop, which resulted him dying in the hospital three days later after the incident. The incident highlights ongoing issues of police brutality and racial injustice in the U.S",
-    "deep_dive": "Protests and public outrage spark across the U.S. after the release of multiple videos by the Memphis Police Department showing officers punching, kicking, and pepper spraying Tyre Nichols as a result of running away from a traffic stop, which resulted him dying in the hospital three days later after the incident. The incident highlights ongoing issues of police brutality and racial injustice in the U.S",
-    "why_it_matters": "The incident highlights ongoing issues of police brutality and racial injustice in the U.S.",
+    "title": "Memphis Releases Tyre Nichols Videos",
+    "one_liner": "Memphis released videos of the police encounter that led to Tyre Nichols's death, prompting outrage and protests.",
+    "description": "Memphis released body-camera and surveillance footage from the police encounter involving Tyre Nichols.",
+    "short_summary": "Memphis released videos of the police encounter that led to Tyre Nichols's death, prompting outrage and protests.",
+    "summary": "On January 27, 2023, Memphis released body-camera and surveillance footage of the January 7 traffic stop and police assault involving Tyre Nichols. Nichols died three days after the encounter, and the video release intensified national scrutiny of police violence and accountability.",
+    "detail": "The release showed the police encounter and assault that led to Nichols's death. Public reaction focused on accountability, civil-rights enforcement, and the use of specialized police units.",
+    "deep_dive": "The video release renewed national demands for police accountability, civil-rights enforcement, and changes to specialized police units. It also became part of a broader debate over how cities respond when police violence is documented publicly.",
+    "why_it_matters": "The release renewed national demands for police accountability and civil-rights enforcement.",
     "category": "politics",
     "tags": [
       "politics",
-      "general_history"
+      "civil_rights",
+      "police_accountability",
+      "protests"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/01/27",
-      "https://en.wikipedia.org/wiki/Tyre_Nichols_protests",
-      "https://en.wikipedia.org/wiki/Memphis_Police_Department"
+      "https://www.cnn.com/2023/01/27/us/tyre-nichols-memphis-friday/index.html",
+      "https://apnews.com/article/tyre-nichols-death-memphis-police-d454f2a10b22e2672ac24c50b04d27b0"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-01-27.json;event_id=f4c602878fdc3a37;cluster_id=8576485685c9;model_id=today-qwen3-14b;rank_score=0.567992;interesting_score=0.590154;stream=interesting-history; date=2023-01-27",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=best_next_queue_pass2_2026_06_06; date=2023-01-27; prior_source_lineage=legacy_remote_feed; confirmed_non_wiki_sources=cnn.com,apnews.com; reviewed_utc=2026-06-06T07:12:00Z",
+    "source_confidence": 0.96,
     "editorial_status": "ready"
   },
   {
@@ -20971,27 +20975,29 @@
     "month": 4,
     "day": 28,
     "year": 2004,
-    "title": "CBS News releases evidence of Abu Ghraib torture and prisoner abuse",
-    "one_liner": "CBS News releases evidence of the Abu Ghraib torture and prisoner abuse, showing rape and abuse by American troops over Iraqi detainees",
-    "description": "CBS News releases evidence of the Abu Ghraib torture and prisoner abuse. The photographs show rape and abuse from the American troops over Iraqi detainees",
-    "short_summary": "CBS News releases evidence of the Abu Ghraib torture and prisoner abuse, showing rape and abuse by American troops over Iraqi detainees",
-    "summary": "CBS News releases evidence of the Abu Ghraib torture and prisoner abuse. The photographs show rape and abuse from the American troops over Iraqi detainees. This event exposed serious human rights violations and led to significant scrutiny of U.S. military practices during the Iraq War",
-    "detail": "CBS News releases evidence of the Abu Ghraib torture and prisoner abuse. The photographs show rape and abuse from the American troops over Iraqi detainees. This event exposed serious human rights violations and led to significant scrutiny of U.S. military practices during the Iraq War",
-    "deep_dive": "CBS News releases evidence of the Abu Ghraib torture and prisoner abuse. The photographs show rape and abuse from the American troops over Iraqi detainees. This event exposed serious human rights violations and led to significant scrutiny of U.S. military practices during the Iraq War",
-    "why_it_matters": "This event exposed serious human rights violations and led to significant scrutiny of U.S. military practices during the Iraq War.",
+    "title": "CBS Airs Abu Ghraib Abuse Photos",
+    "one_liner": "CBS broadcast images and reporting that brought Abu Ghraib prisoner abuse to public attention.",
+    "description": "CBS 60 Minutes II aired a report showing photographs of prisoner abuse at Abu Ghraib prison.",
+    "short_summary": "CBS broadcast images and reporting that brought Abu Ghraib prisoner abuse to public attention.",
+    "summary": "On April 28, 2004, CBS 60 Minutes II aired a report showing photographs of U.S. soldiers abusing and humiliating Iraqi prisoners at Abu Ghraib. The broadcast brought prisoner-abuse evidence into public view and triggered wider scrutiny of U.S. detention practices.",
+    "detail": "CBS reported that photographs had surfaced showing American soldiers abusing and humiliating Iraqis held near Baghdad. The broadcast turned military investigative evidence into a public scandal.",
+    "deep_dive": "The Abu Ghraib broadcast intensified scrutiny of U.S. detention practices, command responsibility, and accountability during the Iraq War. Its impact came from making already documented abuse visible to the public.",
+    "why_it_matters": "The broadcast intensified scrutiny of U.S. detention practices and military accountability during the Iraq War.",
     "category": "politics",
     "tags": [
       "politics",
-      "general_history"
+      "human_rights",
+      "iraq_war",
+      "military_accountability"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/04/28",
-      "https://en.wikipedia.org/wiki/CBS_News",
-      "https://en.wikipedia.org/wiki/Abu_Ghraib_torture_and_prisoner_abuse"
+      "https://apnews.com/9c7c04a55d07275d3848faacdd12d752",
+      "https://www.cbsnews.com/news/abuse-of-iraqi-pows-by-gis-probed/",
+      "https://peabodyawards.com/award-profile/60-minutes-ii-abuse-at-abu-ghraib/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-04-28.json;event_id=71efd4f1b3e02a4c;cluster_id=08da0d385bae;model_id=today-qwen3-14b;rank_score=0.554051;interesting_score=0.577188;stream=interesting-history; date=2004-04-28",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=best_next_queue_pass2_2026_06_06; date=2004-04-28; prior_source_lineage=legacy_remote_feed; confirmed_non_wiki_sources=apnews.com,cbsnews.com,peabodyawards.com; reviewed_utc=2026-06-06T07:12:00Z",
+    "source_confidence": 0.96,
     "editorial_status": "ready"
   },
   {
@@ -22438,27 +22444,28 @@
     "month": 7,
     "day": 14,
     "year": 1933,
-    "title": "Nazi Eugenics Programme Begins",
-    "one_liner": "The Nazi eugenics program starts with the Law for the Prevention of Hereditarily Diseased Offspring, requiring compulsory sterilization of citizens with alleged genetic disorders",
-    "description": "Nazi eugenics programme begins with the proclamation of the Law for the Prevention of Hereditarily Diseased Offspring requiring the compulsory sterilization of any citizen who suffers from alleged genetic disorders",
-    "short_summary": "The Nazi eugenics program starts with the Law for the Prevention of Hereditarily Diseased Offspring, requiring compulsory sterilization of citizens with alleged genetic disorders",
-    "summary": "Nazi eugenics programme begins with the proclamation of the Law for the Prevention of Hereditarily Diseased Offspring requiring the compulsory sterilization of any citizen who suffers from alleged genetic disorders. This law laid the foundation for the systematic persecution of individuals deemed genetically inferior, reflecting the regime's racist ideology",
-    "detail": "Nazi eugenics programme begins with the proclamation of the Law for the Prevention of Hereditarily Diseased Offspring requiring the compulsory sterilization of any citizen who suffers from alleged genetic disorders. This law laid the foundation for the systematic persecution of individuals deemed genetically inferior, reflecting the regime's racist ideology",
-    "deep_dive": "Nazi eugenics programme begins with the proclamation of the Law for the Prevention of Hereditarily Diseased Offspring requiring the compulsory sterilization of any citizen who suffers from alleged genetic disorders. This law laid the foundation for the systematic persecution of individuals deemed genetically inferior, reflecting the regime's racist ideology",
-    "why_it_matters": "This law laid the foundation for the systematic persecution of individuals deemed genetically inferior, reflecting the regime's racist ideology.",
+    "title": "Nazi Forced Sterilization Law Enacted",
+    "one_liner": "Nazi Germany enacted a eugenics law mandating forced sterilization for people labeled hereditarily ill.",
+    "description": "Nazi Germany enacted the Law for the Prevention of Offspring with Hereditary Diseases.",
+    "short_summary": "Nazi Germany enacted a eugenics law mandating forced sterilization for people labeled hereditarily ill.",
+    "summary": "On July 14, 1933, Nazi Germany enacted the Law for the Prevention of Offspring with Hereditary Diseases. The law created the legal basis for compulsory sterilization and came into effect on January 1, 1934.",
+    "detail": "The law authorized sterilization for listed conditions and allowed force to be used. It became an early legal tool of Nazi racial hygiene policy.",
+    "deep_dive": "The law enabled mass state violence against disabled people and others labeled medically or socially undesirable. It marked one of the early legal steps in the Nazi regime's broader campaign of racial hygiene.",
+    "why_it_matters": "The law gave Nazi racial hygiene policy a legal tool for forced sterilization and state violence.",
     "category": "politics",
     "tags": [
-      "history",
-      "general_history"
+      "politics",
+      "human_rights",
+      "nazi_germany",
+      "medical_ethics"
     ],
-    "tone": "balanced",
+    "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/07/14",
-      "https://en.wikipedia.org/wiki/Nazi_eugenics",
-      "https://en.wikipedia.org/wiki/Law_for_the_Prevention_of_Hereditarily_Diseased_Offspring"
+      "https://encyclopedia.ushmm.org/content/en/article/the-biological-state-nazi-racial-hygiene-1933-1939",
+      "https://germanhistorydocs.org/en/nazi-germany-1933-1945/ghdi:document-1521"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-07-14.json;event_id=c7762fe0b59343aa;cluster_id=6619296ac7b5;model_id=today-qwen3-14b;rank_score=0.565085;interesting_score=0.575552;stream=interesting-history; date=1933-07-14",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=best_next_queue_pass2_2026_06_06; date=1933-07-14; prior_source_lineage=legacy_remote_feed; confirmed_non_wiki_sources=encyclopedia.ushmm.org,germanhistorydocs.org; reviewed_utc=2026-06-06T07:12:00Z",
+    "source_confidence": 0.97,
     "editorial_status": "ready"
   },
   {
@@ -22466,27 +22473,28 @@
     "month": 7,
     "day": 14,
     "year": 1957,
-    "title": "Rawya Ateya becomes first female Arab parliamentarian",
-    "one_liner": "Rawya Ateya becomes the first female parliamentarian in the Arab world by taking her seat in Egypt's National Assembly",
-    "description": "Rawya Ateya takes her seat in the National Assembly of Egypt, thereby becoming the first female parliamentarian in the Arab world",
-    "short_summary": "Rawya Ateya becomes the first female parliamentarian in the Arab world by taking her seat in Egypt's National Assembly",
-    "summary": "Rawya Ateya takes her seat in the National Assembly of Egypt, thereby becoming the first female parliamentarian in the Arab world. This was a significant step for women's political representation in the Arab world",
-    "detail": "Rawya Ateya takes her seat in the National Assembly of Egypt, thereby becoming the first female parliamentarian in the Arab world. This was a significant step for women's political representation in the Arab world",
-    "deep_dive": "Rawya Ateya takes her seat in the National Assembly of Egypt, thereby becoming the first female parliamentarian in the Arab world. This was a significant step for women's political representation in the Arab world",
-    "why_it_matters": "This was a significant step for women's political representation in the Arab world.",
+    "title": "Rawya Ateya Enters Egypt's National Assembly",
+    "one_liner": "Rawya Ateya entered Egypt's National Assembly, a breakthrough for women's parliamentary representation in the Arab world.",
+    "description": "Rawya Ateya became the first woman to enter Egypt's parliament.",
+    "short_summary": "Rawya Ateya entered Egypt's National Assembly, a breakthrough for women's parliamentary representation in the Arab world.",
+    "summary": "On July 14, 1957, Rawya Ateya became the first woman to enter Egypt's parliament. Her election followed Egypt's expansion of women's political rights and is widely cited as the first female parliamentary breakthrough in the Arab world.",
+    "detail": "Ateya's seat in the National Assembly came shortly after Egyptian women gained the right to vote and stand for office. Her presence turned newly recognized political rights into parliamentary representation.",
+    "deep_dive": "The milestone matters because representation became visible inside a national legislature, not just in reform language. Ateya turned newly recognized political rights into parliamentary presence.",
+    "why_it_matters": "Ateya's seat marked a landmark in women's political representation in Egypt and the Arab world.",
     "category": "politics",
     "tags": [
       "politics",
-      "oddities_curiosities"
+      "women_leaders",
+      "egypt",
+      "representation"
     ],
     "tone": "uplifting",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/07/14",
-      "https://en.wikipedia.org/wiki/Rawya_Ateya",
-      "https://en.wikipedia.org/wiki/Parliament_of_Egypt"
+      "https://web.archive.org/web/20110716172803/http://www.alraimedia.com/alrai/Article.aspx?id=152068",
+      "https://egyptianstreets.com/2020/10/16/heres-the-story-of-rawya-ateya-first-woman-parliamentarian-in-the-arab-world/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-07-14.json;event_id=47491fe4b78d9849;cluster_id=d0198193ee09;model_id=today-qwen3-14b;rank_score=0.691212;interesting_score=0.644834;stream=interesting-history; date=1957-07-14",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=best_next_queue_pass2_2026_06_06; date=1957-07-14; prior_source_lineage=legacy_remote_feed; confirmed_non_wiki_sources=web.archive.org,egyptianstreets.com; reviewed_utc=2026-06-06T07:12:00Z",
+    "source_confidence": 0.93,
     "editorial_status": "ready"
   },
   {
@@ -23618,27 +23626,29 @@
     "month": 7,
     "day": 25,
     "year": 1978,
-    "title": "First IVF Baby Born",
-    "one_liner": "Louise Joy Brown is born as the first human conceived via in vitro fertilization",
-    "description": "Birth of Louise Joy Brown, the first human to have been born after conception by in vitro fertilisation, or IVF",
-    "short_summary": "Louise Joy Brown is born as the first human conceived via in vitro fertilization",
-    "summary": "Birth of Louise Joy Brown, the first human to have been born after conception by in vitro fertilisation, or IVF. This groundbreaking event revolutionized reproductive medicine and family planning",
-    "detail": "Birth of Louise Joy Brown, the first human to have been born after conception by in vitro fertilisation, or IVF. This groundbreaking event revolutionized reproductive medicine and family planning",
-    "deep_dive": "Birth of Louise Joy Brown, the first human to have been born after conception by in vitro fertilisation, or IVF. This groundbreaking event revolutionized reproductive medicine and family planning",
-    "why_it_matters": "This groundbreaking event revolutionized reproductive medicine and family planning.",
-    "category": "politics",
+    "title": "Louise Brown, First IVF Baby, Is Born",
+    "one_liner": "Louise Joy Brown was born, becoming the first baby conceived through in vitro fertilization.",
+    "description": "Louise Joy Brown was born after being conceived through in vitro fertilization.",
+    "short_summary": "Louise Joy Brown was born, becoming the first baby conceived through in vitro fertilization.",
+    "summary": "On July 25, 1978, Louise Joy Brown was born, becoming the world's first child conceived through in vitro fertilization. Her birth showed that IVF could produce a healthy human birth and transformed reproductive medicine.",
+    "detail": "Louise Brown's birth was the result of years of work by Robert Edwards, Patrick Steptoe, and colleagues. It became a defining milestone in reproductive medicine.",
+    "deep_dive": "IVF became one of the major reproductive-medicine breakthroughs of the 20th century. The birth proved the method could work in humans and opened a path for infertility treatment worldwide.",
+    "why_it_matters": "The birth proved IVF could work in humans and opened a major path for infertility treatment worldwide.",
+    "category": "science",
     "tags": [
-      "politics",
-      "oddities_curiosities"
+      "science",
+      "medicine",
+      "reproductive_medicine",
+      "human_progress"
     ],
     "tone": "uplifting",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/07/25",
-      "https://en.wikipedia.org/wiki/Louise_Brown",
-      "https://en.wikipedia.org/wiki/In_vitro_fertilisation"
+      "https://www.nobelprize.org/prizes/medicine/2010/advanced-information/",
+      "https://www.sciencemuseum.org.uk/about-us/press-office/science-museum-celebrates-40-years-ivf-new-exhibition",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6416702/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-07-25.json;event_id=5adc78c2b028fc14;cluster_id=887c7e6afc9a;model_id=today-qwen3-14b;rank_score=0.70411;interesting_score=0.568793;stream=interesting-history; date=1978-07-25",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=best_next_queue_pass2_2026_06_06; date=1978-07-25; prior_source_lineage=legacy_remote_feed; confirmed_non_wiki_sources=nobelprize.org,sciencemuseum.org.uk,pmc.ncbi.nlm.nih.gov; reviewed_utc=2026-06-06T07:12:00Z",
+    "source_confidence": 0.97,
     "editorial_status": "ready"
   },
   {
@@ -23958,27 +23968,29 @@
     "month": 7,
     "day": 28,
     "year": 1917,
-    "title": "The Silent Parade in New York City",
-    "one_liner": "The Silent Parade takes place in New York City as part of the anti-lynching movement, protesting violence against African Americans",
-    "description": "Anti-lynching movement: The Silent Parade takes place in New York City, in protest against murders, lynchings, and other violence directed towards African Americans",
-    "short_summary": "The Silent Parade takes place in New York City as part of the anti-lynching movement, protesting violence against African Americans",
-    "summary": "Anti-lynching movement: The Silent Parade takes place in New York City, in protest against murders, lynchings, and other violence directed towards African Americans. This event was a pivotal moment in the fight against racial violence and helped raise awareness for civil rights",
-    "detail": "Anti-lynching movement: The Silent Parade takes place in New York City, in protest against murders, lynchings, and other violence directed towards African Americans. This event was a pivotal moment in the fight against racial violence and helped raise awareness for civil rights",
-    "deep_dive": "Anti-lynching movement: The Silent Parade takes place in New York City, in protest against murders, lynchings, and other violence directed towards African Americans. This event was a pivotal moment in the fight against racial violence and helped raise awareness for civil rights",
-    "why_it_matters": "This event was a pivotal moment in the fight against racial violence and helped raise awareness for civil rights.",
+    "title": "Silent Parade Protests Anti-Black Violence",
+    "one_liner": "Thousands marched silently down Fifth Avenue to protest racial violence against Black Americans.",
+    "description": "The NAACP Silent Protest Parade took place on Fifth Avenue in New York City.",
+    "short_summary": "Thousands marched silently down Fifth Avenue to protest racial violence against Black Americans.",
+    "summary": "On July 28, 1917, an estimated 10,000 African Americans marched silently down Fifth Avenue in New York City. Organized by the NAACP and community leaders, the protest responded to the East St. Louis massacre, lynchings, and racial discrimination.",
+    "detail": "The Silent Parade used discipline and public presence to protest anti-Black violence. Marchers carried banners condemning racist violence and demanding justice at a moment when lynchings and mob attacks were drawing national attention.",
+    "deep_dive": "The parade became a landmark early civil rights demonstration. Its silence was not passive; it was a deliberate public indictment of racial terror and government inaction.",
+    "why_it_matters": "The parade became a landmark early civil rights demonstration against lynching and anti-Black violence.",
     "category": "politics",
     "tags": [
       "politics",
-      "general_history"
+      "civil_rights",
+      "anti_lynching",
+      "new_york_city"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/07/28",
-      "https://en.wikipedia.org/wiki/Anti-lynching_movement",
-      "https://en.wikipedia.org/wiki/Silent_Parade"
+      "https://beinecke.library.yale.edu/1917NAACPSilentProtestParade",
+      "https://www.zinnedproject.org/news/tdih/silent-march-nyc-naacp/",
+      "https://aaregistry.org/story/the-east-saint-louis-race-riot-occurs/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-07-28.json;event_id=f235895da5a976f7;cluster_id=924a77cd9766;model_id=today-qwen3-14b;rank_score=0.57117;interesting_score=0.583033;stream=interesting-history; date=1917-07-28",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=best_next_queue_pass2_2026_06_06; date=1917-07-28; prior_source_lineage=legacy_remote_feed; confirmed_non_wiki_sources=beinecke.library.yale.edu,zinnedproject.org,aaregistry.org; reviewed_utc=2026-06-06T07:12:00Z",
+    "source_confidence": 0.96,
     "editorial_status": "ready"
   },
   {
@@ -26921,27 +26933,28 @@
     "month": 8,
     "day": 25,
     "year": 1948,
-    "title": "First Televised Congressional Hearing: \"Confrontation Day\"",
-    "one_liner": "The House Un-American Activities Committee holds the first televised congressional hearing between Whittaker Chambers and Alger Hiss",
-    "description": "The House Un-American Activities Committee holds first-ever televised congressional hearing: \"Confrontation Day\" between Whittaker Chambers and Alger Hiss",
-    "short_summary": "The House Un-American Activities Committee holds the first televised congressional hearing between Whittaker Chambers and Alger Hiss",
-    "summary": "The House Un-American Activities Committee holds first-ever televised congressional hearing: \"Confrontation Day\" between Whittaker Chambers and Alger Hiss. This marked a pivotal moment in media and politics, bringing government proceedings into the public eye for the first time",
-    "detail": "The House Un-American Activities Committee holds first-ever televised congressional hearing: \"Confrontation Day\" between Whittaker Chambers and Alger Hiss. This marked a pivotal moment in media and politics, bringing government proceedings into the public eye for the first time",
-    "deep_dive": "The House Un-American Activities Committee holds first-ever televised congressional hearing: \"Confrontation Day\" between Whittaker Chambers and Alger Hiss. This marked a pivotal moment in media and politics, bringing government proceedings into the public eye for the first time",
-    "why_it_matters": "This marked a pivotal moment in media and politics, bringing government proceedings into the public eye for the first time.",
+    "title": "Hiss and Chambers Face HUAC",
+    "one_liner": "Alger Hiss and Whittaker Chambers confronted each other in a public House Un-American Activities Committee hearing.",
+    "description": "Alger Hiss and Whittaker Chambers faced each other before HUAC.",
+    "short_summary": "Alger Hiss and Whittaker Chambers confronted each other in a public House Un-American Activities Committee hearing.",
+    "summary": "On August 25, 1948, Alger Hiss and Whittaker Chambers faced each other in a public House Un-American Activities Committee hearing. The confrontation became a major early Cold War political moment.",
+    "detail": "The U.S. House identifies the August 25 hearing as the day Hiss and Chambers faced each other before HUAC. Their confrontation pushed the Hiss-Chambers case deeper into national politics and public attention.",
+    "deep_dive": "The hearing became a defining early Cold War congressional-investigation moment. It pulled the Hiss-Chambers case into national politics and media attention.",
+    "why_it_matters": "The hearing helped turn the Hiss-Chambers case into a defining early Cold War political confrontation.",
     "category": "politics",
     "tags": [
-      "strange",
-      "oddities_curiosities"
+      "politics",
+      "cold_war",
+      "congress",
+      "investigations"
     ],
-    "tone": "uplifting",
+    "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/25",
-      "https://en.wikipedia.org/wiki/House_Un-American_Activities_Committee",
-      "https://en.wikipedia.org/wiki/Whittaker_Chambers"
+      "https://history.house.gov/HistoricalHighlight/Detail/35392",
+      "https://history.house.gov/Exhibitions-and-Publications/Electronic-Technology/Television/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-25.json;event_id=32aae1cd904b6558;cluster_id=f98304969621;model_id=today-qwen3-14b;rank_score=0.710669;interesting_score=0.577236;stream=interesting-history; date=1948-08-25",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=best_next_queue_pass2_2026_06_06; date=1948-08-25; prior_source_lineage=legacy_remote_feed; confirmed_non_wiki_sources=history.house.gov,history.house.gov; reviewed_utc=2026-06-06T07:12:00Z",
+    "source_confidence": 0.95,
     "editorial_status": "ready"
   },
   {
@@ -32476,27 +32489,28 @@
     "month": 10,
     "day": 24,
     "year": 1950,
-    "title": "Annexation of Tibet by the People's Republic of China",
-    "one_liner": "The People's Liberation Army ceases all military operations in Tibet, ending the Battle of Chamdo",
-    "description": "Annexation of Tibet by the People's Republic of China: The People's Liberation Army ceases all military operations in Tibet, ending the Battle of Chamdo",
-    "short_summary": "The People's Liberation Army ceases all military operations in Tibet, ending the Battle of Chamdo",
-    "summary": "Annexation of Tibet by the People's Republic of China: The People's Liberation Army ceases all military operations in Tibet, ending the Battle of Chamdo. This marked a significant shift in geopolitical control over Tibet and had lasting implications for regional stability and international relations",
-    "detail": "Annexation of Tibet by the People's Republic of China: The People's Liberation Army ceases all military operations in Tibet, ending the Battle of Chamdo. This marked a significant shift in geopolitical control over Tibet and had lasting implications for regional stability and international relations",
-    "deep_dive": "Annexation of Tibet by the People's Republic of China: The People's Liberation Army ceases all military operations in Tibet, ending the Battle of Chamdo. This marked a significant shift in geopolitical control over Tibet and had lasting implications for regional stability and international relations",
-    "why_it_matters": "This marked a significant shift in geopolitical control over Tibet and had lasting implications for regional stability and international relations.",
-    "category": "politics",
+    "title": "Peking Announces PLA Advance Into Tibet",
+    "one_liner": "Radio Peking announced that Chinese forces had been ordered to advance into Tibet after the capture of Chamdo.",
+    "description": "Radio Peking announced that Chinese forces had been ordered to advance into Tibet.",
+    "short_summary": "Radio Peking announced that Chinese forces had been ordered to advance into Tibet after the capture of Chamdo.",
+    "summary": "On October 24, 1950, Radio Peking announced that Chinese forces had been ordered to advance into Tibet. The announcement followed the entry of Chinese forces into Tibet and the capture of Chamdo earlier that month.",
+    "detail": "The International Commission of Jurists chronology gives October 7 for Chinese forces entering Tibet, October 19 for Chamdo being captured, and October 24 for the public announcement from Peking that forces had been ordered to advance into Tibet.",
+    "deep_dive": "The advance into Tibet led to international protests, negotiations, and the 1951 Seventeen Point Agreement. It shaped Tibet's modern political status and PRC rule there.",
+    "why_it_matters": "The announcement marked a public escalation in the military and diplomatic crisis over Tibet.",
+    "category": "world",
     "tags": [
-      "arts",
-      "civil_rights_progress"
+      "world",
+      "china",
+      "tibet",
+      "military_history"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/10/24",
-      "https://en.wikipedia.org/wiki/People's_Republic_of_China_annexation_of_Tibet",
-      "https://en.wikipedia.org/wiki/People's_Liberation_Army"
+      "https://www.icj.org/resource/the-question-of-tibet-and-the-rule-of-law/",
+      "https://www.icj.org/wp-content/uploads/1959/01/Tibet-rule-of-law-report-1959-eng.pdf"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-10-24.json;event_id=6c269182a850b542;cluster_id=1396e3a7c51a;model_id=today-qwen3-14b;rank_score=0.71603;interesting_score=0.574244;stream=interesting-history; date=1950-10-24",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=best_next_queue_pass2_2026_06_06; date=1950-10-24; prior_source_lineage=legacy_remote_feed; confirmed_non_wiki_sources=icj.org,icj.org; reviewed_utc=2026-06-06T07:12:00Z",
+    "source_confidence": 0.95,
     "editorial_status": "ready"
   },
   {
@@ -38437,27 +38451,29 @@
     "month": 12,
     "day": 18,
     "year": 2006,
-    "title": "United Arab Emirates holds first-ever elections",
-    "one_liner": "The United Arab Emirates holds its first-ever elections",
-    "description": "United Arab Emirates holds its first-ever elections",
-    "short_summary": "The United Arab Emirates holds its first-ever elections",
-    "summary": "United Arab Emirates holds its first-ever elections. This event represents a significant step toward political reform and modernization in the UAE",
-    "detail": "United Arab Emirates holds its first-ever elections. This event represents a significant step toward political reform and modernization in the UAE",
-    "deep_dive": "United Arab Emirates holds its first-ever elections. This event represents a significant step toward political reform and modernization in the UAE",
-    "why_it_matters": "This event represents a significant step toward political reform and modernization in the UAE.",
+    "title": "Dubai and Ras Al Khaimah Vote in UAE's First FNC Elections",
+    "one_liner": "Dubai and Ras Al Khaimah completed a voting round in the UAE's first Federal National Council elections.",
+    "description": "The second round of UAE Federal National Council elections concluded in Dubai and Ras Al Khaimah.",
+    "short_summary": "Dubai and Ras Al Khaimah completed a voting round in the UAE's first Federal National Council elections.",
+    "summary": "On December 18, 2006, the second round of elections to select half of the UAE Federal National Council members concluded in Dubai and Ras Al Khaimah. The broader first FNC election ran from December 16 to 20 through electoral colleges.",
+    "detail": "The vote was part of the UAE's first limited Federal National Council elections. Official election history describes electoral-college voting for half the council seats.",
+    "deep_dive": "The 2006 FNC elections marked the UAE's first limited electoral process for its federal advisory council. The milestone was procedural and gradual, not universal popular suffrage.",
+    "why_it_matters": "The vote opened a limited path for electoral participation in the UAE's federal advisory council.",
     "category": "politics",
     "tags": [
       "politics",
-      "oddities_curiosities"
+      "uae",
+      "elections",
+      "governance"
     ],
-    "tone": "somber",
+    "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/12/18",
-      "https://en.wikipedia.org/wiki/United_Arab_Emirates",
-      "https://en.wikipedia.org/wiki/2006_Emirati_parliamentary_election"
+      "https://uaenec.ae/en/about-us/previous-fnc-elections/federal-national-council-elections-2006",
+      "http://archive.ipu.org/parline-e/reports/arc/2333_06.htm",
+      "https://www.zawya.com/en/business/dubai-rak-elections-results-announced-g1upaw0o"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-12-18.json;event_id=0c2d52684c20e0ad;cluster_id=a95e4589f9a7;model_id=today-qwen3-14b;rank_score=0.694752;interesting_score=0.631843;stream=interesting-history; date=2006-12-18",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=best_next_queue_pass2_2026_06_06; date=2006-12-18; prior_source_lineage=legacy_remote_feed; confirmed_non_wiki_sources=uaenec.ae,archive.ipu.org,zawya.com; reviewed_utc=2026-06-06T07:12:00Z",
+    "source_confidence": 0.96,
     "editorial_status": "ready"
   },
   {
@@ -38629,27 +38645,28 @@
     "month": 12,
     "day": 20,
     "year": 1968,
-    "title": "Zodiac Killer Murders First Victims",
-    "one_liner": "The Zodiac Killer kills David Arthur Faraday and Betty Lou Jensen on Lake Herman Road",
-    "description": "The Zodiac Killer murders his first two officially confirmed victims, David Arthur Faraday and Betty Lou Jensen, on Lake Herman Road in Benicia, California, United States",
-    "short_summary": "The Zodiac Killer kills David Arthur Faraday and Betty Lou Jensen on Lake Herman Road",
-    "summary": "The Zodiac Killer murders his first two officially confirmed victims, David Arthur Faraday and Betty Lou Jensen, on Lake Herman Road in Benicia, California, United States. Marks the beginning of a decades-long mystery and fear in California",
-    "detail": "The Zodiac Killer murders his first two officially confirmed victims, David Arthur Faraday and Betty Lou Jensen, on Lake Herman Road in Benicia, California, United States. Marks the beginning of a decades-long mystery and fear in California",
-    "deep_dive": "The Zodiac Killer murders his first two officially confirmed victims, David Arthur Faraday and Betty Lou Jensen, on Lake Herman Road in Benicia, California, United States. Marks the beginning of a decades-long mystery and fear in California",
-    "why_it_matters": "Marks the beginning of a decades-long mystery and fear in California.",
-    "category": "arts",
+    "title": "David Faraday and Betty Lou Jensen Are Killed",
+    "one_liner": "David Faraday and Betty Lou Jensen were shot to death on Lake Herman Road in the first confirmed Zodiac-linked attack.",
+    "description": "David Faraday and Betty Lou Jensen were killed on Lake Herman Road near Vallejo and Benicia.",
+    "short_summary": "David Faraday and Betty Lou Jensen were shot to death on Lake Herman Road in the first confirmed Zodiac-linked attack.",
+    "summary": "On December 20, 1968, teenagers David Faraday and Betty Lou Jensen were shot to death on Lake Herman Road in the Vallejo and Benicia area. The killings became the first confirmed attack attributed to the Zodiac case.",
+    "detail": "The case is remembered through its victims, date, and location. Faraday and Jensen were killed on Lake Herman Road, and the attack became the first confirmed Zodiac-linked killing.",
+    "deep_dive": "The killings became the first confirmed attack in the Zodiac case, an unsolved series that shaped Bay Area policing, media coverage, and public fear in the late 1960s.",
+    "why_it_matters": "The killings began the confirmed Zodiac case and shaped a lasting unsolved-crime investigation in Northern California.",
+    "category": "history",
     "tags": [
-      "strange",
-      "oddities_curiosities"
+      "history",
+      "crime_history",
+      "california",
+      "unsolved_case"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/12/20",
-      "https://en.wikipedia.org/wiki/Zodiac_Killer",
-      "https://en.wikipedia.org/wiki/Benicia%2C_California"
+      "https://www.sfgate.com/news/article/UNDYING-LEGEND-OF-A-KILLER-MYSTERY-He-taunted-2645447.php",
+      "https://www.history.com/articles/the-zodiac-killer-a-timeline"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-12-20.json;event_id=e4897ed7c0e2005f;cluster_id=82cbc0058a66;model_id=today-qwen3-14b;rank_score=0.713211;interesting_score=0.580378;stream=interesting-history; date=1968-12-20",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=best_next_queue_pass2_2026_06_06; date=1968-12-20; prior_source_lineage=legacy_remote_feed; confirmed_non_wiki_sources=sfgate.com,history.com; reviewed_utc=2026-06-06T07:12:00Z",
+    "source_confidence": 0.95,
     "editorial_status": "ready"
   },
   {
