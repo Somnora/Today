@@ -12799,27 +12799,28 @@
     "month": 2,
     "day": 13,
     "year": 2011,
-    "title": "Umatilla Tribe Restores Centuries-Old Bison Hunting Tradition",
-    "one_liner": "The Umatilla tribe hunts and harvests a bison, restoring a tradition guaranteed by a treaty signed in 1855",
-    "description": "For the first time in more than 100 years the Umatilla, an American Indian tribe, are able to hunt and harvest a bison just outside Yellowstone National Park, restoring a centuries-old tradition guaranteed by a treaty signed in 1855",
-    "short_summary": "The Umatilla tribe hunts and harvests a bison, restoring a tradition guaranteed by a treaty signed in 1855",
-    "summary": "For the first time in more than 100 years the Umatilla, an American Indian tribe, are able to hunt and harvest a bison just outside Yellowstone National Park, restoring a centuries-old tradition guaranteed by a treaty signed in 1855. This event symbolizes cultural restoration and the fulfillment of historical promises to Indigenous communities",
-    "detail": "For the first time in more than 100 years the Umatilla, an American Indian tribe, are able to hunt and harvest a bison just outside Yellowstone National Park, restoring a centuries-old tradition guaranteed by a treaty signed in 1855. This event symbolizes cultural restoration and the fulfillment of historical promises to Indigenous communities",
-    "deep_dive": "For the first time in more than 100 years the Umatilla, an American Indian tribe, are able to hunt and harvest a bison just outside Yellowstone National Park, restoring a centuries-old tradition guaranteed by a treaty signed in 1855. This event symbolizes cultural restoration and the fulfillment of historical promises to Indigenous communities",
-    "why_it_matters": "This event symbolizes cultural restoration and the fulfillment of historical promises to Indigenous communities.",
-    "category": "politics",
+    "title": "Umatilla Treaty Bison Hunt Restored",
+    "one_liner": "Jim Marsh of the Confederated Tribes of the Umatilla Indian Reservation harvested a bison near Gardiner, Montana, during a treaty-rights hunt described as the Umatillas' first in more than 100 years.",
+    "description": "Jim Marsh of the Confederated Tribes of the Umatilla Indian Reservation harvested a bison near Gardiner, Montana, during a treaty-rights hunt described as the Umatillas' first in more than 100 years.",
+    "short_summary": "A Umatilla hunter harvested a bison near Yellowstone as a treaty-rights hunting tradition returned after more than a century.",
+    "summary": "Jim Marsh of the Confederated Tribes of the Umatilla Indian Reservation harvested a bison near Gardiner, Montana, during a treaty-rights hunt described as the Umatillas' first in more than 100 years. The moment connected present-day cultural practice with rights reserved in an 1855 treaty.",
+    "detail": "Jim Marsh of the Confederated Tribes of the Umatilla Indian Reservation harvested a bison near Gardiner, Montana, during a treaty-rights hunt described as the Umatillas' first in more than 100 years. The moment connected present-day cultural practice with rights reserved in an 1855 treaty.",
+    "deep_dive": "An Associated Press photo caption placed Jim Marsh near Gardiner, Montana, on February 13, 2011, and described the hunt as the Umatillas' first bison hunt in more than 100 years. The restored hunt drew on treaty rights reserved in 1855 and carried cultural meaning beyond the single harvest.",
+    "why_it_matters": "The hunt showed treaty rights as living commitments, not only historical documents.",
+    "category": "culture",
     "tags": [
-      "politics",
-      "oddities_curiosities"
+      "culture",
+      "indigenous_history",
+      "treaty_rights",
+      "bison",
+      "umatilla"
     ],
     "tone": "uplifting",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/02/13",
-      "https://en.wikipedia.org/wiki/Confederated_Tribes_of_the_Umatilla_Indian_Reservation",
-      "https://en.wikipedia.org/wiki/Tribe_(Native_American)"
+      "https://www.alamy.com/jim-marsh-a-cayuse-indian-from-the-confederated-tribes-of-the-umatilla-indian-reservation-in-pendleton-ore-walks-away-from-a-bison-that-he-shot-and-killed-sunday-feb-13-2011-near-gardiner-mont-for-the-first-time-in-more-than-100-years-the-umatillas-are-able-to-hunt-bison-just-outside-yellowstone-national-park-restoring-a-centuries-old-tradition-guaranteed-by-a-treaty-signed-in-1855-ap-phototed-s-warren-image523861240.html"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-02-13.json;event_id=0d2c2f803ad400a9;cluster_id=ad39875a55f5;model_id=today-qwen3-14b;rank_score=0.711553;interesting_score=0.62792;stream=interesting-history; date=2011-02-13",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07; source_posture=external_source_repair; date=2011-02-13",
+    "source_confidence": 0.86,
     "editorial_status": "ready"
   },
   {
@@ -12880,28 +12881,30 @@
     "month": 2,
     "day": 14,
     "year": 1947,
-    "title": "Abolition of Noble Ranks in Hungary",
-    "one_liner": "The act abolishing all noble ranks and related styles comes into force in Hungary",
-    "description": "The act abolishing all noble ranks and related styles comes into force in Hungary",
-    "short_summary": "The act abolishing all noble ranks and related styles comes into force in Hungary",
-    "summary": "The act abolishing all noble ranks and related styles comes into force in Hungary. This act represented a major step toward social equality and the dismantling of aristocratic privileges",
-    "detail": "The act abolishing all noble ranks and related styles comes into force in Hungary. This act represented a major step toward social equality and the dismantling of aristocratic privileges",
-    "deep_dive": "The act abolishing all noble ranks and related styles comes into force in Hungary. This act represented a major step toward social equality and the dismantling of aristocratic privileges",
-    "why_it_matters": "This act represented a major step toward social equality and the dismantling of aristocratic privileges.",
+    "title": "Hungary Noble-Ranks Date Needs Review",
+    "one_liner": "Official Hungarian legal texts support Act IV of 1947 taking effect on January 14, 1947, not this February 14 record date.",
+    "description": "Official Hungarian legal texts support Act IV of 1947 taking effect on January 14, 1947, not this February 14 record date.",
+    "short_summary": "Hungary noble-ranks record held because official legal sources conflict with this calendar date.",
+    "summary": "Official Hungarian legal texts support Act IV of 1947 taking effect on January 14, 1947, abolishing noble and aristocratic ranks and certain titles. This February 14 record is hidden until the date can be corrected or separately sourced.",
+    "detail": "Official Hungarian legal texts support Act IV of 1947 taking effect on January 14, 1947, abolishing noble and aristocratic ranks and certain titles. This February 14 record is hidden until the date can be corrected or separately sourced.",
+    "deep_dive": "Hungary Act IV of 1947 abolished noble and aristocratic ranks and certain titles. The official legal record gives January 14, 1947 as the promulgation and effective date, so the current February 14 slot is not safe for the visible feed.",
+    "why_it_matters": "The hold prevents a legal-history milestone from shipping on a date the official law text does not support.",
     "category": "politics",
     "tags": [
       "politics",
-      "civil_rights_progress"
+      "hungary",
+      "legal_history",
+      "nobility",
+      "republicanism"
     ],
-    "tone": "somber",
+    "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/02/14",
-      "https://en.wikipedia.org/wiki/Statute_IV_of_1947_regarding_the_abolition_of_certain_titles_and_ranks",
-      "https://en.wikipedia.org/wiki/Hungarian_nobility"
+      "https://njt.hu/jogszabaly/1947-4-00-00",
+      "https://net.jogtar.hu/ezer-ev-torveny?docid=94700004.TV"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-02-14.json;event_id=0784c6b75731930e;cluster_id=958a48e2618f;model_id=today-qwen3-14b;rank_score=0.730957;interesting_score=0.568502;stream=interesting-history; date=1947-02-14",
-    "source_confidence": 0.9,
-    "editorial_status": "ready"
+    "provenance": "source_repair=today-ios-best-next-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07; source_posture=external_source_repair; date=1947-02-14",
+    "source_confidence": 0.48,
+    "editorial_status": "defer"
   },
   {
     "id": "february-14-2000-6dabd783312d57d9",
@@ -19876,27 +19879,29 @@
     "month": 4,
     "day": 19,
     "year": 2011,
-    "title": "Fidel Castro Resigns as Cuba's Communist Party Leader",
-    "one_liner": "Fidel Castro resigns as First Secretary of the Communist Party of Cuba after holding the title since July 1961",
-    "description": "Fidel Castro resigns as First Secretary of the Communist Party of Cuba after holding the title since July 1961",
-    "short_summary": "Fidel Castro resigns as First Secretary of the Communist Party of Cuba after holding the title since July 1961",
-    "summary": "Fidel Castro resigns as First Secretary of the Communist Party of Cuba after holding the title since July 1961. This event signifies a major political shift in Cuba's leadership and governance",
-    "detail": "Fidel Castro resigns as First Secretary of the Communist Party of Cuba after holding the title since July 1961. This event signifies a major political shift in Cuba's leadership and governance",
-    "deep_dive": "Fidel Castro resigns as First Secretary of the Communist Party of Cuba after holding the title since July 1961. This event signifies a major political shift in Cuba's leadership and governance",
-    "why_it_matters": "This event signifies a major political shift in Cuba's leadership and governance.",
+    "title": "Raul Castro Takes Cuba Party Leadership",
+    "one_liner": "Raul Castro was named First Secretary of Cuba's Communist Party, officially replacing Fidel Castro at the close of the party congress.",
+    "description": "Raul Castro was named First Secretary of Cuba's Communist Party, officially replacing Fidel Castro at the close of the party congress.",
+    "short_summary": "Raul Castro became First Secretary of Cuba's Communist Party, formally replacing Fidel Castro in the party post.",
+    "summary": "Raul Castro was named First Secretary of Cuba's Communist Party, officially replacing Fidel Castro at the close of the party congress. The handoff clarified a leadership transition that had already been unfolding in Cuban state power.",
+    "detail": "Raul Castro was named First Secretary of Cuba's Communist Party, officially replacing Fidel Castro at the close of the party congress. The handoff clarified a leadership transition that had already been unfolding in Cuban state power.",
+    "deep_dive": "Voice of America reported on April 19, 2011, that Raul Castro had been named First Secretary of Cuba's Communist Party during the Havana party congress. That wording is safer than saying Fidel resigned on that date, because separate reporting tied Fidel's resignation claim to an earlier illness-era transition.",
+    "why_it_matters": "The party post made Cuba’s leadership transition formal inside the ruling organization as well as the state.",
     "category": "politics",
     "tags": [
-      "history",
-      "oddities_curiosities"
+      "politics",
+      "cuba",
+      "fidel_castro",
+      "raul_castro",
+      "leadership_transition"
     ],
-    "tone": "uplifting",
+    "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/04/19",
-      "https://en.wikipedia.org/wiki/Fidel_Castro",
-      "https://en.wikipedia.org/wiki/First_Secretary_of_the_Communist_Party_of_Cuba"
+      "https://www.voanews.com/a/raul-castro-named-head-of-cubas-communist-party-120212899/164381.html",
+      "https://www.bbc.com/news/world-latin-america-12818651"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-04-19.json;event_id=0796a515d6590a97;cluster_id=342c1e0a27e3;model_id=today-qwen3-14b;rank_score=0.719529;interesting_score=0.593144;stream=interesting-history; date=2011-04-19",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07; source_posture=external_source_repair; date=2011-04-19",
+    "source_confidence": 0.88,
     "editorial_status": "ready"
   },
   {
@@ -22175,28 +22180,29 @@
     "month": 7,
     "day": 11,
     "year": 1941,
-    "title": "Northern Rhodesian Labour Party holds first congress",
-    "one_liner": "The Northern Rhodesian Labour Party holds its first congress in Nkana",
-    "description": "The Northern Rhodesian Labour Party holds its first congress in Nkana",
-    "short_summary": "The Northern Rhodesian Labour Party holds its first congress in Nkana",
-    "summary": "The Northern Rhodesian Labour Party holds its first congress in Nkana. An early step in political organization in what is now Zambia",
-    "detail": "The Northern Rhodesian Labour Party holds its first congress in Nkana. An early step in political organization in what is now Zambia",
-    "deep_dive": "The Northern Rhodesian Labour Party holds its first congress in Nkana. An early step in political organization in what is now Zambia",
-    "why_it_matters": "An early step in political organization in what is now Zambia.",
+    "title": "Northern Rhodesian Labour Congress Needs Review",
+    "one_liner": "A book snippet supports a party congress at Nkana on 11 July, but the available source trail is not strong enough for the full first-congress claim on this record.",
+    "description": "A book snippet supports a party congress at Nkana on 11 July, but the available source trail is not strong enough for the full first-congress claim on this record.",
+    "short_summary": "Northern Rhodesian Labour Party congress record held pending stronger exact-date source support.",
+    "summary": "A book snippet supports a Northern Rhodesian Labour Party congress at Nkana on 11 July, but the available source trail does not fully support the original first-congress wording with enough confidence. The record is hidden until a stronger source can be checked.",
+    "detail": "A book snippet supports a Northern Rhodesian Labour Party congress at Nkana on 11 July, but the available source trail does not fully support the original first-congress wording with enough confidence. The record is hidden until a stronger source can be checked.",
+    "deep_dive": "The available lead points to J. R. T. Wood describing a Rhodesia Labour Party congress at Nkana on 11 July, with a weaker derived source carrying the first-congress claim. That is not enough for a visible-feed repair of a colonial-politics record.",
+    "why_it_matters": "The hold avoids presenting a colonial political organizing claim before the exact source support is strong enough.",
     "category": "politics",
     "tags": [
-      "strange",
-      "oddities_curiosities"
+      "politics",
+      "northern_rhodesia",
+      "zambia",
+      "labor_history",
+      "colonial_politics"
     ],
-    "tone": "uplifting",
+    "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/07/11",
-      "https://en.wikipedia.org/wiki/Northern_Rhodesian_Labour_Party",
-      "https://en.wikipedia.org/wiki/Nkana"
+      "https://books.google.com/books?id=lzhzAAAAMAAJ"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-07-11.json;event_id=8941cd809075e011;cluster_id=1d8cf135ea93;model_id=today-qwen3-14b;rank_score=0.697082;interesting_score=0.633824;stream=interesting-history; date=1941-07-11",
-    "source_confidence": 0.9,
-    "editorial_status": "ready"
+    "provenance": "source_repair=today-ios-best-next-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07; source_posture=external_source_repair; date=1941-07-11",
+    "source_confidence": 0.4,
+    "editorial_status": "defer"
   },
   {
     "id": "july-12-2001-8d27166de1eb1265",
@@ -22926,27 +22932,29 @@
     "month": 7,
     "day": 19,
     "year": 1972,
-    "title": "British SAS in Battle of Mirbat",
-    "one_liner": "British SAS units assist the Omani government in the Battle of Mirbat during the Dhofar Rebellion",
-    "description": "Dhofar Rebellion: British SAS units help the Omani government against Popular Front for the Liberation of Oman rebels in the Battle of Mirbat",
-    "short_summary": "British SAS units assist the Omani government in the Battle of Mirbat during the Dhofar Rebellion",
-    "summary": "Dhofar Rebellion: British SAS units help the Omani government against Popular Front for the Liberation of Oman rebels in the Battle of Mirbat. This battle was a pivotal moment in the Dhofar Rebellion and demonstrated the effectiveness of SAS operations",
-    "detail": "Dhofar Rebellion: British SAS units help the Omani government against Popular Front for the Liberation of Oman rebels in the Battle of Mirbat. This battle was a pivotal moment in the Dhofar Rebellion and demonstrated the effectiveness of SAS operations",
-    "deep_dive": "Dhofar Rebellion: British SAS units help the Omani government against Popular Front for the Liberation of Oman rebels in the Battle of Mirbat. This battle was a pivotal moment in the Dhofar Rebellion and demonstrated the effectiveness of SAS operations",
-    "why_it_matters": "This battle was a pivotal moment in the Dhofar Rebellion and demonstrated the effectiveness of SAS operations.",
+    "title": "SAS Team Defends Mirbat in Oman",
+    "one_liner": "A nine-man British 22 SAS training team helped defend Mirbat during a rebel attack in Oman's Dhofar conflict.",
+    "description": "A nine-man British 22 SAS training team helped defend Mirbat during a rebel attack in Oman's Dhofar conflict.",
+    "short_summary": "A small British SAS team helped defend Mirbat during a rebel attack in Oman.",
+    "summary": "A nine-man British 22 SAS training team helped defend Mirbat during a rebel attack in Oman's Dhofar conflict. The event is remembered in British military history for the scale of the attack against a small defending team.",
+    "detail": "A nine-man British 22 SAS training team helped defend Mirbat during a rebel attack in Oman's Dhofar conflict. The event is remembered in British military history for the scale of the attack against a small defending team.",
+    "deep_dive": "The Imperial War Museums memorial record describes a nine-man British Army Training Team under Mike Kealy at Mirbat on July 19, 1972, coming under sustained attack by more than 250 fighters. The record is stronger when framed as a specific defense during the Dhofar conflict rather than a broad claim about the rebellion's outcome.",
+    "why_it_matters": "Mirbat shows how small foreign military teams could become pivotal on the ground inside Cold War-era regional conflicts.",
     "category": "politics",
     "tags": [
-      "arts",
-      "civil_rights_progress"
+      "politics",
+      "military_history",
+      "oman",
+      "dhofar_rebellion",
+      "special_air_service"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/07/19",
-      "https://en.wikipedia.org/wiki/Dhofar_rebellion",
-      "https://en.wikipedia.org/wiki/Special_Air_Service"
+      "https://memorials.iwm.org.uk/memorial/80550",
+      "http://britains-smallwars.com/campaigns/oman/page.php?art_url=battle-of-mirbat"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-07-19.json;event_id=719cc3017d5ea984;cluster_id=26b7dfbd2903;model_id=today-qwen3-14b;rank_score=0.726818;interesting_score=0.576005;stream=interesting-history; date=1972-07-19",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07; source_posture=external_source_repair; date=1972-07-19",
+    "source_confidence": 0.86,
     "editorial_status": "ready"
   },
   {
@@ -23568,27 +23576,29 @@
     "month": 7,
     "day": 25,
     "year": 1958,
-    "title": "African Regroupment Party Congress",
-    "one_liner": "The African Regroupment Party holds its first congress in Cotonou",
-    "description": "The African Regroupment Party holds its first congress in Cotonou",
-    "short_summary": "The African Regroupment Party holds its first congress in Cotonou",
-    "summary": "The African Regroupment Party holds its first congress in Cotonou. This event highlights political movements and regional unity in Africa",
-    "detail": "The African Regroupment Party holds its first congress in Cotonou. This event highlights political movements and regional unity in Africa",
-    "deep_dive": "The African Regroupment Party holds its first congress in Cotonou. This event highlights political movements and regional unity in Africa",
-    "why_it_matters": "This event highlights political movements and regional unity in Africa.",
+    "title": "African Regroupment Party Opens Congress",
+    "one_liner": "The African Regroupment Party opened its constitutive congress in Cotonou, Dahomey, during a key moment in African decolonization politics.",
+    "description": "The African Regroupment Party opened its constitutive congress in Cotonou, Dahomey, during a key moment in African decolonization politics.",
+    "short_summary": "The African Regroupment Party opened its constitutive congress in Cotonou.",
+    "summary": "The African Regroupment Party opened its constitutive congress in Cotonou, Dahomey, during a key moment in African decolonization politics. Contemporary coverage described the meeting as a first congress running from July 25 to 27.",
+    "detail": "The African Regroupment Party opened its constitutive congress in Cotonou, Dahomey, during a key moment in African decolonization politics. Contemporary coverage described the meeting as a first congress running from July 25 to 27.",
+    "deep_dive": "Le Monde reported that the Parti du Regroupement Africain was to hold its constitutive congress in Cotonou from July 25 to 27, 1958. Framing the event as the congress opening avoids overclaiming beyond the dated meeting window.",
+    "why_it_matters": "The congress captures African political regrouping as French West African territories moved toward new constitutional futures.",
     "category": "politics",
     "tags": [
-      "strange",
-      "oddities_curiosities"
+      "politics",
+      "pan_africanism",
+      "decolonization",
+      "benin",
+      "french_west_africa"
     ],
-    "tone": "uplifting",
+    "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/07/25",
-      "https://en.wikipedia.org/wiki/African_Regroupment_Party",
-      "https://en.wikipedia.org/wiki/Cotonou"
+      "https://www.lemonde.fr/archives/article/1958/07/24/le-parti-du-regroupement-africain-va-tenir-a-cotonou-son-premier-congres_2293469_1819218.html",
+      "https://www.onthisday.com/date/1958/july/25"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-07-25.json;event_id=f38df91707093c84;cluster_id=a231107b2819;model_id=today-qwen3-14b;rank_score=0.664663;interesting_score=0.610651;stream=interesting-history; date=1958-07-25",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07; source_posture=external_source_repair; date=1958-07-25",
+    "source_confidence": 0.76,
     "editorial_status": "ready"
   },
   {
@@ -24052,27 +24062,28 @@
     "month": 7,
     "day": 29,
     "year": 1973,
-    "title": "Greece abolishes its monarchy",
-    "one_liner": "Greeks vote to abolish the monarchy, marking the beginning of the Metapolitefsi era",
-    "description": "Greeks vote to abolish the monarchy, beginning the first period of the Metapolitefsi",
-    "short_summary": "Greeks vote to abolish the monarchy, marking the beginning of the Metapolitefsi era",
-    "summary": "Greeks vote to abolish the monarchy, beginning the first period of the Metapolitefsi. This event signifies a major political change in Greece, transitioning from monarchy to democracy",
-    "detail": "Greeks vote to abolish the monarchy, beginning the first period of the Metapolitefsi. This event signifies a major political change in Greece, transitioning from monarchy to democracy",
-    "deep_dive": "Greeks vote to abolish the monarchy, beginning the first period of the Metapolitefsi. This event signifies a major political change in Greece, transitioning from monarchy to democracy",
-    "why_it_matters": "This event signifies a major political change in Greece, transitioning from monarchy to democracy.",
+    "title": "Greek Referendum Confirms Junta Republic",
+    "one_liner": "A Greek junta-run referendum confirmed constitutional changes after the regime's June abolition of the monarchy and proclamation of a republic.",
+    "description": "A Greek junta-run referendum confirmed constitutional changes after the regime's June abolition of the monarchy and proclamation of a republic.",
+    "short_summary": "A junta-run Greek referendum confirmed the regime’s republic after its June abolition of the monarchy.",
+    "summary": "A Greek junta-run referendum confirmed constitutional changes after the regime's June abolition of the monarchy and proclamation of a republic. The result belonged to the military regime's controlled political order, not the later democratic transition.",
+    "detail": "A Greek junta-run referendum confirmed constitutional changes after the regime's June abolition of the monarchy and proclamation of a republic. The result belonged to the military regime's controlled political order, not the later democratic transition.",
+    "deep_dive": "U.S. diplomatic records described the July 29, 1973 plebiscite as confirming constitutional changes decreed after George Papadopoulos abolished the monarchy and proclaimed a republic on June 1. The safer framing separates this junta referendum from Greece’s later democratic restoration.",
+    "why_it_matters": "The referendum shows why exact political wording matters: the date confirmed a junta action, not a clean transition to democracy.",
     "category": "politics",
     "tags": [
       "politics",
-      "civil_rights_progress",
-      "oddities_curiosities"
+      "greece",
+      "referendum",
+      "monarchy",
+      "military_junta"
     ],
-    "tone": "uplifting",
+    "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/07/29",
-      "https://en.wikipedia.org/wiki/1973_Greek_republic_referendum",
-      "https://en.wikipedia.org/wiki/Metapolitefsi"
+      "https://history.state.gov/historicaldocuments/frus1969-76v30/d6",
+      "https://www.britannica.com/biography/Constantine-II-king-of-Greece"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-07-29.json;event_id=0eef51e94ebfd22e;cluster_id=72c1a5d0184d;model_id=today-qwen3-14b;rank_score=0.711972;interesting_score=0.588845;stream=interesting-history; date=1973-07-29",
+    "provenance": "source_repair=today-ios-best-next-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07; source_posture=external_source_repair; date=1973-07-29",
     "source_confidence": 0.9,
     "editorial_status": "ready"
   },
@@ -25200,27 +25211,29 @@
     "month": 8,
     "day": 9,
     "year": 1897,
-    "title": "First International Congress of Mathematicians held in Zürich",
-    "one_liner": "The first International Congress of Mathematicians is held in Zürich, Switzerland",
-    "description": "The first International Congress of Mathematicians is held in Zürich, Switzerland",
-    "short_summary": "The first International Congress of Mathematicians is held in Zürich, Switzerland",
-    "summary": "The first International Congress of Mathematicians is held in Zürich, Switzerland. This event established a foundation for international collaboration in mathematics",
-    "detail": "The first International Congress of Mathematicians is held in Zürich, Switzerland. This event established a foundation for international collaboration in mathematics",
-    "deep_dive": "The first International Congress of Mathematicians is held in Zürich, Switzerland. This event established a foundation for international collaboration in mathematics",
-    "why_it_matters": "This event established a foundation for international collaboration in mathematics.",
-    "category": "politics",
+    "title": "First Mathematicians Congress Opens",
+    "one_liner": "The first International Congress of Mathematicians opened in Zürich, bringing mathematicians from many countries into a recurring international forum.",
+    "description": "The first International Congress of Mathematicians opened in Zürich, bringing mathematicians from many countries into a recurring international forum.",
+    "short_summary": "The first International Congress of Mathematicians opened in Zürich.",
+    "summary": "The first International Congress of Mathematicians opened in Zürich, bringing mathematicians from many countries into a recurring international forum. Contemporary Nature coverage described the meeting across August 9, 10, and 11.",
+    "detail": "The first International Congress of Mathematicians opened in Zürich, bringing mathematicians from many countries into a recurring international forum. Contemporary Nature coverage described the meeting across August 9, 10, and 11.",
+    "deep_dive": "Nature reported that on August 9, 10, and 11, the first International Congress of Mathematicians met in Zürich. The International Mathematical Union proceedings index also identifies the 1897 Zürich congress and its August 9 to 11 dates.",
+    "why_it_matters": "The congress gave modern mathematics a recurring international stage for exchange, recognition, and shared direction.",
+    "category": "science",
     "tags": [
-      "strange",
-      "oddities_curiosities"
+      "science",
+      "mathematics",
+      "switzerland",
+      "international_collaboration",
+      "human_progress"
     ],
     "tone": "uplifting",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/09",
-      "https://en.wikipedia.org/wiki/International_Congress_of_Mathematicians",
-      "https://en.wikipedia.org/wiki/Zurich"
+      "https://www.nature.com/articles/056395a0",
+      "https://www.mathunion.org/icm/proceedings"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-09.json;event_id=e7f5d22d71efd9a5;cluster_id=68cedfbd6d44;model_id=today-qwen3-14b;rank_score=0.699611;interesting_score=0.576102;stream=interesting-history; date=1897-08-09",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07; source_posture=external_source_repair; date=1897-08-09",
+    "source_confidence": 0.94,
     "editorial_status": "ready"
   },
   {
@@ -26263,26 +26276,27 @@
     "month": 8,
     "day": 19,
     "year": 1989,
-    "title": "Tadeusz Mazowiecki Nominated as Prime Minister",
-    "one_liner": "Solidarity activist Tadeusz Mazowiecki is nominated as Poland's first non-communist prime minister in 42 years",
-    "description": "Polish president Wojciech Jaruzelski nominates Solidarity activist Tadeusz Mazowiecki to be the first non-communist prime minister in 42 years",
-    "short_summary": "Solidarity activist Tadeusz Mazowiecki is nominated as Poland's first non-communist prime minister in 42 years",
-    "summary": "Polish president Wojciech Jaruzelski nominates Solidarity activist Tadeusz Mazowiecki to be the first non-communist prime minister in 42 years. This marks a significant political shift in Poland and the beginning of democratic reforms",
-    "detail": "Polish president Wojciech Jaruzelski nominates Solidarity activist Tadeusz Mazowiecki to be the first non-communist prime minister in 42 years. This marks a significant political shift in Poland and the beginning of democratic reforms",
-    "deep_dive": "Polish president Wojciech Jaruzelski nominates Solidarity activist Tadeusz Mazowiecki to be the first non-communist prime minister in 42 years. This marks a significant political shift in Poland and the beginning of democratic reforms",
-    "why_it_matters": "This marks a significant political shift in Poland and the beginning of democratic reforms.",
+    "title": "Mazowiecki Nominated to Lead Poland",
+    "one_liner": "President Wojciech Jaruzelski nominated Tadeusz Mazowiecki as prime minister, setting up Poland's first non-communist government in the Eastern Bloc in more than 40 years.",
+    "description": "President Wojciech Jaruzelski nominated Tadeusz Mazowiecki as prime minister, setting up Poland's first non-communist government in the Eastern Bloc in more than 40 years.",
+    "short_summary": "Tadeusz Mazowiecki was nominated to form Poland's first non-communist East Bloc government in more than 40 years.",
+    "summary": "President Wojciech Jaruzelski nominated Tadeusz Mazowiecki as prime minister, setting up Poland's first non-communist government in the Eastern Bloc in more than 40 years. Parliament still had to consider the nomination, so the record is framed as a nomination rather than a completed appointment.",
+    "detail": "President Wojciech Jaruzelski nominated Tadeusz Mazowiecki as prime minister, setting up Poland's first non-communist government in the Eastern Bloc in more than 40 years. Parliament still had to consider the nomination, so the record is framed as a nomination rather than a completed appointment.",
+    "deep_dive": "UPI reported from Warsaw on August 19, 1989, that President Wojciech Jaruzelski nominated Solidarity editor Tadeusz Mazowiecki as prime minister and asked him to form a government. The source also notes that the Sejm would still meet to consider the nomination.",
+    "why_it_matters": "Mazowiecki’s nomination marked a visible crack in communist one-party rule across the Eastern Bloc.",
     "category": "politics",
     "tags": [
       "politics",
-      "oddities_curiosities"
+      "poland",
+      "solidarity",
+      "cold_war",
+      "democracy"
     ],
     "tone": "uplifting",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/19",
-      "https://en.wikipedia.org/wiki/Wojciech_Jaruzelski",
-      "https://en.wikipedia.org/wiki/Solidarity_(Polish_trade_union)"
+      "https://www.upi.com/Archives/1989/08/19/Jaruzelski-nominates-Mazowiecki-to-be-prime-minister/4805619502400/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-19.json;event_id=20f75a84772bb918;cluster_id=5d52352d3be9;model_id=today-qwen3-14b;rank_score=0.708335;interesting_score=0.60288;stream=interesting-history; date=1989-08-19",
+    "provenance": "source_repair=today-ios-best-next-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07; source_posture=external_source_repair; date=1989-08-19",
     "source_confidence": 0.9,
     "editorial_status": "ready"
   },
@@ -26600,26 +26614,28 @@
     "month": 8,
     "day": 22,
     "year": 1968,
-    "title": "Pope Paul VI Arrives in Bogotá, Colombia",
-    "one_liner": "Pope Paul VI arrives in Bogotá, Colombia, marking the first papal visit to Latin America",
-    "description": "Pope Paul VI arrives in Bogotá, Colombia. It is the first visit of a pope to Latin America",
-    "short_summary": "Pope Paul VI arrives in Bogotá, Colombia, marking the first papal visit to Latin America",
-    "summary": "Pope Paul VI arrives in Bogotá, Colombia. It is the first visit of a pope to Latin America. This event signifies a major milestone in religious and cultural history, showcasing the global reach of the Catholic Church",
-    "detail": "Pope Paul VI arrives in Bogotá, Colombia. It is the first visit of a pope to Latin America. This event signifies a major milestone in religious and cultural history, showcasing the global reach of the Catholic Church",
-    "deep_dive": "Pope Paul VI arrives in Bogotá, Colombia. It is the first visit of a pope to Latin America. This event signifies a major milestone in religious and cultural history, showcasing the global reach of the Catholic Church",
-    "why_it_matters": "This event signifies a major milestone in religious and cultural history, showcasing the global reach of the Catholic Church.",
-    "category": "politics",
+    "title": "Pope Paul VI Arrives in Bogotá",
+    "one_liner": "Pope Paul VI arrived in Bogotá to begin his 1968 apostolic journey to Colombia, the first papal visit to Latin America.",
+    "description": "Pope Paul VI arrived in Bogotá to begin his 1968 apostolic journey to Colombia, the first papal visit to Latin America.",
+    "short_summary": "Pope Paul VI arrived in Bogotá, beginning the first papal visit to Latin America.",
+    "summary": "Pope Paul VI arrived in Bogotá to begin his 1968 apostolic journey to Colombia, the first papal visit to Latin America. The trip placed the papacy directly inside Latin American social and religious debates of the era.",
+    "detail": "Pope Paul VI arrived in Bogotá to begin his 1968 apostolic journey to Colombia, the first papal visit to Latin America. The trip placed the papacy directly inside Latin American social and religious debates of the era.",
+    "deep_dive": "UPI reported on August 22, 1968, that Pope Paul VI arrived in Colombia, while the Vatican lists the Bogotá apostolic journey as August 22 to 25, 1968. Vatican News later described the visit as the first time a pope reached Latin America.",
+    "why_it_matters": "The arrival expanded the modern papacy’s global presence and brought Vatican attention to Latin America at a charged moment.",
+    "category": "culture",
     "tags": [
-      "politics",
-      "oddities_curiosities"
+      "culture",
+      "religion",
+      "vatican",
+      "latin_america",
+      "colombia"
     ],
     "tone": "uplifting",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/22",
-      "https://en.wikipedia.org/wiki/Pope_Paul_VI",
-      "https://en.wikipedia.org/wiki/Bogot%C3%A1"
+      "https://www.upi.com/Archives/1968/08/22/Pope-arrives-in-Colombia/9021534865125/",
+      "https://www.vatican.va/content/paul-vi/en/travels/documents/bogota.html"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-22.json;event_id=b6e9765709109b4c;cluster_id=fbc8f460caff;model_id=today-qwen3-14b;rank_score=0.694146;interesting_score=0.666083;stream=interesting-history; date=1968-08-22",
+    "provenance": "source_repair=today-ios-best-next-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07; source_posture=external_source_repair; date=1968-08-22",
     "source_confidence": 0.9,
     "editorial_status": "ready"
   },
@@ -33814,27 +33830,28 @@
     "month": 11,
     "day": 5,
     "year": 1986,
-    "title": "First U.S. naval visit to China since 1949",
-    "one_liner": "USS Rentz, USS Reeves and USS Oldendorf visit Qingdao, China; the first U.S. naval visit to China since 1949",
-    "description": "USS Rentz, USS Reeves and USS Oldendorf visit Qingdao, China; the first US naval visit to China since 1949",
-    "short_summary": "USS Rentz, USS Reeves and USS Oldendorf visit Qingdao, China; the first U.S. naval visit to China since 1949",
-    "summary": "USS Rentz, USS Reeves and USS Oldendorf visit Qingdao, China; the first US naval visit to China since 1949. This visit symbolized a thaw in U.S.-China relations and marked a significant moment in Cold War diplomacy",
-    "detail": "USS Rentz, USS Reeves and USS Oldendorf visit Qingdao, China; the first US naval visit to China since 1949. This visit symbolized a thaw in U.S.-China relations and marked a significant moment in Cold War diplomacy",
-    "deep_dive": "USS Rentz, USS Reeves and USS Oldendorf visit Qingdao, China; the first US naval visit to China since 1949. This visit symbolized a thaw in U.S.-China relations and marked a significant moment in Cold War diplomacy",
-    "why_it_matters": "This visit symbolized a thaw in U.S.-China relations and marked a significant moment in Cold War diplomacy.",
+    "title": "U.S. Warships Begin Qingdao Port Visit",
+    "one_liner": "USS Rentz, USS Reeves, and USS Oldendorf began a Qingdao port call described as the first official U.S. warship visit to the People's Republic of China since 1949.",
+    "description": "USS Rentz, USS Reeves, and USS Oldendorf began a Qingdao port call described as the first official U.S. warship visit to the People's Republic of China since 1949.",
+    "short_summary": "U.S. Navy ships began a Qingdao port call described as the first official U.S. warship visit to the People's Republic of China since 1949.",
+    "summary": "USS Rentz, USS Reeves, and USS Oldendorf began a Qingdao port call described as the first official U.S. warship visit to the People's Republic of China since 1949. The visit gave Cold War diplomacy a concrete naval milestone.",
+    "detail": "USS Rentz, USS Reeves, and USS Oldendorf began a Qingdao port call described as the first official U.S. warship visit to the People's Republic of China since 1949. The visit gave Cold War diplomacy a concrete naval milestone.",
+    "deep_dive": "On November 5, 1986, USS Rentz joined USS Reeves and USS Oldendorf for a port call at Qingdao. Naval-history coverage describes the visit as the first official U.S. warship port call to the People's Republic of China since 1949, a visible sign of thawing military and diplomatic contact.",
+    "why_it_matters": "The port call turned a cautious diplomatic thaw into a visible naval encounter between two Cold War powers.",
     "category": "politics",
     "tags": [
       "politics",
-      "oddities_curiosities"
+      "diplomacy",
+      "military_history",
+      "china",
+      "us_navy"
     ],
-    "tone": "somber",
+    "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/11/05",
-      "https://en.wikipedia.org/wiki/USS_Rentz",
-      "https://en.wikipedia.org/wiki/USS_Reeves_(DLG-24)"
+      "https://www.navysite.de/ffg/FFG46.HTM"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-11-05.json;event_id=65d4b741d93e4e1d;cluster_id=65c22108634e;model_id=today-qwen3-14b;rank_score=0.680803;interesting_score=0.645037;stream=interesting-history; date=1986-11-05",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07; source_posture=external_source_repair; date=1986-11-05",
+    "source_confidence": 0.82,
     "editorial_status": "ready"
   },
   {
@@ -39932,28 +39949,29 @@
     "month": 12,
     "day": 31,
     "year": 1983,
-    "title": "Benjamin Ward Appointed NYPD Commissioner",
-    "one_liner": "Benjamin Ward becomes the first African American police commissioner of the New York City Police Department",
-    "description": "Benjamin Ward is appointed New York City Police Department's first ever African American police commissioner",
-    "short_summary": "Benjamin Ward becomes the first African American police commissioner of the New York City Police Department",
-    "summary": "Benjamin Ward is appointed New York City Police Department's first ever African American police commissioner. This appointment represents a significant milestone in diversity and leadership within law enforcement",
-    "detail": "Benjamin Ward is appointed New York City Police Department's first ever African American police commissioner. This appointment represents a significant milestone in diversity and leadership within law enforcement",
-    "deep_dive": "Benjamin Ward is appointed New York City Police Department's first ever African American police commissioner. This appointment represents a significant milestone in diversity and leadership within law enforcement",
-    "why_it_matters": "This appointment represents a significant milestone in diversity and leadership within law enforcement.",
+    "title": "Benjamin Ward Appointment Date Needs Review",
+    "one_liner": "A source review supports Mayor Edward Koch naming Benjamin Ward on November 7, 1983, not this December 31 record date.",
+    "description": "A source review supports Mayor Edward Koch naming Benjamin Ward on November 7, 1983, not this December 31 record date.",
+    "short_summary": "Benjamin Ward appointment record held because the sourced appointment date conflicts with this calendar date.",
+    "summary": "A reputable newspaper archive supports Mayor Edward Koch naming Benjamin Ward as New York City police commissioner on November 7, 1983. This December 31 record is hidden until the date can be moved or separately sourced.",
+    "detail": "A reputable newspaper archive supports Mayor Edward Koch naming Benjamin Ward as New York City police commissioner on November 7, 1983. This December 31 record is hidden until the date can be moved or separately sourced.",
+    "deep_dive": "Source review found support for Benjamin Ward being named New York City police commissioner in November 1983, with no exact independent support for a December 31 appointment event. The item is held out of the visible feed rather than source-laundered.",
+    "why_it_matters": "Holding the record protects the feed from presenting a civil-rights and law-enforcement milestone on an unsupported date.",
     "category": "politics",
     "tags": [
       "politics",
-      "oddities_curiosities"
+      "law_enforcement",
+      "new_york_city",
+      "civil_rights",
+      "nypd"
     ],
-    "tone": "somber",
+    "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/12/31",
-      "https://en.wikipedia.org/wiki/Benjamin_Ward",
-      "https://en.wikipedia.org/wiki/New_York_City_Police_Department"
+      "https://www.washingtonpost.com/archive/national/1983/11/08/new-york-taps-black-for-top-police-post/f4c8c6f1-79f7-4834-a39d-7a58cff7af21/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-12-31.json;event_id=905a79487fb500d2;cluster_id=fada698337f2;model_id=today-qwen3-14b;rank_score=0.695951;interesting_score=0.66805;stream=interesting-history; date=1983-12-31",
-    "source_confidence": 0.9,
-    "editorial_status": "ready"
+    "provenance": "source_repair=today-ios-best-next-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07; source_posture=external_source_repair; date=1983-12-31",
+    "source_confidence": 0.42,
+    "editorial_status": "defer"
   },
   {
     "id": "app167-0501-1930-lowell-proposes-pluto-name",
