@@ -6620,28 +6620,29 @@
     "month": 6,
     "day": 15,
     "year": 1410,
-    "title": "Mongol Forces Decimated at Onon River",
-    "one_liner": "Chinese forces under the Yongle Emperor defeat Mongol forces at the Onon River",
-    "description": "In a decisive battle at Onon River, the Mongol forces of Oljei Temur were decimated by the Chinese armies of the Yongle Emperor",
-    "short_summary": "Chinese forces under the Yongle Emperor defeat Mongol forces at the Onon River",
-    "summary": "In a decisive battle at Onon River, the Mongol forces of Oljei Temur were decimated by the Chinese armies of the Yongle Emperor",
-    "detail": "In a decisive battle at Onon River, the Mongol forces of Oljei Temur were decimated by the Chinese armies of the Yongle Emperor",
-    "deep_dive": "In a decisive battle at Onon River, the Mongol forces of Oljei Temur were decimated by the Chinese armies of the Yongle Emperor",
-    "why_it_matters": "This battle weakened Mongol power and reinforced Chinese dominance in the region.",
+    "title": "Onon River Battle Date Needs Review",
+    "one_liner": "The June 15 claim about Ming forces defeating Bunyashiri near the Onon River is held because current exact-date leads are derivative and need stronger scholarly support.",
+    "description": "The June 15 claim about Ming forces defeating Bunyashiri near the Onon River is held because current exact-date leads are derivative and need stronger scholarly support.",
+    "short_summary": "The Onon River battle record is held pending stronger exact-date support.",
+    "summary": "The June 15 claim about Ming forces defeating Bunyashiri near the Onon River is held because current exact-date leads are derivative and need stronger scholarly support. The older wording also used overly theatrical battle language.",
+    "detail": "The June 15 claim about Ming forces defeating Bunyashiri near the Onon River is held because current exact-date leads are derivative and need stronger scholarly support. The older wording also used overly theatrical battle language.",
+    "deep_dive": "Source leads point to a Ming campaign against Bunyashiri near the Onon River on June 15, 1410, but the retrievable exact-date pages are weak derivative references. This record should use a scholarly Ming history source before returning to the visible feed.",
+    "why_it_matters": "Holding the record avoids presenting a medieval military claim as settled when the current source support is not strong enough for a visible history feed.",
     "category": "history",
     "tags": [
       "history",
-      "general_history"
+      "military_history",
+      "ming_dynasty",
+      "mongol_history",
+      "source_review"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/06/15",
-      "https://en.wikipedia.org/wiki/Yongle_Emperor's_campaigns_against_the_Mongols",
-      "https://en.wikipedia.org/wiki/%C3%96ljei_Tem%C3%BCr_Khan"
+      "http://www.historman.com/en/event/Yongle_Emperor%27s_campaigns_against_the_Mongols/Q11087883"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-06-15.json;event_id=26bdc49bca8cfd59;cluster_id=8a199518d544;model_id=today-qwen3-14b;rank_score=0.552927;interesting_score=0.559656;stream=interesting-history; date=1410-06-15",
-    "source_confidence": 0.9,
-    "editorial_status": "ready"
+    "provenance": "source_repair=today-ios-best-next-pass3-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass3; source_posture=external_source_repair; date=1410-06-15",
+    "source_confidence": 0.36,
+    "editorial_status": "defer"
   },
   {
     "id": "june-15-1944-982f8281b6935bc3",
@@ -8549,28 +8550,30 @@
     "month": 3,
     "day": 3,
     "year": 1924,
-    "title": "The Free State of Fiume is annexed by the Kingdom of Italy",
-    "one_liner": "The Free State of Fiume is annexed by the Kingdom of Italy",
-    "description": "The Free State of Fiume is annexed by the Kingdom of Italy",
-    "short_summary": "The Free State of Fiume is annexed by the Kingdom of Italy",
-    "summary": "The Free State of Fiume is annexed by the Kingdom of Italy. This event marked a significant shift in regional politics and territorial control in Europe",
-    "detail": "The Free State of Fiume is annexed by the Kingdom of Italy. This event marked a significant shift in regional politics and territorial control in Europe",
-    "deep_dive": "The Free State of Fiume is annexed by the Kingdom of Italy. This event marked a significant shift in regional politics and territorial control in Europe",
-    "why_it_matters": "This event marked a significant shift in regional politics and territorial control in Europe.",
+    "title": "Fiume Annexation Date Needs Review",
+    "one_liner": "The Fiume annexation record is held because stronger sources support the Treaty of Rome on January 27 or annexation ceremonies on March 16, not March 3.",
+    "description": "The Fiume annexation record is held because stronger sources support the Treaty of Rome on January 27 or annexation ceremonies on March 16, not March 3.",
+    "short_summary": "The Fiume annexation record is held pending a date correction.",
+    "summary": "The Fiume annexation record is held because stronger sources support the Treaty of Rome on January 27 or annexation ceremonies on March 16, not March 3. The record should be moved or rewritten before returning to the visible feed.",
+    "detail": "The Fiume annexation record is held because stronger sources support the Treaty of Rome on January 27 or annexation ceremonies on March 16, not March 3. The record should be moved or rewritten before returning to the visible feed.",
+    "deep_dive": "Italian legal and encyclopedia sources point to March 16, 1924 for civil celebrations and the Fiume provincial designation, while treaty sources point to January 27, 1924 for the Treaty of Rome. That conflicts with the current March 3 placement.",
+    "why_it_matters": "The date distinction matters because treaty signing, legal celebration, and annexation framing are different political events.",
     "category": "politics",
     "tags": [
       "politics",
-      "human_progress"
+      "italy",
+      "fiume",
+      "interwar_europe",
+      "source_review"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/03/03",
-      "https://en.wikipedia.org/wiki/Free_State_of_Fiume",
-      "https://en.wikipedia.org/wiki/Kingdom_of_Italy"
+      "https://www.fiscoai.it/normativa/legge/279/1924/",
+      "https://www.treccani.it/enciclopedia/provincia-del-carnaro_(Enciclopedia-Italiana)/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-03-03.json;event_id=7b4f5ceff0ad11d7;cluster_id=56dd3a99aa97;model_id=today-qwen3-14b;rank_score=0.680426;interesting_score=0.642901;stream=interesting-history; date=1924-03-03",
-    "source_confidence": 0.9,
-    "editorial_status": "ready"
+    "provenance": "source_repair=today-ios-best-next-pass3-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass3; source_posture=external_source_repair; date=1924-03-03",
+    "source_confidence": 0.42,
+    "editorial_status": "defer"
   },
   {
     "id": "march-04-2020-b7c7a83d09eabdaa",
@@ -10214,27 +10217,29 @@
     "month": 3,
     "day": 19,
     "year": 1965,
-    "title": "Discovery of SS Georgiana Wreck",
-    "one_liner": "The wreck of the SS Georgiana, a powerful Confederate cruiser, is discovered by teenage diver E. Lee Spence",
-    "description": "The wreck of the SS Georgiana, valued at over $50,000,000 and said to have been the most powerful Confederate cruiser, is discovered by teenage diver and pioneer underwater archaeologist E. Lee Spence, exactly 102 years after its destruction",
-    "short_summary": "The wreck of the SS Georgiana, a powerful Confederate cruiser, is discovered by teenage diver E. Lee Spence",
-    "summary": "The wreck of the SS Georgiana, valued at over $50,000,000 and said to have been the most powerful Confederate cruiser, is discovered by teenage diver and pioneer underwater archaeologist E. Lee Spence, exactly 102 years after its destruction. This discovery was a major milestone in underwater archaeology and historical preservation",
-    "detail": "The wreck of the SS Georgiana, valued at over $50,000,000 and said to have been the most powerful Confederate cruiser, is discovered by teenage diver and pioneer underwater archaeologist E. Lee Spence, exactly 102 years after its destruction. This discovery was a major milestone in underwater archaeology and historical preservation",
-    "deep_dive": "The wreck of the SS Georgiana, valued at over $50,000,000 and said to have been the most powerful Confederate cruiser, is discovered by teenage diver and pioneer underwater archaeologist E. Lee Spence, exactly 102 years after its destruction. This discovery was a major milestone in underwater archaeology and historical preservation",
-    "why_it_matters": "This discovery was a major milestone in underwater archaeology and historical preservation.",
+    "title": "SS Georgiana Wreck Found by Teenage Diver",
+    "one_liner": "Teenage diver E. Lee Spence discovered the wreck of the Confederate vessel SS Georgiana near Charleston, exactly 102 years after it sank.",
+    "description": "Teenage diver E. Lee Spence discovered the wreck of the Confederate vessel SS Georgiana near Charleston, exactly 102 years after it sank.",
+    "short_summary": "E. Lee Spence discovered the SS Georgiana wreck near Charleston.",
+    "summary": "Teenage diver E. Lee Spence discovered the wreck of the Confederate vessel SS Georgiana near Charleston, exactly 102 years after it sank. The repaired wording drops unstable valuation claims and focuses on the supported discovery date.",
+    "detail": "Teenage diver E. Lee Spence discovered the wreck of the Confederate vessel SS Georgiana near Charleston, exactly 102 years after it sank. The repaired wording drops unstable valuation claims and focuses on the supported discovery date.",
+    "deep_dive": "Popular maritime and history sources place Spence’s discovery of the SS Georgiana wreck on March 19, 1965, exactly 102 years after the vessel sank off Charleston. The older copy’s large dollar valuation is not needed for the verified event.",
+    "why_it_matters": "The discovery connected Civil War maritime history with the rise of underwater archaeology around Charleston’s wreck sites.",
     "category": "history",
     "tags": [
       "history",
-      "invention_discovery"
+      "maritime_history",
+      "shipwrecks",
+      "archaeology",
+      "civil_war"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/03/19",
-      "https://en.wikipedia.org/wiki/SS_Georgiana",
-      "https://en.wikipedia.org/wiki/Confederate_States_of_America"
+      "https://www.historyandheadlines.com/march-191965-50-million-wreck-discovered-teenage-diver/",
+      "https://www.historydaily.com/discovering-the-wreck-of-the-ss-georgiana/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-03-19.json;event_id=1bdac5825b892bba;cluster_id=245c20e3721c;model_id=today-qwen3-14b;rank_score=0.715394;interesting_score=0.59232;stream=interesting-history; date=1965-03-19",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-pass3-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass3; source_posture=external_source_repair; date=1965-03-19",
+    "source_confidence": 0.76,
     "editorial_status": "ready"
   },
   {
@@ -11009,27 +11014,28 @@
     "month": 3,
     "day": 26,
     "year": 1958,
-    "title": "African Regroupment Party Launched in Paris",
-    "one_liner": "The African Regroupment Party is launched at a meeting in Paris",
-    "description": "The African Regroupment Party is launched at a meeting in Paris",
-    "short_summary": "The African Regroupment Party is launched at a meeting in Paris",
-    "summary": "The African Regroupment Party is launched at a meeting in Paris. Marks the beginning of a political movement focused on African unity and representation",
-    "detail": "The African Regroupment Party is launched at a meeting in Paris. Marks the beginning of a political movement focused on African unity and representation",
-    "deep_dive": "The African Regroupment Party is launched at a meeting in Paris. Marks the beginning of a political movement focused on African unity and representation",
-    "why_it_matters": "Marks the beginning of a political movement focused on African unity and representation.",
-    "category": "science",
+    "title": "Parti du Regroupement Africain Formed",
+    "one_liner": "The Parti du Regroupement Africain was formed as an inter-African political grouping during the decolonization era.",
+    "description": "The Parti du Regroupement Africain was formed as an inter-African political grouping during the decolonization era.",
+    "short_summary": "The Parti du Regroupement Africain was formed as an inter-African political grouping.",
+    "summary": "The Parti du Regroupement Africain was formed as an inter-African political grouping during the decolonization era. The repaired copy drops the older Paris location because stronger authority-file support points to the date but not that location.",
+    "detail": "The Parti du Regroupement Africain was formed as an inter-African political grouping during the decolonization era. The repaired copy drops the older Paris location because stronger authority-file support points to the date but not that location.",
+    "deep_dive": "IdRef, a French higher-education authority file, identifies the Parti du Regroupement Africain and gives March 26, 1958 as its formation date. The legacy location detail was not strong enough to keep in the visible copy.",
+    "why_it_matters": "The party reflected attempts to organize African political power across colonial boundaries during the late 1950s.",
+    "category": "politics",
     "tags": [
-      "history",
-      "invention_discovery"
+      "politics",
+      "african_history",
+      "decolonization",
+      "pan_africanism",
+      "french_west_africa"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/03/26",
-      "https://en.wikipedia.org/wiki/African_Regroupment_Party",
-      "https://en.wikipedia.org/wiki/Paris"
+      "https://www.idref.fr/150083319"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-03-26.json;event_id=fd4eb1d7bc36fecc;cluster_id=88d92ddcdc08;model_id=today-qwen3-14b;rank_score=0.683675;interesting_score=0.619184;stream=interesting-history; date=1958-03-26",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-pass3-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass3; source_posture=external_source_repair; date=1958-03-26",
+    "source_confidence": 0.74,
     "editorial_status": "ready"
   },
   {
@@ -12771,27 +12777,29 @@
     "month": 2,
     "day": 13,
     "year": 1961,
-    "title": "500,000-Year-Old Rock with Spark Plug Found in California",
-    "one_liner": "An allegedly 500,000-year-old rock is discovered near Olancha, California, that appears to encase a spark plug",
-    "description": "An allegedly 500,000-year-old rock is discovered near Olancha, California, US, that appears to anachronistically encase a spark plug",
-    "short_summary": "An allegedly 500,000-year-old rock is discovered near Olancha, California, that appears to encase a spark plug",
-    "summary": "An allegedly 500,000-year-old rock is discovered near Olancha, California, US, that appears to anachronistically encase a spark plug. This unusual find raises questions about the timeline of human technology and natural processes",
-    "detail": "An allegedly 500,000-year-old rock is discovered near Olancha, California, US, that appears to anachronistically encase a spark plug. This unusual find raises questions about the timeline of human technology and natural processes",
-    "deep_dive": "An allegedly 500,000-year-old rock is discovered near Olancha, California, US, that appears to anachronistically encase a spark plug. This unusual find raises questions about the timeline of human technology and natural processes",
-    "why_it_matters": "This unusual find raises questions about the timeline of human technology and natural processes.",
-    "category": "technology",
+    "title": "Coso Artifact Found Near Olancha",
+    "one_liner": "Rockhounds found the Coso artifact near Olancha, California, an object later identified as a 1920s Champion spark plug rather than an ancient machine part.",
+    "description": "Rockhounds found the Coso artifact near Olancha, California, an object later identified as a 1920s Champion spark plug rather than an ancient machine part.",
+    "short_summary": "Rockhounds found the Coso artifact near Olancha, California.",
+    "summary": "Rockhounds found the Coso artifact near Olancha, California, an object later identified as a 1920s Champion spark plug rather than an ancient machine part. The repaired wording treats the old age claim as disputed, not factual.",
+    "detail": "Rockhounds found the Coso artifact near Olancha, California, an object later identified as a 1920s Champion spark plug rather than an ancient machine part. The repaired wording treats the old age claim as disputed, not factual.",
+    "deep_dive": "TalkOrigins places the find on February 13, 1961, when Wallace Lane, Virginia Maxey, and Mike Mikesell were collecting mineral specimens near Olancha. Later analysis identified the object as a 1920s Champion spark plug inside a concretion.",
+    "why_it_matters": "The artifact is a useful case study in how extraordinary claims can travel farther than the evidence supporting them.",
+    "category": "strange",
     "tags": [
-      "history",
-      "invention_discovery"
+      "strange",
+      "science",
+      "pseudoscience",
+      "california",
+      "skepticism"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/02/13",
-      "https://en.wikipedia.org/wiki/Coso_artifact",
-      "https://en.wikipedia.org/wiki/Olancha%2C_California"
+      "https://www.talkorigins.org/faqs/coso.html",
+      "https://ncse.ngo/coso-artifact"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-02-13.json;event_id=0c15780754f9d399;cluster_id=59c85112ad0f;model_id=today-qwen3-14b;rank_score=0.739182;interesting_score=0.578516;stream=interesting-history; date=1961-02-13",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-pass3-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass3; source_posture=external_source_repair; date=1961-02-13",
+    "source_confidence": 0.86,
     "editorial_status": "ready"
   },
   {
@@ -13717,27 +13725,29 @@
     "month": 2,
     "day": 22,
     "year": 1974,
-    "title": "The Organisation of the Islamic Conference summit begins in Lahore, Pakistan",
-    "one_liner": "The Organisation of the Islamic Conference summit begins in Lahore, Pakistan, with 37 countries attending",
-    "description": "The Organisation of the Islamic Conference summit begins in Lahore, Pakistan. Thirty-seven countries attend and twenty-two heads of state and government participate. It also recognizes Bangladesh",
-    "short_summary": "The Organisation of the Islamic Conference summit begins in Lahore, Pakistan, with 37 countries attending",
-    "summary": "The Organisation of the Islamic Conference summit begins in Lahore, Pakistan. Thirty-seven countries attend and twenty-two heads of state and government participate. It also recognizes Bangladesh. This summit was a significant event in international Islamic diplomacy and cooperation",
-    "detail": "The Organisation of the Islamic Conference summit begins in Lahore, Pakistan. Thirty-seven countries attend and twenty-two heads of state and government participate. It also recognizes Bangladesh. This summit was a significant event in international Islamic diplomacy and cooperation",
-    "deep_dive": "The Organisation of the Islamic Conference summit begins in Lahore, Pakistan. Thirty-seven countries attend and twenty-two heads of state and government participate. It also recognizes Bangladesh. This summit was a significant event in international Islamic diplomacy and cooperation",
-    "why_it_matters": "This summit was a significant event in international Islamic diplomacy and cooperation.",
-    "category": "exploration",
+    "title": "Second Islamic Summit Opens in Lahore",
+    "one_liner": "The Second Islamic Summit Conference opened in Lahore, Pakistan, bringing together leaders and dignitaries from Muslim-majority countries.",
+    "description": "The Second Islamic Summit Conference opened in Lahore, Pakistan, bringing together leaders and dignitaries from Muslim-majority countries.",
+    "short_summary": "The Second Islamic Summit Conference opened in Lahore, Pakistan.",
+    "summary": "The Second Islamic Summit Conference opened in Lahore, Pakistan, bringing together leaders and dignitaries from Muslim-majority countries. The repaired category and tags frame it as diplomacy rather than exploration.",
+    "detail": "The Second Islamic Summit Conference opened in Lahore, Pakistan, bringing together leaders and dignitaries from Muslim-majority countries. The repaired category and tags frame it as diplomacy rather than exploration.",
+    "deep_dive": "A contemporary Allama Iqbal journal article says the Islamic Summit Conference took place from February 22 to February 24, 1974, in Lahore and opened at 6 p.m. under Prime Minister Zulfikar Ali Bhutto’s chairmanship.",
+    "why_it_matters": "The summit became a high-profile moment of Islamic-world diplomacy and Pakistan’s regional positioning after the Bangladesh war.",
+    "category": "politics",
     "tags": [
-      "arts",
-      "general_history"
+      "politics",
+      "diplomacy",
+      "pakistan",
+      "islamic_world",
+      "lahore"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/02/22",
-      "https://en.wikipedia.org/wiki/Organisation_of_Islamic_Cooperation",
-      "https://en.wikipedia.org/wiki/Lahore"
+      "https://allamaiqbal.com/publications/journals/review/apr74/5.htm",
+      "https://historypak.com/lahore-summit-1974/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-02-22.json;event_id=1169a5809d7a0c54;cluster_id=783e57a48f52;model_id=today-qwen3-14b;rank_score=0.59736;interesting_score=0.519773;stream=interesting-history; date=1974-02-22",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-pass3-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass3; source_posture=external_source_repair; date=1974-02-22",
+    "source_confidence": 0.84,
     "editorial_status": "ready"
   },
   {
@@ -14319,27 +14329,28 @@
     "month": 2,
     "day": 27,
     "year": 2007,
-    "title": "Chinese Stock Bubble of 2007: Shanghai Stock Exchange Falls 9%",
-    "one_liner": "The Shanghai Stock Exchange experiences its largest daily drop in ten years, falling 9%, due to fears of a crackdown on illegal trading and rising inflation",
-    "description": "Chinese stock bubble of 2007: The Shanghai Stock Exchange falls 9%, the largest daily fall in ten years, following speculation about a crackdown on illegal share offerings and trading, and fears about accelerating inflation",
-    "short_summary": "The Shanghai Stock Exchange experiences its largest daily drop in ten years, falling 9%, due to fears of a crackdown on illegal trading and rising inflation",
-    "summary": "Chinese stock bubble of 2007: The Shanghai Stock Exchange falls 9%, the largest daily fall in ten years, following speculation about a crackdown on illegal share offerings and trading, and fears about accelerating inflation. This event underscores the volatility of financial markets and the impact of regulatory actions and economic concerns on investor behavior",
-    "detail": "Chinese stock bubble of 2007: The Shanghai Stock Exchange falls 9%, the largest daily fall in ten years, following speculation about a crackdown on illegal share offerings and trading, and fears about accelerating inflation. This event underscores the volatility of financial markets and the impact of regulatory actions and economic concerns on investor behavior",
-    "deep_dive": "Chinese stock bubble of 2007: The Shanghai Stock Exchange falls 9%, the largest daily fall in ten years, following speculation about a crackdown on illegal share offerings and trading, and fears about accelerating inflation. This event underscores the volatility of financial markets and the impact of regulatory actions and economic concerns on investor behavior",
-    "why_it_matters": "This event underscores the volatility of financial markets and the impact of regulatory actions and economic concerns on investor behavior.",
+    "title": "Shanghai Composite Tumbles 8.8 Percent",
+    "one_liner": "China’s Shanghai Composite Index fell 8.8 percent, its biggest one-day decline in a decade, amid fears of a crackdown on speculation.",
+    "description": "China’s Shanghai Composite Index fell 8.8 percent, its biggest one-day decline in a decade, amid fears of a crackdown on speculation.",
+    "short_summary": "China’s Shanghai Composite Index fell 8.8 percent in a sharp market selloff.",
+    "summary": "China’s Shanghai Composite Index fell 8.8 percent, its biggest one-day decline in a decade, amid fears of a crackdown on speculation. The repaired wording names the index instead of saying the whole exchange fell.",
+    "detail": "China’s Shanghai Composite Index fell 8.8 percent, its biggest one-day decline in a decade, amid fears of a crackdown on speculation. The repaired wording names the index instead of saying the whole exchange fell.",
+    "deep_dive": "CNBC reported on February 27, 2007 that the Shanghai Composite fell nearly 9 percent, closing down 8.8 percent in its biggest single-day decline since February 1997. The selloff spread anxiety through global markets.",
+    "why_it_matters": "The selloff showed how quickly local market fears could ripple through a more connected global financial system.",
     "category": "history",
     "tags": [
       "history",
-      "general_history"
+      "finance",
+      "china",
+      "stock_market",
+      "global_markets"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/02/27",
-      "https://en.wikipedia.org/wiki/Chinese_stock_bubble_of_2007",
-      "https://en.wikipedia.org/wiki/Shanghai_Stock_Exchange"
+      "https://www.cnbc.com/2007/02/27/stocks-dive-in-worst-selloff-in-four-years-on-fears-of-global-slowdown.html"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-02-27.json;event_id=76e3821acf370b44;cluster_id=672b40e19358;model_id=today-qwen3-14b;rank_score=0.569871;interesting_score=0.578141;stream=interesting-history; date=2007-02-27",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-pass3-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass3; source_posture=external_source_repair; date=2007-02-27",
+    "source_confidence": 0.87,
     "editorial_status": "ready"
   },
   {
@@ -14542,27 +14553,29 @@
     "month": 1,
     "day": 1,
     "year": 1998,
-    "title": "Russia begins to circulate new rubles following a currency reform",
-    "one_liner": "Russia begins to circulate new rubles following a currency reform to stem inflation and promote confidence",
-    "description": "Following a currency reform, Russia begins to circulate new rubles to stem inflation and promote confidence",
-    "short_summary": "Russia begins to circulate new rubles following a currency reform to stem inflation and promote confidence",
-    "summary": "Following a currency reform, Russia begins to circulate new rubles to stem inflation and promote confidence. This reform was a critical step in stabilizing the Russian economy and restoring public trust in the currency",
-    "detail": "Following a currency reform, Russia begins to circulate new rubles to stem inflation and promote confidence. This reform was a critical step in stabilizing the Russian economy and restoring public trust in the currency",
-    "deep_dive": "Following a currency reform, Russia begins to circulate new rubles to stem inflation and promote confidence. This reform was a critical step in stabilizing the Russian economy and restoring public trust in the currency",
-    "why_it_matters": "This reform was a critical step in stabilizing the Russian economy and restoring public trust in the currency.",
+    "title": "Russia Begins Ruble Redenomination",
+    "one_liner": "Russia began a ruble redenomination, introducing new banknotes at a rate of one new ruble to 1,000 old rubles while both circulated during 1998.",
+    "description": "Russia began a ruble redenomination, introducing new banknotes at a rate of one new ruble to 1,000 old rubles while both circulated during 1998.",
+    "short_summary": "Russia began a ruble redenomination that removed three zeroes from the old currency.",
+    "summary": "Russia began a ruble redenomination, introducing new banknotes at a rate of one new ruble to 1,000 old rubles while both circulated during 1998. The repaired wording avoids overstating immediate economic confidence effects.",
+    "detail": "Russia began a ruble redenomination, introducing new banknotes at a rate of one new ruble to 1,000 old rubles while both circulated during 1998. The repaired wording avoids overstating immediate economic confidence effects.",
+    "deep_dive": "CNN reported before the reform that the ruble would lose three zeroes beginning January 1, 1998, with old and new rubles circulating together during the year. RFE/RL later described the reform as launched but gradual in practice.",
+    "why_it_matters": "The reform made daily pricing easier, but it also reflected Russia’s fragile post-Soviet monetary transition.",
     "category": "history",
     "tags": [
       "history",
-      "general_history"
+      "economics",
+      "russia",
+      "currency",
+      "post_soviet"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/01/01",
-      "https://en.wikipedia.org/wiki/Monetary_reform_in_Russia%2C_1998",
-      "https://en.wikipedia.org/wiki/Russian_ruble"
+      "https://www.cnn.com/WORLD/9708/04/ruble.reform/",
+      "https://www.rferl.org/a/1087695.html"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-01-01.json;event_id=3b9269b90e2c5745;cluster_id=cee6610f3f46;model_id=today-qwen3-14b;rank_score=0.558043;interesting_score=0.557957;stream=interesting-history; date=1998-01-01",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-pass3-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass3; source_posture=external_source_repair; date=1998-01-01",
+    "source_confidence": 0.86,
     "editorial_status": "ready"
   },
   {
@@ -14740,26 +14753,27 @@
     "month": 1,
     "day": 3,
     "year": 2016,
-    "title": "Iran ends diplomatic ties with Saudi Arabia",
-    "one_liner": "Iran ends its diplomatic relations with Saudi Arabia in response to the execution of Nimr al-Nimr",
-    "description": "In response to the execution of Nimr al-Nimr, Iran ends its diplomatic relations with Saudi Arabia",
-    "short_summary": "Iran ends its diplomatic relations with Saudi Arabia in response to the execution of Nimr al-Nimr",
-    "summary": "In response to the execution of Nimr al-Nimr, Iran ends its diplomatic relations with Saudi Arabia. This event marked a significant shift in Middle Eastern geopolitics and regional tensions",
-    "detail": "In response to the execution of Nimr al-Nimr, Iran ends its diplomatic relations with Saudi Arabia. This event marked a significant shift in Middle Eastern geopolitics and regional tensions",
-    "deep_dive": "In response to the execution of Nimr al-Nimr, Iran ends its diplomatic relations with Saudi Arabia. This event marked a significant shift in Middle Eastern geopolitics and regional tensions",
-    "why_it_matters": "This event marked a significant shift in Middle Eastern geopolitics and regional tensions.",
-    "category": "history",
+    "title": "Saudi Arabia Cuts Diplomatic Ties with Iran",
+    "one_liner": "Saudi Arabia broke off diplomatic ties with Iran after protesters stormed the Saudi embassy in Tehran following the execution of Sheikh Nimr al-Nimr.",
+    "description": "Saudi Arabia broke off diplomatic ties with Iran after protesters stormed the Saudi embassy in Tehran following the execution of Sheikh Nimr al-Nimr.",
+    "short_summary": "Saudi Arabia broke off diplomatic ties with Iran amid a crisis over Sheikh Nimr al-Nimr’s execution.",
+    "summary": "Saudi Arabia broke off diplomatic ties with Iran after protesters stormed the Saudi embassy in Tehran following the execution of Sheikh Nimr al-Nimr. The repaired wording corrects the direction of the diplomatic break.",
+    "detail": "Saudi Arabia broke off diplomatic ties with Iran after protesters stormed the Saudi embassy in Tehran following the execution of Sheikh Nimr al-Nimr. The repaired wording corrects the direction of the diplomatic break.",
+    "deep_dive": "BBC reported on January 3, 2016 that Saudi Arabia said it had broken off diplomatic ties with Iran and ordered Iranian diplomats to leave within 48 hours. The crisis followed Saudi Arabia’s execution of Shia cleric Sheikh Nimr al-Nimr and protests at Saudi diplomatic sites in Iran.",
+    "why_it_matters": "The break intensified a regional rivalry already shaping conflicts and alliances across the Middle East.",
+    "category": "politics",
     "tags": [
-      "history",
-      "human_progress"
+      "politics",
+      "diplomacy",
+      "saudi_arabia",
+      "iran",
+      "middle_east"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/01/03",
-      "https://en.wikipedia.org/wiki/Nimr_al-Nimr",
-      "https://en.wikipedia.org/wiki/Iran%E2%80%93Saudi_Arabia_relations"
+      "https://www.bbc.com/news/world-middle-east-35217328"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-01-03.json;event_id=d740c21a785d6df0;cluster_id=300e3723e805;model_id=today-qwen3-14b;rank_score=0.697956;interesting_score=0.570607;stream=interesting-history; date=2016-01-03",
+    "provenance": "source_repair=today-ios-best-next-pass3-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass3; source_posture=external_source_repair; date=2016-01-03",
     "source_confidence": 0.9,
     "editorial_status": "ready"
   },
@@ -15331,27 +15345,28 @@
     "month": 1,
     "day": 8,
     "year": 1972,
-    "title": "Sheikh Mujibur Rahman released from prison",
-    "one_liner": "President of Pakistan Zulfikar Ali Bhutto releases Bengali leader Sheikh Mujibur Rahman from prison",
-    "description": "Bowing to international pressure, President of Pakistan Zulfikar Ali Bhutto releases Bengali leader Sheikh Mujibur Rahman from prison, who had been arrested after declaring the independence of Bangladesh",
-    "short_summary": "President of Pakistan Zulfikar Ali Bhutto releases Bengali leader Sheikh Mujibur Rahman from prison",
-    "summary": "Bowing to international pressure, President of Pakistan Zulfikar Ali Bhutto releases Bengali leader Sheikh Mujibur Rahman from prison, who had been arrested after declaring the independence of Bangladesh. This event was a critical moment in the lead-up to Bangladesh's independence",
-    "detail": "Bowing to international pressure, President of Pakistan Zulfikar Ali Bhutto releases Bengali leader Sheikh Mujibur Rahman from prison, who had been arrested after declaring the independence of Bangladesh. This event was a critical moment in the lead-up to Bangladesh's independence",
-    "deep_dive": "Bowing to international pressure, President of Pakistan Zulfikar Ali Bhutto releases Bengali leader Sheikh Mujibur Rahman from prison, who had been arrested after declaring the independence of Bangladesh. This event was a critical moment in the lead-up to Bangladesh's independence",
-    "why_it_matters": "This event was a critical moment in the lead-up to Bangladesh's independence.",
+    "title": "Sheikh Mujibur Rahman Released from Prison",
+    "one_liner": "Pakistan released Sheikh Mujibur Rahman from prison, and he left for London on his way back to newly independent Bangladesh.",
+    "description": "Pakistan released Sheikh Mujibur Rahman from prison, and he left for London on his way back to newly independent Bangladesh.",
+    "short_summary": "Pakistan released Sheikh Mujibur Rahman from prison.",
+    "summary": "Pakistan released Sheikh Mujibur Rahman from prison, and he left for London on his way back to newly independent Bangladesh. The repaired copy avoids unsourced causal phrasing and focuses on the verified release.",
+    "detail": "Pakistan released Sheikh Mujibur Rahman from prison, and he left for London on his way back to newly independent Bangladesh. The repaired copy avoids unsourced causal phrasing and focuses on the verified release.",
+    "deep_dive": "An Awami League biography says the Pakistan government released Mujib on January 8, 1972, that Zulfikar Ali Bhutto met him the same day, and that Mujib immediately left for London en route to Dhaka.",
+    "why_it_matters": "His release cleared the way for Bangladesh’s founding leader to return home after the war for independence.",
     "category": "politics",
     "tags": [
       "politics",
-      "general_history"
+      "bangladesh",
+      "pakistan",
+      "sheikh_mujibur_rahman",
+      "decolonization"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/01/08",
-      "https://en.wikipedia.org/wiki/President_of_Pakistan",
-      "https://en.wikipedia.org/wiki/Zulfikar_Ali_Bhutto"
+      "https://www.albd.org/pages/bangabandhu"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-01-08.json;event_id=268f6bb271065587;cluster_id=4bcc255560c2;model_id=today-qwen3-14b;rank_score=0.576973;interesting_score=0.577687;stream=interesting-history; date=1972-01-08",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-pass3-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass3; source_posture=external_source_repair; date=1972-01-08",
+    "source_confidence": 0.78,
     "editorial_status": "ready"
   },
   {
@@ -15984,27 +15999,28 @@
     "month": 1,
     "day": 14,
     "year": 1957,
-    "title": "Kripalu Maharaj named fifth Jagadguru",
-    "one_liner": "Kripalu Maharaj is named fifth Jagadguru (world teacher) after delivering speeches to 500 Hindu scholars",
-    "description": "Kripalu Maharaj is named fifth Jagadguru (world teacher) after giving seven days of speeches before 500 Hindu scholars",
-    "short_summary": "Kripalu Maharaj is named fifth Jagadguru (world teacher) after delivering speeches to 500 Hindu scholars",
-    "summary": "Kripalu Maharaj is named fifth Jagadguru (world teacher) after giving seven days of speeches before 500 Hindu scholars. This event highlights a significant moment in spiritual and religious history within the Hindu tradition",
-    "detail": "Kripalu Maharaj is named fifth Jagadguru (world teacher) after giving seven days of speeches before 500 Hindu scholars. This event highlights a significant moment in spiritual and religious history within the Hindu tradition",
-    "deep_dive": "Kripalu Maharaj is named fifth Jagadguru (world teacher) after giving seven days of speeches before 500 Hindu scholars. This event highlights a significant moment in spiritual and religious history within the Hindu tradition",
-    "why_it_matters": "This event highlights a significant moment in spiritual and religious history within the Hindu tradition.",
-    "category": "history",
+    "title": "Kripalu Maharaj Named Jagadguru",
+    "one_liner": "Kashi Vidvat Parishat conferred the title Jagadguru on Kripalu Maharaj, according to his organization’s biography of the event.",
+    "description": "Kashi Vidvat Parishat conferred the title Jagadguru on Kripalu Maharaj, according to his organization’s biography of the event.",
+    "short_summary": "Kashi Vidvat Parishat conferred the title Jagadguru on Kripalu Maharaj.",
+    "summary": "Kashi Vidvat Parishat conferred the title Jagadguru on Kripalu Maharaj, according to his organization’s biography of the event. The repaired wording attributes the religious-title claim instead of treating every honorific detail as independently settled.",
+    "detail": "Kashi Vidvat Parishat conferred the title Jagadguru on Kripalu Maharaj, according to his organization’s biography of the event. The repaired wording attributes the religious-title claim instead of treating every honorific detail as independently settled.",
+    "deep_dive": "Jagadguru Kripalu Parishat says the title was conferred on January 14, 1957, by Kashi Vidvat Parishat of Varanasi. Because the final source is closely connected to the subject, the app copy keeps the claim narrow and attributed.",
+    "why_it_matters": "The record reflects how spiritual authority can be formalized through religious institutions and remembered by follower communities.",
+    "category": "culture",
     "tags": [
-      "history",
-      "general_history"
+      "culture",
+      "religion",
+      "hinduism",
+      "india",
+      "spiritual_history"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/01/14",
-      "https://en.wikipedia.org/wiki/Kripalu_Maharaj",
-      "https://en.wikipedia.org/wiki/Jagadguru"
+      "https://www.jkp.org.in/jagadguru-shri-kripalu-ji-maharaj-a-brief-biography/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-01-14.json;event_id=fef183ba5105796a;cluster_id=70813a8f0ef6;model_id=today-qwen3-14b;rank_score=0.565683;interesting_score=0.562167;stream=interesting-history; date=1957-01-14",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-pass3-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass3; source_posture=external_source_repair; date=1957-01-14",
+    "source_confidence": 0.66,
     "editorial_status": "ready"
   },
   {
@@ -16407,27 +16423,28 @@
     "month": 1,
     "day": 18,
     "year": 1977,
-    "title": "Scientists Identify Bacterium Causing Legionnaires' Disease",
-    "one_liner": "Scientists at the CDC identify a new bacterium as the cause of Legionnaires' disease",
-    "description": "Scientists at the Centers for Disease Control and Prevention announce they have identified a previously unknown bacterium as the cause of the mysterious Legionnaires' disease",
-    "short_summary": "Scientists at the CDC identify a new bacterium as the cause of Legionnaires' disease",
-    "summary": "Scientists at the Centers for Disease Control and Prevention announce they have identified a previously unknown bacterium as the cause of the mysterious Legionnaires' disease. This discovery was crucial in understanding and preventing outbreaks of Legionnaires' disease",
-    "detail": "Scientists at the Centers for Disease Control and Prevention announce they have identified a previously unknown bacterium as the cause of the mysterious Legionnaires' disease. This discovery was crucial in understanding and preventing outbreaks of Legionnaires' disease",
-    "deep_dive": "Scientists at the Centers for Disease Control and Prevention announce they have identified a previously unknown bacterium as the cause of the mysterious Legionnaires' disease. This discovery was crucial in understanding and preventing outbreaks of Legionnaires' disease",
-    "why_it_matters": "This discovery was crucial in understanding and preventing outbreaks of Legionnaires' disease.",
-    "category": "history",
+    "title": "CDC Identifies Legionnaires Disease Bacterium",
+    "one_liner": "The CDC announced that scientists had identified the bacterium that caused Legionnaires disease after the 1976 Philadelphia outbreak.",
+    "description": "The CDC announced that scientists had identified the bacterium that caused Legionnaires disease after the 1976 Philadelphia outbreak.",
+    "short_summary": "The CDC announced the bacterium that caused Legionnaires disease.",
+    "summary": "The CDC announced that scientists had identified the bacterium that caused Legionnaires disease after the 1976 Philadelphia outbreak. The repaired category places the record in science rather than generic history.",
+    "detail": "The CDC announced that scientists had identified the bacterium that caused Legionnaires disease after the 1976 Philadelphia outbreak. The repaired category places the record in science rather than generic history.",
+    "deep_dive": "CDC’s MMWR archive says the January 18, 1977 special issue announced identification of the bacterium that caused Legionnaires disease. The finding followed months of investigation after the American Legion convention outbreak in Philadelphia.",
+    "why_it_matters": "Identifying the bacterium turned a frightening mystery outbreak into a disease that public-health officials could track and prevent.",
+    "category": "science",
     "tags": [
-      "history",
-      "general_history"
+      "science",
+      "medicine",
+      "public_health",
+      "cdc",
+      "infectious_disease"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/01/18",
-      "https://en.wikipedia.org/wiki/Centers_for_Disease_Control_and_Prevention",
-      "https://en.wikipedia.org/wiki/Bacteria"
+      "https://www.cdc.gov/mmwr/preview/mmwrhtml/00045728.htm"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-01-18.json;event_id=181f979f12d36efd;cluster_id=21be108cba31;model_id=today-qwen3-14b;rank_score=0.562798;interesting_score=0.569228;stream=interesting-history; date=1977-01-18",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-pass3-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass3; source_posture=external_source_repair; date=1977-01-18",
+    "source_confidence": 0.94,
     "editorial_status": "ready"
   },
   {
@@ -16578,27 +16595,28 @@
     "month": 1,
     "day": 19,
     "year": 1981,
-    "title": "Iran Hostage Crisis Resolved",
-    "one_liner": "US and Iranian officials sign an agreement to release 52 American hostages after 14 months",
-    "description": "Iran hostage crisis: United States and Iranian officials sign an agreement to release 52 American hostages after 14 months of captivity",
-    "short_summary": "US and Iranian officials sign an agreement to release 52 American hostages after 14 months",
-    "summary": "Iran hostage crisis: United States and Iranian officials sign an agreement to release 52 American hostages after 14 months of captivity. This event significantly influenced US-Iran relations and international diplomacy",
-    "detail": "Iran hostage crisis: United States and Iranian officials sign an agreement to release 52 American hostages after 14 months of captivity. This event significantly influenced US-Iran relations and international diplomacy",
-    "deep_dive": "Iran hostage crisis: United States and Iranian officials sign an agreement to release 52 American hostages after 14 months of captivity. This event significantly influenced US-Iran relations and international diplomacy",
-    "why_it_matters": "This event significantly influenced US-Iran relations and international diplomacy.",
-    "category": "history",
+    "title": "Algiers Accords Signed to End Hostage Crisis",
+    "one_liner": "The Algiers Accords were signed as the final U.S.-Iran deal to end the Iran hostage crisis; the hostages were released the next day.",
+    "description": "The Algiers Accords were signed as the final U.S.-Iran deal to end the Iran hostage crisis; the hostages were released the next day.",
+    "short_summary": "The Algiers Accords were signed to end the Iran hostage crisis.",
+    "summary": "The Algiers Accords were signed as the final U.S.-Iran deal to end the Iran hostage crisis; the hostages were released the next day. The repaired wording separates the agreement date from the release date.",
+    "detail": "The Algiers Accords were signed as the final U.S.-Iran deal to end the Iran hostage crisis; the hostages were released the next day. The repaired wording separates the agreement date from the release date.",
+    "deep_dive": "The National Archives timeline says the Algiers Accords were signed on January 19, 1981, constituting the final U.S.-Iran deal to end the hostage crisis. It lists the release of the 52 U.S. hostages on January 20.",
+    "why_it_matters": "The agreement ended a crisis that had reshaped U.S.-Iran relations and dominated the final year of Jimmy Carter’s presidency.",
+    "category": "politics",
     "tags": [
-      "history",
-      "general_history"
+      "politics",
+      "iran_hostage_crisis",
+      "diplomacy",
+      "us_iran_relations",
+      "algiers_accords"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/01/19",
-      "https://en.wikipedia.org/wiki/Iran_hostage_crisis",
-      "https://en.wikipedia.org/wiki/Iran"
+      "https://www.archives.gov/research/foreign-policy/iran-hostage-crisis"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-01-19.json;event_id=dbffe027d8f9040f;cluster_id=d4fa558b1f7c;model_id=today-qwen3-14b;rank_score=0.569726;interesting_score=0.565505;stream=interesting-history; date=1981-01-19",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-pass3-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass3; source_posture=external_source_repair; date=1981-01-19",
+    "source_confidence": 0.92,
     "editorial_status": "ready"
   },
   {
@@ -16715,27 +16733,28 @@
     "month": 1,
     "day": 21,
     "year": 1945,
-    "title": "Founding of the Trade Union Council",
-    "one_liner": "The Trade Union Council of Transcarpathian Ukraine is founded in Mukachevo",
-    "description": "The Trade Union Council of Transcarpathian Ukraine is founded in Mukachevo",
-    "short_summary": "The Trade Union Council of Transcarpathian Ukraine is founded in Mukachevo",
-    "summary": "The Trade Union Council of Transcarpathian Ukraine is founded in Mukachevo. This event represents a significant step in labor organization and social progress in the region",
-    "detail": "The Trade Union Council of Transcarpathian Ukraine is founded in Mukachevo. This event represents a significant step in labor organization and social progress in the region",
-    "deep_dive": "The Trade Union Council of Transcarpathian Ukraine is founded in Mukachevo. This event represents a significant step in labor organization and social progress in the region",
-    "why_it_matters": "This event represents a significant step in labor organization and social progress in the region.",
+    "title": "Transcarpathian Trade Union Congress Meets",
+    "one_liner": "The First Congress of Trade Unions of Transcarpathian Ukraine met in Mukachevo and elected a central trade-union council.",
+    "description": "The First Congress of Trade Unions of Transcarpathian Ukraine met in Mukachevo and elected a central trade-union council.",
+    "short_summary": "Transcarpathian Ukraine’s first trade-union congress met in Mukachevo.",
+    "summary": "The First Congress of Trade Unions of Transcarpathian Ukraine met in Mukachevo and elected a central trade-union council. The repaired wording avoids implying that the council’s full organizational setup was completed that day.",
+    "detail": "The First Congress of Trade Unions of Transcarpathian Ukraine met in Mukachevo and elected a central trade-union council. The repaired wording avoids implying that the council’s full organizational setup was completed that day.",
+    "deep_dive": "A regional trade-union history page says the First Congress of Trade Unions of Transcarpathian Ukraine took place in Mukachevo on January 21, 1945, and elected the Central Council. It says the council’s first meeting and technical organization followed on January 28.",
+    "why_it_matters": "The congress marked the postwar formalization of labor organization in a region moving through major political change.",
     "category": "history",
     "tags": [
       "history",
-      "human_progress"
+      "labor_history",
+      "ukraine",
+      "trade_unions",
+      "transcarpathia"
     ],
-    "tone": "uplifting",
+    "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/01/21",
-      "https://en.wikipedia.org/wiki/Trade_Union_Council_of_Transcarpathian_Ukraine",
-      "https://en.wikipedia.org/wiki/Mukachevo"
+      "https://www.oblpon.uz.ua/pro-nas/istoriya/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-01-21.json;event_id=baab60b6d1d76334;cluster_id=16b7b45eb18a;model_id=today-qwen3-14b;rank_score=0.730152;interesting_score=0.580327;stream=interesting-history; date=1945-01-21",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-pass3-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass3; source_posture=external_source_repair; date=1945-01-21",
+    "source_confidence": 0.82,
     "editorial_status": "ready"
   },
   {
@@ -17550,27 +17569,29 @@
     "month": 1,
     "day": 28,
     "year": 1938,
-    "title": "Land Speed Record Broken by Mercedes-Benz",
-    "one_liner": "Rudolf Caracciola breaks the land speed record on a public road in a Mercedes-Benz W125 Rekordwagen",
-    "description": "The World Land Speed Record on a public road is broken by Rudolf Caracciola in the Mercedes-Benz W125 Rekordwagen at a speed of 432.7 kilometres per hour (268.9 mph)",
-    "short_summary": "Rudolf Caracciola breaks the land speed record on a public road in a Mercedes-Benz W125 Rekordwagen",
-    "summary": "The World Land Speed Record on a public road is broken by Rudolf Caracciola in the Mercedes-Benz W125 Rekordwagen at a speed of 432.7 kilometres per hour (268.9 mph). This achievement showcased engineering innovation and pushed the boundaries of automotive speed",
-    "detail": "The World Land Speed Record on a public road is broken by Rudolf Caracciola in the Mercedes-Benz W125 Rekordwagen at a speed of 432.7 kilometres per hour (268.9 mph). This achievement showcased engineering innovation and pushed the boundaries of automotive speed",
-    "deep_dive": "The World Land Speed Record on a public road is broken by Rudolf Caracciola in the Mercedes-Benz W125 Rekordwagen at a speed of 432.7 kilometres per hour (268.9 mph). This achievement showcased engineering innovation and pushed the boundaries of automotive speed",
-    "why_it_matters": "This achievement showcased engineering innovation and pushed the boundaries of automotive speed.",
+    "title": "Caracciola Sets Public-Road Speed Record",
+    "one_liner": "Rudolf Caracciola drove a Mercedes-Benz W 125 record car to 432.7 km/h over a flying kilometre on the Frankfurt-Darmstadt autobahn.",
+    "description": "Rudolf Caracciola drove a Mercedes-Benz W 125 record car to 432.7 km/h over a flying kilometre on the Frankfurt-Darmstadt autobahn.",
+    "short_summary": "Rudolf Caracciola set a public-road speed record in a Mercedes-Benz W 125 record car.",
+    "summary": "Rudolf Caracciola drove a Mercedes-Benz W 125 record car to 432.7 km/h over a flying kilometre on the Frankfurt-Darmstadt autobahn. The repaired wording frames it as a public-road speed record rather than the absolute land speed record.",
+    "detail": "Rudolf Caracciola drove a Mercedes-Benz W 125 record car to 432.7 km/h over a flying kilometre on the Frankfurt-Darmstadt autobahn. The repaired wording frames it as a public-road speed record rather than the absolute land speed record.",
+    "deep_dive": "Automotive history sources place Caracciola’s record run on January 28, 1938. Conceptcarz, republishing Mercedes-Benz historical material, describes the 432.7 km/h flying-kilometre speed as a world speed record on a public road.",
+    "why_it_matters": "The run showed the extreme edge of prewar automotive engineering while also illustrating why public-road speed records carried unusual risk.",
     "category": "technology",
     "tags": [
-      "strange",
-      "oddities_curiosities"
+      "technology",
+      "automotive_history",
+      "engineering",
+      "motorsport",
+      "mercedes_benz"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/01/28",
-      "https://en.wikipedia.org/wiki/List_of_land_speed_records",
-      "https://en.wikipedia.org/wiki/Highway"
+      "https://www.conceptcarz.com/a30287/caracciolas-1938-mercedes-benz.aspx",
+      "https://www.rhein-taler.de/en/thaler-motifs/rheintaler/rudolf-caracciola.php"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-01-28.json;event_id=f5006961ea9269c4;cluster_id=860cdab79622;model_id=today-qwen3-14b;rank_score=0.580335;interesting_score=0.595521;stream=interesting-history; date=1938-01-28",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-pass3-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass3; source_posture=external_source_repair; date=1938-01-28",
+    "source_confidence": 0.86,
     "editorial_status": "ready"
   },
   {
