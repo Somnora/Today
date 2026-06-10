@@ -1,0 +1,51 @@
+{
+  "generated_at_utc": "2026-06-08T09:26:26Z",
+  "repo": "/Users/jamesmcshane/Desktop/today-ios",
+  "mutation_receipt": "/Users/jamesmcshane/Desktop/today-ios/docs/editorial-source-scout/source-scout-batch-001/source-repair-mutation-20260608T091150Z/MUTATION_RECEIPT.json",
+  "changed_record_ids": [
+    "august-07-1962-e78f730929733f00",
+    "august-04-1892-fd89cb4fea529961",
+    "september-20-1941-cc587e668a24d693",
+    "october-16-1998-2016eb66331a26bb",
+    "august-08-2022-37bd901849b7ea28",
+    "october-02-1919-0a3726e29078ed59",
+    "august-04-2018-1b084fcbccc384d0",
+    "september-16-1976-441b067e0c98a3e6",
+    "september-23-1955-066299b2c0da7301"
+  ],
+  "validators": {
+    "python3 .github/scripts/validate_events.py": "passed",
+    "python3 .github/scripts/validate_runtime_contracts.py": "passed",
+    "git diff --check": "passed"
+  },
+  "builds": {
+    "Today": "passed",
+    "TodayWidgetExtension": "passed",
+    "derived_data_path": "/tmp/today-ios-dd-20260608T091150Z"
+  },
+  "bundle_sha_check": {
+    "source": "1a7f9e1ee0a5772b61016260683d37924611ffae76d6d1719e6ba5d745ea9a5c",
+    "app": "1a7f9e1ee0a5772b61016260683d37924611ffae76d6d1719e6ba5d745ea9a5c",
+    "widget": "1a7f9e1ee0a5772b61016260683d37924611ffae76d6d1719e6ba5d745ea9a5c",
+    "all_match": true
+  },
+  "counts": {
+    "source": 1646,
+    "app": 1646,
+    "widget": 1646
+  },
+  "style_and_source_token_gates": {
+    "changed_records_no_em_dash": true,
+    "changed_records_no_emoji": true,
+    "changed_records_no_legacy_remote_feed_urls": true,
+    "generated_artifacts_no_em_dash": true,
+    "generated_artifacts_no_emoji": true
+  },
+  "independent_review": {
+    "verdict": "PASS",
+    "summary": "No blocker found. Sensitive copy narrowed and legacy remote-feed source URLs removed from changed app records."
+  },
+  "deferred": [
+    "august-26-1942-80d95a14c483beb1"
+  ]
+}

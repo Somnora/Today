@@ -8,7 +8,7 @@ nothing else in the repo replaces it at build time.
 
 | Output path | What it is |
 | --- | --- |
-| `sample-data/events.json` | Top-level JSON array of `HistoricalEvent` records (1646 records, 1644 app-publishable after status filtering, as of 2026-06-01). |
+| `sample-data/events.json` | Top-level JSON array of `HistoricalEvent` records (1638 records, all app-publishable, no bundled deferred records, as of 2026-06-09). |
 | `<App>.app/events.json` | Same file, copied verbatim by Xcode's `Resources` build phase. |
 
 The Xcode file reference is the lone `events.json` row inside the
@@ -24,7 +24,7 @@ input, and are ignored from public source control.
 
 `events.json` is the cumulative artifact of a multi-step editorial pipeline
 that lives outside this public app repo. The chain that built the current
-1646-record file:
+1638-record file:
 
 1. **Upstream promoted bundles** — one JSON file per calendar date in the
    private editorial workspace. Remote hostnames and operator paths are not
@@ -46,7 +46,7 @@ that lives outside this public app repo. The chain that built the current
    `future_source_rescue_batch_*`, `undercovered-category-date-rescue-batch-*`,
    and later `app*` source-repair passes.
 
-There is **no master orchestrator**. The 1646-record current state is
+There is **no master orchestrator**. The 1638-record current state is
 not reproducible by a single command — it is the sum of all those
 batches in chronological order.
 
@@ -125,6 +125,6 @@ Common optional: `year`, `one_liner`, `short_summary`, `description`,
 `editorial_status`.
 
 `DataLoader` filters out records where `editorial_status` is
-`duplicate`, `weak_event`, or `defer`. The current bundle contains 1644
-app-publishable records and 2 deferred records that remain bundled but are
-filtered out at runtime.
+`duplicate`, `weak_event`, or `defer`. The current bundle contains 1638
+app-publishable records and no bundled deferred records. Deferred rows are
+retained only as audit/rework artifacts under `docs/editorial-source-scout/`.

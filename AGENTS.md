@@ -113,7 +113,7 @@ kept outside public source control.
 ✅ Thumbs up/down local storage
 ✅ Widget shell with timeline provider
 ✅ Color system and typography
-✅ 1646-record bundled event corpus, with app-filtering for non-publishable statuses
+✅ 1638-record app-publishable bundled event corpus; deferred records are quarantined outside the app bundle
 
 ### Data / Editorial Work Still Needed
 - Continued source-truth review and source-quality hardening of the bundled corpus

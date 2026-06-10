@@ -1,0 +1,38 @@
+{
+  "generated_at_utc": "2026-06-08T07:51:03Z",
+  "pre_sha256": "01e47335dab450749dff3bf2c41a79979dde3724ff801f4eb088fa8c5bfcfd2b",
+  "post_sha256": "01e47335dab450749dff3bf2c41a79979dde3724ff801f4eb088fa8c5bfcfd2b",
+  "events_json_unchanged": true,
+  "no_app_data_write": true,
+  "mutation_allowed": false,
+  "style_hits": [],
+  "artifact_files": [
+    "/Users/jamesmcshane/Desktop/today-ios/docs/editorial-source-scout/source-scout-batch-001/DEFERRED_CANDIDATES.md",
+    "/Users/jamesmcshane/Desktop/today-ios/docs/editorial-source-scout/source-scout-batch-001/NO_WRITE_AND_STYLE_RECEIPT.json",
+    "/Users/jamesmcshane/Desktop/today-ios/docs/editorial-source-scout/source-scout-batch-001/PROPOSED_REPAIRS_DRAFT.json",
+    "/Users/jamesmcshane/Desktop/today-ios/docs/editorial-source-scout/source-scout-batch-001/RANKED_REPAIR_QUEUE.md",
+    "/Users/jamesmcshane/Desktop/today-ios/docs/editorial-source-scout/source-scout-batch-001/SCOUT_RUN_REPORT.md",
+    "/Users/jamesmcshane/Desktop/today-ios/docs/editorial-source-scout/source-scout-batch-001/SOURCE_CONFIRMATION_MANIFEST.json",
+    "/Users/jamesmcshane/Desktop/today-ios/docs/editorial-source-scout/source-scout-batch-001/SOURCE_LEADS_RAW.json"
+  ],
+  "targeted_confirmation_counts": {
+    "records_checked": 10,
+    "repair_ready_source_only": 5,
+    "repair_ready_with_copy_review": 4,
+    "defer_exact_source_gap": 1
+  },
+  "verification_completed_at_utc": "2026-06-08T07:54:36Z",
+  "json_parse_passed": true,
+  "style_gate_passed": true,
+  "style_gate_rules": [
+    "no em dash in artifacts",
+    "no emoji in artifacts",
+    "no MEDIA tags in artifacts"
+  ],
+  "validators": {
+    "python3 .github/scripts/validate_events.py": "passed",
+    "python3 .github/scripts/validate_runtime_contracts.py": "passed"
+  },
+  "post_verification_sha256": "01e47335dab450749dff3bf2c41a79979dde3724ff801f4eb088fa8c5bfcfd2b",
+  "events_json_unchanged_after_verification": true
+}

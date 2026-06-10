@@ -1,0 +1,189 @@
+{
+  "cutline": "quarantine all records with editorial_status=defer outside the active app bundle",
+  "timestamp_utc": "20260610T010630Z",
+  "active_events_path": "sample-data/events.json",
+  "backup_path": "sample-data/events.json.bak-before-deferred-quarantine-20260610T010630Z",
+  "quarantined_records_path": "docs/editorial-source-scout/deferred-quarantine-20260610T010630Z/QUARANTINED_RECORDS.json",
+  "policy": "Deferred records are retained for audit/rework only and are not bundled into the app or widget release candidate.",
+  "before": {
+    "records": 1646,
+    "publishable_records": 1638,
+    "app_filtered_records": 8,
+    "status_counts": {
+      "app_ready_merged": 31,
+      "app_ready_merged_append": 8,
+      "defer": 8,
+      "ready": 1599
+    },
+    "tone_counts": {
+      "balanced": 751,
+      "somber": 266,
+      "uplifting": 629
+    },
+    "sha256": "f0b00ba8896f58f94b7ba7ceb7ea83b4fdea9897664f4c7f9f332b383b6c8acd"
+  },
+  "after": {
+    "records": 1638,
+    "publishable_records": 1638,
+    "app_filtered_records": 0,
+    "status_counts": {
+      "app_ready_merged": 31,
+      "app_ready_merged_append": 8,
+      "ready": 1599
+    },
+    "tone_counts": {
+      "balanced": 743,
+      "somber": 266,
+      "uplifting": 629
+    },
+    "sha256": "bd803167249432df6f0e9c15bafd635e595ef7c9a0241dcb233bfd5b68f42927"
+  },
+  "quarantined_ids": [
+    "june-15-1410-26bdc49bca8cfd59",
+    "march-03-1924-7b4f5ceff0ad11d7",
+    "february-14-1947-0784c6b75731930e",
+    "january-06-1947-05a9592ef608f5cc",
+    "july-11-1941-8941cd809075e011",
+    "august-07-1985-9227d6db9e45a43c",
+    "november-04-1924-3e91bc013fcff467",
+    "december-31-1983-905a79487fb500d2"
+  ],
+  "quarantined_titles": [
+    {
+      "id": "june-15-1410-26bdc49bca8cfd59",
+      "month": 6,
+      "day": 15,
+      "year": 1410,
+      "title": "Onon River Battle Date Needs Review",
+      "category": "history",
+      "tone": "balanced"
+    },
+    {
+      "id": "march-03-1924-7b4f5ceff0ad11d7",
+      "month": 3,
+      "day": 3,
+      "year": 1924,
+      "title": "Fiume Annexation Date Needs Review",
+      "category": "politics",
+      "tone": "balanced"
+    },
+    {
+      "id": "february-14-1947-0784c6b75731930e",
+      "month": 2,
+      "day": 14,
+      "year": 1947,
+      "title": "Hungary Noble-Ranks Date Needs Review",
+      "category": "politics",
+      "tone": "balanced"
+    },
+    {
+      "id": "january-06-1947-05a9592ef608f5cc",
+      "month": 1,
+      "day": 6,
+      "year": 1947,
+      "title": "Pan Am Round-the-World Ticket Date Needs Review",
+      "category": "exploration",
+      "tone": "balanced"
+    },
+    {
+      "id": "july-11-1941-8941cd809075e011",
+      "month": 7,
+      "day": 11,
+      "year": 1941,
+      "title": "Northern Rhodesian Labour Congress Needs Review",
+      "category": "politics",
+      "tone": "balanced"
+    },
+    {
+      "id": "august-07-1985-9227d6db9e45a43c",
+      "month": 8,
+      "day": 7,
+      "year": 1985,
+      "title": "Japan Astronaut Selection Exact-Date Claim Deferred",
+      "category": "exploration",
+      "tone": "balanced"
+    },
+    {
+      "id": "november-04-1924-3e91bc013fcff467",
+      "month": 11,
+      "day": 4,
+      "year": 1924,
+      "title": "Nellie Tayloe Ross Election Exact-Date Claim Deferred",
+      "category": "politics",
+      "tone": "balanced"
+    },
+    {
+      "id": "december-31-1983-905a79487fb500d2",
+      "month": 12,
+      "day": 31,
+      "year": 1983,
+      "title": "Benjamin Ward Appointment Date Needs Review",
+      "category": "politics",
+      "tone": "balanced"
+    }
+  ],
+  "verification": {
+    "status": "passed",
+    "verified_at_utc": "20260610T010747Z",
+    "commands": [
+      {
+        "command": "python3 .github/scripts/validate_events.py",
+        "result": "passed",
+        "records": 1638,
+        "publishable_records": 1638
+      },
+      {
+        "command": "python3 .github/scripts/validate_runtime_contracts.py",
+        "result": "passed",
+        "records": 1638,
+        "publishable_records": 1638
+      },
+      {
+        "command": "xcodebuild -project Today.xcodeproj -scheme Today -destination 'generic/platform=iOS Simulator' -derivedDataPath /tmp/today-ios-deferred-quarantine-20260610T010704Z CODE_SIGNING_ALLOWED=NO build",
+        "result": "passed"
+      },
+      {
+        "command": "xcodebuild -project Today.xcodeproj -scheme TodayWidgetExtension -destination 'generic/platform=iOS Simulator' -derivedDataPath /tmp/today-ios-deferred-quarantine-20260610T010704Z CODE_SIGNING_ALLOWED=NO build",
+        "result": "passed"
+      }
+    ],
+    "bundle_sha_check": {
+      "source_sha256": "bd803167249432df6f0e9c15bafd635e595ef7c9a0241dcb233bfd5b68f42927",
+      "app_bundle_sha256": "bd803167249432df6f0e9c15bafd635e595ef7c9a0241dcb233bfd5b68f42927",
+      "widget_bundle_sha256": "bd803167249432df6f0e9c15bafd635e595ef7c9a0241dcb233bfd5b68f42927",
+      "app_bundle_match": true,
+      "widget_bundle_match": true,
+      "records": 1638,
+      "app_filtered_records": 0
+    },
+    "derived_data_path": "/tmp/today-ios-deferred-quarantine-20260610T010704Z",
+    "extra_cutline_checks": {
+      "active_defer_records": 0,
+      "active_app_filtered_records": 0,
+      "affected_publishable_counts_before": {
+        "01-06": 3,
+        "02-14": 4,
+        "03-03": 4,
+        "06-15": 4,
+        "07-11": 4,
+        "08-07": 4,
+        "11-04": 4,
+        "12-31": 3
+      },
+      "affected_publishable_counts_after": {
+        "01-06": 3,
+        "02-14": 4,
+        "03-03": 4,
+        "06-15": 4,
+        "07-11": 4,
+        "08-07": 4,
+        "11-04": 4,
+        "12-31": 3
+      },
+      "quarantined_record_em_dash_count": 0,
+      "quarantined_record_emoji_count": 0,
+      "git_diff_check": "passed",
+      "private_qa_scanner": "not_run; not present in this checkout per repo docs/private-workspace note"
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "generated_at_utc": "2026-06-08T10:05:50Z",
+  "repo": "/Users/jamesmcshane/Desktop/today-ios",
+  "data_file": "sample-data/events.json",
+  "input_sha256_before_this_mutation": "1a7f9e1ee0a5772b61016260683d37924611ffae76d6d1719e6ba5d745ea9a5c",
+  "selection_note": "Best-next continuation from current visible records with live remote encyclopedia/feed sources after source-scout-batch-001 was already executed. Two unresolved source-lead items were not mutated after a failed worker loop; this pass uses six parent-verified source-confirmed records.",
+  "records": [
+    {
+      "id": "april-04-1984-216fbcb2fb5052f9",
+      "verdict": "repair_ready",
+      "final_sources": [
+        "https://www.reaganlibrary.gov/archives/speech/presidents-news-conference-38",
+        "https://www.upi.com/Archives/1984/04/05/Reagan-proposes-chemical-arms-ban/1893449989200/"
+      ],
+      "evidence": [
+        {
+          "publisher": "Reagan Library",
+          "excerpt": "The President's News Conference April 4, 1984 ... U.S. Proposal for Ban on Chemical Weapons ... a comprehensive, worldwide ban on chemical weapons. Our proposal would prohibit the production, possession, and use of chemical weapons."
+        },
+        {
+          "publisher": "UPI",
+          "excerpt": "Reagan opened his 23rd formal news conference Wednesday evening by announcing plans to offer the Soviet Union a global ban on chemical weapons."
+        }
+      ],
+      "mutation_note": "Source replacement and copy tightened to announcement of proposal."
+    },
+    {
+      "id": "april-07-2018-457c29636958ac5b",
+      "verdict": "repair_ready_copy_reviewed",
+      "final_sources": [
+        "https://apnews.com/article/04a9443d9dc94c90aa8b3c24d10c5bb8",
+        "https://edition.cnn.com/2018/04/07/americas/brazil-lula-da-silva/",
+        "https://www.bbc.com/news/world-latin-america-50351438"
+      ],
+      "evidence": [
+        {
+          "publisher": "AP News",
+          "excerpt": "Saturday, April 7, 2018 ... Da Silva began serving a sentence of 12 years and one month for a corruption conviction ... Judge Sergio Moro ... so-called Car Wash cases ... ordered an arrest warrant."
+        },
+        {
+          "publisher": "CNN",
+          "excerpt": "Former Brazilian President Luiz Inacio Lula da Silva turned himself over to federal authorities Saturday to begin serving a 12-year prison sentence for corruption ... Operation Car Wash."
+        },
+        {
+          "publisher": "BBC",
+          "excerpt": "A judge ordered his release after a Supreme Court ruling that defendants should only be imprisoned if they have exhausted their appeal options ... 580 days."
+        }
+      ],
+      "mutation_note": "Narrowed from generic arrested wording to turn-over/custody wording."
+    },
+    {
+      "id": "april-10-1970-9fd084047a6bdec5",
+      "verdict": "repair_ready_copy_reviewed",
+      "final_sources": [
+        "https://www.history.com/this-day-in-history/april-10/paul-mccartney-announces-the-breakup-of-the-beatles",
+        "https://www.theguardian.com/music/from-the-archive-blog/2020/apr/09/day-beatles-broke-up-paul-mccartney-1970"
+      ],
+      "evidence": [
+        {
+          "publisher": "HISTORY",
+          "excerpt": "Paul McCartney announces his break from the Beatles | April 10, 1970."
+        },
+        {
+          "publisher": "The Guardian",
+          "excerpt": "Paul McCartney confirmed yesterday that he had broken with the Beatles ... he did not know whether his break with the Beatles was temporary or permanent."
+        }
+      ],
+      "mutation_note": "Narrowed to public split statement, not formal dissolution."
+    },
+    {
+      "id": "april-16-1943-e052a628ca341806",
+      "verdict": "repair_ready_copy_reviewed",
+      "final_sources": [
+        "https://edu.rsc.org/resources/on-this-day-apr-16--lsd-effects-discovered/10416.article",
+        "https://www.britannica.com/biography/Albert-Hofmann",
+        "https://www.swissinfo.ch/eng/sci-tech/75-years-ago_the-first-trip-down-lsd-lane/44050456"
+      ],
+      "evidence": [
+        {
+          "publisher": "Royal Society of Chemistry",
+          "excerpt": "On This Day - April 16 : The psychedelic properties of LSD were discovered ... in 1943."
+        },
+        {
+          "publisher": "Britannica",
+          "excerpt": "Following his initial, accidental exposure to LSD, on April 16, 1943 ... intentionally ingested ... on April 19, 1943."
+        },
+        {
+          "publisher": "SWI swissinfo.ch",
+          "excerpt": "On April 16, 1943, Albert Hofmann suddenly saw an uninterrupted stream of fantastic pictures ... Three days later, Hofmann intentionally took a small amount of LSD."
+        }
+      ],
+      "mutation_note": "Repaired category and separated April 16 accidental discovery from April 19 deliberate test."
+    },
+    {
+      "id": "april-20-1968-30da991d9896e922",
+      "verdict": "repair_ready_copy_reviewed",
+      "final_sources": [
+        "https://warwick.ac.uk/services/library/mrc/studying/docs/racism/powell/"
+      ],
+      "evidence": [
+        {
+          "publisher": "University of Warwick Modern Records Centre",
+          "excerpt": "On 20 April 1968 ... Enoch Powell addressed a Conservative Party meeting in Birmingham ... The speech used controversial language and violent imagery to strongly oppose mass immigration into Britain."
+        }
+      ],
+      "mutation_note": "Repaired category/tone and sensitive racial-politics framing."
+    },
+    {
+      "id": "april-22-1864-773e5ddf2d87c1b1",
+      "verdict": "repair_ready_copy_reviewed",
+      "final_sources": [
+        "https://blogs.loc.gov/law/2013/04/in-god-we-trust/",
+        "https://www.govinfo.gov/content/pkg/STATUTE-13/pdf/STATUTE-13-Pg54.pdf",
+        "https://www.govinfo.gov/content/pkg/STATUTE-13/pdf/STATUTE-13-Pg55.pdf"
+      ],
+      "evidence": [
+        {
+          "publisher": "Library of Congress",
+          "excerpt": "On April 22, 1864, Congress passed a law ... instructed the director of the Mint to fix the shape, mottos, and devices of the one and two cent coins. Later in 1864, the Mint issued two cent coins with the motto In God We Trust."
+        },
+        {
+          "publisher": "GovInfo Statutes at Large",
+          "excerpt": "there shall be from time to time struck and coined at the mint a two-cent piece ... the shape, mottoes, and devices ... Approved, April 22, 1864."
+        }
+      ],
+      "mutation_note": "Narrowed unsupported all-coin motto claim."
+    }
+  ],
+  "not_mutated_this_pass": [
+    {
+      "id": "january-31-2007-25f29f1dce2198de",
+      "reason": "source-lead worker hit max-iteration; not repeated in parent loop this pass"
+    },
+    {
+      "id": "april-04-1988-da02934ef4d082c8",
+      "reason": "source-lead worker hit max-iteration; not repeated in parent loop this pass"
+    }
+  ]
+}

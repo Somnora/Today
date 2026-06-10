@@ -1,0 +1,238 @@
+[
+  {
+    "id": "june-15-1410-26bdc49bca8cfd59",
+    "month": 6,
+    "day": 15,
+    "year": 1410,
+    "title": "Onon River Battle Date Needs Review",
+    "one_liner": "The June 15 claim about Ming forces defeating Bunyashiri near the Onon River is held because current exact-date leads are derivative and need stronger scholarly support.",
+    "description": "The June 15 claim about Ming forces defeating Bunyashiri near the Onon River is held because current exact-date leads are derivative and need stronger scholarly support.",
+    "short_summary": "The Onon River battle record is held pending stronger exact-date support.",
+    "summary": "The June 15 claim about Ming forces defeating Bunyashiri near the Onon River is held because current exact-date leads are derivative and need stronger scholarly support. The older wording also used overly theatrical battle language.",
+    "detail": "The June 15 claim about Ming forces defeating Bunyashiri near the Onon River is held because current exact-date leads are derivative and need stronger scholarly support. The older wording also used overly theatrical battle language.",
+    "deep_dive": "Source leads point to a Ming campaign against Bunyashiri near the Onon River on June 15, 1410, but the retrievable exact-date pages are weak derivative references. This record should use a scholarly Ming history source before returning to the visible feed.",
+    "why_it_matters": "Holding the record avoids presenting a medieval military claim as settled when the current source support is not strong enough for a visible history feed.",
+    "category": "history",
+    "tags": [
+      "history",
+      "military_history",
+      "ming_dynasty",
+      "mongol_history",
+      "source_review"
+    ],
+    "tone": "balanced",
+    "sources": [
+      "http://www.historman.com/en/event/Yongle_Emperor%27s_campaigns_against_the_Mongols/Q11087883"
+    ],
+    "provenance": "source_repair=today-ios-best-next-pass3-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass3; source_posture=external_source_repair; date=1410-06-15",
+    "source_confidence": 0.36,
+    "editorial_status": "defer"
+  },
+  {
+    "id": "march-03-1924-7b4f5ceff0ad11d7",
+    "month": 3,
+    "day": 3,
+    "year": 1924,
+    "title": "Fiume Annexation Date Needs Review",
+    "one_liner": "The Fiume annexation record is held because stronger sources support the Treaty of Rome on January 27 or annexation ceremonies on March 16, not March 3.",
+    "description": "The Fiume annexation record is held because stronger sources support the Treaty of Rome on January 27 or annexation ceremonies on March 16, not March 3.",
+    "short_summary": "The Fiume annexation record is held pending a date correction.",
+    "summary": "The Fiume annexation record is held because stronger sources support the Treaty of Rome on January 27 or annexation ceremonies on March 16, not March 3. The record should be moved or rewritten before returning to the visible feed.",
+    "detail": "The Fiume annexation record is held because stronger sources support the Treaty of Rome on January 27 or annexation ceremonies on March 16, not March 3. The record should be moved or rewritten before returning to the visible feed.",
+    "deep_dive": "Italian legal and encyclopedia sources point to March 16, 1924 for civil celebrations and the Fiume provincial designation, while treaty sources point to January 27, 1924 for the Treaty of Rome. That conflicts with the current March 3 placement.",
+    "why_it_matters": "The date distinction matters because treaty signing, legal celebration, and annexation framing are different political events.",
+    "category": "politics",
+    "tags": [
+      "politics",
+      "italy",
+      "fiume",
+      "interwar_europe",
+      "source_review"
+    ],
+    "tone": "balanced",
+    "sources": [
+      "https://www.fiscoai.it/normativa/legge/279/1924/",
+      "https://www.treccani.it/enciclopedia/provincia-del-carnaro_(Enciclopedia-Italiana)/"
+    ],
+    "provenance": "source_repair=today-ios-best-next-pass3-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass3; source_posture=external_source_repair; date=1924-03-03",
+    "source_confidence": 0.42,
+    "editorial_status": "defer"
+  },
+  {
+    "id": "february-14-1947-0784c6b75731930e",
+    "month": 2,
+    "day": 14,
+    "year": 1947,
+    "title": "Hungary Noble-Ranks Date Needs Review",
+    "one_liner": "Official Hungarian legal texts support Act IV of 1947 taking effect on January 14, 1947, not this February 14 record date.",
+    "description": "Official Hungarian legal texts support Act IV of 1947 taking effect on January 14, 1947, not this February 14 record date.",
+    "short_summary": "Hungary noble-ranks record held because official legal sources conflict with this calendar date.",
+    "summary": "Official Hungarian legal texts support Act IV of 1947 taking effect on January 14, 1947, abolishing noble and aristocratic ranks and certain titles. This February 14 record is hidden until the date can be corrected or separately sourced.",
+    "detail": "Official Hungarian legal texts support Act IV of 1947 taking effect on January 14, 1947, abolishing noble and aristocratic ranks and certain titles. This February 14 record is hidden until the date can be corrected or separately sourced.",
+    "deep_dive": "Hungary Act IV of 1947 abolished noble and aristocratic ranks and certain titles. The official legal record gives January 14, 1947 as the promulgation and effective date, so the current February 14 slot is not safe for the visible feed.",
+    "why_it_matters": "The hold prevents a legal-history milestone from shipping on a date the official law text does not support.",
+    "category": "politics",
+    "tags": [
+      "politics",
+      "hungary",
+      "legal_history",
+      "nobility",
+      "republicanism"
+    ],
+    "tone": "balanced",
+    "sources": [
+      "https://njt.hu/jogszabaly/1947-4-00-00",
+      "https://net.jogtar.hu/ezer-ev-torveny?docid=94700004.TV"
+    ],
+    "provenance": "source_repair=today-ios-best-next-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07; source_posture=external_source_repair; date=1947-02-14",
+    "source_confidence": 0.48,
+    "editorial_status": "defer"
+  },
+  {
+    "id": "january-06-1947-05a9592ef608f5cc",
+    "month": 1,
+    "day": 6,
+    "year": 1947,
+    "title": "Pan Am Round-the-World Ticket Date Needs Review",
+    "one_liner": "The January 6 ticket claim is held because stronger Pan Am history sources point to June 17, 1947 for the first regular round-the-world service.",
+    "description": "The January 6 ticket claim is held because stronger Pan Am history sources point to June 17, 1947 for the first regular round-the-world service.",
+    "short_summary": "Pan Am round-the-world ticket record held pending stronger exact-date source support.",
+    "summary": "Date-history pages place a Pan Am round-the-world ticket claim on January 6, 1947, but stronger Pan Am history sources point to June 17, 1947 for the first regular round-the-world service. The record is hidden until the January ticket-offer claim can be verified or moved.",
+    "detail": "Date-history pages place a Pan Am round-the-world ticket claim on January 6, 1947, but stronger Pan Am history sources point to June 17, 1947 for the first regular round-the-world service. The record is hidden until the January ticket-offer claim can be verified or moved.",
+    "deep_dive": "Pan Am Historical Foundation materials say Juan Trippe opened new round-the-world schedules on June 17, 1947, and later coverage treats that date as the first regular round-the-world passenger service. That conflict makes the January 6 ticket wording unsafe for the visible feed.",
+    "why_it_matters": "Holding the record protects a travel milestone from being displayed on a date that stronger aviation sources may contradict.",
+    "category": "exploration",
+    "tags": [
+      "exploration",
+      "aviation",
+      "pan_am",
+      "transportation",
+      "source_review"
+    ],
+    "tone": "balanced",
+    "sources": [
+      "https://www.panam.org/about-pahf/a-brief-history-of-pan-am-by-gene-banning",
+      "https://www.panam.org/enduring-legacy/r-e-g-davies-maps",
+      "https://www.wired.com/2009/06/dayintech-0617/"
+    ],
+    "provenance": "source_repair=today-ios-best-next-pass2-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass2; source_posture=external_source_repair; date=1947-01-06",
+    "source_confidence": 0.44,
+    "editorial_status": "defer"
+  },
+  {
+    "id": "july-11-1941-8941cd809075e011",
+    "month": 7,
+    "day": 11,
+    "year": 1941,
+    "title": "Northern Rhodesian Labour Congress Needs Review",
+    "one_liner": "A book snippet supports a party congress at Nkana on 11 July, but the available source trail is not strong enough for the full first-congress claim on this record.",
+    "description": "A book snippet supports a party congress at Nkana on 11 July, but the available source trail is not strong enough for the full first-congress claim on this record.",
+    "short_summary": "Northern Rhodesian Labour Party congress record held pending stronger exact-date source support.",
+    "summary": "A book snippet supports a Northern Rhodesian Labour Party congress at Nkana on 11 July, but the available source trail does not fully support the original first-congress wording with enough confidence. The record is hidden until a stronger source can be checked.",
+    "detail": "A book snippet supports a Northern Rhodesian Labour Party congress at Nkana on 11 July, but the available source trail does not fully support the original first-congress wording with enough confidence. The record is hidden until a stronger source can be checked.",
+    "deep_dive": "The available lead points to J. R. T. Wood describing a Rhodesia Labour Party congress at Nkana on 11 July, with a weaker derived source carrying the first-congress claim. That is not enough for a visible-feed repair of a colonial-politics record.",
+    "why_it_matters": "The hold avoids presenting a colonial political organizing claim before the exact source support is strong enough.",
+    "category": "politics",
+    "tags": [
+      "politics",
+      "northern_rhodesia",
+      "zambia",
+      "labor_history",
+      "colonial_politics"
+    ],
+    "tone": "balanced",
+    "sources": [
+      "https://books.google.com/books?id=lzhzAAAAMAAJ"
+    ],
+    "provenance": "source_repair=today-ios-best-next-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07; source_posture=external_source_repair; date=1941-07-11",
+    "source_confidence": 0.4,
+    "editorial_status": "defer"
+  },
+  {
+    "id": "august-07-1985-9227d6db9e45a43c",
+    "month": 8,
+    "day": 7,
+    "year": 1985,
+    "title": "Japan Astronaut Selection Exact-Date Claim Deferred",
+    "one_liner": "JAXA confirms Japan selected its first astronaut candidates in 1985, but this record's exact August 7 date needs stronger support.",
+    "description": "JAXA confirms Japan selected its first astronaut candidates in 1985, but this record's exact August 7 date needs stronger support.",
+    "short_summary": "JAXA confirms Japan selected its first astronaut candidates in 1985, but this record's exact August 7 date needs stronger support.",
+    "summary": "JAXA pages confirm Takao Doi, Mamoru Mohri, and Chiaki Mukai were selected as astronaut candidates in 1985. This record is deferred because the exact August 7 date was not verified in this pass from a directly reviewable non-Wikipedia source.",
+    "detail": "JAXA pages confirm Takao Doi, Mamoru Mohri, and Chiaki Mukai were selected as astronaut candidates in 1985. This record is deferred because the exact August 7 date was not verified in this pass from a directly reviewable non-Wikipedia source.",
+    "deep_dive": "JAXA pages confirm Takao Doi, Mamoru Mohri, and Chiaki Mukai were selected as astronaut candidates in 1985. This record is deferred because the exact August 7 date was not verified in this pass from a directly reviewable non-Wikipedia source.",
+    "why_it_matters": "The milestone is worth preserving only after the exact date is source-secure.",
+    "category": "exploration",
+    "tags": [
+      "spaceflight",
+      "Japan",
+      "JAXA",
+      "astronauts"
+    ],
+    "tone": "balanced",
+    "sources": [
+      "https://humans-in-space.jaxa.jp/en/astronaut/doi-takao/",
+      "https://humans-in-space.jaxa.jp/en/astronaut/mohri-mamoru/",
+      "https://humans-in-space.jaxa.jp/en/astronaut/mukai-chiaki/"
+    ],
+    "provenance": "source_repair=APP-189-best-next-visible-feed-source-posture-repair; date=1985-08-07; editorial_status=defer; defer_reason=JAXA_sources_confirm_month_year_and_people_but_not_exact_day; no_wikipedia_or_wikimedia; source_domain=humans-in-space.jaxa.jp; reviewed_utc=2026-05-30T20:19:29Z",
+    "source_confidence": 0.62,
+    "editorial_status": "defer"
+  },
+  {
+    "id": "november-04-1924-3e91bc013fcff467",
+    "month": 11,
+    "day": 4,
+    "year": 1924,
+    "title": "Nellie Tayloe Ross Election Exact-Date Claim Deferred",
+    "one_liner": "The National Governors Association confirms Ross was the first woman to serve as a state governor, but the exact election date needs stronger support.",
+    "description": "The National Governors Association confirms Ross was the first woman to serve as a state governor, but the exact election date needs stronger support.",
+    "short_summary": "The National Governors Association confirms Ross was the first woman to serve as a state governor, but the exact election date needs stronger support.",
+    "summary": "The National Governors Association confirms Nellie Tayloe Ross was the first woman to take the oath of office and serve as governor of a state. This record is deferred because this pass did not verify the exact November 4, 1924 election date from a directly reviewable non-Wikipedia source.",
+    "detail": "The National Governors Association confirms Nellie Tayloe Ross was the first woman to take the oath of office and serve as governor of a state. This record is deferred because this pass did not verify the exact November 4, 1924 election date from a directly reviewable non-Wikipedia source.",
+    "deep_dive": "The National Governors Association confirms Nellie Tayloe Ross was the first woman to take the oath of office and serve as governor of a state. This record is deferred because this pass did not verify the exact November 4, 1924 election date from a directly reviewable non-Wikipedia source.",
+    "why_it_matters": "The milestone is historically important, but the visible-feed date should not rely on unsupported chronology lineage.",
+    "category": "politics",
+    "tags": [
+      "politics",
+      "Wyoming",
+      "women_in_politics",
+      "governor"
+    ],
+    "tone": "balanced",
+    "sources": [
+      "https://www.nga.org/governor/nellie-tayloe-ross/"
+    ],
+    "provenance": "source_repair=APP-189-best-next-visible-feed-source-posture-repair; date=1924-11-04; editorial_status=defer; defer_reason=source_confirms_first_woman_governor_and_term_but_not_exact_election_date; no_wikipedia_or_wikimedia; source_domain=nga.org; reviewed_utc=2026-05-30T20:19:29Z",
+    "source_confidence": 0.58,
+    "editorial_status": "defer"
+  },
+  {
+    "id": "december-31-1983-905a79487fb500d2",
+    "month": 12,
+    "day": 31,
+    "year": 1983,
+    "title": "Benjamin Ward Appointment Date Needs Review",
+    "one_liner": "A source review supports Mayor Edward Koch naming Benjamin Ward on November 7, 1983, not this December 31 record date.",
+    "description": "A source review supports Mayor Edward Koch naming Benjamin Ward on November 7, 1983, not this December 31 record date.",
+    "short_summary": "Benjamin Ward appointment record held because the sourced appointment date conflicts with this calendar date.",
+    "summary": "A reputable newspaper archive supports Mayor Edward Koch naming Benjamin Ward as New York City police commissioner on November 7, 1983. This December 31 record is hidden until the date can be moved or separately sourced.",
+    "detail": "A reputable newspaper archive supports Mayor Edward Koch naming Benjamin Ward as New York City police commissioner on November 7, 1983. This December 31 record is hidden until the date can be moved or separately sourced.",
+    "deep_dive": "Source review found support for Benjamin Ward being named New York City police commissioner in November 1983, with no exact independent support for a December 31 appointment event. The item is held out of the visible feed rather than source-laundered.",
+    "why_it_matters": "Holding the record protects the feed from presenting a civil-rights and law-enforcement milestone on an unsupported date.",
+    "category": "politics",
+    "tags": [
+      "politics",
+      "law_enforcement",
+      "new_york_city",
+      "civil_rights",
+      "nypd"
+    ],
+    "tone": "balanced",
+    "sources": [
+      "https://www.washingtonpost.com/archive/national/1983/11/08/new-york-taps-black-for-top-police-post/f4c8c6f1-79f7-4834-a39d-7a58cff7af21/"
+    ],
+    "provenance": "source_repair=today-ios-best-next-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07; source_posture=external_source_repair; date=1983-12-31",
+    "source_confidence": 0.42,
+    "editorial_status": "defer"
+  }
+]

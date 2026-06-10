@@ -1,0 +1,76 @@
+{
+  "generated_at_utc": "2026-06-08T10:14:30Z",
+  "mutation_receipt": "/Users/jamesmcshane/Desktop/today-ios/docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z/MUTATION_RECEIPT.json",
+  "commands": [
+    {
+      "name": "validate_events.py",
+      "command": "python3 .github/scripts/validate_events.py",
+      "result": "passed"
+    },
+    {
+      "name": "validate_runtime_contracts.py",
+      "command": "python3 .github/scripts/validate_runtime_contracts.py",
+      "result": "passed"
+    },
+    {
+      "name": "git diff --check",
+      "command": "git diff --check",
+      "result": "passed"
+    },
+    {
+      "name": "changed-record style and source-token gate",
+      "command": "custom Python gate over changed IDs",
+      "result": "passed"
+    },
+    {
+      "name": "generated-artifact style gate",
+      "command": "custom Python gate over source-repair-batch-002 artifacts",
+      "result": "passed"
+    },
+    {
+      "name": "source warning count delta",
+      "command": "custom visible remote encyclopedia/feed source count",
+      "result": "before=276 after=270"
+    },
+    {
+      "name": "Today app build",
+      "command": "xcodebuild -project Today.xcodeproj -scheme Today -destination 'generic/platform=iOS Simulator' -derivedDataPath /tmp/today-ios-dd-20260608T100550Z CODE_SIGNING_ALLOWED=NO build",
+      "result": "passed"
+    },
+    {
+      "name": "TodayWidgetExtension build",
+      "command": "xcodebuild -project Today.xcodeproj -scheme TodayWidgetExtension -destination 'generic/platform=iOS Simulator' -derivedDataPath /tmp/today-ios-dd-20260608T100550Z CODE_SIGNING_ALLOWED=NO build",
+      "result": "passed"
+    },
+    {
+      "name": "bundle SHA comparison",
+      "command": "compare source, Today.app, and TodayWidgetExtension.appex events.json",
+      "result": "passed"
+    },
+    {
+      "name": "independent diff review",
+      "command": "delegate_task review of DIFF_REVIEW_INPUT.json",
+      "result": "PASS"
+    }
+  ],
+  "private_qa_scanner": "not present in this checkout; replaced with validators, style/source gates, visible source-token count, build gates, bundle SHA comparison, and independent diff review",
+  "bundle_receipt": {
+    "derived_data_path": "/tmp/today-ios-dd-20260608T100550Z",
+    "source_path": "/Users/jamesmcshane/Desktop/today-ios/sample-data/events.json",
+    "app_bundle_path": "/tmp/today-ios-dd-20260608T100550Z/Build/Products/Debug-iphonesimulator/Today.app/events.json",
+    "widget_bundle_path": "/tmp/today-ios-dd-20260608T100550Z/Build/Products/Debug-iphonesimulator/TodayWidgetExtension.appex/events.json",
+    "source_count": 1646,
+    "app_bundle_count": 1646,
+    "widget_bundle_count": 1646,
+    "source_sha256": "f0b00ba8896f58f94b7ba7ceb7ea83b4fdea9897664f4c7f9f332b383b6c8acd",
+    "app_bundle_sha256": "f0b00ba8896f58f94b7ba7ceb7ea83b4fdea9897664f4c7f9f332b383b6c8acd",
+    "widget_bundle_sha256": "f0b00ba8896f58f94b7ba7ceb7ea83b4fdea9897664f4c7f9f332b383b6c8acd",
+    "all_match": true
+  },
+  "independent_review_summary": "PASS. No blockers. Claims supported by cited sources and manifest evidence; changed records contain no stale feed/encyclopedia source URLs, no forbidden source tokens, no dash or emoji style violations, and no private path leakage.",
+  "known_unmutated_ids": [
+    "january-31-2007-25f29f1dce2198de",
+    "april-04-1988-da02934ef4d082c8",
+    "august-26-1942-80d95a14c483beb1"
+  ]
+}

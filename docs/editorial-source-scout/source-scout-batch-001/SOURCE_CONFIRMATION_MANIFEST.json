@@ -1,0 +1,338 @@
+{
+  "generated_at_utc": "2026-06-08T07:51:03Z",
+  "repo": "/Users/jamesmcshane/Desktop/today-ios",
+  "input_file": "/Users/jamesmcshane/Desktop/today-ios/sample-data/events.json",
+  "input_sha256_at_confirmation": "01e47335dab450749dff3bf2c41a79979dde3724ff801f4eb088fa8c5bfcfd2b",
+  "no_app_data_write": true,
+  "mutation_allowed": false,
+  "confirmation_scope": "Targeted direct-source confirmation for the top 10 risky/defer records from the batch-001 queue.",
+  "counts": {
+    "records_checked": 10,
+    "repair_ready_source_only": 5,
+    "repair_ready_with_copy_review": 4,
+    "defer_exact_source_gap": 1
+  },
+  "records": [
+    {
+      "id": "august-07-1962-e78f730929733f00",
+      "date": "August 7, 1962",
+      "title": "Frances Oldham Kelsey Awarded for Thalidomide Refusal",
+      "verdict": "repair_ready_source_only",
+      "rank": 1,
+      "repair_type": "source_replace",
+      "proposed_title": "Frances Oldham Kelsey Awarded for Thalidomide Refusal",
+      "proposed_description": "Canadian-born American pharmacologist Frances Oldham Kelsey receives the President's Award for Distinguished Federal Civilian Service for refusing to authorize thalidomide without stronger safety evidence.",
+      "proposed_summary": "Canadian-born American pharmacologist Frances Oldham Kelsey receives the President's Award for Distinguished Federal Civilian Service after refusing to authorize thalidomide without stronger safety evidence. Her caution helped keep a drug later linked to severe birth defects from being approved in the United States.",
+      "old_sources": [
+        "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/07",
+        "https://en.wikipedia.org/wiki/Frances_Oldham_Kelsey",
+        "https://en.wikipedia.org/wiki/Thalidomide"
+      ],
+      "proposed_sources": [
+        "https://www.presidency.ucsb.edu/documents/remarks-upon-presenting-the-presidents-awards-for-distinguished-federal-civilian-service",
+        "https://web.archive.org/web/20061020043712/https://www.fda.gov/fdac/features/2001/201_kelsey.html"
+      ],
+      "evidence": [
+        {
+          "publisher": "American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-upon-presenting-the-presidents-awards-for-distinguished-federal-civilian-service",
+          "excerpt": "August 7, 1962 ... To: Dr. Frances O. Kelsey, Medical Officer, Food and Drug Administration ... her exceptional judgment in evaluating a new drug for safety for human use, has prevented a major tragedy of birth deformities in the United States."
+        },
+        {
+          "publisher": "FDA Consumer archive via Internet Archive",
+          "url": "https://web.archive.org/web/20061020043712/https://www.fda.gov/fdac/features/2001/201_kelsey.html",
+          "excerpt": "In recognition of Kelsey's vigilance, President John F. Kennedy, on Aug. 7, 1962, presented her with the highest honor that can be bestowed upon a U.S. civilian: the medal for Distinguished Federal Civilian Service."
+        }
+      ],
+      "notes": "Exact date, person, award, FDA role, and thalidomide refusal are supported by official or archived official sources."
+    },
+    {
+      "id": "august-04-1892-fd89cb4fea529961",
+      "date": "August 4, 1892",
+      "title": "Lizzie Borden's Parents Found Murdered",
+      "verdict": "repair_ready_source_only",
+      "rank": 2,
+      "repair_type": "source_replace",
+      "proposed_title": "Lizzie Borden's Parents Found Murdered",
+      "proposed_description": "Andrew and Abby Borden are found murdered in their Fall River, Massachusetts home. Lizzie Borden is later tried and acquitted for the killings.",
+      "proposed_summary": "Andrew and Abby Borden are found murdered in their Fall River, Massachusetts home. Lizzie Borden is later tried and acquitted, and the case becomes one of the best-known unsolved murder cases in American criminal history.",
+      "old_sources": [
+        "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/04",
+        "https://en.wikipedia.org/wiki/Lizzie_Borden",
+        "https://en.wikipedia.org/wiki/Fall_River%2C_Massachusetts"
+      ],
+      "proposed_sources": [
+        "https://www.smithsonianmag.com/history/how-lizzie-borden-got-away-with-murder-180972707/",
+        "https://guides.loc.gov/chronicling-america-lizzie-borden/selected-articles"
+      ],
+      "evidence": [
+        {
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/how-lizzie-borden-got-away-with-murder-180972707/",
+          "excerpt": "the murders, which took place about an hour and a half apart on the morning of August 4, 1892."
+        },
+        {
+          "publisher": "Library of Congress",
+          "url": "https://guides.loc.gov/chronicling-america-lizzie-borden/selected-articles",
+          "excerpt": "Search Strategies and Selected Articles - Arrest and Trial of Lizzie Borden ... Lizzie Borden Arrested ... Not Guilty."
+        }
+      ],
+      "notes": "Exact date and murder location are supported; acquittal is supported by Library of Congress newspaper guide and Smithsonian context."
+    },
+    {
+      "id": "september-20-1941-cc587e668a24d693",
+      "date": "September 20, 1941",
+      "title": "The Holocaust in Lithuania: Mass Execution of Jews in Nemenčinė",
+      "verdict": "repair_ready_source_only",
+      "rank": 3,
+      "repair_type": "source_replace",
+      "proposed_title": "The Holocaust in Lithuania: Mass Execution of Jews in Nemenčinė",
+      "proposed_description": "On September 20, 1941, 403 Jews from Nemenčinė were shot at a mass murder site documented by the Holocaust Atlas of Lithuania.",
+      "proposed_summary": "On September 20, 1941, 403 Jews from Nemenčinė were shot at a mass murder site documented by the Holocaust Atlas of Lithuania. The record should use restrained wording and avoid unsupported overbroad attribution beyond the source.",
+      "old_sources": [
+        "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/09/20",
+        "https://en.wikipedia.org/wiki/The_Holocaust_in_Lithuania",
+        "https://en.wikipedia.org/wiki/Nemen%C4%8Din%C4%97"
+      ],
+      "proposed_sources": [
+        "http://www.holocaustatlas.lt/EN/#a_atlas/search//page/1/item/181/",
+        "http://www.holocaustatlas.lt/load_markers.js.php?l=EN"
+      ],
+      "evidence": [
+        {
+          "publisher": "Holocaust Atlas of Lithuania",
+          "url": "http://www.holocaustatlas.lt/EN/#a_atlas/search//page/1/item/181/",
+          "excerpt": "Mass Murder of the Jews from Nemenčinė"
+        },
+        {
+          "publisher": "Holocaust Atlas of Lithuania marker data",
+          "url": "http://www.holocaustatlas.lt/load_markers.js.php?l=EN",
+          "excerpt": "On September 20, 1941, 403 Jews from Nemenčinė were shot."
+        }
+      ],
+      "notes": "Exact date, location, and victim count are supported. Proposed wording narrows attribution to what the source directly supports."
+    },
+    {
+      "id": "october-16-1998-2016eb66331a26bb",
+      "date": "October 16, 1998",
+      "title": "Former Chilean dictator Augusto Pinochet arrested in London",
+      "verdict": "repair_ready_source_only",
+      "rank": 4,
+      "repair_type": "source_replace",
+      "proposed_title": "Former Chilean dictator Augusto Pinochet arrested in London",
+      "proposed_description": "Former Chilean dictator Augusto Pinochet is arrested at a London hospital on a Spanish warrant seeking extradition on murder charges.",
+      "proposed_summary": "Former Chilean dictator Augusto Pinochet is arrested at a London hospital on a Spanish warrant seeking extradition on murder charges. The arrest becomes a major moment for international accountability efforts over alleged human rights abuses.",
+      "old_sources": [
+        "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/10/16",
+        "https://en.wikipedia.org/wiki/Augusto_Pinochet",
+        "https://en.wikipedia.org/wiki/Indictment_and_arrest_of_Augusto_Pinochet"
+      ],
+      "proposed_sources": [
+        "https://www.theguardian.com/world/1998/oct/18/pinochet.chile",
+        "https://news.bbc.co.uk/2/hi/europe/195413.stm"
+      ],
+      "evidence": [
+        {
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/world/1998/oct/18/pinochet.chile",
+          "excerpt": "General Augusto Pinochet ... was arrested at a London hospital on Friday night by police acting on a request from Spain."
+        },
+        {
+          "publisher": "BBC News",
+          "url": "https://news.bbc.co.uk/2/hi/europe/195413.stm",
+          "excerpt": "The former Chilean dictator, General Augusto Pinochet, has been arrested in London on a warrant from Spain requesting his extradition on murder charges."
+        }
+      ],
+      "notes": "Guardian publication date is October 17, 1998 and states Friday night, which supports October 16. BBC supports London arrest and Spanish murder-extradition warrant."
+    },
+    {
+      "id": "august-08-2022-37bd901849b7ea28",
+      "date": "August 8, 2022",
+      "title": "FBI Searches Former President Trump's Residence",
+      "verdict": "repair_ready_source_only",
+      "rank": 5,
+      "repair_type": "source_replace",
+      "proposed_title": "FBI Searches Former President Trump's Residence",
+      "proposed_description": "The FBI searches former president Donald Trump's Mar-a-Lago residence in Palm Beach, Florida, under a federal search warrant.",
+      "proposed_summary": "The FBI searches former president Donald Trump's Mar-a-Lago residence in Palm Beach, Florida, under a federal search warrant. The search marks a major legal and political escalation involving presidential records and classified-material investigations.",
+      "old_sources": [
+        "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/08",
+        "https://en.wikipedia.org/wiki/Federal_Bureau_of_Investigation",
+        "https://en.wikipedia.org/wiki/FBI_search_of_Mar-a-Lago"
+      ],
+      "proposed_sources": [
+        "https://www.bbc.com/news/world-us-canada-62472908",
+        "https://www.nbcnews.com/politics/donald-trump/fbi-executes-search-warrant-trumps-mar-lago-sources-say-rcna42133"
+      ],
+      "evidence": [
+        {
+          "publisher": "BBC News",
+          "url": "https://www.bbc.com/news/world-us-canada-62472908",
+          "excerpt": "Donald Trump has said his Florida home was raided by the FBI ... Mr Trump said a large group of FBI agents were at Mar-a-Lago in Palm Beach ... A federal search warrant must be signed by a judge."
+        },
+        {
+          "publisher": "NBC News",
+          "url": "https://www.nbcnews.com/politics/donald-trump/fbi-executes-search-warrant-trumps-mar-lago-sources-say-rcna42133",
+          "excerpt": "Aug. 8, 2022 ... Former President Donald Trump said Monday that the FBI had raided his home at Mar-a-Lago in Florida ... A senior government official told NBC News that the FBI was at Mar-a-Lago for the majority of the day and confirmed that the search warrant was connected to the National Archives."
+        }
+      ],
+      "notes": "Exact date, FBI search, residence, and search-warrant context are supported by accessible non-Wiki news sources."
+    },
+    {
+      "id": "october-02-1919-0a3726e29078ed59",
+      "date": "October 2, 1919",
+      "title": "Woodrow Wilson's Stroke at the White House",
+      "verdict": "repair_ready_with_copy_review",
+      "rank": 6,
+      "repair_type": "source_replace_and_copy_narrow",
+      "proposed_title": "Woodrow Wilson's Stroke at the White House",
+      "proposed_description": "After cutting short a national tour to promote the League of Nations, President Woodrow Wilson suffers a near-fatal stroke in Washington on October 2, 1919.",
+      "proposed_summary": "After cutting short a national tour to promote the League of Nations, President Woodrow Wilson suffers a near-fatal stroke in Washington on October 2, 1919. The illness sharply limits his public role and leaves First Lady Edith Wilson controlling much of the paper flow around the presidency during his recovery.",
+      "old_sources": [
+        "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/10/02",
+        "https://en.wikipedia.org/wiki/Stroke",
+        "https://en.wikipedia.org/wiki/Pueblo_speech"
+      ],
+      "proposed_sources": [
+        "https://www.history.com/this-day-in-history/october-2/woodrow-wilson-suffers-a-stroke",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC1911642/"
+      ],
+      "evidence": [
+        {
+          "publisher": "HISTORY",
+          "url": "https://www.history.com/this-day-in-history/october-2/woodrow-wilson-suffers-a-stroke",
+          "excerpt": "President Woodrow Wilson ... suffers a stroke on October 2, 1919. He managed to return to Washington, only to suffer a near-fatal stroke on October 2."
+        },
+        {
+          "publisher": "PubMed Central",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1911642/",
+          "excerpt": "Woodrow Wilson: A Medical and Psychological Biography."
+        }
+      ],
+      "notes": "Exact date and stroke are supported. Current wording says physically and mentally incapacitated for the remainder of his presidency; proposed wording narrows that claim."
+    },
+    {
+      "id": "august-04-2018-1b084fcbccc384d0",
+      "date": "August 4, 2018",
+      "title": "Venezuela Drone Attack During Maduro's Speech",
+      "verdict": "repair_ready_with_copy_review",
+      "rank": 7,
+      "repair_type": "source_replace_and_copy_narrow",
+      "proposed_title": "Venezuela Drone Attack During Maduro's Speech",
+      "proposed_description": "Venezuelan officials say explosive drones detonated near President Nicolas Maduro during a Caracas military speech, injuring seven members of the national guard.",
+      "proposed_summary": "Venezuelan officials say explosive drones detonated near President Nicolas Maduro during a Caracas military speech, injuring seven members of the national guard. Because some contemporaneous reports questioned parts of the official account, the record should attribute the drone details to officials rather than present every detail as settled fact.",
+      "old_sources": [
+        "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/04",
+        "https://en.wikipedia.org/wiki/Crisis_in_Venezuela",
+        "https://en.wikipedia.org/wiki/2018_Caracas_drone_attack"
+      ],
+      "proposed_sources": [
+        "https://www.bbc.com/news/world-latin-america-45073385",
+        "https://www.theguardian.com/world/2018/aug/04/nicolas-maduros-speech-cut-short-while-soldiers-scatter"
+      ],
+      "evidence": [
+        {
+          "publisher": "BBC News",
+          "url": "https://www.bbc.com/news/world-latin-america-45073385",
+          "excerpt": "Venezuelan President Nicolas Maduro says he has survived an assassination attempt involving explosive drones ... Seven soldiers were injured, and several people were later arrested, the Venezuelan authorities said."
+        },
+        {
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/world/2018/aug/04/nicolas-maduros-speech-cut-short-while-soldiers-scatter",
+          "excerpt": "Venezuela's president, Nicolas Maduro, has survived an apparent assassination attempt after what officials described as drones armed with explosives ... Seven people were injured, the country's information minister, Jorge Rodriguez, said."
+        }
+      ],
+      "notes": "Exact date and reported injuries are supported. Because the source frames parts as officials said and notes dispute, copy should be attribution-safe."
+    },
+    {
+      "id": "september-16-1976-441b067e0c98a3e6",
+      "date": "September 16, 1976",
+      "title": "Night of the Pencils",
+      "verdict": "repair_ready_with_copy_review",
+      "rank": 8,
+      "repair_type": "source_replace_and_copy_narrow",
+      "proposed_title": "Night of the Pencils",
+      "proposed_description": "Security forces in La Plata, Argentina abduct high-school students on September 16 and 17, 1976, in what becomes known as the Night of the Pencils.",
+      "proposed_summary": "Security forces in La Plata, Argentina abduct high-school students on September 16 and 17, 1976, in what becomes known as the Night of the Pencils. BBC reporting supports imprisonment, torture, and deaths, while the current rape wording needs a more specific source before it should be retained.",
+      "old_sources": [
+        "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/09/16",
+        "https://en.wikipedia.org/wiki/Night_of_the_Pencils",
+        "https://en.wikipedia.org/wiki/La_Plata"
+      ],
+      "proposed_sources": [
+        "https://www.bbc.com/news/world-latin-america-14910859"
+      ],
+      "evidence": [
+        {
+          "publisher": "BBC News",
+          "url": "https://www.bbc.com/news/world-latin-america-14910859",
+          "excerpt": "On 16 and 17 September 1976, masked men raided their homes under cover of darkness, taking them away to clandestine detention centres in what became known as the Night of the Pencils. Six were never seen again."
+        },
+        {
+          "publisher": "BBC News",
+          "url": "https://www.bbc.com/news/world-latin-america-14910859",
+          "excerpt": "They were young idealistic high school students who were unaware of what horrors they were about to face: imprisonment, torture and, in some cases, death."
+        }
+      ],
+      "notes": "Date, place, abduction, torture, and deaths are supported. Retain rape only if a separate direct source is added."
+    },
+    {
+      "id": "september-23-1955-066299b2c0da7301",
+      "date": "September 23, 1955",
+      "title": "Emmett Till Murder Trial",
+      "verdict": "repair_ready_with_copy_review",
+      "rank": 9,
+      "repair_type": "source_replace_and_copy_narrow",
+      "proposed_title": "Emmett Till Murder Trial",
+      "proposed_description": "An all-white Mississippi jury acquits J. W. Milam and Roy Bryant of murdering 14-year-old Emmett Till.",
+      "proposed_summary": "An all-white Mississippi jury acquits J. W. Milam and Roy Bryant of murdering 14-year-old Emmett Till on September 23, 1955. The verdict becomes a defining example of racist injustice in the civil rights era.",
+      "old_sources": [
+        "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/09/23",
+        "https://en.wikipedia.org/wiki/Mississippi",
+        "https://en.wikipedia.org/wiki/Emmett_Till"
+      ],
+      "proposed_sources": [
+        "https://www.pbs.org/wgbh/americanexperience/features/till-timeline/",
+        "https://www.britannica.com/biography/Emmett-Till"
+      ],
+      "evidence": [
+        {
+          "publisher": "PBS American Experience",
+          "url": "https://www.pbs.org/wgbh/americanexperience/features/till-timeline/",
+          "excerpt": "September 23, 1955 Milam and Bryant are acquitted of murdering Emmett Till after the jury deliberates only 67 minutes."
+        },
+        {
+          "publisher": "Britannica",
+          "url": "https://www.britannica.com/biography/Emmett-Till",
+          "excerpt": "The trial of Till's killers began on September 19, 1955 ... an all-white, all-male jury ... acquitted Bryant and Milam of all charges."
+        }
+      ],
+      "notes": "Exact date and acquittal are supported. Proposed copy says murdering rather than torture-murder because the source quotes directly support murder and acquittal."
+    },
+    {
+      "id": "august-26-1942-80d95a14c483beb1",
+      "date": "August 26, 1942",
+      "title": "Holocaust in Ukraine: Deportation of Jews to Belzec",
+      "verdict": "defer_exact_source_gap",
+      "rank": 10,
+      "repair_type": "defer",
+      "proposed_title": null,
+      "proposed_description": null,
+      "proposed_summary": null,
+      "old_sources": [
+        "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/26",
+        "https://en.wikipedia.org/wiki/The_Holocaust_in_Ukraine",
+        "https://en.wikipedia.org/wiki/Chortkiv"
+      ],
+      "proposed_sources": [],
+      "evidence": [
+        {
+          "publisher": "Wikipedia date page only, not acceptable as final source",
+          "url": "https://en.wikipedia.org/wiki/August_26",
+          "excerpt": "The on-this-day claim appears on the Wikipedia August 26 page, but the targeted pass did not surface an accessible direct non-Wiki source supporting the exact Chortkiv, August 26, 1942, Belzec, 2,000 deported, and 500 murdered details."
+        }
+      ],
+      "notes": "Do not mutate. Needs targeted historical-source work, likely USHMM/Yad Vashem/camps and ghettos encyclopedia, local museum, or book-page verification."
+    }
+  ]
+}

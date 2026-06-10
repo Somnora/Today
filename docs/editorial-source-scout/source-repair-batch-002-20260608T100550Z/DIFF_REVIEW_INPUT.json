@@ -1,0 +1,526 @@
+{
+  "generated_at_utc": "2026-06-08T10:05:50Z",
+  "purpose": "independent diff review input for Today iOS best-next pass4 source/posture repair",
+  "receipt": {
+    "generated_at_utc": "2026-06-08T10:05:50Z",
+    "repo": "/Users/jamesmcshane/Desktop/today-ios",
+    "data_file": "sample-data/events.json",
+    "backup_path": "/Users/jamesmcshane/Desktop/today-ios/sample-data/events.json.bak-best-next-pass4-20260608T100550Z",
+    "backup_sha256": "1a7f9e1ee0a5772b61016260683d37924611ffae76d6d1719e6ba5d745ea9a5c",
+    "pre_mutation_sha256": "1a7f9e1ee0a5772b61016260683d37924611ffae76d6d1719e6ba5d745ea9a5c",
+    "post_mutation_sha256": "f0b00ba8896f58f94b7ba7ceb7ea83b4fdea9897664f4c7f9f332b383b6c8acd",
+    "artifact_dir": "/Users/jamesmcshane/Desktop/today-ios/docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z",
+    "changed_ids": [
+      "april-04-1984-216fbcb2fb5052f9",
+      "april-07-2018-457c29636958ac5b",
+      "april-10-1970-9fd084047a6bdec5",
+      "april-16-1943-e052a628ca341806",
+      "april-20-1968-30da991d9896e922",
+      "april-22-1864-773e5ddf2d87c1b1"
+    ],
+    "changed_count": 6,
+    "not_mutated_ids": [
+      "january-31-2007-25f29f1dce2198de",
+      "april-04-1988-da02934ef4d082c8"
+    ],
+    "source_token_policy": "Changed records cite external sources only and avoid literal remote encyclopedia/feed source tokens in app data.",
+    "mutation_type": "best-next visible-feed source/posture repair continuation"
+  },
+  "source_manifest": {
+    "generated_at_utc": "2026-06-08T10:05:50Z",
+    "repo": "/Users/jamesmcshane/Desktop/today-ios",
+    "data_file": "sample-data/events.json",
+    "input_sha256_before_this_mutation": "1a7f9e1ee0a5772b61016260683d37924611ffae76d6d1719e6ba5d745ea9a5c",
+    "selection_note": "Best-next continuation from current visible records with live remote encyclopedia/feed sources after source-scout-batch-001 was already executed. Two unresolved source-lead items were not mutated after a failed worker loop; this pass uses six parent-verified source-confirmed records.",
+    "records": [
+      {
+        "id": "april-04-1984-216fbcb2fb5052f9",
+        "verdict": "repair_ready",
+        "final_sources": [
+          "https://www.reaganlibrary.gov/archives/speech/presidents-news-conference-38",
+          "https://www.upi.com/Archives/1984/04/05/Reagan-proposes-chemical-arms-ban/1893449989200/"
+        ],
+        "evidence": [
+          {
+            "publisher": "Reagan Library",
+            "excerpt": "The President's News Conference April 4, 1984 ... U.S. Proposal for Ban on Chemical Weapons ... a comprehensive, worldwide ban on chemical weapons. Our proposal would prohibit the production, possession, and use of chemical weapons."
+          },
+          {
+            "publisher": "UPI",
+            "excerpt": "Reagan opened his 23rd formal news conference Wednesday evening by announcing plans to offer the Soviet Union a global ban on chemical weapons."
+          }
+        ],
+        "mutation_note": "Source replacement and copy tightened to announcement of proposal."
+      },
+      {
+        "id": "april-07-2018-457c29636958ac5b",
+        "verdict": "repair_ready_copy_reviewed",
+        "final_sources": [
+          "https://apnews.com/article/04a9443d9dc94c90aa8b3c24d10c5bb8",
+          "https://edition.cnn.com/2018/04/07/americas/brazil-lula-da-silva/",
+          "https://www.bbc.com/news/world-latin-america-50351438"
+        ],
+        "evidence": [
+          {
+            "publisher": "AP News",
+            "excerpt": "Saturday, April 7, 2018 ... Da Silva began serving a sentence of 12 years and one month for a corruption conviction ... Judge Sergio Moro ... so-called Car Wash cases ... ordered an arrest warrant."
+          },
+          {
+            "publisher": "CNN",
+            "excerpt": "Former Brazilian President Luiz Inacio Lula da Silva turned himself over to federal authorities Saturday to begin serving a 12-year prison sentence for corruption ... Operation Car Wash."
+          },
+          {
+            "publisher": "BBC",
+            "excerpt": "A judge ordered his release after a Supreme Court ruling that defendants should only be imprisoned if they have exhausted their appeal options ... 580 days."
+          }
+        ],
+        "mutation_note": "Narrowed from generic arrested wording to turn-over/custody wording."
+      },
+      {
+        "id": "april-10-1970-9fd084047a6bdec5",
+        "verdict": "repair_ready_copy_reviewed",
+        "final_sources": [
+          "https://www.history.com/this-day-in-history/april-10/paul-mccartney-announces-the-breakup-of-the-beatles",
+          "https://www.theguardian.com/music/from-the-archive-blog/2020/apr/09/day-beatles-broke-up-paul-mccartney-1970"
+        ],
+        "evidence": [
+          {
+            "publisher": "HISTORY",
+            "excerpt": "Paul McCartney announces his break from the Beatles | April 10, 1970."
+          },
+          {
+            "publisher": "The Guardian",
+            "excerpt": "Paul McCartney confirmed yesterday that he had broken with the Beatles ... he did not know whether his break with the Beatles was temporary or permanent."
+          }
+        ],
+        "mutation_note": "Narrowed to public split statement, not formal dissolution."
+      },
+      {
+        "id": "april-16-1943-e052a628ca341806",
+        "verdict": "repair_ready_copy_reviewed",
+        "final_sources": [
+          "https://edu.rsc.org/resources/on-this-day-apr-16--lsd-effects-discovered/10416.article",
+          "https://www.britannica.com/biography/Albert-Hofmann",
+          "https://www.swissinfo.ch/eng/sci-tech/75-years-ago_the-first-trip-down-lsd-lane/44050456"
+        ],
+        "evidence": [
+          {
+            "publisher": "Royal Society of Chemistry",
+            "excerpt": "On This Day - April 16 : The psychedelic properties of LSD were discovered ... in 1943."
+          },
+          {
+            "publisher": "Britannica",
+            "excerpt": "Following his initial, accidental exposure to LSD, on April 16, 1943 ... intentionally ingested ... on April 19, 1943."
+          },
+          {
+            "publisher": "SWI swissinfo.ch",
+            "excerpt": "On April 16, 1943, Albert Hofmann suddenly saw an uninterrupted stream of fantastic pictures ... Three days later, Hofmann intentionally took a small amount of LSD."
+          }
+        ],
+        "mutation_note": "Repaired category and separated April 16 accidental discovery from April 19 deliberate test."
+      },
+      {
+        "id": "april-20-1968-30da991d9896e922",
+        "verdict": "repair_ready_copy_reviewed",
+        "final_sources": [
+          "https://warwick.ac.uk/services/library/mrc/studying/docs/racism/powell/"
+        ],
+        "evidence": [
+          {
+            "publisher": "University of Warwick Modern Records Centre",
+            "excerpt": "On 20 April 1968 ... Enoch Powell addressed a Conservative Party meeting in Birmingham ... The speech used controversial language and violent imagery to strongly oppose mass immigration into Britain."
+          }
+        ],
+        "mutation_note": "Repaired category/tone and sensitive racial-politics framing."
+      },
+      {
+        "id": "april-22-1864-773e5ddf2d87c1b1",
+        "verdict": "repair_ready_copy_reviewed",
+        "final_sources": [
+          "https://blogs.loc.gov/law/2013/04/in-god-we-trust/",
+          "https://www.govinfo.gov/content/pkg/STATUTE-13/pdf/STATUTE-13-Pg54.pdf",
+          "https://www.govinfo.gov/content/pkg/STATUTE-13/pdf/STATUTE-13-Pg55.pdf"
+        ],
+        "evidence": [
+          {
+            "publisher": "Library of Congress",
+            "excerpt": "On April 22, 1864, Congress passed a law ... instructed the director of the Mint to fix the shape, mottos, and devices of the one and two cent coins. Later in 1864, the Mint issued two cent coins with the motto In God We Trust."
+          },
+          {
+            "publisher": "GovInfo Statutes at Large",
+            "excerpt": "there shall be from time to time struck and coined at the mint a two-cent piece ... the shape, mottoes, and devices ... Approved, April 22, 1864."
+          }
+        ],
+        "mutation_note": "Narrowed unsupported all-coin motto claim."
+      }
+    ],
+    "not_mutated_this_pass": [
+      {
+        "id": "january-31-2007-25f29f1dce2198de",
+        "reason": "source-lead worker hit max-iteration; not repeated in parent loop this pass"
+      },
+      {
+        "id": "april-04-1988-da02934ef4d082c8",
+        "reason": "source-lead worker hit max-iteration; not repeated in parent loop this pass"
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "april-04-1984-216fbcb2fb5052f9",
+      "before": {
+        "id": "april-04-1984-216fbcb2fb5052f9",
+        "month": 4,
+        "day": 4,
+        "year": 1984,
+        "title": "Ronald Reagan calls for chemical weapons ban",
+        "one_liner": "President Ronald Reagan calls for an international ban on chemical weapons",
+        "description": "President Ronald Reagan calls for an international ban on chemical weapons",
+        "short_summary": "President Ronald Reagan calls for an international ban on chemical weapons",
+        "summary": "President Ronald Reagan calls for an international ban on chemical weapons. This highlights efforts to address global security and humanitarian concerns",
+        "detail": "President Ronald Reagan calls for an international ban on chemical weapons. This highlights efforts to address global security and humanitarian concerns",
+        "deep_dive": "President Ronald Reagan calls for an international ban on chemical weapons. This highlights efforts to address global security and humanitarian concerns",
+        "why_it_matters": "This highlights efforts to address global security and humanitarian concerns.",
+        "category": "politics",
+        "tags": [
+          "politics",
+          "general_history"
+        ],
+        "tone": "balanced",
+        "sources": [
+          "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/04/04",
+          "https://en.wikipedia.org/wiki/Ronald_Reagan",
+          "https://en.wikipedia.org/wiki/Chemical_weapon"
+        ],
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-04-04.json;event_id=216fbcb2fb5052f9;cluster_id=b69a42d29c34;model_id=today-qwen3-14b;rank_score=0.559802;interesting_score=0.553527;stream=interesting-history; date=1984-04-04",
+        "source_confidence": 0.9,
+        "editorial_status": "ready"
+      },
+      "after": {
+        "id": "april-04-1984-216fbcb2fb5052f9",
+        "month": 4,
+        "day": 4,
+        "year": 1984,
+        "title": "Reagan Proposes Worldwide Chemical Weapons Ban",
+        "one_liner": "President Ronald Reagan announces a U.S. proposal for a comprehensive worldwide ban on chemical weapons.",
+        "description": "President Ronald Reagan announces a U.S. proposal for a comprehensive worldwide ban on chemical weapons.",
+        "short_summary": "President Ronald Reagan announces a U.S. proposal for a comprehensive worldwide ban on chemical weapons.",
+        "summary": "President Ronald Reagan opens an April 4, 1984 news conference by announcing that the United States will send Vice President George H. W. Bush to Geneva with a proposal for a comprehensive worldwide ban on chemical weapons. The proposal called for prohibiting the production, possession, and use of chemical weapons.",
+        "detail": "President Ronald Reagan opens an April 4, 1984 news conference by announcing a U.S. proposal for a comprehensive worldwide ban on chemical weapons, including production, possession, and use.",
+        "deep_dive": "The official Reagan Library transcript ties the announcement to the April 4, 1984 news conference and to a Geneva arms-control proposal. The repaired wording keeps the claim to Reagan announcing the proposal, rather than implying that a treaty was adopted that day.",
+        "why_it_matters": "The moment shows arms-control politics turning from broad concern into a dated diplomatic proposal.",
+        "category": "politics",
+        "tags": [
+          "politics",
+          "arms_control",
+          "chemical_weapons"
+        ],
+        "tone": "balanced",
+        "sources": [
+          "https://www.reaganlibrary.gov/archives/speech/presidents-news-conference-38",
+          "https://www.upi.com/Archives/1984/04/05/Reagan-proposes-chemical-arms-ban/1893449989200/"
+        ],
+        "provenance": "source_repair=today-ios-best-next-pass4-2026-06-08; artifact=docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z; source_posture=external_source_repair; date=1984-04-04; app_data_written=true",
+        "source_confidence": 0.96,
+        "editorial_status": "ready"
+      }
+    },
+    {
+      "id": "april-07-2018-457c29636958ac5b",
+      "before": {
+        "id": "april-07-2018-457c29636958ac5b",
+        "month": 4,
+        "day": 7,
+        "year": 2018,
+        "title": "Lula da Silva Arrested in Brazil's Car-Wash Operation",
+        "one_liner": "Former Brazilian president Luiz Inácio Lula da Silva is arrested for corruption as part of the Car-Wash Operation",
+        "description": "Former Brazilian president, Luiz Inácio Lula da Silva, is arrested for corruption by determination of Judge Sérgio Moro, from the \"Car-Wash Operation\". Lula stayed imprisoned for 580 days, before being released by the Brazilian Supreme Court",
+        "short_summary": "Former Brazilian president Luiz Inácio Lula da Silva is arrested for corruption as part of the Car-Wash Operation",
+        "summary": "Former Brazilian president, Luiz Inácio Lula da Silva, is arrested for corruption by determination of Judge Sérgio Moro, from the \"Car-Wash Operation\". Lula stayed imprisoned for 580 days, before being released by the Brazilian Supreme Court. His arrest marked a pivotal moment in Brazil's fight against political corruption and judicial reforms",
+        "detail": "Former Brazilian president, Luiz Inácio Lula da Silva, is arrested for corruption by determination of Judge Sérgio Moro, from the \"Car-Wash Operation\". Lula stayed imprisoned for 580 days, before being released by the Brazilian Supreme Court. His arrest marked a pivotal moment in Brazil's fight against political corruption and judicial reforms",
+        "deep_dive": "Former Brazilian president, Luiz Inácio Lula da Silva, is arrested for corruption by determination of Judge Sérgio Moro, from the \"Car-Wash Operation\". Lula stayed imprisoned for 580 days, before being released by the Brazilian Supreme Court. His arrest marked a pivotal moment in Brazil's fight against political corruption and judicial reforms",
+        "why_it_matters": "His arrest marked a pivotal moment in Brazil's fight against political corruption and judicial reforms.",
+        "category": "politics",
+        "tags": [
+          "arts",
+          "general_history"
+        ],
+        "tone": "balanced",
+        "sources": [
+          "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/04/07",
+          "https://en.wikipedia.org/wiki/Brazilians",
+          "https://en.wikipedia.org/wiki/Luiz_In%C3%A1cio_Lula_da_Silva"
+        ],
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-04-07.json;event_id=457c29636958ac5b;cluster_id=07a593be8fa5;model_id=today-qwen3-14b;rank_score=0.571121;interesting_score=0.577795;stream=interesting-history; date=2018-04-07",
+        "source_confidence": 0.9,
+        "editorial_status": "ready"
+      },
+      "after": {
+        "id": "april-07-2018-457c29636958ac5b",
+        "month": 4,
+        "day": 7,
+        "year": 2018,
+        "title": "Lula da Silva Taken into Custody in Brazil",
+        "one_liner": "Former Brazilian president Luiz Inacio Lula da Silva turns himself over to federal authorities to begin serving a corruption sentence tied to Operation Car Wash.",
+        "description": "Former Brazilian president Luiz Inacio Lula da Silva turns himself over to federal authorities to begin serving a corruption sentence tied to Operation Car Wash.",
+        "short_summary": "Former Brazilian president Luiz Inacio Lula da Silva turns himself over to federal authorities in Brazil.",
+        "summary": "On April 7, 2018, former Brazilian president Luiz Inacio Lula da Silva turns himself over to federal authorities and begins serving a corruption sentence linked to Operation Car Wash. He is later released after a Supreme Court ruling on imprisonment before appeals are exhausted.",
+        "detail": "On April 7, 2018, Luiz Inacio Lula da Silva turns himself over to federal authorities after an arrest warrant in the Operation Car Wash corruption case. The repaired wording uses the source-supported custody and surrender language.",
+        "deep_dive": "AP and CNN both place Lula da Silva in federal custody on April 7, 2018 and connect the case to Operation Car Wash. BBC later confirms his release after a Supreme Court ruling, so the record keeps that context without presenting it as part of the same-day action.",
+        "why_it_matters": "The case became a defining test of Brazil's anti-corruption drive, courts, and electoral politics.",
+        "category": "politics",
+        "tags": [
+          "politics",
+          "brazil",
+          "operation_car_wash"
+        ],
+        "tone": "balanced",
+        "sources": [
+          "https://apnews.com/article/04a9443d9dc94c90aa8b3c24d10c5bb8",
+          "https://edition.cnn.com/2018/04/07/americas/brazil-lula-da-silva/",
+          "https://www.bbc.com/news/world-latin-america-50351438"
+        ],
+        "provenance": "source_repair=today-ios-best-next-pass4-2026-06-08; artifact=docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z; source_posture=external_source_repair; date=2018-04-07; claim_narrowed=custody_and_surrender_language; app_data_written=true",
+        "source_confidence": 0.95,
+        "editorial_status": "ready"
+      }
+    },
+    {
+      "id": "april-10-1970-9fd084047a6bdec5",
+      "before": {
+        "id": "april-10-1970-9fd084047a6bdec5",
+        "month": 4,
+        "day": 10,
+        "year": 1970,
+        "title": "Paul McCartney Leaves The Beatles",
+        "one_liner": "Paul McCartney announces his departure from The Beatles for personal and professional reasons",
+        "description": "Paul McCartney announces that he is leaving The Beatles for personal and professional reasons",
+        "short_summary": "Paul McCartney announces his departure from The Beatles for personal and professional reasons",
+        "summary": "Paul McCartney announces that he is leaving The Beatles for personal and professional reasons. This marked the beginning of the end for one of the most influential bands in music history",
+        "detail": "Paul McCartney announces that he is leaving The Beatles for personal and professional reasons. This marked the beginning of the end for one of the most influential bands in music history",
+        "deep_dive": "Paul McCartney announces that he is leaving The Beatles for personal and professional reasons. This marked the beginning of the end for one of the most influential bands in music history",
+        "why_it_matters": "This marked the beginning of the end for one of the most influential bands in music history.",
+        "category": "arts",
+        "tags": [
+          "arts",
+          "general_history"
+        ],
+        "tone": "balanced",
+        "sources": [
+          "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/04/10",
+          "https://en.wikipedia.org/wiki/Paul_McCartney",
+          "https://en.wikipedia.org/wiki/The_Beatles"
+        ],
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-04-10.json;event_id=9fd084047a6bdec5;cluster_id=9fbb09190651;model_id=today-qwen3-14b;rank_score=0.563262;interesting_score=0.557258;stream=interesting-history; date=1970-04-10",
+        "source_confidence": 0.9,
+        "editorial_status": "ready"
+      },
+      "after": {
+        "id": "april-10-1970-9fd084047a6bdec5",
+        "month": 4,
+        "day": 10,
+        "year": 1970,
+        "title": "Paul McCartney Makes the Beatles Split Public",
+        "one_liner": "Paul McCartney's April 10, 1970 press statements make his break from the Beatles public.",
+        "description": "Paul McCartney's April 10, 1970 press statements make his break from the Beatles public.",
+        "short_summary": "Paul McCartney makes his break from the Beatles public through April 10, 1970 press statements.",
+        "summary": "Paul McCartney's self-interview for his solo album is reported on April 10, 1970, making his break from the Beatles public. Contemporary coverage framed it as a major split while McCartney left open whether the break was temporary or permanent.",
+        "detail": "On April 10, 1970, press coverage of Paul McCartney's self-interview makes his break from the Beatles public. The repaired wording avoids treating the date as a formal legal dissolution of the band.",
+        "deep_dive": "History.com and the Guardian both support April 10, 1970 as the public announcement moment. The copy narrows the claim from simply leaving the band to making the split public, which better matches the available sources.",
+        "why_it_matters": "The public break marked the point when a private band fracture became a cultural event.",
+        "category": "arts",
+        "tags": [
+          "arts",
+          "music",
+          "the_beatles"
+        ],
+        "tone": "balanced",
+        "sources": [
+          "https://www.history.com/this-day-in-history/april-10/paul-mccartney-announces-the-breakup-of-the-beatles",
+          "https://www.theguardian.com/music/from-the-archive-blog/2020/apr/09/day-beatles-broke-up-paul-mccartney-1970"
+        ],
+        "provenance": "source_repair=today-ios-best-next-pass4-2026-06-08; artifact=docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z; source_posture=external_source_repair; date=1970-04-10; claim_narrowed=public_split_statement_not_formal_dissolution; app_data_written=true",
+        "source_confidence": 0.93,
+        "editorial_status": "ready"
+      }
+    },
+    {
+      "id": "april-16-1943-e052a628ca341806",
+      "before": {
+        "id": "april-16-1943-e052a628ca341806",
+        "month": 4,
+        "day": 16,
+        "year": 1943,
+        "title": "Discovery of LSD's Hallucinogenic Effects",
+        "one_liner": "Albert Hofmann accidentally discovers the hallucinogenic effects of the research drug LSD",
+        "description": "Albert Hofmann accidentally discovers the hallucinogenic effects of the research drug LSD. He intentionally takes the drug three days later on April 19",
+        "short_summary": "Albert Hofmann accidentally discovers the hallucinogenic effects of the research drug LSD",
+        "summary": "Albert Hofmann accidentally discovers the hallucinogenic effects of the research drug LSD. He intentionally takes the drug three days later on April 19. This discovery led to significant scientific and cultural impacts in the 20th century",
+        "detail": "Albert Hofmann accidentally discovers the hallucinogenic effects of the research drug LSD. He intentionally takes the drug three days later on April 19. This discovery led to significant scientific and cultural impacts in the 20th century",
+        "deep_dive": "Albert Hofmann accidentally discovers the hallucinogenic effects of the research drug LSD. He intentionally takes the drug three days later on April 19. This discovery led to significant scientific and cultural impacts in the 20th century",
+        "why_it_matters": "This discovery led to significant scientific and cultural impacts in the 20th century.",
+        "category": "history",
+        "tags": [
+          "history",
+          "general_history"
+        ],
+        "tone": "uplifting",
+        "sources": [
+          "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/04/16",
+          "https://en.wikipedia.org/wiki/Albert_Hofmann",
+          "https://en.wikipedia.org/wiki/LSD"
+        ],
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-04-16.json;event_id=e052a628ca341806;cluster_id=205f487addb9;model_id=today-qwen3-14b;rank_score=0.556334;interesting_score=0.564369;stream=interesting-history; date=1943-04-16",
+        "source_confidence": 0.9,
+        "editorial_status": "ready"
+      },
+      "after": {
+        "id": "april-16-1943-e052a628ca341806",
+        "month": 4,
+        "day": 16,
+        "year": 1943,
+        "title": "Albert Hofmann Discovers LSD's Psychedelic Effects",
+        "one_liner": "Albert Hofmann accidentally experiences LSD's hallucinogenic effects on April 16, 1943.",
+        "description": "Albert Hofmann accidentally experiences LSD's hallucinogenic effects on April 16, 1943, then intentionally tests the substance three days later.",
+        "short_summary": "Albert Hofmann accidentally experiences LSD's hallucinogenic effects on April 16, 1943.",
+        "summary": "Swiss chemist Albert Hofmann accidentally experiences LSD's hallucinogenic effects on April 16, 1943. Three days later, he intentionally ingests the compound to investigate those effects, creating the episode later remembered as Bicycle Day.",
+        "detail": "Albert Hofmann accidentally absorbs a small amount of LSD and experiences hallucinations on April 16, 1943. The app copy separates that accidental discovery from his intentional April 19 test.",
+        "deep_dive": "Royal Society of Chemistry and Britannica both support the April 16 accidental exposure and the April 19 intentional ingestion. The category is repaired from general history to science because the event is a chemistry and pharmacology milestone.",
+        "why_it_matters": "The discovery changed psychedelic research, psychiatry, and later cultural debates around drug use.",
+        "category": "science",
+        "tags": [
+          "science",
+          "chemistry",
+          "pharmacology"
+        ],
+        "tone": "balanced",
+        "sources": [
+          "https://edu.rsc.org/resources/on-this-day-apr-16--lsd-effects-discovered/10416.article",
+          "https://www.britannica.com/biography/Albert-Hofmann",
+          "https://www.swissinfo.ch/eng/sci-tech/75-years-ago_the-first-trip-down-lsd-lane/44050456"
+        ],
+        "provenance": "source_repair=today-ios-best-next-pass4-2026-06-08; artifact=docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z; source_posture=external_source_repair; date=1943-04-16; category_repaired=history_to_science; app_data_written=true",
+        "source_confidence": 0.95,
+        "editorial_status": "ready"
+      }
+    },
+    {
+      "id": "april-20-1968-30da991d9896e922",
+      "before": {
+        "id": "april-20-1968-30da991d9896e922",
+        "month": 4,
+        "day": 20,
+        "year": 1968,
+        "title": "Enoch Powell delivers the \"Rivers of Blood\" speech",
+        "one_liner": "English politician Enoch Powell delivers his controversial \"Rivers of Blood\" speech, which sparked widespread debate",
+        "description": "English politician Enoch Powell makes his controversial \"Rivers of Blood\" speech",
+        "short_summary": "English politician Enoch Powell delivers his controversial \"Rivers of Blood\" speech, which sparked widespread debate",
+        "summary": "English politician Enoch Powell makes his controversial \"Rivers of Blood\" speech. The speech is a pivotal moment in British political history, reflecting deep societal tensions and racial issues of the time",
+        "detail": "English politician Enoch Powell makes his controversial \"Rivers of Blood\" speech. The speech is a pivotal moment in British political history, reflecting deep societal tensions and racial issues of the time",
+        "deep_dive": "English politician Enoch Powell makes his controversial \"Rivers of Blood\" speech. The speech is a pivotal moment in British political history, reflecting deep societal tensions and racial issues of the time",
+        "why_it_matters": "The speech is a pivotal moment in British political history, reflecting deep societal tensions and racial issues of the time.",
+        "category": "history",
+        "tags": [
+          "history",
+          "general_history"
+        ],
+        "tone": "balanced",
+        "sources": [
+          "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/04/20",
+          "https://en.wikipedia.org/wiki/Enoch_Powell",
+          "https://en.wikipedia.org/wiki/Rivers_of_Blood_speech"
+        ],
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-04-20.json;event_id=30da991d9896e922;cluster_id=0dcbbe01327a;model_id=today-qwen3-14b;rank_score=0.559952;interesting_score=0.554705;stream=interesting-history; date=1968-04-20",
+        "source_confidence": 0.9,
+        "editorial_status": "ready"
+      },
+      "after": {
+        "id": "april-20-1968-30da991d9896e922",
+        "month": 4,
+        "day": 20,
+        "year": 1968,
+        "title": "Enoch Powell Gives the Rivers of Blood Speech",
+        "one_liner": "Enoch Powell addresses a Conservative Party meeting in Birmingham with a speech opposing immigration and warning of racial conflict.",
+        "description": "Enoch Powell addresses a Conservative Party meeting in Birmingham with the speech later known as Rivers of Blood.",
+        "short_summary": "Enoch Powell gives the speech later known as Rivers of Blood in Birmingham.",
+        "summary": "On April 20, 1968, British MP Enoch Powell addresses a Conservative Party meeting in Birmingham with the speech later known as Rivers of Blood. The speech used inflammatory imagery against Commonwealth immigration and made Powell a central figure for opponents of immigration.",
+        "detail": "On April 20, 1968, Enoch Powell gives the speech later known as Rivers of Blood at a Conservative Party meeting in Birmingham. The repaired wording names the source-supported venue and keeps the racial politics context direct.",
+        "deep_dive": "The University of Warwick Modern Records Centre supports the date, speaker, Birmingham meeting, and immigration context. The repair moves the record from generic history to politics and shifts tone to somber for a racially charged speech.",
+        "why_it_matters": "The speech became one of modern Britain's defining flashpoints over immigration, race, and political rhetoric.",
+        "category": "politics",
+        "tags": [
+          "politics",
+          "britain",
+          "race_relations"
+        ],
+        "tone": "somber",
+        "sources": [
+          "https://warwick.ac.uk/services/library/mrc/studying/docs/racism/powell/"
+        ],
+        "provenance": "source_repair=today-ios-best-next-pass4-2026-06-08; artifact=docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z; source_posture=external_source_repair; date=1968-04-20; category_repaired=history_to_politics; tone_repaired=balanced_to_somber; app_data_written=true",
+        "source_confidence": 0.95,
+        "editorial_status": "ready"
+      }
+    },
+    {
+      "id": "april-22-1864-773e5ddf2d87c1b1",
+      "before": {
+        "id": "april-22-1864-773e5ddf2d87c1b1",
+        "month": 4,
+        "day": 22,
+        "year": 1864,
+        "title": "U.S. Congress Passes Coinage Act of 1864",
+        "one_liner": "The U.S. Congress passes the Coinage Act of 1864, allowing the inscription 'In God We Trust' on all U.S. coins",
+        "description": "The U.S. Congress passes the Coinage Act of 1864 that permitted the inscription In God We Trust be placed on all coins minted as United States currency",
+        "short_summary": "The U.S. Congress passes the Coinage Act of 1864, allowing the inscription 'In God We Trust' on all U.S. coins",
+        "summary": "The U.S. Congress passes the Coinage Act of 1864 that permitted the inscription In God We Trust be placed on all coins minted as United States currency. This act established a national motto on U.S. currency, reflecting the country's values and faith",
+        "detail": "The U.S. Congress passes the Coinage Act of 1864 that permitted the inscription In God We Trust be placed on all coins minted as United States currency. This act established a national motto on U.S. currency, reflecting the country's values and faith",
+        "deep_dive": "The U.S. Congress passes the Coinage Act of 1864 that permitted the inscription In God We Trust be placed on all coins minted as United States currency. This act established a national motto on U.S. currency, reflecting the country's values and faith",
+        "why_it_matters": "This act established a national motto on U.S. currency, reflecting the country's values and faith.",
+        "category": "politics",
+        "tags": [
+          "history",
+          "general_history"
+        ],
+        "tone": "balanced",
+        "sources": [
+          "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/04/22",
+          "https://en.wikipedia.org/wiki/United_States_Congress",
+          "https://en.wikipedia.org/wiki/Coinage_Act_of_1864"
+        ],
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-04-22.json;event_id=773e5ddf2d87c1b1;cluster_id=f93613b6c338;model_id=today-qwen3-14b;rank_score=0.56529;interesting_score=0.566304;stream=interesting-history; date=1864-04-22",
+        "source_confidence": 0.9,
+        "editorial_status": "ready"
+      },
+      "after": {
+        "id": "april-22-1864-773e5ddf2d87c1b1",
+        "month": 4,
+        "day": 22,
+        "year": 1864,
+        "title": "Congress Passes the 1864 Coinage Law",
+        "one_liner": "Congress passes an April 22, 1864 coinage law that lets the Mint choose mottoes and devices for one and two-cent coins.",
+        "description": "Congress passes an April 22, 1864 coinage law that lets the Mint choose mottoes and devices for one and two-cent coins, leading to the two-cent coin bearing In God We Trust.",
+        "short_summary": "Congress passes an 1864 coinage law tied to the first U.S. coins bearing In God We Trust.",
+        "summary": "Congress passes an April 22, 1864 coinage law that lets the Mint choose mottoes and devices for one and two-cent coins. Later in 1864, the Mint issues two-cent coins bearing In God We Trust.",
+        "detail": "The April 22, 1864 law authorized the design framework for one and two-cent coins. The repaired copy avoids the unsupported claim that the statute put In God We Trust on all U.S. coins that day.",
+        "deep_dive": "Library of Congress and GovInfo support the April 22, 1864 law and its coinage language. The final wording narrows the record to the two-cent coin pathway instead of overstating an all-coin motto rule.",
+        "why_it_matters": "The law opened the path for a phrase that later became a lasting feature of U.S. currency.",
+        "category": "politics",
+        "tags": [
+          "politics",
+          "currency",
+          "us_history"
+        ],
+        "tone": "balanced",
+        "sources": [
+          "https://blogs.loc.gov/law/2013/04/in-god-we-trust/",
+          "https://www.govinfo.gov/content/pkg/STATUTE-13/pdf/STATUTE-13-Pg54.pdf",
+          "https://www.govinfo.gov/content/pkg/STATUTE-13/pdf/STATUTE-13-Pg55.pdf"
+        ],
+        "provenance": "source_repair=today-ios-best-next-pass4-2026-06-08; artifact=docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z; source_posture=external_source_repair; date=1864-04-22; claim_narrowed=two_cent_motto_path_not_all_coins; app_data_written=true",
+        "source_confidence": 0.95,
+        "editorial_status": "ready"
+      }
+    }
+  ]
+}

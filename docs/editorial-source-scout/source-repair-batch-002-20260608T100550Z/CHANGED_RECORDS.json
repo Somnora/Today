@@ -1,0 +1,172 @@
+[
+  {
+    "id": "april-04-1984-216fbcb2fb5052f9",
+    "month": 4,
+    "day": 4,
+    "year": 1984,
+    "title": "Reagan Proposes Worldwide Chemical Weapons Ban",
+    "one_liner": "President Ronald Reagan announces a U.S. proposal for a comprehensive worldwide ban on chemical weapons.",
+    "description": "President Ronald Reagan announces a U.S. proposal for a comprehensive worldwide ban on chemical weapons.",
+    "short_summary": "President Ronald Reagan announces a U.S. proposal for a comprehensive worldwide ban on chemical weapons.",
+    "summary": "President Ronald Reagan opens an April 4, 1984 news conference by announcing that the United States will send Vice President George H. W. Bush to Geneva with a proposal for a comprehensive worldwide ban on chemical weapons. The proposal called for prohibiting the production, possession, and use of chemical weapons.",
+    "detail": "President Ronald Reagan opens an April 4, 1984 news conference by announcing a U.S. proposal for a comprehensive worldwide ban on chemical weapons, including production, possession, and use.",
+    "deep_dive": "The official Reagan Library transcript ties the announcement to the April 4, 1984 news conference and to a Geneva arms-control proposal. The repaired wording keeps the claim to Reagan announcing the proposal, rather than implying that a treaty was adopted that day.",
+    "why_it_matters": "The moment shows arms-control politics turning from broad concern into a dated diplomatic proposal.",
+    "category": "politics",
+    "tags": [
+      "politics",
+      "arms_control",
+      "chemical_weapons"
+    ],
+    "tone": "balanced",
+    "sources": [
+      "https://www.reaganlibrary.gov/archives/speech/presidents-news-conference-38",
+      "https://www.upi.com/Archives/1984/04/05/Reagan-proposes-chemical-arms-ban/1893449989200/"
+    ],
+    "provenance": "source_repair=today-ios-best-next-pass4-2026-06-08; artifact=docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z; source_posture=external_source_repair; date=1984-04-04; app_data_written=true",
+    "source_confidence": 0.96,
+    "editorial_status": "ready"
+  },
+  {
+    "id": "april-07-2018-457c29636958ac5b",
+    "month": 4,
+    "day": 7,
+    "year": 2018,
+    "title": "Lula da Silva Taken into Custody in Brazil",
+    "one_liner": "Former Brazilian president Luiz Inacio Lula da Silva turns himself over to federal authorities to begin serving a corruption sentence tied to Operation Car Wash.",
+    "description": "Former Brazilian president Luiz Inacio Lula da Silva turns himself over to federal authorities to begin serving a corruption sentence tied to Operation Car Wash.",
+    "short_summary": "Former Brazilian president Luiz Inacio Lula da Silva turns himself over to federal authorities in Brazil.",
+    "summary": "On April 7, 2018, former Brazilian president Luiz Inacio Lula da Silva turns himself over to federal authorities and begins serving a corruption sentence linked to Operation Car Wash. He is later released after a Supreme Court ruling on imprisonment before appeals are exhausted.",
+    "detail": "On April 7, 2018, Luiz Inacio Lula da Silva turns himself over to federal authorities after an arrest warrant in the Operation Car Wash corruption case. The repaired wording uses the source-supported custody and surrender language.",
+    "deep_dive": "AP and CNN both place Lula da Silva in federal custody on April 7, 2018 and connect the case to Operation Car Wash. BBC later confirms his release after a Supreme Court ruling, so the record keeps that context without presenting it as part of the same-day action.",
+    "why_it_matters": "The case became a defining test of Brazil's anti-corruption drive, courts, and electoral politics.",
+    "category": "politics",
+    "tags": [
+      "politics",
+      "brazil",
+      "operation_car_wash"
+    ],
+    "tone": "balanced",
+    "sources": [
+      "https://apnews.com/article/04a9443d9dc94c90aa8b3c24d10c5bb8",
+      "https://edition.cnn.com/2018/04/07/americas/brazil-lula-da-silva/",
+      "https://www.bbc.com/news/world-latin-america-50351438"
+    ],
+    "provenance": "source_repair=today-ios-best-next-pass4-2026-06-08; artifact=docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z; source_posture=external_source_repair; date=2018-04-07; claim_narrowed=custody_and_surrender_language; app_data_written=true",
+    "source_confidence": 0.95,
+    "editorial_status": "ready"
+  },
+  {
+    "id": "april-10-1970-9fd084047a6bdec5",
+    "month": 4,
+    "day": 10,
+    "year": 1970,
+    "title": "Paul McCartney Makes the Beatles Split Public",
+    "one_liner": "Paul McCartney's April 10, 1970 press statements make his break from the Beatles public.",
+    "description": "Paul McCartney's April 10, 1970 press statements make his break from the Beatles public.",
+    "short_summary": "Paul McCartney makes his break from the Beatles public through April 10, 1970 press statements.",
+    "summary": "Paul McCartney's self-interview for his solo album is reported on April 10, 1970, making his break from the Beatles public. Contemporary coverage framed it as a major split while McCartney left open whether the break was temporary or permanent.",
+    "detail": "On April 10, 1970, press coverage of Paul McCartney's self-interview makes his break from the Beatles public. The repaired wording avoids treating the date as a formal legal dissolution of the band.",
+    "deep_dive": "History.com and the Guardian both support April 10, 1970 as the public announcement moment. The copy narrows the claim from simply leaving the band to making the split public, which better matches the available sources.",
+    "why_it_matters": "The public break marked the point when a private band fracture became a cultural event.",
+    "category": "arts",
+    "tags": [
+      "arts",
+      "music",
+      "the_beatles"
+    ],
+    "tone": "balanced",
+    "sources": [
+      "https://www.history.com/this-day-in-history/april-10/paul-mccartney-announces-the-breakup-of-the-beatles",
+      "https://www.theguardian.com/music/from-the-archive-blog/2020/apr/09/day-beatles-broke-up-paul-mccartney-1970"
+    ],
+    "provenance": "source_repair=today-ios-best-next-pass4-2026-06-08; artifact=docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z; source_posture=external_source_repair; date=1970-04-10; claim_narrowed=public_split_statement_not_formal_dissolution; app_data_written=true",
+    "source_confidence": 0.93,
+    "editorial_status": "ready"
+  },
+  {
+    "id": "april-16-1943-e052a628ca341806",
+    "month": 4,
+    "day": 16,
+    "year": 1943,
+    "title": "Albert Hofmann Discovers LSD's Psychedelic Effects",
+    "one_liner": "Albert Hofmann accidentally experiences LSD's hallucinogenic effects on April 16, 1943.",
+    "description": "Albert Hofmann accidentally experiences LSD's hallucinogenic effects on April 16, 1943, then intentionally tests the substance three days later.",
+    "short_summary": "Albert Hofmann accidentally experiences LSD's hallucinogenic effects on April 16, 1943.",
+    "summary": "Swiss chemist Albert Hofmann accidentally experiences LSD's hallucinogenic effects on April 16, 1943. Three days later, he intentionally ingests the compound to investigate those effects, creating the episode later remembered as Bicycle Day.",
+    "detail": "Albert Hofmann accidentally absorbs a small amount of LSD and experiences hallucinations on April 16, 1943. The app copy separates that accidental discovery from his intentional April 19 test.",
+    "deep_dive": "Royal Society of Chemistry and Britannica both support the April 16 accidental exposure and the April 19 intentional ingestion. The category is repaired from general history to science because the event is a chemistry and pharmacology milestone.",
+    "why_it_matters": "The discovery changed psychedelic research, psychiatry, and later cultural debates around drug use.",
+    "category": "science",
+    "tags": [
+      "science",
+      "chemistry",
+      "pharmacology"
+    ],
+    "tone": "balanced",
+    "sources": [
+      "https://edu.rsc.org/resources/on-this-day-apr-16--lsd-effects-discovered/10416.article",
+      "https://www.britannica.com/biography/Albert-Hofmann",
+      "https://www.swissinfo.ch/eng/sci-tech/75-years-ago_the-first-trip-down-lsd-lane/44050456"
+    ],
+    "provenance": "source_repair=today-ios-best-next-pass4-2026-06-08; artifact=docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z; source_posture=external_source_repair; date=1943-04-16; category_repaired=history_to_science; app_data_written=true",
+    "source_confidence": 0.95,
+    "editorial_status": "ready"
+  },
+  {
+    "id": "april-20-1968-30da991d9896e922",
+    "month": 4,
+    "day": 20,
+    "year": 1968,
+    "title": "Enoch Powell Gives the Rivers of Blood Speech",
+    "one_liner": "Enoch Powell addresses a Conservative Party meeting in Birmingham with a speech opposing immigration and warning of racial conflict.",
+    "description": "Enoch Powell addresses a Conservative Party meeting in Birmingham with the speech later known as Rivers of Blood.",
+    "short_summary": "Enoch Powell gives the speech later known as Rivers of Blood in Birmingham.",
+    "summary": "On April 20, 1968, British MP Enoch Powell addresses a Conservative Party meeting in Birmingham with the speech later known as Rivers of Blood. The speech used inflammatory imagery against Commonwealth immigration and made Powell a central figure for opponents of immigration.",
+    "detail": "On April 20, 1968, Enoch Powell gives the speech later known as Rivers of Blood at a Conservative Party meeting in Birmingham. The repaired wording names the source-supported venue and keeps the racial politics context direct.",
+    "deep_dive": "The University of Warwick Modern Records Centre supports the date, speaker, Birmingham meeting, and immigration context. The repair moves the record from generic history to politics and shifts tone to somber for a racially charged speech.",
+    "why_it_matters": "The speech became one of modern Britain's defining flashpoints over immigration, race, and political rhetoric.",
+    "category": "politics",
+    "tags": [
+      "politics",
+      "britain",
+      "race_relations"
+    ],
+    "tone": "somber",
+    "sources": [
+      "https://warwick.ac.uk/services/library/mrc/studying/docs/racism/powell/"
+    ],
+    "provenance": "source_repair=today-ios-best-next-pass4-2026-06-08; artifact=docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z; source_posture=external_source_repair; date=1968-04-20; category_repaired=history_to_politics; tone_repaired=balanced_to_somber; app_data_written=true",
+    "source_confidence": 0.95,
+    "editorial_status": "ready"
+  },
+  {
+    "id": "april-22-1864-773e5ddf2d87c1b1",
+    "month": 4,
+    "day": 22,
+    "year": 1864,
+    "title": "Congress Passes the 1864 Coinage Law",
+    "one_liner": "Congress passes an April 22, 1864 coinage law that lets the Mint choose mottoes and devices for one and two-cent coins.",
+    "description": "Congress passes an April 22, 1864 coinage law that lets the Mint choose mottoes and devices for one and two-cent coins, leading to the two-cent coin bearing In God We Trust.",
+    "short_summary": "Congress passes an 1864 coinage law tied to the first U.S. coins bearing In God We Trust.",
+    "summary": "Congress passes an April 22, 1864 coinage law that lets the Mint choose mottoes and devices for one and two-cent coins. Later in 1864, the Mint issues two-cent coins bearing In God We Trust.",
+    "detail": "The April 22, 1864 law authorized the design framework for one and two-cent coins. The repaired copy avoids the unsupported claim that the statute put In God We Trust on all U.S. coins that day.",
+    "deep_dive": "Library of Congress and GovInfo support the April 22, 1864 law and its coinage language. The final wording narrows the record to the two-cent coin pathway instead of overstating an all-coin motto rule.",
+    "why_it_matters": "The law opened the path for a phrase that later became a lasting feature of U.S. currency.",
+    "category": "politics",
+    "tags": [
+      "politics",
+      "currency",
+      "us_history"
+    ],
+    "tone": "balanced",
+    "sources": [
+      "https://blogs.loc.gov/law/2013/04/in-god-we-trust/",
+      "https://www.govinfo.gov/content/pkg/STATUTE-13/pdf/STATUTE-13-Pg54.pdf",
+      "https://www.govinfo.gov/content/pkg/STATUTE-13/pdf/STATUTE-13-Pg55.pdf"
+    ],
+    "provenance": "source_repair=today-ios-best-next-pass4-2026-06-08; artifact=docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z; source_posture=external_source_repair; date=1864-04-22; claim_narrowed=two_cent_motto_path_not_all_coins; app_data_written=true",
+    "source_confidence": 0.95,
+    "editorial_status": "ready"
+  }
+]

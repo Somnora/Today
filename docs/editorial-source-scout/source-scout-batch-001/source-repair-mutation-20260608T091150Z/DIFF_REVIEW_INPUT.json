@@ -1,0 +1,464 @@
+{
+  "generated_at_utc": "2026-06-08T09:11:50Z",
+  "repo": "/Users/jamesmcshane/Desktop/today-ios",
+  "changed_records": [
+    {
+      "id": "august-07-1962-e78f730929733f00",
+      "phase": "source_only",
+      "before": {
+        "title": "Frances Oldham Kelsey Awarded for Thalidomide Refusal",
+        "one_liner": "Frances Oldham Kelsey is awarded the U.S. President's Award for refusing to authorize thalidomide",
+        "description": "Canadian-born American pharmacologist Frances Oldham Kelsey is awarded the U.S. President's Award for Distinguished Federal Civilian Service for her refusal to authorize thalidomide",
+        "short_summary": "Frances Oldham Kelsey is awarded the U.S. President's Award for refusing to authorize thalidomide",
+        "summary": "Canadian-born American pharmacologist Frances Oldham Kelsey is awarded the U.S. President's Award for Distinguished Federal Civilian Service for her refusal to authorize thalidomide. Her decision prevented a drug linked to severe birth defects from reaching the market, saving countless lives",
+        "detail": "Canadian-born American pharmacologist Frances Oldham Kelsey is awarded the U.S. President's Award for Distinguished Federal Civilian Service for her refusal to authorize thalidomide. Her decision prevented a drug linked to severe birth defects from reaching the market, saving countless lives",
+        "deep_dive": "Canadian-born American pharmacologist Frances Oldham Kelsey is awarded the U.S. President's Award for Distinguished Federal Civilian Service for her refusal to authorize thalidomide. Her decision prevented a drug linked to severe birth defects from reaching the market, saving countless lives",
+        "why_it_matters": "Her decision prevented a drug linked to severe birth defects from reaching the market, saving countless lives.",
+        "category": "politics",
+        "tone": "somber",
+        "tags": [
+          "politics",
+          "general_history"
+        ],
+        "sources": [
+          "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/07",
+          "https://en.wikipedia.org/wiki/Frances_Oldham_Kelsey",
+          "https://en.wikipedia.org/wiki/Thalidomide"
+        ],
+        "source_confidence": 0.9,
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-07.json;event_id=e78f730929733f00;cluster_id=45901a3b43fa;model_id=today-qwen3-14b;rank_score=0.709645;interesting_score=0.582026;stream=interesting-history; date=1962-08-07"
+      },
+      "after": {
+        "title": "Frances Oldham Kelsey Awarded for Thalidomide Refusal",
+        "one_liner": "Frances Oldham Kelsey receives a presidential service award after refusing to authorize thalidomide without stronger safety evidence",
+        "description": "Canadian-born American pharmacologist Frances Oldham Kelsey receives the President's Award for Distinguished Federal Civilian Service after refusing to authorize thalidomide without stronger safety evidence.",
+        "short_summary": "Frances Oldham Kelsey receives a presidential service award after refusing to authorize thalidomide without stronger safety evidence",
+        "summary": "Canadian-born American pharmacologist Frances Oldham Kelsey receives the President's Award for Distinguished Federal Civilian Service after refusing to authorize thalidomide without stronger safety evidence. Her caution helped keep a drug later linked to severe birth defects from being approved in the United States.",
+        "detail": "Canadian-born American pharmacologist Frances Oldham Kelsey receives the President's Award for Distinguished Federal Civilian Service after refusing to authorize thalidomide without stronger safety evidence. Her caution helped keep a drug later linked to severe birth defects from being approved in the United States.",
+        "deep_dive": "Canadian-born American pharmacologist Frances Oldham Kelsey receives the President's Award for Distinguished Federal Civilian Service after refusing to authorize thalidomide without stronger safety evidence. Her caution helped keep a drug later linked to severe birth defects from being approved in the United States.",
+        "why_it_matters": "Kelsey’s review helped strengthen public trust in drug safety by showing that regulatory caution can prevent irreversible harm.",
+        "category": "science",
+        "tone": "somber",
+        "tags": [
+          "science",
+          "medicine",
+          "public_health"
+        ],
+        "sources": [
+          "https://www.presidency.ucsb.edu/documents/remarks-upon-presenting-the-presidents-awards-for-distinguished-federal-civilian-service",
+          "https://web.archive.org/web/20061020043712/https://www.fda.gov/fdac/features/2001/201_kelsey.html"
+        ],
+        "source_confidence": 0.97,
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-07.json;event_id=e78f730929733f00;cluster_id=45901a3b43fa;model_id=today-qwen3-14b;rank_score=0.709645;interesting_score=0.582026;stream=interesting-history; date=1962-08-07; source_repair=source_scout_batch_001; source_repair_phase=source_only; source_repair_receipt=docs/editorial-source-scout/source-scout-batch-001/source-repair-mutation-20260608T091150Z/MUTATION_RECEIPT.json; app_data_written=true"
+      }
+    },
+    {
+      "id": "august-04-1892-fd89cb4fea529961",
+      "phase": "source_only",
+      "before": {
+        "title": "Lizzie Borden's Parents Found Murdered",
+        "one_liner": "The father and stepmother of Lizzie Borden are found murdered in their Fall River, Massachusetts home",
+        "description": "The father and stepmother of Lizzie Borden are found murdered in their Fall River, Massachusetts home. She will be tried and acquitted for the crimes a year later",
+        "short_summary": "The father and stepmother of Lizzie Borden are found murdered in their Fall River, Massachusetts home",
+        "summary": "The father and stepmother of Lizzie Borden are found murdered in their Fall River, Massachusetts home. She will be tried and acquitted for the crimes a year later. This case became one of the most infamous unsolved murders in American history, leading to a highly publicized trial and acquittal",
+        "detail": "The father and stepmother of Lizzie Borden are found murdered in their Fall River, Massachusetts home. She will be tried and acquitted for the crimes a year later. This case became one of the most infamous unsolved murders in American history, leading to a highly publicized trial and acquittal",
+        "deep_dive": "The father and stepmother of Lizzie Borden are found murdered in their Fall River, Massachusetts home. She will be tried and acquitted for the crimes a year later. This case became one of the most infamous unsolved murders in American history, leading to a highly publicized trial and acquittal",
+        "why_it_matters": "This case became one of the most infamous unsolved murders in American history, leading to a highly publicized trial and acquittal.",
+        "category": "history",
+        "tone": "somber",
+        "tags": [
+          "history",
+          "general_history"
+        ],
+        "sources": [
+          "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/04",
+          "https://en.wikipedia.org/wiki/Lizzie_Borden",
+          "https://en.wikipedia.org/wiki/Fall_River%2C_Massachusetts"
+        ],
+        "source_confidence": 0.9,
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-04.json;event_id=fd89cb4fea529961;cluster_id=63bccd1b371d;model_id=today-qwen3-14b;rank_score=0.565104;interesting_score=0.568464;stream=interesting-history; date=1892-08-04"
+      },
+      "after": {
+        "title": "Lizzie Borden's Parents Found Murdered",
+        "one_liner": "Andrew and Abby Borden are found murdered in their Fall River, Massachusetts home",
+        "description": "Andrew and Abby Borden are found murdered in their Fall River, Massachusetts home. Lizzie Borden is later tried and acquitted for the killings.",
+        "short_summary": "Andrew and Abby Borden are found murdered in their Fall River, Massachusetts home",
+        "summary": "Andrew and Abby Borden are found murdered in their Fall River, Massachusetts home. Lizzie Borden is later tried and acquitted, and the case becomes one of the best-known unsolved murder cases in American criminal history.",
+        "detail": "Andrew and Abby Borden are found murdered in their Fall River, Massachusetts home. Lizzie Borden is later tried and acquitted, and the case becomes one of the best-known unsolved murder cases in American criminal history.",
+        "deep_dive": "Andrew and Abby Borden are found murdered in their Fall River, Massachusetts home. Lizzie Borden is later tried and acquitted, and the case becomes one of the best-known unsolved murder cases in American criminal history.",
+        "why_it_matters": "The case became a lasting example of how media attention, gender expectations, and courtroom uncertainty can turn a local murder into national folklore.",
+        "category": "history",
+        "tone": "somber",
+        "tags": [
+          "history",
+          "crime",
+          "legal_history"
+        ],
+        "sources": [
+          "https://www.smithsonianmag.com/history/how-lizzie-borden-got-away-with-murder-180972707/",
+          "https://guides.loc.gov/chronicling-america-lizzie-borden/selected-articles"
+        ],
+        "source_confidence": 0.92,
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-04.json;event_id=fd89cb4fea529961;cluster_id=63bccd1b371d;model_id=today-qwen3-14b;rank_score=0.565104;interesting_score=0.568464;stream=interesting-history; date=1892-08-04; source_repair=source_scout_batch_001; source_repair_phase=source_only; source_repair_receipt=docs/editorial-source-scout/source-scout-batch-001/source-repair-mutation-20260608T091150Z/MUTATION_RECEIPT.json; app_data_written=true"
+      }
+    },
+    {
+      "id": "september-20-1941-cc587e668a24d693",
+      "phase": "source_only",
+      "before": {
+        "title": "The Holocaust in Lithuania: Mass Execution of Jews in Nemenčinė",
+        "one_liner": "Lithuanian Nazis and local police begin a mass execution of 403 Jews in Nemenčinė",
+        "description": "The Holocaust in Lithuania: Lithuanian Nazis and local police begin a mass execution of 403 Jews in Nemenčinė",
+        "short_summary": "Lithuanian Nazis and local police begin a mass execution of 403 Jews in Nemenčinė",
+        "summary": "The Holocaust in Lithuania: Lithuanian Nazis and local police begin a mass execution of 403 Jews in Nemenčinė. This event highlights the collaboration between local authorities and Nazi forces during the Holocaust, underscoring the tragic impact on Jewish communities in Lithuania",
+        "detail": "The Holocaust in Lithuania: Lithuanian Nazis and local police begin a mass execution of 403 Jews in Nemenčinė. This event highlights the collaboration between local authorities and Nazi forces during the Holocaust, underscoring the tragic impact on Jewish communities in Lithuania",
+        "deep_dive": "The Holocaust in Lithuania: Lithuanian Nazis and local police begin a mass execution of 403 Jews in Nemenčinė. This event highlights the collaboration between local authorities and Nazi forces during the Holocaust, underscoring the tragic impact on Jewish communities in Lithuania",
+        "why_it_matters": "This event highlights the collaboration between local authorities and Nazi forces during the Holocaust, underscoring the tragic impact on Jewish communities in Lithuania.",
+        "category": "history",
+        "tone": "somber",
+        "tags": [
+          "history",
+          "general_history"
+        ],
+        "sources": [
+          "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/09/20",
+          "https://en.wikipedia.org/wiki/The_Holocaust_in_Lithuania",
+          "https://en.wikipedia.org/wiki/Nemen%C4%8Din%C4%97"
+        ],
+        "source_confidence": 0.9,
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-20.json;event_id=cc587e668a24d693;cluster_id=61d9d37a95a6;model_id=today-qwen3-14b;rank_score=0.554409;interesting_score=0.570147;stream=interesting-history; date=1941-09-20"
+      },
+      "after": {
+        "title": "The Holocaust in Lithuania: Mass Execution of Jews in Nemenčinė",
+        "one_liner": "403 Jews from Nemenčinė are shot at a documented mass murder site in Lithuania",
+        "description": "On September 20, 1941, 403 Jews from Nemenčinė are shot at a mass murder site documented by the Holocaust Atlas of Lithuania.",
+        "short_summary": "403 Jews from Nemenčinė are shot at a documented mass murder site in Lithuania",
+        "summary": "On September 20, 1941, 403 Jews from Nemenčinė are shot at a mass murder site documented by the Holocaust Atlas of Lithuania. The record is kept narrow to the date, place, victim count, and killing documented by the source.",
+        "detail": "On September 20, 1941, 403 Jews from Nemenčinė are shot at a mass murder site documented by the Holocaust Atlas of Lithuania. The record is kept narrow to the date, place, victim count, and killing documented by the source.",
+        "deep_dive": "On September 20, 1941, 403 Jews from Nemenčinė are shot at a mass murder site documented by the Holocaust Atlas of Lithuania. The record is kept narrow to the date, place, victim count, and killing documented by the source.",
+        "why_it_matters": "The documented killing preserves the scale of local mass murder during the Holocaust in Lithuania without adding unsupported details about perpetrators or sequence.",
+        "category": "history",
+        "tone": "somber",
+        "tags": [
+          "history",
+          "holocaust",
+          "lithuania"
+        ],
+        "sources": [
+          "http://www.holocaustatlas.lt/EN/#a_atlas/search//page/1/item/181/",
+          "http://www.holocaustatlas.lt/load_markers.js.php?l=EN"
+        ],
+        "source_confidence": 0.9,
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-20.json;event_id=cc587e668a24d693;cluster_id=61d9d37a95a6;model_id=today-qwen3-14b;rank_score=0.554409;interesting_score=0.570147;stream=interesting-history; date=1941-09-20; source_repair=source_scout_batch_001; source_repair_phase=source_only; source_repair_receipt=docs/editorial-source-scout/source-scout-batch-001/source-repair-mutation-20260608T091150Z/MUTATION_RECEIPT.json; app_data_written=true"
+      }
+    },
+    {
+      "id": "october-16-1998-2016eb66331a26bb",
+      "phase": "source_only",
+      "before": {
+        "title": "Former Chilean dictator Augusto Pinochet arrested in London",
+        "one_liner": "Former Chilean dictator Augusto Pinochet is arrested in London on a murder extradition warrant",
+        "description": "Former Chilean dictator Augusto Pinochet is arrested in London on a murder extradition warrant",
+        "short_summary": "Former Chilean dictator Augusto Pinochet is arrested in London on a murder extradition warrant",
+        "summary": "Former Chilean dictator Augusto Pinochet is arrested in London on a murder extradition warrant. This event marked a significant moment in international justice and the pursuit of accountability for human rights violations",
+        "detail": "Former Chilean dictator Augusto Pinochet is arrested in London on a murder extradition warrant. This event marked a significant moment in international justice and the pursuit of accountability for human rights violations",
+        "deep_dive": "Former Chilean dictator Augusto Pinochet is arrested in London on a murder extradition warrant. This event marked a significant moment in international justice and the pursuit of accountability for human rights violations",
+        "why_it_matters": "This event marked a significant moment in international justice and the pursuit of accountability for human rights violations.",
+        "category": "politics",
+        "tone": "somber",
+        "tags": [
+          "politics",
+          "general_history"
+        ],
+        "sources": [
+          "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/10/16",
+          "https://en.wikipedia.org/wiki/Augusto_Pinochet",
+          "https://en.wikipedia.org/wiki/Indictment_and_arrest_of_Augusto_Pinochet"
+        ],
+        "source_confidence": 0.9,
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-10-16.json;event_id=2016eb66331a26bb;cluster_id=cc3453630b07;model_id=today-qwen3-14b;rank_score=0.562735;interesting_score=0.570655;stream=interesting-history; date=1998-10-16"
+      },
+      "after": {
+        "title": "Former Chilean dictator Augusto Pinochet arrested in London",
+        "one_liner": "Former Chilean dictator Augusto Pinochet is arrested in London on a Spanish extradition warrant",
+        "description": "Former Chilean dictator Augusto Pinochet is arrested at a London hospital on a Spanish warrant seeking extradition on murder charges.",
+        "short_summary": "Former Chilean dictator Augusto Pinochet is arrested in London on a Spanish extradition warrant",
+        "summary": "Former Chilean dictator Augusto Pinochet is arrested at a London hospital on a Spanish warrant seeking extradition on murder charges. The arrest becomes a major moment for international accountability efforts over alleged human rights abuses.",
+        "detail": "Former Chilean dictator Augusto Pinochet is arrested at a London hospital on a Spanish warrant seeking extradition on murder charges. The arrest becomes a major moment for international accountability efforts over alleged human rights abuses.",
+        "deep_dive": "Former Chilean dictator Augusto Pinochet is arrested at a London hospital on a Spanish warrant seeking extradition on murder charges. The arrest becomes a major moment for international accountability efforts over alleged human rights abuses.",
+        "why_it_matters": "The arrest tested whether former heads of state could face legal accountability abroad for alleged abuses committed under their rule.",
+        "category": "politics",
+        "tone": "somber",
+        "tags": [
+          "politics",
+          "human_rights",
+          "legal_history"
+        ],
+        "sources": [
+          "https://www.theguardian.com/world/1998/oct/18/pinochet.chile",
+          "https://news.bbc.co.uk/2/hi/europe/195413.stm"
+        ],
+        "source_confidence": 0.93,
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-10-16.json;event_id=2016eb66331a26bb;cluster_id=cc3453630b07;model_id=today-qwen3-14b;rank_score=0.562735;interesting_score=0.570655;stream=interesting-history; date=1998-10-16; source_repair=source_scout_batch_001; source_repair_phase=source_only; source_repair_receipt=docs/editorial-source-scout/source-scout-batch-001/source-repair-mutation-20260608T091150Z/MUTATION_RECEIPT.json; app_data_written=true"
+      }
+    },
+    {
+      "id": "august-08-2022-37bd901849b7ea28",
+      "phase": "source_only",
+      "before": {
+        "title": "FBI Searches Former President Trump's Residence",
+        "one_liner": "The FBI executes a search warrant at former president Donald Trump's residence in Mar-a-Lago, Florida",
+        "description": "The Federal Bureau of Investigation (FBI) executes a search warrant at former president Donald Trump's residence in Mar-a-Lago, Palm Beach, Florida",
+        "short_summary": "The FBI executes a search warrant at former president Donald Trump's residence in Mar-a-Lago, Florida",
+        "summary": "The Federal Bureau of Investigation (FBI) executes a search warrant at former president Donald Trump's residence in Mar-a-Lago, Palm Beach, Florida. This event highlights a major legal and political development involving a former U.S. president",
+        "detail": "The Federal Bureau of Investigation (FBI) executes a search warrant at former president Donald Trump's residence in Mar-a-Lago, Palm Beach, Florida. This event highlights a major legal and political development involving a former U.S. president",
+        "deep_dive": "The Federal Bureau of Investigation (FBI) executes a search warrant at former president Donald Trump's residence in Mar-a-Lago, Palm Beach, Florida. This event highlights a major legal and political development involving a former U.S. president",
+        "why_it_matters": "This event highlights a major legal and political development involving a former U.S. president.",
+        "category": "politics",
+        "tone": "somber",
+        "tags": [
+          "politics",
+          "general_history"
+        ],
+        "sources": [
+          "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/08",
+          "https://en.wikipedia.org/wiki/Federal_Bureau_of_Investigation",
+          "https://en.wikipedia.org/wiki/FBI_search_of_Mar-a-Lago"
+        ],
+        "source_confidence": 0.9,
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-08.json;event_id=37bd901849b7ea28;cluster_id=36ac2293e533;model_id=today-qwen3-14b;rank_score=0.565547;interesting_score=0.566436;stream=interesting-history; date=2022-08-08"
+      },
+      "after": {
+        "title": "FBI Searches Former President Trump's Residence",
+        "one_liner": "The FBI searches former president Donald Trump's Mar-a-Lago residence under a federal search warrant",
+        "description": "The FBI searches former president Donald Trump's Mar-a-Lago residence in Palm Beach, Florida, under a federal search warrant.",
+        "short_summary": "The FBI searches former president Donald Trump's Mar-a-Lago residence under a federal search warrant",
+        "summary": "The FBI searches former president Donald Trump's Mar-a-Lago residence in Palm Beach, Florida, under a federal search warrant. The search marks a major legal and political escalation involving presidential records and classified-material investigations.",
+        "detail": "The FBI searches former president Donald Trump's Mar-a-Lago residence in Palm Beach, Florida, under a federal search warrant. The search marks a major legal and political escalation involving presidential records and classified-material investigations.",
+        "deep_dive": "The FBI searches former president Donald Trump's Mar-a-Lago residence in Palm Beach, Florida, under a federal search warrant. The search marks a major legal and political escalation involving presidential records and classified-material investigations.",
+        "why_it_matters": "The search brought an unprecedented legal confrontation around a former U.S. president into public view.",
+        "category": "politics",
+        "tone": "balanced",
+        "tags": [
+          "politics",
+          "legal_history",
+          "united_states"
+        ],
+        "sources": [
+          "https://www.bbc.com/news/world-us-canada-62472908",
+          "https://www.nbcnews.com/politics/donald-trump/fbi-executes-search-warrant-trumps-mar-lago-sources-say-rcna42133"
+        ],
+        "source_confidence": 0.93,
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-08.json;event_id=37bd901849b7ea28;cluster_id=36ac2293e533;model_id=today-qwen3-14b;rank_score=0.565547;interesting_score=0.566436;stream=interesting-history; date=2022-08-08; source_repair=source_scout_batch_001; source_repair_phase=source_only; source_repair_receipt=docs/editorial-source-scout/source-scout-batch-001/source-repair-mutation-20260608T091150Z/MUTATION_RECEIPT.json; app_data_written=true"
+      }
+    },
+    {
+      "id": "october-02-1919-0a3726e29078ed59",
+      "phase": "copy_reviewed",
+      "before": {
+        "title": "Woodrow Wilson's Stroke at the White House",
+        "one_liner": "U.S. President Woodrow Wilson suffers a catastrophic stroke at the White House, leaving him incapacitated for the remainder of his presidency",
+        "description": "Seven days after suffering a \"physical collapse\" following a speech in Pueblo, Colorado, U.S. president Woodrow Wilson has a catastrophic stroke at the White House, leaving him physically and mentally incapacitated for the remainder of his presidency",
+        "short_summary": "U.S. President Woodrow Wilson suffers a catastrophic stroke at the White House, leaving him incapacitated for the remainder of his presidency",
+        "summary": "Seven days after suffering a \"physical collapse\" following a speech in Pueblo, Colorado, U.S. president Woodrow Wilson has a catastrophic stroke at the White House, leaving him physically and mentally incapacitated for the remainder of his presidency. This event marked a turning point in Wilson's leadership and had lasting effects on U.S. politics and foreign policy",
+        "detail": "Seven days after suffering a \"physical collapse\" following a speech in Pueblo, Colorado, U.S. president Woodrow Wilson has a catastrophic stroke at the White House, leaving him physically and mentally incapacitated for the remainder of his presidency. This event marked a turning point in Wilson's leadership and had lasting effects on U.S. politics and foreign policy",
+        "deep_dive": "Seven days after suffering a \"physical collapse\" following a speech in Pueblo, Colorado, U.S. president Woodrow Wilson has a catastrophic stroke at the White House, leaving him physically and mentally incapacitated for the remainder of his presidency. This event marked a turning point in Wilson's leadership and had lasting effects on U.S. politics and foreign policy",
+        "why_it_matters": "This event marked a turning point in Wilson's leadership and had lasting effects on U.S. politics and foreign policy.",
+        "category": "politics",
+        "tone": "somber",
+        "tags": [
+          "politics",
+          "general_history"
+        ],
+        "sources": [
+          "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/10/02",
+          "https://en.wikipedia.org/wiki/Stroke",
+          "https://en.wikipedia.org/wiki/Pueblo_speech"
+        ],
+        "source_confidence": 0.9,
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-10-02.json;event_id=0a3726e29078ed59;cluster_id=0ea374ef14d6;model_id=today-qwen3-14b;rank_score=0.576246;interesting_score=0.579411;stream=interesting-history; date=1919-10-02"
+      },
+      "after": {
+        "title": "Woodrow Wilson's Stroke at the White House",
+        "one_liner": "President Woodrow Wilson suffers a near-fatal stroke after cutting short his League of Nations tour",
+        "description": "After cutting short a national speaking tour to promote the League of Nations, President Woodrow Wilson suffers a near-fatal stroke in Washington.",
+        "short_summary": "President Woodrow Wilson suffers a near-fatal stroke after cutting short his League of Nations tour",
+        "summary": "After cutting short a national speaking tour to promote the League of Nations, President Woodrow Wilson suffers a near-fatal stroke in Washington. The illness sharply limits his public role during the final stretch of his presidency.",
+        "detail": "After cutting short a national speaking tour to promote the League of Nations, President Woodrow Wilson suffers a near-fatal stroke in Washington. The illness sharply limits his public role during the final stretch of his presidency.",
+        "deep_dive": "After cutting short a national speaking tour to promote the League of Nations, President Woodrow Wilson suffers a near-fatal stroke in Washington. The illness sharply limits his public role during the final stretch of his presidency.",
+        "why_it_matters": "Wilson’s illness exposed how fragile presidential continuity could be before modern disability procedures were in place.",
+        "category": "politics",
+        "tone": "somber",
+        "tags": [
+          "politics",
+          "presidency",
+          "medical_history"
+        ],
+        "sources": [
+          "https://www.history.com/this-day-in-history/october-2/woodrow-wilson-suffers-a-stroke",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC1911642/"
+        ],
+        "source_confidence": 0.88,
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-10-02.json;event_id=0a3726e29078ed59;cluster_id=0ea374ef14d6;model_id=today-qwen3-14b;rank_score=0.576246;interesting_score=0.579411;stream=interesting-history; date=1919-10-02; source_repair=source_scout_batch_001; source_repair_phase=copy_reviewed; source_repair_receipt=docs/editorial-source-scout/source-scout-batch-001/source-repair-mutation-20260608T091150Z/MUTATION_RECEIPT.json; app_data_written=true"
+      }
+    },
+    {
+      "id": "august-04-2018-1b084fcbccc384d0",
+      "phase": "copy_reviewed",
+      "before": {
+        "title": "Venezuela Drone Attack During Maduro's Speech",
+        "one_liner": "Seven people are injured when two drones detonate explosives on Avenida Bolívar, Caracas during President Nicolás Maduro's speech",
+        "description": "Crisis in Venezuela: Seven people are injured when two drones detonate explosives on Avenida Bolívar, Caracas while president Nicolás Maduro is giving a speech to the Venezuelan National Guard",
+        "short_summary": "Seven people are injured when two drones detonate explosives on Avenida Bolívar, Caracas during President Nicolás Maduro's speech",
+        "summary": "Crisis in Venezuela: Seven people are injured when two drones detonate explosives on Avenida Bolívar, Caracas while president Nicolás Maduro is giving a speech to the Venezuelan National Guard. This event highlights the ongoing political and security challenges in Venezuela under Maduro's leadership",
+        "detail": "Crisis in Venezuela: Seven people are injured when two drones detonate explosives on Avenida Bolívar, Caracas while president Nicolás Maduro is giving a speech to the Venezuelan National Guard. This event highlights the ongoing political and security challenges in Venezuela under Maduro's leadership",
+        "deep_dive": "Crisis in Venezuela: Seven people are injured when two drones detonate explosives on Avenida Bolívar, Caracas while president Nicolás Maduro is giving a speech to the Venezuelan National Guard. This event highlights the ongoing political and security challenges in Venezuela under Maduro's leadership",
+        "why_it_matters": "This event highlights the ongoing political and security challenges in Venezuela under Maduro's leadership.",
+        "category": "politics",
+        "tone": "somber",
+        "tags": [
+          "politics",
+          "general_history"
+        ],
+        "sources": [
+          "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/04",
+          "https://en.wikipedia.org/wiki/Crisis_in_Venezuela",
+          "https://en.wikipedia.org/wiki/2018_Caracas_drone_attack"
+        ],
+        "source_confidence": 0.9,
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-04.json;event_id=1b084fcbccc384d0;cluster_id=a4df69ac78aa;model_id=today-qwen3-14b;rank_score=0.578988;interesting_score=0.576698;stream=interesting-history; date=2018-08-04"
+      },
+      "after": {
+        "title": "Venezuela Drone Attack During Maduro's Speech",
+        "one_liner": "Venezuelan officials say explosive drones detonated near President Nicolas Maduro during a Caracas military speech",
+        "description": "Venezuelan officials say explosive drones detonated near President Nicolas Maduro during a Caracas military speech, injuring seven members of the national guard.",
+        "short_summary": "Venezuelan officials say explosive drones detonated near President Nicolas Maduro during a Caracas military speech",
+        "summary": "Venezuelan officials say explosive drones detonated near President Nicolas Maduro during a Caracas military speech, injuring seven members of the national guard. Contemporaneous reporting also noted conflicting accounts, so the event is framed through official claims rather than treated as fully settled.",
+        "detail": "Venezuelan officials say explosive drones detonated near President Nicolas Maduro during a Caracas military speech, injuring seven members of the national guard. Contemporaneous reporting also noted conflicting accounts, so the event is framed through official claims rather than treated as fully settled.",
+        "deep_dive": "Venezuelan officials say explosive drones detonated near President Nicolas Maduro during a Caracas military speech, injuring seven members of the national guard. Contemporaneous reporting also noted conflicting accounts, so the event is framed through official claims rather than treated as fully settled.",
+        "why_it_matters": "The incident showed the volatility of Venezuela’s political crisis and the difficulty of establishing a clean public record during contested events.",
+        "category": "politics",
+        "tone": "somber",
+        "tags": [
+          "politics",
+          "venezuela",
+          "security"
+        ],
+        "sources": [
+          "https://www.bbc.com/news/world-latin-america-45073385",
+          "https://www.theguardian.com/world/2018/aug/04/nicolas-maduros-speech-cut-short-while-soldiers-scatter"
+        ],
+        "source_confidence": 0.85,
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-04.json;event_id=1b084fcbccc384d0;cluster_id=a4df69ac78aa;model_id=today-qwen3-14b;rank_score=0.578988;interesting_score=0.576698;stream=interesting-history; date=2018-08-04; source_repair=source_scout_batch_001; source_repair_phase=copy_reviewed; source_repair_receipt=docs/editorial-source-scout/source-scout-batch-001/source-repair-mutation-20260608T091150Z/MUTATION_RECEIPT.json; app_data_written=true"
+      }
+    },
+    {
+      "id": "september-16-1976-441b067e0c98a3e6",
+      "phase": "copy_reviewed",
+      "before": {
+        "title": "Night of the Pencils",
+        "one_liner": "A group of high-school students in La Plata, Argentina, were kidnapped, tortured, raped, and murdered during the Argentinian military dictatorship",
+        "description": "Night of the Pencils: In the city of La Plata, Argentina, a group of high-school students were kidnapped and later tortured, raped and murdered during the Argentinian military dictatorship",
+        "short_summary": "A group of high-school students in La Plata, Argentina, were kidnapped, tortured, raped, and murdered during the Argentinian military dictatorship",
+        "summary": "Night of the Pencils: In the city of La Plata, Argentina, a group of high-school students were kidnapped and later tortured, raped and murdered during the Argentinian military dictatorship. This event highlights the brutal repression and human rights violations committed during Argentina's military dictatorship",
+        "detail": "Night of the Pencils: In the city of La Plata, Argentina, a group of high-school students were kidnapped and later tortured, raped and murdered during the Argentinian military dictatorship. This event highlights the brutal repression and human rights violations committed during Argentina's military dictatorship",
+        "deep_dive": "Night of the Pencils: In the city of La Plata, Argentina, a group of high-school students were kidnapped and later tortured, raped and murdered during the Argentinian military dictatorship. This event highlights the brutal repression and human rights violations committed during Argentina's military dictatorship",
+        "why_it_matters": "This event highlights the brutal repression and human rights violations committed during Argentina's military dictatorship.",
+        "category": "politics",
+        "tone": "somber",
+        "tags": [
+          "politics",
+          "general_history"
+        ],
+        "sources": [
+          "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/09/16",
+          "https://en.wikipedia.org/wiki/Night_of_the_Pencils",
+          "https://en.wikipedia.org/wiki/La_Plata"
+        ],
+        "source_confidence": 0.9,
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-16.json;event_id=441b067e0c98a3e6;cluster_id=ba050f0a7214;model_id=today-qwen3-14b;rank_score=0.560137;interesting_score=0.58345;stream=interesting-history; date=1976-09-16"
+      },
+      "after": {
+        "title": "Night of the Pencils",
+        "one_liner": "Security forces abduct high-school students in La Plata, Argentina, during the military dictatorship",
+        "description": "Security forces in La Plata, Argentina abduct high-school students on September 16 and 17, 1976, in what becomes known as the Night of the Pencils.",
+        "short_summary": "Security forces abduct high-school students in La Plata, Argentina, during the military dictatorship",
+        "summary": "Security forces in La Plata, Argentina abduct high-school students on September 16 and 17, 1976, in what becomes known as the Night of the Pencils. The students are taken to clandestine detention centers; reporting describes imprisonment, torture, and deaths, with six never seen again.",
+        "detail": "Security forces in La Plata, Argentina abduct high-school students on September 16 and 17, 1976, in what becomes known as the Night of the Pencils. The students are taken to clandestine detention centers; reporting describes imprisonment, torture, and deaths, with six never seen again.",
+        "deep_dive": "Security forces in La Plata, Argentina abduct high-school students on September 16 and 17, 1976, in what becomes known as the Night of the Pencils. The students are taken to clandestine detention centers; reporting describes imprisonment, torture, and deaths, with six never seen again.",
+        "why_it_matters": "The case remains a stark symbol of Argentina’s dictatorship-era repression and the vulnerability of student activists under state terror.",
+        "category": "politics",
+        "tone": "somber",
+        "tags": [
+          "politics",
+          "human_rights",
+          "argentina"
+        ],
+        "sources": [
+          "https://www.bbc.com/news/world-latin-america-14910859"
+        ],
+        "source_confidence": 0.86,
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-16.json;event_id=441b067e0c98a3e6;cluster_id=ba050f0a7214;model_id=today-qwen3-14b;rank_score=0.560137;interesting_score=0.58345;stream=interesting-history; date=1976-09-16; source_repair=source_scout_batch_001; source_repair_phase=copy_reviewed; source_repair_receipt=docs/editorial-source-scout/source-scout-batch-001/source-repair-mutation-20260608T091150Z/MUTATION_RECEIPT.json; app_data_written=true"
+      }
+    },
+    {
+      "id": "september-23-1955-066299b2c0da7301",
+      "phase": "copy_reviewed",
+      "before": {
+        "title": "Emmett Till Murder Trial",
+        "one_liner": "An all-white jury in Mississippi acquits Roy Bryant and J. W. Milam in the murder of Emmett Till",
+        "description": "An all-white jury in Mississippi finds Roy Bryant and J. W. Milam not guilty in the torture-murder of 14-year-old African American boy Emmett Till",
+        "short_summary": "An all-white jury in Mississippi acquits Roy Bryant and J. W. Milam in the murder of Emmett Till",
+        "summary": "An all-white jury in Mississippi finds Roy Bryant and J. W. Milam not guilty in the torture-murder of 14-year-old African American boy Emmett Till. This event underscores the systemic racism and injustice in the U.S. legal system during the civil rights era",
+        "detail": "An all-white jury in Mississippi finds Roy Bryant and J. W. Milam not guilty in the torture-murder of 14-year-old African American boy Emmett Till. This event underscores the systemic racism and injustice in the U.S. legal system during the civil rights era",
+        "deep_dive": "An all-white jury in Mississippi finds Roy Bryant and J. W. Milam not guilty in the torture-murder of 14-year-old African American boy Emmett Till. This event underscores the systemic racism and injustice in the U.S. legal system during the civil rights era",
+        "why_it_matters": "This event underscores the systemic racism and injustice in the U.S. legal system during the civil rights era.",
+        "category": "politics",
+        "tone": "somber",
+        "tags": [
+          "politics",
+          "general_history"
+        ],
+        "sources": [
+          "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/09/23",
+          "https://en.wikipedia.org/wiki/Mississippi",
+          "https://en.wikipedia.org/wiki/Emmett_Till"
+        ],
+        "source_confidence": 0.9,
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-23.json;event_id=066299b2c0da7301;cluster_id=4ee34d9ef9d8;model_id=today-qwen3-14b;rank_score=0.568339;interesting_score=0.579694;stream=interesting-history; date=1955-09-23"
+      },
+      "after": {
+        "title": "Emmett Till Murder Trial",
+        "one_liner": "An all-white Mississippi jury acquits J. W. Milam and Roy Bryant of murdering Emmett Till",
+        "description": "An all-white Mississippi jury acquits J. W. Milam and Roy Bryant of murdering 14-year-old Emmett Till.",
+        "short_summary": "An all-white Mississippi jury acquits J. W. Milam and Roy Bryant of murdering Emmett Till",
+        "summary": "An all-white Mississippi jury acquits J. W. Milam and Roy Bryant of murdering 14-year-old Emmett Till on September 23, 1955. The verdict becomes a defining example of racist injustice in the civil rights era.",
+        "detail": "An all-white Mississippi jury acquits J. W. Milam and Roy Bryant of murdering 14-year-old Emmett Till on September 23, 1955. The verdict becomes a defining example of racist injustice in the civil rights era.",
+        "deep_dive": "An all-white Mississippi jury acquits J. W. Milam and Roy Bryant of murdering 14-year-old Emmett Till on September 23, 1955. The verdict becomes a defining example of racist injustice in the civil rights era.",
+        "why_it_matters": "The acquittal helped galvanize national attention on racist violence and the failures of equal justice in the Jim Crow South.",
+        "category": "politics",
+        "tone": "somber",
+        "tags": [
+          "politics",
+          "civil_rights",
+          "legal_history"
+        ],
+        "sources": [
+          "https://www.pbs.org/wgbh/americanexperience/features/till-timeline/",
+          "https://www.britannica.com/biography/Emmett-Till"
+        ],
+        "source_confidence": 0.93,
+        "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-23.json;event_id=066299b2c0da7301;cluster_id=4ee34d9ef9d8;model_id=today-qwen3-14b;rank_score=0.568339;interesting_score=0.579694;stream=interesting-history; date=1955-09-23; source_repair=source_scout_batch_001; source_repair_phase=copy_reviewed; source_repair_receipt=docs/editorial-source-scout/source-scout-batch-001/source-repair-mutation-20260608T091150Z/MUTATION_RECEIPT.json; app_data_written=true"
+      }
+    }
+  ],
+  "deferred_record_ids": [
+    "august-26-1942-80d95a14c483beb1"
+  ],
+  "review_questions": [
+    "Do changed records contain unsupported claims relative to final sources?",
+    "Do changed records retain legacy remote-feed source URLs?",
+    "Do sensitive records use attribution-safe wording?",
+    "Are any copy choices too broad for the cited evidence?"
+  ]
+}

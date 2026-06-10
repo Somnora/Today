@@ -6616,35 +6616,6 @@
     "editorial_status": "ready"
   },
   {
-    "id": "june-15-1410-26bdc49bca8cfd59",
-    "month": 6,
-    "day": 15,
-    "year": 1410,
-    "title": "Onon River Battle Date Needs Review",
-    "one_liner": "The June 15 claim about Ming forces defeating Bunyashiri near the Onon River is held because current exact-date leads are derivative and need stronger scholarly support.",
-    "description": "The June 15 claim about Ming forces defeating Bunyashiri near the Onon River is held because current exact-date leads are derivative and need stronger scholarly support.",
-    "short_summary": "The Onon River battle record is held pending stronger exact-date support.",
-    "summary": "The June 15 claim about Ming forces defeating Bunyashiri near the Onon River is held because current exact-date leads are derivative and need stronger scholarly support. The older wording also used overly theatrical battle language.",
-    "detail": "The June 15 claim about Ming forces defeating Bunyashiri near the Onon River is held because current exact-date leads are derivative and need stronger scholarly support. The older wording also used overly theatrical battle language.",
-    "deep_dive": "Source leads point to a Ming campaign against Bunyashiri near the Onon River on June 15, 1410, but the retrievable exact-date pages are weak derivative references. This record should use a scholarly Ming history source before returning to the visible feed.",
-    "why_it_matters": "Holding the record avoids presenting a medieval military claim as settled when the current source support is not strong enough for a visible history feed.",
-    "category": "history",
-    "tags": [
-      "history",
-      "military_history",
-      "ming_dynasty",
-      "mongol_history",
-      "source_review"
-    ],
-    "tone": "balanced",
-    "sources": [
-      "http://www.historman.com/en/event/Yongle_Emperor%27s_campaigns_against_the_Mongols/Q11087883"
-    ],
-    "provenance": "source_repair=today-ios-best-next-pass3-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass3; source_posture=external_source_repair; date=1410-06-15",
-    "source_confidence": 0.36,
-    "editorial_status": "defer"
-  },
-  {
     "id": "june-15-1944-982f8281b6935bc3",
     "month": 6,
     "day": 15,
@@ -8544,36 +8515,6 @@
     "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-03-03.json;event_id=94cb2e740e0b111d;cluster_id=3d7bb41b44bb;model_id=today-qwen3-14b;rank_score=0.691459;interesting_score=0.657661;stream=interesting-history; date=1924-03-03; source_repaired=APP-145; no_wikipedia_or_wikimedia; exact_date_claim_verified; date=1924-03-03",
     "source_confidence": 0.9,
     "editorial_status": "ready"
-  },
-  {
-    "id": "march-03-1924-7b4f5ceff0ad11d7",
-    "month": 3,
-    "day": 3,
-    "year": 1924,
-    "title": "Fiume Annexation Date Needs Review",
-    "one_liner": "The Fiume annexation record is held because stronger sources support the Treaty of Rome on January 27 or annexation ceremonies on March 16, not March 3.",
-    "description": "The Fiume annexation record is held because stronger sources support the Treaty of Rome on January 27 or annexation ceremonies on March 16, not March 3.",
-    "short_summary": "The Fiume annexation record is held pending a date correction.",
-    "summary": "The Fiume annexation record is held because stronger sources support the Treaty of Rome on January 27 or annexation ceremonies on March 16, not March 3. The record should be moved or rewritten before returning to the visible feed.",
-    "detail": "The Fiume annexation record is held because stronger sources support the Treaty of Rome on January 27 or annexation ceremonies on March 16, not March 3. The record should be moved or rewritten before returning to the visible feed.",
-    "deep_dive": "Italian legal and encyclopedia sources point to March 16, 1924 for civil celebrations and the Fiume provincial designation, while treaty sources point to January 27, 1924 for the Treaty of Rome. That conflicts with the current March 3 placement.",
-    "why_it_matters": "The date distinction matters because treaty signing, legal celebration, and annexation framing are different political events.",
-    "category": "politics",
-    "tags": [
-      "politics",
-      "italy",
-      "fiume",
-      "interwar_europe",
-      "source_review"
-    ],
-    "tone": "balanced",
-    "sources": [
-      "https://www.fiscoai.it/normativa/legge/279/1924/",
-      "https://www.treccani.it/enciclopedia/provincia-del-carnaro_(Enciclopedia-Italiana)/"
-    ],
-    "provenance": "source_repair=today-ios-best-next-pass3-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass3; source_posture=external_source_repair; date=1924-03-03",
-    "source_confidence": 0.42,
-    "editorial_status": "defer"
   },
   {
     "id": "march-04-2020-b7c7a83d09eabdaa",
@@ -12885,36 +12826,6 @@
     "editorial_status": "ready"
   },
   {
-    "id": "february-14-1947-0784c6b75731930e",
-    "month": 2,
-    "day": 14,
-    "year": 1947,
-    "title": "Hungary Noble-Ranks Date Needs Review",
-    "one_liner": "Official Hungarian legal texts support Act IV of 1947 taking effect on January 14, 1947, not this February 14 record date.",
-    "description": "Official Hungarian legal texts support Act IV of 1947 taking effect on January 14, 1947, not this February 14 record date.",
-    "short_summary": "Hungary noble-ranks record held because official legal sources conflict with this calendar date.",
-    "summary": "Official Hungarian legal texts support Act IV of 1947 taking effect on January 14, 1947, abolishing noble and aristocratic ranks and certain titles. This February 14 record is hidden until the date can be corrected or separately sourced.",
-    "detail": "Official Hungarian legal texts support Act IV of 1947 taking effect on January 14, 1947, abolishing noble and aristocratic ranks and certain titles. This February 14 record is hidden until the date can be corrected or separately sourced.",
-    "deep_dive": "Hungary Act IV of 1947 abolished noble and aristocratic ranks and certain titles. The official legal record gives January 14, 1947 as the promulgation and effective date, so the current February 14 slot is not safe for the visible feed.",
-    "why_it_matters": "The hold prevents a legal-history milestone from shipping on a date the official law text does not support.",
-    "category": "politics",
-    "tags": [
-      "politics",
-      "hungary",
-      "legal_history",
-      "nobility",
-      "republicanism"
-    ],
-    "tone": "balanced",
-    "sources": [
-      "https://njt.hu/jogszabaly/1947-4-00-00",
-      "https://net.jogtar.hu/ezer-ev-torveny?docid=94700004.TV"
-    ],
-    "provenance": "source_repair=today-ios-best-next-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07; source_posture=external_source_repair; date=1947-02-14",
-    "source_confidence": 0.48,
-    "editorial_status": "defer"
-  },
-  {
     "id": "february-14-2000-6dabd783312d57d9",
     "month": 2,
     "day": 14,
@@ -15084,37 +14995,6 @@
     "provenance": "app163_date_trap_split_pass; date=2005-01-04; no_wikipedia_or_wikimedia; confirmed_non_wiki_sources=courts.ms.gov; moved_from=2005-01-06; reviewed_utc=2026-05-27T21:20:19Z",
     "source_confidence": 0.9,
     "editorial_status": "ready"
-  },
-  {
-    "id": "january-06-1947-05a9592ef608f5cc",
-    "month": 1,
-    "day": 6,
-    "year": 1947,
-    "title": "Pan Am Round-the-World Ticket Date Needs Review",
-    "one_liner": "The January 6 ticket claim is held because stronger Pan Am history sources point to June 17, 1947 for the first regular round-the-world service.",
-    "description": "The January 6 ticket claim is held because stronger Pan Am history sources point to June 17, 1947 for the first regular round-the-world service.",
-    "short_summary": "Pan Am round-the-world ticket record held pending stronger exact-date source support.",
-    "summary": "Date-history pages place a Pan Am round-the-world ticket claim on January 6, 1947, but stronger Pan Am history sources point to June 17, 1947 for the first regular round-the-world service. The record is hidden until the January ticket-offer claim can be verified or moved.",
-    "detail": "Date-history pages place a Pan Am round-the-world ticket claim on January 6, 1947, but stronger Pan Am history sources point to June 17, 1947 for the first regular round-the-world service. The record is hidden until the January ticket-offer claim can be verified or moved.",
-    "deep_dive": "Pan Am Historical Foundation materials say Juan Trippe opened new round-the-world schedules on June 17, 1947, and later coverage treats that date as the first regular round-the-world passenger service. That conflict makes the January 6 ticket wording unsafe for the visible feed.",
-    "why_it_matters": "Holding the record protects a travel milestone from being displayed on a date that stronger aviation sources may contradict.",
-    "category": "exploration",
-    "tags": [
-      "exploration",
-      "aviation",
-      "pan_am",
-      "transportation",
-      "source_review"
-    ],
-    "tone": "balanced",
-    "sources": [
-      "https://www.panam.org/about-pahf/a-brief-history-of-pan-am-by-gene-banning",
-      "https://www.panam.org/enduring-legacy/r-e-g-davies-maps",
-      "https://www.wired.com/2009/06/dayintech-0617/"
-    ],
-    "provenance": "source_repair=today-ios-best-next-pass2-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07-pass2; source_posture=external_source_repair; date=1947-01-06",
-    "source_confidence": 0.44,
-    "editorial_status": "defer"
   },
   {
     "id": "january-06-1994-524a4eca40f9036d",
@@ -18374,27 +18254,27 @@
     "month": 4,
     "day": 4,
     "year": 1984,
-    "title": "Ronald Reagan calls for chemical weapons ban",
-    "one_liner": "President Ronald Reagan calls for an international ban on chemical weapons",
-    "description": "President Ronald Reagan calls for an international ban on chemical weapons",
-    "short_summary": "President Ronald Reagan calls for an international ban on chemical weapons",
-    "summary": "President Ronald Reagan calls for an international ban on chemical weapons. This highlights efforts to address global security and humanitarian concerns",
-    "detail": "President Ronald Reagan calls for an international ban on chemical weapons. This highlights efforts to address global security and humanitarian concerns",
-    "deep_dive": "President Ronald Reagan calls for an international ban on chemical weapons. This highlights efforts to address global security and humanitarian concerns",
-    "why_it_matters": "This highlights efforts to address global security and humanitarian concerns.",
+    "title": "Reagan Proposes Worldwide Chemical Weapons Ban",
+    "one_liner": "President Ronald Reagan announces a U.S. proposal for a comprehensive worldwide ban on chemical weapons.",
+    "description": "President Ronald Reagan announces a U.S. proposal for a comprehensive worldwide ban on chemical weapons.",
+    "short_summary": "President Ronald Reagan announces a U.S. proposal for a comprehensive worldwide ban on chemical weapons.",
+    "summary": "President Ronald Reagan opens an April 4, 1984 news conference by announcing that the United States will send Vice President George H. W. Bush to Geneva with a proposal for a comprehensive worldwide ban on chemical weapons. The proposal called for prohibiting the production, possession, and use of chemical weapons.",
+    "detail": "President Ronald Reagan opens an April 4, 1984 news conference by announcing a U.S. proposal for a comprehensive worldwide ban on chemical weapons, including production, possession, and use.",
+    "deep_dive": "The official Reagan Library transcript ties the announcement to the April 4, 1984 news conference and to a Geneva arms-control proposal. The repaired wording keeps the claim to Reagan announcing the proposal, rather than implying that a treaty was adopted that day.",
+    "why_it_matters": "The moment shows arms-control politics turning from broad concern into a dated diplomatic proposal.",
     "category": "politics",
     "tags": [
       "politics",
-      "general_history"
+      "arms_control",
+      "chemical_weapons"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/04/04",
-      "https://en.wikipedia.org/wiki/Ronald_Reagan",
-      "https://en.wikipedia.org/wiki/Chemical_weapon"
+      "https://www.reaganlibrary.gov/archives/speech/presidents-news-conference-38",
+      "https://www.upi.com/Archives/1984/04/05/Reagan-proposes-chemical-arms-ban/1893449989200/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-04-04.json;event_id=216fbcb2fb5052f9;cluster_id=b69a42d29c34;model_id=today-qwen3-14b;rank_score=0.559802;interesting_score=0.553527;stream=interesting-history; date=1984-04-04",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-pass4-2026-06-08; artifact=docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z; source_posture=external_source_repair; date=1984-04-04; app_data_written=true",
+    "source_confidence": 0.96,
     "editorial_status": "ready"
   },
   {
@@ -18705,27 +18585,28 @@
     "month": 4,
     "day": 7,
     "year": 2018,
-    "title": "Lula da Silva Arrested in Brazil's Car-Wash Operation",
-    "one_liner": "Former Brazilian president Luiz Inácio Lula da Silva is arrested for corruption as part of the Car-Wash Operation",
-    "description": "Former Brazilian president, Luiz Inácio Lula da Silva, is arrested for corruption by determination of Judge Sérgio Moro, from the \"Car-Wash Operation\". Lula stayed imprisoned for 580 days, before being released by the Brazilian Supreme Court",
-    "short_summary": "Former Brazilian president Luiz Inácio Lula da Silva is arrested for corruption as part of the Car-Wash Operation",
-    "summary": "Former Brazilian president, Luiz Inácio Lula da Silva, is arrested for corruption by determination of Judge Sérgio Moro, from the \"Car-Wash Operation\". Lula stayed imprisoned for 580 days, before being released by the Brazilian Supreme Court. His arrest marked a pivotal moment in Brazil's fight against political corruption and judicial reforms",
-    "detail": "Former Brazilian president, Luiz Inácio Lula da Silva, is arrested for corruption by determination of Judge Sérgio Moro, from the \"Car-Wash Operation\". Lula stayed imprisoned for 580 days, before being released by the Brazilian Supreme Court. His arrest marked a pivotal moment in Brazil's fight against political corruption and judicial reforms",
-    "deep_dive": "Former Brazilian president, Luiz Inácio Lula da Silva, is arrested for corruption by determination of Judge Sérgio Moro, from the \"Car-Wash Operation\". Lula stayed imprisoned for 580 days, before being released by the Brazilian Supreme Court. His arrest marked a pivotal moment in Brazil's fight against political corruption and judicial reforms",
-    "why_it_matters": "His arrest marked a pivotal moment in Brazil's fight against political corruption and judicial reforms.",
+    "title": "Lula da Silva Taken into Custody in Brazil",
+    "one_liner": "Former Brazilian president Luiz Inacio Lula da Silva turns himself over to federal authorities to begin serving a corruption sentence tied to Operation Car Wash.",
+    "description": "Former Brazilian president Luiz Inacio Lula da Silva turns himself over to federal authorities to begin serving a corruption sentence tied to Operation Car Wash.",
+    "short_summary": "Former Brazilian president Luiz Inacio Lula da Silva turns himself over to federal authorities in Brazil.",
+    "summary": "On April 7, 2018, former Brazilian president Luiz Inacio Lula da Silva turns himself over to federal authorities and begins serving a corruption sentence linked to Operation Car Wash. He is later released after a Supreme Court ruling on imprisonment before appeals are exhausted.",
+    "detail": "On April 7, 2018, Luiz Inacio Lula da Silva turns himself over to federal authorities after an arrest warrant in the Operation Car Wash corruption case. The repaired wording uses the source-supported custody and surrender language.",
+    "deep_dive": "AP and CNN both place Lula da Silva in federal custody on April 7, 2018 and connect the case to Operation Car Wash. BBC later confirms his release after a Supreme Court ruling, so the record keeps that context without presenting it as part of the same-day action.",
+    "why_it_matters": "The case became a defining test of Brazil's anti-corruption drive, courts, and electoral politics.",
     "category": "politics",
     "tags": [
-      "arts",
-      "general_history"
+      "politics",
+      "brazil",
+      "operation_car_wash"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/04/07",
-      "https://en.wikipedia.org/wiki/Brazilians",
-      "https://en.wikipedia.org/wiki/Luiz_In%C3%A1cio_Lula_da_Silva"
+      "https://apnews.com/article/04a9443d9dc94c90aa8b3c24d10c5bb8",
+      "https://edition.cnn.com/2018/04/07/americas/brazil-lula-da-silva/",
+      "https://www.bbc.com/news/world-latin-america-50351438"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-04-07.json;event_id=457c29636958ac5b;cluster_id=07a593be8fa5;model_id=today-qwen3-14b;rank_score=0.571121;interesting_score=0.577795;stream=interesting-history; date=2018-04-07",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-pass4-2026-06-08; artifact=docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z; source_posture=external_source_repair; date=2018-04-07; claim_narrowed=custody_and_surrender_language; app_data_written=true",
+    "source_confidence": 0.95,
     "editorial_status": "ready"
   },
   {
@@ -19007,27 +18888,27 @@
     "month": 4,
     "day": 10,
     "year": 1970,
-    "title": "Paul McCartney Leaves The Beatles",
-    "one_liner": "Paul McCartney announces his departure from The Beatles for personal and professional reasons",
-    "description": "Paul McCartney announces that he is leaving The Beatles for personal and professional reasons",
-    "short_summary": "Paul McCartney announces his departure from The Beatles for personal and professional reasons",
-    "summary": "Paul McCartney announces that he is leaving The Beatles for personal and professional reasons. This marked the beginning of the end for one of the most influential bands in music history",
-    "detail": "Paul McCartney announces that he is leaving The Beatles for personal and professional reasons. This marked the beginning of the end for one of the most influential bands in music history",
-    "deep_dive": "Paul McCartney announces that he is leaving The Beatles for personal and professional reasons. This marked the beginning of the end for one of the most influential bands in music history",
-    "why_it_matters": "This marked the beginning of the end for one of the most influential bands in music history.",
+    "title": "Paul McCartney Makes the Beatles Split Public",
+    "one_liner": "Paul McCartney's April 10, 1970 press statements make his break from the Beatles public.",
+    "description": "Paul McCartney's April 10, 1970 press statements make his break from the Beatles public.",
+    "short_summary": "Paul McCartney makes his break from the Beatles public through April 10, 1970 press statements.",
+    "summary": "Paul McCartney's self-interview for his solo album is reported on April 10, 1970, making his break from the Beatles public. Contemporary coverage framed it as a major split while McCartney left open whether the break was temporary or permanent.",
+    "detail": "On April 10, 1970, press coverage of Paul McCartney's self-interview makes his break from the Beatles public. The repaired wording avoids treating the date as a formal legal dissolution of the band.",
+    "deep_dive": "History.com and the Guardian both support April 10, 1970 as the public announcement moment. The copy narrows the claim from simply leaving the band to making the split public, which better matches the available sources.",
+    "why_it_matters": "The public break marked the point when a private band fracture became a cultural event.",
     "category": "arts",
     "tags": [
       "arts",
-      "general_history"
+      "music",
+      "the_beatles"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/04/10",
-      "https://en.wikipedia.org/wiki/Paul_McCartney",
-      "https://en.wikipedia.org/wiki/The_Beatles"
+      "https://www.history.com/this-day-in-history/april-10/paul-mccartney-announces-the-breakup-of-the-beatles",
+      "https://www.theguardian.com/music/from-the-archive-blog/2020/apr/09/day-beatles-broke-up-paul-mccartney-1970"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-04-10.json;event_id=9fd084047a6bdec5;cluster_id=9fbb09190651;model_id=today-qwen3-14b;rank_score=0.563262;interesting_score=0.557258;stream=interesting-history; date=1970-04-10",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-pass4-2026-06-08; artifact=docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z; source_posture=external_source_repair; date=1970-04-10; claim_narrowed=public_split_statement_not_formal_dissolution; app_data_written=true",
+    "source_confidence": 0.93,
     "editorial_status": "ready"
   },
   {
@@ -19653,27 +19534,28 @@
     "month": 4,
     "day": 16,
     "year": 1943,
-    "title": "Discovery of LSD's Hallucinogenic Effects",
-    "one_liner": "Albert Hofmann accidentally discovers the hallucinogenic effects of the research drug LSD",
-    "description": "Albert Hofmann accidentally discovers the hallucinogenic effects of the research drug LSD. He intentionally takes the drug three days later on April 19",
-    "short_summary": "Albert Hofmann accidentally discovers the hallucinogenic effects of the research drug LSD",
-    "summary": "Albert Hofmann accidentally discovers the hallucinogenic effects of the research drug LSD. He intentionally takes the drug three days later on April 19. This discovery led to significant scientific and cultural impacts in the 20th century",
-    "detail": "Albert Hofmann accidentally discovers the hallucinogenic effects of the research drug LSD. He intentionally takes the drug three days later on April 19. This discovery led to significant scientific and cultural impacts in the 20th century",
-    "deep_dive": "Albert Hofmann accidentally discovers the hallucinogenic effects of the research drug LSD. He intentionally takes the drug three days later on April 19. This discovery led to significant scientific and cultural impacts in the 20th century",
-    "why_it_matters": "This discovery led to significant scientific and cultural impacts in the 20th century.",
-    "category": "history",
+    "title": "Albert Hofmann Discovers LSD's Psychedelic Effects",
+    "one_liner": "Albert Hofmann accidentally experiences LSD's hallucinogenic effects on April 16, 1943.",
+    "description": "Albert Hofmann accidentally experiences LSD's hallucinogenic effects on April 16, 1943, then intentionally tests the substance three days later.",
+    "short_summary": "Albert Hofmann accidentally experiences LSD's hallucinogenic effects on April 16, 1943.",
+    "summary": "Swiss chemist Albert Hofmann accidentally experiences LSD's hallucinogenic effects on April 16, 1943. Three days later, he intentionally ingests the compound to investigate those effects, creating the episode later remembered as Bicycle Day.",
+    "detail": "Albert Hofmann accidentally absorbs a small amount of LSD and experiences hallucinations on April 16, 1943. The app copy separates that accidental discovery from his intentional April 19 test.",
+    "deep_dive": "Royal Society of Chemistry and Britannica both support the April 16 accidental exposure and the April 19 intentional ingestion. The category is repaired from general history to science because the event is a chemistry and pharmacology milestone.",
+    "why_it_matters": "The discovery changed psychedelic research, psychiatry, and later cultural debates around drug use.",
+    "category": "science",
     "tags": [
-      "history",
-      "general_history"
+      "science",
+      "chemistry",
+      "pharmacology"
     ],
-    "tone": "uplifting",
+    "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/04/16",
-      "https://en.wikipedia.org/wiki/Albert_Hofmann",
-      "https://en.wikipedia.org/wiki/LSD"
+      "https://edu.rsc.org/resources/on-this-day-apr-16--lsd-effects-discovered/10416.article",
+      "https://www.britannica.com/biography/Albert-Hofmann",
+      "https://www.swissinfo.ch/eng/sci-tech/75-years-ago_the-first-trip-down-lsd-lane/44050456"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-04-16.json;event_id=e052a628ca341806;cluster_id=205f487addb9;model_id=today-qwen3-14b;rank_score=0.556334;interesting_score=0.564369;stream=interesting-history; date=1943-04-16",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-pass4-2026-06-08; artifact=docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z; source_posture=external_source_repair; date=1943-04-16; category_repaired=history_to_science; app_data_written=true",
+    "source_confidence": 0.95,
     "editorial_status": "ready"
   },
   {
@@ -20124,27 +20006,26 @@
     "month": 4,
     "day": 20,
     "year": 1968,
-    "title": "Enoch Powell delivers the \"Rivers of Blood\" speech",
-    "one_liner": "English politician Enoch Powell delivers his controversial \"Rivers of Blood\" speech, which sparked widespread debate",
-    "description": "English politician Enoch Powell makes his controversial \"Rivers of Blood\" speech",
-    "short_summary": "English politician Enoch Powell delivers his controversial \"Rivers of Blood\" speech, which sparked widespread debate",
-    "summary": "English politician Enoch Powell makes his controversial \"Rivers of Blood\" speech. The speech is a pivotal moment in British political history, reflecting deep societal tensions and racial issues of the time",
-    "detail": "English politician Enoch Powell makes his controversial \"Rivers of Blood\" speech. The speech is a pivotal moment in British political history, reflecting deep societal tensions and racial issues of the time",
-    "deep_dive": "English politician Enoch Powell makes his controversial \"Rivers of Blood\" speech. The speech is a pivotal moment in British political history, reflecting deep societal tensions and racial issues of the time",
-    "why_it_matters": "The speech is a pivotal moment in British political history, reflecting deep societal tensions and racial issues of the time.",
-    "category": "history",
+    "title": "Enoch Powell Gives the Rivers of Blood Speech",
+    "one_liner": "Enoch Powell addresses a Conservative Party meeting in Birmingham with a speech opposing immigration and warning of racial conflict.",
+    "description": "Enoch Powell addresses a Conservative Party meeting in Birmingham with the speech later known as Rivers of Blood.",
+    "short_summary": "Enoch Powell gives the speech later known as Rivers of Blood in Birmingham.",
+    "summary": "On April 20, 1968, British MP Enoch Powell addresses a Conservative Party meeting in Birmingham with the speech later known as Rivers of Blood. The speech used inflammatory imagery against Commonwealth immigration and made Powell a central figure for opponents of immigration.",
+    "detail": "On April 20, 1968, Enoch Powell gives the speech later known as Rivers of Blood at a Conservative Party meeting in Birmingham. The repaired wording names the source-supported venue and keeps the racial politics context direct.",
+    "deep_dive": "The University of Warwick Modern Records Centre supports the date, speaker, Birmingham meeting, and immigration context. The repair moves the record from generic history to politics and shifts tone to somber for a racially charged speech.",
+    "why_it_matters": "The speech became one of modern Britain's defining flashpoints over immigration, race, and political rhetoric.",
+    "category": "politics",
     "tags": [
-      "history",
-      "general_history"
+      "politics",
+      "britain",
+      "race_relations"
     ],
-    "tone": "balanced",
+    "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/04/20",
-      "https://en.wikipedia.org/wiki/Enoch_Powell",
-      "https://en.wikipedia.org/wiki/Rivers_of_Blood_speech"
+      "https://warwick.ac.uk/services/library/mrc/studying/docs/racism/powell/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-04-20.json;event_id=30da991d9896e922;cluster_id=0dcbbe01327a;model_id=today-qwen3-14b;rank_score=0.559952;interesting_score=0.554705;stream=interesting-history; date=1968-04-20",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-pass4-2026-06-08; artifact=docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z; source_posture=external_source_repair; date=1968-04-20; category_repaired=history_to_politics; tone_repaired=balanced_to_somber; app_data_written=true",
+    "source_confidence": 0.95,
     "editorial_status": "ready"
   },
   {
@@ -20347,27 +20228,28 @@
     "month": 4,
     "day": 22,
     "year": 1864,
-    "title": "U.S. Congress Passes Coinage Act of 1864",
-    "one_liner": "The U.S. Congress passes the Coinage Act of 1864, allowing the inscription 'In God We Trust' on all U.S. coins",
-    "description": "The U.S. Congress passes the Coinage Act of 1864 that permitted the inscription In God We Trust be placed on all coins minted as United States currency",
-    "short_summary": "The U.S. Congress passes the Coinage Act of 1864, allowing the inscription 'In God We Trust' on all U.S. coins",
-    "summary": "The U.S. Congress passes the Coinage Act of 1864 that permitted the inscription In God We Trust be placed on all coins minted as United States currency. This act established a national motto on U.S. currency, reflecting the country's values and faith",
-    "detail": "The U.S. Congress passes the Coinage Act of 1864 that permitted the inscription In God We Trust be placed on all coins minted as United States currency. This act established a national motto on U.S. currency, reflecting the country's values and faith",
-    "deep_dive": "The U.S. Congress passes the Coinage Act of 1864 that permitted the inscription In God We Trust be placed on all coins minted as United States currency. This act established a national motto on U.S. currency, reflecting the country's values and faith",
-    "why_it_matters": "This act established a national motto on U.S. currency, reflecting the country's values and faith.",
+    "title": "Congress Passes the 1864 Coinage Law",
+    "one_liner": "Congress passes an April 22, 1864 coinage law that lets the Mint choose mottoes and devices for one and two-cent coins.",
+    "description": "Congress passes an April 22, 1864 coinage law that lets the Mint choose mottoes and devices for one and two-cent coins, leading to the two-cent coin bearing In God We Trust.",
+    "short_summary": "Congress passes an 1864 coinage law tied to the first U.S. coins bearing In God We Trust.",
+    "summary": "Congress passes an April 22, 1864 coinage law that lets the Mint choose mottoes and devices for one and two-cent coins. Later in 1864, the Mint issues two-cent coins bearing In God We Trust.",
+    "detail": "The April 22, 1864 law authorized the design framework for one and two-cent coins. The repaired copy avoids the unsupported claim that the statute put In God We Trust on all U.S. coins that day.",
+    "deep_dive": "Library of Congress and GovInfo support the April 22, 1864 law and its coinage language. The final wording narrows the record to the two-cent coin pathway instead of overstating an all-coin motto rule.",
+    "why_it_matters": "The law opened the path for a phrase that later became a lasting feature of U.S. currency.",
     "category": "politics",
     "tags": [
-      "history",
-      "general_history"
+      "politics",
+      "currency",
+      "us_history"
     ],
     "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/04/22",
-      "https://en.wikipedia.org/wiki/United_States_Congress",
-      "https://en.wikipedia.org/wiki/Coinage_Act_of_1864"
+      "https://blogs.loc.gov/law/2013/04/in-god-we-trust/",
+      "https://www.govinfo.gov/content/pkg/STATUTE-13/pdf/STATUTE-13-Pg54.pdf",
+      "https://www.govinfo.gov/content/pkg/STATUTE-13/pdf/STATUTE-13-Pg55.pdf"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-04-22.json;event_id=773e5ddf2d87c1b1;cluster_id=f93613b6c338;model_id=today-qwen3-14b;rank_score=0.56529;interesting_score=0.566304;stream=interesting-history; date=1864-04-22",
-    "source_confidence": 0.9,
+    "provenance": "source_repair=today-ios-best-next-pass4-2026-06-08; artifact=docs/editorial-source-scout/source-repair-batch-002-20260608T100550Z; source_posture=external_source_repair; date=1864-04-22; claim_narrowed=two_cent_motto_path_not_all_coins; app_data_written=true",
+    "source_confidence": 0.95,
     "editorial_status": "ready"
   },
   {
@@ -22223,35 +22105,6 @@
     "provenance": "source_warning_reduction_app159; date=1972-07-11; confirmed_non_wiki_sources=mark-weeks.com; 365chess.com; prior_source_lineage=legacy_remote_feed; reviewed_utc=2026-05-27T07:47:14Z",
     "source_confidence": 0.95,
     "editorial_status": "ready"
-  },
-  {
-    "id": "july-11-1941-8941cd809075e011",
-    "month": 7,
-    "day": 11,
-    "year": 1941,
-    "title": "Northern Rhodesian Labour Congress Needs Review",
-    "one_liner": "A book snippet supports a party congress at Nkana on 11 July, but the available source trail is not strong enough for the full first-congress claim on this record.",
-    "description": "A book snippet supports a party congress at Nkana on 11 July, but the available source trail is not strong enough for the full first-congress claim on this record.",
-    "short_summary": "Northern Rhodesian Labour Party congress record held pending stronger exact-date source support.",
-    "summary": "A book snippet supports a Northern Rhodesian Labour Party congress at Nkana on 11 July, but the available source trail does not fully support the original first-congress wording with enough confidence. The record is hidden until a stronger source can be checked.",
-    "detail": "A book snippet supports a Northern Rhodesian Labour Party congress at Nkana on 11 July, but the available source trail does not fully support the original first-congress wording with enough confidence. The record is hidden until a stronger source can be checked.",
-    "deep_dive": "The available lead points to J. R. T. Wood describing a Rhodesia Labour Party congress at Nkana on 11 July, with a weaker derived source carrying the first-congress claim. That is not enough for a visible-feed repair of a colonial-politics record.",
-    "why_it_matters": "The hold avoids presenting a colonial political organizing claim before the exact source support is strong enough.",
-    "category": "politics",
-    "tags": [
-      "politics",
-      "northern_rhodesia",
-      "zambia",
-      "labor_history",
-      "colonial_politics"
-    ],
-    "tone": "balanced",
-    "sources": [
-      "https://books.google.com/books?id=lzhzAAAAMAAJ"
-    ],
-    "provenance": "source_repair=today-ios-best-next-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07; source_posture=external_source_repair; date=1941-07-11",
-    "source_confidence": 0.4,
-    "editorial_status": "defer"
   },
   {
     "id": "july-12-2001-8d27166de1eb1265",
@@ -24728,26 +24581,26 @@
     "day": 4,
     "year": 1892,
     "title": "Lizzie Borden's Parents Found Murdered",
-    "one_liner": "The father and stepmother of Lizzie Borden are found murdered in their Fall River, Massachusetts home",
-    "description": "The father and stepmother of Lizzie Borden are found murdered in their Fall River, Massachusetts home. She will be tried and acquitted for the crimes a year later",
-    "short_summary": "The father and stepmother of Lizzie Borden are found murdered in their Fall River, Massachusetts home",
-    "summary": "The father and stepmother of Lizzie Borden are found murdered in their Fall River, Massachusetts home. She will be tried and acquitted for the crimes a year later. This case became one of the most infamous unsolved murders in American history, leading to a highly publicized trial and acquittal",
-    "detail": "The father and stepmother of Lizzie Borden are found murdered in their Fall River, Massachusetts home. She will be tried and acquitted for the crimes a year later. This case became one of the most infamous unsolved murders in American history, leading to a highly publicized trial and acquittal",
-    "deep_dive": "The father and stepmother of Lizzie Borden are found murdered in their Fall River, Massachusetts home. She will be tried and acquitted for the crimes a year later. This case became one of the most infamous unsolved murders in American history, leading to a highly publicized trial and acquittal",
-    "why_it_matters": "This case became one of the most infamous unsolved murders in American history, leading to a highly publicized trial and acquittal.",
+    "one_liner": "Andrew and Abby Borden are found murdered in their Fall River, Massachusetts home",
+    "description": "Andrew and Abby Borden are found murdered in their Fall River, Massachusetts home. Lizzie Borden is later tried and acquitted for the killings.",
+    "short_summary": "Andrew and Abby Borden are found murdered in their Fall River, Massachusetts home",
+    "summary": "Andrew and Abby Borden are found murdered in their Fall River, Massachusetts home. Lizzie Borden is later tried and acquitted, and the case becomes one of the best-known unsolved murder cases in American criminal history.",
+    "detail": "Andrew and Abby Borden are found murdered in their Fall River, Massachusetts home. Lizzie Borden is later tried and acquitted, and the case becomes one of the best-known unsolved murder cases in American criminal history.",
+    "deep_dive": "Andrew and Abby Borden are found murdered in their Fall River, Massachusetts home. Lizzie Borden is later tried and acquitted, and the case becomes one of the best-known unsolved murder cases in American criminal history.",
+    "why_it_matters": "The case became a lasting example of how media attention, gender expectations, and courtroom uncertainty can turn a local murder into national folklore.",
     "category": "history",
     "tags": [
       "history",
-      "general_history"
+      "crime",
+      "legal_history"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/04",
-      "https://en.wikipedia.org/wiki/Lizzie_Borden",
-      "https://en.wikipedia.org/wiki/Fall_River%2C_Massachusetts"
+      "https://www.smithsonianmag.com/history/how-lizzie-borden-got-away-with-murder-180972707/",
+      "https://guides.loc.gov/chronicling-america-lizzie-borden/selected-articles"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-04.json;event_id=fd89cb4fea529961;cluster_id=63bccd1b371d;model_id=today-qwen3-14b;rank_score=0.565104;interesting_score=0.568464;stream=interesting-history; date=1892-08-04",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-04.json;event_id=fd89cb4fea529961;cluster_id=63bccd1b371d;model_id=today-qwen3-14b;rank_score=0.565104;interesting_score=0.568464;stream=interesting-history; date=1892-08-04; source_repair=source_scout_batch_001; source_repair_phase=source_only; source_repair_receipt=docs/editorial-source-scout/source-scout-batch-001/source-repair-mutation-20260608T091150Z/MUTATION_RECEIPT.json; app_data_written=true",
+    "source_confidence": 0.92,
     "editorial_status": "ready"
   },
   {
@@ -24756,26 +24609,26 @@
     "day": 4,
     "year": 2018,
     "title": "Venezuela Drone Attack During Maduro's Speech",
-    "one_liner": "Seven people are injured when two drones detonate explosives on Avenida Bolívar, Caracas during President Nicolás Maduro's speech",
-    "description": "Crisis in Venezuela: Seven people are injured when two drones detonate explosives on Avenida Bolívar, Caracas while president Nicolás Maduro is giving a speech to the Venezuelan National Guard",
-    "short_summary": "Seven people are injured when two drones detonate explosives on Avenida Bolívar, Caracas during President Nicolás Maduro's speech",
-    "summary": "Crisis in Venezuela: Seven people are injured when two drones detonate explosives on Avenida Bolívar, Caracas while president Nicolás Maduro is giving a speech to the Venezuelan National Guard. This event highlights the ongoing political and security challenges in Venezuela under Maduro's leadership",
-    "detail": "Crisis in Venezuela: Seven people are injured when two drones detonate explosives on Avenida Bolívar, Caracas while president Nicolás Maduro is giving a speech to the Venezuelan National Guard. This event highlights the ongoing political and security challenges in Venezuela under Maduro's leadership",
-    "deep_dive": "Crisis in Venezuela: Seven people are injured when two drones detonate explosives on Avenida Bolívar, Caracas while president Nicolás Maduro is giving a speech to the Venezuelan National Guard. This event highlights the ongoing political and security challenges in Venezuela under Maduro's leadership",
-    "why_it_matters": "This event highlights the ongoing political and security challenges in Venezuela under Maduro's leadership.",
+    "one_liner": "Venezuelan officials say explosive drones detonated near President Nicolas Maduro during a Caracas military speech",
+    "description": "Venezuelan officials say explosive drones detonated near President Nicolas Maduro during a Caracas military speech, injuring seven members of the national guard.",
+    "short_summary": "Venezuelan officials say explosive drones detonated near President Nicolas Maduro during a Caracas military speech",
+    "summary": "Venezuelan officials say explosive drones detonated near President Nicolas Maduro during a Caracas military speech, injuring seven members of the national guard. Contemporaneous reporting also noted conflicting accounts, so the event is framed through official claims rather than treated as fully settled.",
+    "detail": "Venezuelan officials say explosive drones detonated near President Nicolas Maduro during a Caracas military speech, injuring seven members of the national guard. Contemporaneous reporting also noted conflicting accounts, so the event is framed through official claims rather than treated as fully settled.",
+    "deep_dive": "Venezuelan officials say explosive drones detonated near President Nicolas Maduro during a Caracas military speech, injuring seven members of the national guard. Contemporaneous reporting also noted conflicting accounts, so the event is framed through official claims rather than treated as fully settled.",
+    "why_it_matters": "The incident showed the volatility of Venezuela’s political crisis and the difficulty of establishing a clean public record during contested events.",
     "category": "politics",
     "tags": [
       "politics",
-      "general_history"
+      "venezuela",
+      "security"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/04",
-      "https://en.wikipedia.org/wiki/Crisis_in_Venezuela",
-      "https://en.wikipedia.org/wiki/2018_Caracas_drone_attack"
+      "https://www.bbc.com/news/world-latin-america-45073385",
+      "https://www.theguardian.com/world/2018/aug/04/nicolas-maduros-speech-cut-short-while-soldiers-scatter"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-04.json;event_id=1b084fcbccc384d0;cluster_id=a4df69ac78aa;model_id=today-qwen3-14b;rank_score=0.578988;interesting_score=0.576698;stream=interesting-history; date=2018-08-04",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-04.json;event_id=1b084fcbccc384d0;cluster_id=a4df69ac78aa;model_id=today-qwen3-14b;rank_score=0.578988;interesting_score=0.576698;stream=interesting-history; date=2018-08-04; source_repair=source_scout_batch_001; source_repair_phase=copy_reviewed; source_repair_receipt=docs/editorial-source-scout/source-scout-batch-001/source-repair-mutation-20260608T091150Z/MUTATION_RECEIPT.json; app_data_written=true",
+    "source_confidence": 0.85,
     "editorial_status": "ready"
   },
   {
@@ -25031,61 +24884,31 @@
     "editorial_status": "ready"
   },
   {
-    "id": "august-07-1985-9227d6db9e45a43c",
-    "month": 8,
-    "day": 7,
-    "year": 1985,
-    "title": "Japan Astronaut Selection Exact-Date Claim Deferred",
-    "one_liner": "JAXA confirms Japan selected its first astronaut candidates in 1985, but this record's exact August 7 date needs stronger support.",
-    "description": "JAXA confirms Japan selected its first astronaut candidates in 1985, but this record's exact August 7 date needs stronger support.",
-    "short_summary": "JAXA confirms Japan selected its first astronaut candidates in 1985, but this record's exact August 7 date needs stronger support.",
-    "summary": "JAXA pages confirm Takao Doi, Mamoru Mohri, and Chiaki Mukai were selected as astronaut candidates in 1985. This record is deferred because the exact August 7 date was not verified in this pass from a directly reviewable non-Wikipedia source.",
-    "detail": "JAXA pages confirm Takao Doi, Mamoru Mohri, and Chiaki Mukai were selected as astronaut candidates in 1985. This record is deferred because the exact August 7 date was not verified in this pass from a directly reviewable non-Wikipedia source.",
-    "deep_dive": "JAXA pages confirm Takao Doi, Mamoru Mohri, and Chiaki Mukai were selected as astronaut candidates in 1985. This record is deferred because the exact August 7 date was not verified in this pass from a directly reviewable non-Wikipedia source.",
-    "why_it_matters": "The milestone is worth preserving only after the exact date is source-secure.",
-    "category": "exploration",
-    "tags": [
-      "spaceflight",
-      "Japan",
-      "JAXA",
-      "astronauts"
-    ],
-    "tone": "balanced",
-    "sources": [
-      "https://humans-in-space.jaxa.jp/en/astronaut/doi-takao/",
-      "https://humans-in-space.jaxa.jp/en/astronaut/mohri-mamoru/",
-      "https://humans-in-space.jaxa.jp/en/astronaut/mukai-chiaki/"
-    ],
-    "provenance": "source_repair=APP-189-best-next-visible-feed-source-posture-repair; date=1985-08-07; editorial_status=defer; defer_reason=JAXA_sources_confirm_month_year_and_people_but_not_exact_day; no_wikipedia_or_wikimedia; source_domain=humans-in-space.jaxa.jp; reviewed_utc=2026-05-30T20:19:29Z",
-    "source_confidence": 0.62,
-    "editorial_status": "defer"
-  },
-  {
     "id": "august-07-1962-e78f730929733f00",
     "month": 8,
     "day": 7,
     "year": 1962,
     "title": "Frances Oldham Kelsey Awarded for Thalidomide Refusal",
-    "one_liner": "Frances Oldham Kelsey is awarded the U.S. President's Award for refusing to authorize thalidomide",
-    "description": "Canadian-born American pharmacologist Frances Oldham Kelsey is awarded the U.S. President's Award for Distinguished Federal Civilian Service for her refusal to authorize thalidomide",
-    "short_summary": "Frances Oldham Kelsey is awarded the U.S. President's Award for refusing to authorize thalidomide",
-    "summary": "Canadian-born American pharmacologist Frances Oldham Kelsey is awarded the U.S. President's Award for Distinguished Federal Civilian Service for her refusal to authorize thalidomide. Her decision prevented a drug linked to severe birth defects from reaching the market, saving countless lives",
-    "detail": "Canadian-born American pharmacologist Frances Oldham Kelsey is awarded the U.S. President's Award for Distinguished Federal Civilian Service for her refusal to authorize thalidomide. Her decision prevented a drug linked to severe birth defects from reaching the market, saving countless lives",
-    "deep_dive": "Canadian-born American pharmacologist Frances Oldham Kelsey is awarded the U.S. President's Award for Distinguished Federal Civilian Service for her refusal to authorize thalidomide. Her decision prevented a drug linked to severe birth defects from reaching the market, saving countless lives",
-    "why_it_matters": "Her decision prevented a drug linked to severe birth defects from reaching the market, saving countless lives.",
-    "category": "politics",
+    "one_liner": "Frances Oldham Kelsey receives a presidential service award after refusing to authorize thalidomide without stronger safety evidence",
+    "description": "Canadian-born American pharmacologist Frances Oldham Kelsey receives the President's Award for Distinguished Federal Civilian Service after refusing to authorize thalidomide without stronger safety evidence.",
+    "short_summary": "Frances Oldham Kelsey receives a presidential service award after refusing to authorize thalidomide without stronger safety evidence",
+    "summary": "Canadian-born American pharmacologist Frances Oldham Kelsey receives the President's Award for Distinguished Federal Civilian Service after refusing to authorize thalidomide without stronger safety evidence. Her caution helped keep a drug later linked to severe birth defects from being approved in the United States.",
+    "detail": "Canadian-born American pharmacologist Frances Oldham Kelsey receives the President's Award for Distinguished Federal Civilian Service after refusing to authorize thalidomide without stronger safety evidence. Her caution helped keep a drug later linked to severe birth defects from being approved in the United States.",
+    "deep_dive": "Canadian-born American pharmacologist Frances Oldham Kelsey receives the President's Award for Distinguished Federal Civilian Service after refusing to authorize thalidomide without stronger safety evidence. Her caution helped keep a drug later linked to severe birth defects from being approved in the United States.",
+    "why_it_matters": "Kelsey’s review helped strengthen public trust in drug safety by showing that regulatory caution can prevent irreversible harm.",
+    "category": "science",
     "tags": [
-      "politics",
-      "general_history"
+      "science",
+      "medicine",
+      "public_health"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/07",
-      "https://en.wikipedia.org/wiki/Frances_Oldham_Kelsey",
-      "https://en.wikipedia.org/wiki/Thalidomide"
+      "https://www.presidency.ucsb.edu/documents/remarks-upon-presenting-the-presidents-awards-for-distinguished-federal-civilian-service",
+      "https://web.archive.org/web/20061020043712/https://www.fda.gov/fdac/features/2001/201_kelsey.html"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-07.json;event_id=e78f730929733f00;cluster_id=45901a3b43fa;model_id=today-qwen3-14b;rank_score=0.709645;interesting_score=0.582026;stream=interesting-history; date=1962-08-07",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-07.json;event_id=e78f730929733f00;cluster_id=45901a3b43fa;model_id=today-qwen3-14b;rank_score=0.709645;interesting_score=0.582026;stream=interesting-history; date=1962-08-07; source_repair=source_scout_batch_001; source_repair_phase=source_only; source_repair_receipt=docs/editorial-source-scout/source-scout-batch-001/source-repair-mutation-20260608T091150Z/MUTATION_RECEIPT.json; app_data_written=true",
+    "source_confidence": 0.97,
     "editorial_status": "ready"
   },
   {
@@ -25233,26 +25056,26 @@
     "day": 8,
     "year": 2022,
     "title": "FBI Searches Former President Trump's Residence",
-    "one_liner": "The FBI executes a search warrant at former president Donald Trump's residence in Mar-a-Lago, Florida",
-    "description": "The Federal Bureau of Investigation (FBI) executes a search warrant at former president Donald Trump's residence in Mar-a-Lago, Palm Beach, Florida",
-    "short_summary": "The FBI executes a search warrant at former president Donald Trump's residence in Mar-a-Lago, Florida",
-    "summary": "The Federal Bureau of Investigation (FBI) executes a search warrant at former president Donald Trump's residence in Mar-a-Lago, Palm Beach, Florida. This event highlights a major legal and political development involving a former U.S. president",
-    "detail": "The Federal Bureau of Investigation (FBI) executes a search warrant at former president Donald Trump's residence in Mar-a-Lago, Palm Beach, Florida. This event highlights a major legal and political development involving a former U.S. president",
-    "deep_dive": "The Federal Bureau of Investigation (FBI) executes a search warrant at former president Donald Trump's residence in Mar-a-Lago, Palm Beach, Florida. This event highlights a major legal and political development involving a former U.S. president",
-    "why_it_matters": "This event highlights a major legal and political development involving a former U.S. president.",
+    "one_liner": "The FBI searches former president Donald Trump's Mar-a-Lago residence under a federal search warrant",
+    "description": "The FBI searches former president Donald Trump's Mar-a-Lago residence in Palm Beach, Florida, under a federal search warrant.",
+    "short_summary": "The FBI searches former president Donald Trump's Mar-a-Lago residence under a federal search warrant",
+    "summary": "The FBI searches former president Donald Trump's Mar-a-Lago residence in Palm Beach, Florida, under a federal search warrant. The search marks a major legal and political escalation involving presidential records and classified-material investigations.",
+    "detail": "The FBI searches former president Donald Trump's Mar-a-Lago residence in Palm Beach, Florida, under a federal search warrant. The search marks a major legal and political escalation involving presidential records and classified-material investigations.",
+    "deep_dive": "The FBI searches former president Donald Trump's Mar-a-Lago residence in Palm Beach, Florida, under a federal search warrant. The search marks a major legal and political escalation involving presidential records and classified-material investigations.",
+    "why_it_matters": "The search brought an unprecedented legal confrontation around a former U.S. president into public view.",
     "category": "politics",
     "tags": [
       "politics",
-      "general_history"
+      "legal_history",
+      "united_states"
     ],
-    "tone": "somber",
+    "tone": "balanced",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/08/08",
-      "https://en.wikipedia.org/wiki/Federal_Bureau_of_Investigation",
-      "https://en.wikipedia.org/wiki/FBI_search_of_Mar-a-Lago"
+      "https://www.bbc.com/news/world-us-canada-62472908",
+      "https://www.nbcnews.com/politics/donald-trump/fbi-executes-search-warrant-trumps-mar-lago-sources-say-rcna42133"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-08.json;event_id=37bd901849b7ea28;cluster_id=36ac2293e533;model_id=today-qwen3-14b;rank_score=0.565547;interesting_score=0.566436;stream=interesting-history; date=2022-08-08",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-08-08.json;event_id=37bd901849b7ea28;cluster_id=36ac2293e533;model_id=today-qwen3-14b;rank_score=0.565547;interesting_score=0.566436;stream=interesting-history; date=2022-08-08; source_repair=source_scout_batch_001; source_repair_phase=source_only; source_repair_receipt=docs/editorial-source-scout/source-scout-batch-001/source-repair-mutation-20260608T091150Z/MUTATION_RECEIPT.json; app_data_written=true",
+    "source_confidence": 0.93,
     "editorial_status": "ready"
   },
   {
@@ -29419,26 +29242,25 @@
     "day": 16,
     "year": 1976,
     "title": "Night of the Pencils",
-    "one_liner": "A group of high-school students in La Plata, Argentina, were kidnapped, tortured, raped, and murdered during the Argentinian military dictatorship",
-    "description": "Night of the Pencils: In the city of La Plata, Argentina, a group of high-school students were kidnapped and later tortured, raped and murdered during the Argentinian military dictatorship",
-    "short_summary": "A group of high-school students in La Plata, Argentina, were kidnapped, tortured, raped, and murdered during the Argentinian military dictatorship",
-    "summary": "Night of the Pencils: In the city of La Plata, Argentina, a group of high-school students were kidnapped and later tortured, raped and murdered during the Argentinian military dictatorship. This event highlights the brutal repression and human rights violations committed during Argentina's military dictatorship",
-    "detail": "Night of the Pencils: In the city of La Plata, Argentina, a group of high-school students were kidnapped and later tortured, raped and murdered during the Argentinian military dictatorship. This event highlights the brutal repression and human rights violations committed during Argentina's military dictatorship",
-    "deep_dive": "Night of the Pencils: In the city of La Plata, Argentina, a group of high-school students were kidnapped and later tortured, raped and murdered during the Argentinian military dictatorship. This event highlights the brutal repression and human rights violations committed during Argentina's military dictatorship",
-    "why_it_matters": "This event highlights the brutal repression and human rights violations committed during Argentina's military dictatorship.",
+    "one_liner": "Security forces abduct high-school students in La Plata, Argentina, during the military dictatorship",
+    "description": "Security forces in La Plata, Argentina abduct high-school students on September 16 and 17, 1976, in what becomes known as the Night of the Pencils.",
+    "short_summary": "Security forces abduct high-school students in La Plata, Argentina, during the military dictatorship",
+    "summary": "Security forces in La Plata, Argentina abduct high-school students on September 16 and 17, 1976, in what becomes known as the Night of the Pencils. The students are taken to clandestine detention centers; reporting describes imprisonment, torture, and deaths, with six never seen again.",
+    "detail": "Security forces in La Plata, Argentina abduct high-school students on September 16 and 17, 1976, in what becomes known as the Night of the Pencils. The students are taken to clandestine detention centers; reporting describes imprisonment, torture, and deaths, with six never seen again.",
+    "deep_dive": "Security forces in La Plata, Argentina abduct high-school students on September 16 and 17, 1976, in what becomes known as the Night of the Pencils. The students are taken to clandestine detention centers; reporting describes imprisonment, torture, and deaths, with six never seen again.",
+    "why_it_matters": "The case remains a stark symbol of Argentina’s dictatorship-era repression and the vulnerability of student activists under state terror.",
     "category": "politics",
     "tags": [
       "politics",
-      "general_history"
+      "human_rights",
+      "argentina"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/09/16",
-      "https://en.wikipedia.org/wiki/Night_of_the_Pencils",
-      "https://en.wikipedia.org/wiki/La_Plata"
+      "https://www.bbc.com/news/world-latin-america-14910859"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-16.json;event_id=441b067e0c98a3e6;cluster_id=ba050f0a7214;model_id=today-qwen3-14b;rank_score=0.560137;interesting_score=0.58345;stream=interesting-history; date=1976-09-16",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-16.json;event_id=441b067e0c98a3e6;cluster_id=ba050f0a7214;model_id=today-qwen3-14b;rank_score=0.560137;interesting_score=0.58345;stream=interesting-history; date=1976-09-16; source_repair=source_scout_batch_001; source_repair_phase=copy_reviewed; source_repair_receipt=docs/editorial-source-scout/source-scout-batch-001/source-repair-mutation-20260608T091150Z/MUTATION_RECEIPT.json; app_data_written=true",
+    "source_confidence": 0.86,
     "editorial_status": "ready"
   },
   {
@@ -29785,25 +29607,25 @@
     "day": 20,
     "year": 1941,
     "title": "The Holocaust in Lithuania: Mass Execution of Jews in Nemenčinė",
-    "one_liner": "Lithuanian Nazis and local police begin a mass execution of 403 Jews in Nemenčinė",
-    "description": "The Holocaust in Lithuania: Lithuanian Nazis and local police begin a mass execution of 403 Jews in Nemenčinė",
-    "short_summary": "Lithuanian Nazis and local police begin a mass execution of 403 Jews in Nemenčinė",
-    "summary": "The Holocaust in Lithuania: Lithuanian Nazis and local police begin a mass execution of 403 Jews in Nemenčinė. This event highlights the collaboration between local authorities and Nazi forces during the Holocaust, underscoring the tragic impact on Jewish communities in Lithuania",
-    "detail": "The Holocaust in Lithuania: Lithuanian Nazis and local police begin a mass execution of 403 Jews in Nemenčinė. This event highlights the collaboration between local authorities and Nazi forces during the Holocaust, underscoring the tragic impact on Jewish communities in Lithuania",
-    "deep_dive": "The Holocaust in Lithuania: Lithuanian Nazis and local police begin a mass execution of 403 Jews in Nemenčinė. This event highlights the collaboration between local authorities and Nazi forces during the Holocaust, underscoring the tragic impact on Jewish communities in Lithuania",
-    "why_it_matters": "This event highlights the collaboration between local authorities and Nazi forces during the Holocaust, underscoring the tragic impact on Jewish communities in Lithuania.",
+    "one_liner": "403 Jews from Nemenčinė are shot at a documented mass murder site in Lithuania",
+    "description": "On September 20, 1941, 403 Jews from Nemenčinė are shot at a mass murder site documented by the Holocaust Atlas of Lithuania.",
+    "short_summary": "403 Jews from Nemenčinė are shot at a documented mass murder site in Lithuania",
+    "summary": "On September 20, 1941, 403 Jews from Nemenčinė are shot at a mass murder site documented by the Holocaust Atlas of Lithuania. The record is kept narrow to the date, place, victim count, and killing documented by the source.",
+    "detail": "On September 20, 1941, 403 Jews from Nemenčinė are shot at a mass murder site documented by the Holocaust Atlas of Lithuania. The record is kept narrow to the date, place, victim count, and killing documented by the source.",
+    "deep_dive": "On September 20, 1941, 403 Jews from Nemenčinė are shot at a mass murder site documented by the Holocaust Atlas of Lithuania. The record is kept narrow to the date, place, victim count, and killing documented by the source.",
+    "why_it_matters": "The documented killing preserves the scale of local mass murder during the Holocaust in Lithuania without adding unsupported details about perpetrators or sequence.",
     "category": "history",
     "tags": [
       "history",
-      "general_history"
+      "holocaust",
+      "lithuania"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/09/20",
-      "https://en.wikipedia.org/wiki/The_Holocaust_in_Lithuania",
-      "https://en.wikipedia.org/wiki/Nemen%C4%8Din%C4%97"
+      "http://www.holocaustatlas.lt/EN/#a_atlas/search//page/1/item/181/",
+      "http://www.holocaustatlas.lt/load_markers.js.php?l=EN"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-20.json;event_id=cc587e668a24d693;cluster_id=61d9d37a95a6;model_id=today-qwen3-14b;rank_score=0.554409;interesting_score=0.570147;stream=interesting-history; date=1941-09-20",
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-20.json;event_id=cc587e668a24d693;cluster_id=61d9d37a95a6;model_id=today-qwen3-14b;rank_score=0.554409;interesting_score=0.570147;stream=interesting-history; date=1941-09-20; source_repair=source_scout_batch_001; source_repair_phase=source_only; source_repair_receipt=docs/editorial-source-scout/source-scout-batch-001/source-repair-mutation-20260608T091150Z/MUTATION_RECEIPT.json; app_data_written=true",
     "source_confidence": 0.9,
     "editorial_status": "ready"
   },
@@ -30090,26 +29912,26 @@
     "day": 23,
     "year": 1955,
     "title": "Emmett Till Murder Trial",
-    "one_liner": "An all-white jury in Mississippi acquits Roy Bryant and J. W. Milam in the murder of Emmett Till",
-    "description": "An all-white jury in Mississippi finds Roy Bryant and J. W. Milam not guilty in the torture-murder of 14-year-old African American boy Emmett Till",
-    "short_summary": "An all-white jury in Mississippi acquits Roy Bryant and J. W. Milam in the murder of Emmett Till",
-    "summary": "An all-white jury in Mississippi finds Roy Bryant and J. W. Milam not guilty in the torture-murder of 14-year-old African American boy Emmett Till. This event underscores the systemic racism and injustice in the U.S. legal system during the civil rights era",
-    "detail": "An all-white jury in Mississippi finds Roy Bryant and J. W. Milam not guilty in the torture-murder of 14-year-old African American boy Emmett Till. This event underscores the systemic racism and injustice in the U.S. legal system during the civil rights era",
-    "deep_dive": "An all-white jury in Mississippi finds Roy Bryant and J. W. Milam not guilty in the torture-murder of 14-year-old African American boy Emmett Till. This event underscores the systemic racism and injustice in the U.S. legal system during the civil rights era",
-    "why_it_matters": "This event underscores the systemic racism and injustice in the U.S. legal system during the civil rights era.",
+    "one_liner": "An all-white Mississippi jury acquits J. W. Milam and Roy Bryant of murdering Emmett Till",
+    "description": "An all-white Mississippi jury acquits J. W. Milam and Roy Bryant of murdering 14-year-old Emmett Till.",
+    "short_summary": "An all-white Mississippi jury acquits J. W. Milam and Roy Bryant of murdering Emmett Till",
+    "summary": "An all-white Mississippi jury acquits J. W. Milam and Roy Bryant of murdering 14-year-old Emmett Till on September 23, 1955. The verdict becomes a defining example of racist injustice in the civil rights era.",
+    "detail": "An all-white Mississippi jury acquits J. W. Milam and Roy Bryant of murdering 14-year-old Emmett Till on September 23, 1955. The verdict becomes a defining example of racist injustice in the civil rights era.",
+    "deep_dive": "An all-white Mississippi jury acquits J. W. Milam and Roy Bryant of murdering 14-year-old Emmett Till on September 23, 1955. The verdict becomes a defining example of racist injustice in the civil rights era.",
+    "why_it_matters": "The acquittal helped galvanize national attention on racist violence and the failures of equal justice in the Jim Crow South.",
     "category": "politics",
     "tags": [
       "politics",
-      "general_history"
+      "civil_rights",
+      "legal_history"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/09/23",
-      "https://en.wikipedia.org/wiki/Mississippi",
-      "https://en.wikipedia.org/wiki/Emmett_Till"
+      "https://www.pbs.org/wgbh/americanexperience/features/till-timeline/",
+      "https://www.britannica.com/biography/Emmett-Till"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-23.json;event_id=066299b2c0da7301;cluster_id=4ee34d9ef9d8;model_id=today-qwen3-14b;rank_score=0.568339;interesting_score=0.579694;stream=interesting-history; date=1955-09-23",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-09-23.json;event_id=066299b2c0da7301;cluster_id=4ee34d9ef9d8;model_id=today-qwen3-14b;rank_score=0.568339;interesting_score=0.579694;stream=interesting-history; date=1955-09-23; source_repair=source_scout_batch_001; source_repair_phase=copy_reviewed; source_repair_receipt=docs/editorial-source-scout/source-scout-batch-001/source-repair-mutation-20260608T091150Z/MUTATION_RECEIPT.json; app_data_written=true",
+    "source_confidence": 0.93,
     "editorial_status": "ready"
   },
   {
@@ -30732,26 +30554,26 @@
     "day": 2,
     "year": 1919,
     "title": "Woodrow Wilson's Stroke at the White House",
-    "one_liner": "U.S. President Woodrow Wilson suffers a catastrophic stroke at the White House, leaving him incapacitated for the remainder of his presidency",
-    "description": "Seven days after suffering a \"physical collapse\" following a speech in Pueblo, Colorado, U.S. president Woodrow Wilson has a catastrophic stroke at the White House, leaving him physically and mentally incapacitated for the remainder of his presidency",
-    "short_summary": "U.S. President Woodrow Wilson suffers a catastrophic stroke at the White House, leaving him incapacitated for the remainder of his presidency",
-    "summary": "Seven days after suffering a \"physical collapse\" following a speech in Pueblo, Colorado, U.S. president Woodrow Wilson has a catastrophic stroke at the White House, leaving him physically and mentally incapacitated for the remainder of his presidency. This event marked a turning point in Wilson's leadership and had lasting effects on U.S. politics and foreign policy",
-    "detail": "Seven days after suffering a \"physical collapse\" following a speech in Pueblo, Colorado, U.S. president Woodrow Wilson has a catastrophic stroke at the White House, leaving him physically and mentally incapacitated for the remainder of his presidency. This event marked a turning point in Wilson's leadership and had lasting effects on U.S. politics and foreign policy",
-    "deep_dive": "Seven days after suffering a \"physical collapse\" following a speech in Pueblo, Colorado, U.S. president Woodrow Wilson has a catastrophic stroke at the White House, leaving him physically and mentally incapacitated for the remainder of his presidency. This event marked a turning point in Wilson's leadership and had lasting effects on U.S. politics and foreign policy",
-    "why_it_matters": "This event marked a turning point in Wilson's leadership and had lasting effects on U.S. politics and foreign policy.",
+    "one_liner": "President Woodrow Wilson suffers a near-fatal stroke after cutting short his League of Nations tour",
+    "description": "After cutting short a national speaking tour to promote the League of Nations, President Woodrow Wilson suffers a near-fatal stroke in Washington.",
+    "short_summary": "President Woodrow Wilson suffers a near-fatal stroke after cutting short his League of Nations tour",
+    "summary": "After cutting short a national speaking tour to promote the League of Nations, President Woodrow Wilson suffers a near-fatal stroke in Washington. The illness sharply limits his public role during the final stretch of his presidency.",
+    "detail": "After cutting short a national speaking tour to promote the League of Nations, President Woodrow Wilson suffers a near-fatal stroke in Washington. The illness sharply limits his public role during the final stretch of his presidency.",
+    "deep_dive": "After cutting short a national speaking tour to promote the League of Nations, President Woodrow Wilson suffers a near-fatal stroke in Washington. The illness sharply limits his public role during the final stretch of his presidency.",
+    "why_it_matters": "Wilson’s illness exposed how fragile presidential continuity could be before modern disability procedures were in place.",
     "category": "politics",
     "tags": [
       "politics",
-      "general_history"
+      "presidency",
+      "medical_history"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/10/02",
-      "https://en.wikipedia.org/wiki/Stroke",
-      "https://en.wikipedia.org/wiki/Pueblo_speech"
+      "https://www.history.com/this-day-in-history/october-2/woodrow-wilson-suffers-a-stroke",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC1911642/"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-10-02.json;event_id=0a3726e29078ed59;cluster_id=0ea374ef14d6;model_id=today-qwen3-14b;rank_score=0.576246;interesting_score=0.579411;stream=interesting-history; date=1919-10-02",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-10-02.json;event_id=0a3726e29078ed59;cluster_id=0ea374ef14d6;model_id=today-qwen3-14b;rank_score=0.576246;interesting_score=0.579411;stream=interesting-history; date=1919-10-02; source_repair=source_scout_batch_001; source_repair_phase=copy_reviewed; source_repair_receipt=docs/editorial-source-scout/source-scout-batch-001/source-repair-mutation-20260608T091150Z/MUTATION_RECEIPT.json; app_data_written=true",
+    "source_confidence": 0.88,
     "editorial_status": "ready"
   },
   {
@@ -31894,26 +31716,26 @@
     "day": 16,
     "year": 1998,
     "title": "Former Chilean dictator Augusto Pinochet arrested in London",
-    "one_liner": "Former Chilean dictator Augusto Pinochet is arrested in London on a murder extradition warrant",
-    "description": "Former Chilean dictator Augusto Pinochet is arrested in London on a murder extradition warrant",
-    "short_summary": "Former Chilean dictator Augusto Pinochet is arrested in London on a murder extradition warrant",
-    "summary": "Former Chilean dictator Augusto Pinochet is arrested in London on a murder extradition warrant. This event marked a significant moment in international justice and the pursuit of accountability for human rights violations",
-    "detail": "Former Chilean dictator Augusto Pinochet is arrested in London on a murder extradition warrant. This event marked a significant moment in international justice and the pursuit of accountability for human rights violations",
-    "deep_dive": "Former Chilean dictator Augusto Pinochet is arrested in London on a murder extradition warrant. This event marked a significant moment in international justice and the pursuit of accountability for human rights violations",
-    "why_it_matters": "This event marked a significant moment in international justice and the pursuit of accountability for human rights violations.",
+    "one_liner": "Former Chilean dictator Augusto Pinochet is arrested in London on a Spanish extradition warrant",
+    "description": "Former Chilean dictator Augusto Pinochet is arrested at a London hospital on a Spanish warrant seeking extradition on murder charges.",
+    "short_summary": "Former Chilean dictator Augusto Pinochet is arrested in London on a Spanish extradition warrant",
+    "summary": "Former Chilean dictator Augusto Pinochet is arrested at a London hospital on a Spanish warrant seeking extradition on murder charges. The arrest becomes a major moment for international accountability efforts over alleged human rights abuses.",
+    "detail": "Former Chilean dictator Augusto Pinochet is arrested at a London hospital on a Spanish warrant seeking extradition on murder charges. The arrest becomes a major moment for international accountability efforts over alleged human rights abuses.",
+    "deep_dive": "Former Chilean dictator Augusto Pinochet is arrested at a London hospital on a Spanish warrant seeking extradition on murder charges. The arrest becomes a major moment for international accountability efforts over alleged human rights abuses.",
+    "why_it_matters": "The arrest tested whether former heads of state could face legal accountability abroad for alleged abuses committed under their rule.",
     "category": "politics",
     "tags": [
       "politics",
-      "general_history"
+      "human_rights",
+      "legal_history"
     ],
     "tone": "somber",
     "sources": [
-      "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/10/16",
-      "https://en.wikipedia.org/wiki/Augusto_Pinochet",
-      "https://en.wikipedia.org/wiki/Indictment_and_arrest_of_Augusto_Pinochet"
+      "https://www.theguardian.com/world/1998/oct/18/pinochet.chile",
+      "https://news.bbc.co.uk/2/hi/europe/195413.stm"
     ],
-    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-10-16.json;event_id=2016eb66331a26bb;cluster_id=cc3453630b07;model_id=today-qwen3-14b;rank_score=0.562735;interesting_score=0.570655;stream=interesting-history; date=1998-10-16",
-    "source_confidence": 0.9,
+    "provenance": "source_bundle=/lambda/nfs/Somnora-East/today/promoted/v2-interesting/by_date/2024-10-16.json;event_id=2016eb66331a26bb;cluster_id=cc3453630b07;model_id=today-qwen3-14b;rank_score=0.562735;interesting_score=0.570655;stream=interesting-history; date=1998-10-16; source_repair=source_scout_batch_001; source_repair_phase=source_only; source_repair_receipt=docs/editorial-source-scout/source-scout-batch-001/source-repair-mutation-20260608T091150Z/MUTATION_RECEIPT.json; app_data_written=true",
+    "source_confidence": 0.93,
     "editorial_status": "ready"
   },
   {
@@ -33734,34 +33556,6 @@
     "provenance": "source_warning_reduction_app197_best_next_visible_feed; date=1960-11-04; confirmed_non_wiki_sources=news.janegoodall.org,history.com; prior_source_lineage=legacy_remote_feed; reviewed_utc=2026-05-31T20:40:01Z",
     "source_confidence": 0.96,
     "editorial_status": "ready"
-  },
-  {
-    "id": "november-04-1924-3e91bc013fcff467",
-    "month": 11,
-    "day": 4,
-    "year": 1924,
-    "title": "Nellie Tayloe Ross Election Exact-Date Claim Deferred",
-    "one_liner": "The National Governors Association confirms Ross was the first woman to serve as a state governor, but the exact election date needs stronger support.",
-    "description": "The National Governors Association confirms Ross was the first woman to serve as a state governor, but the exact election date needs stronger support.",
-    "short_summary": "The National Governors Association confirms Ross was the first woman to serve as a state governor, but the exact election date needs stronger support.",
-    "summary": "The National Governors Association confirms Nellie Tayloe Ross was the first woman to take the oath of office and serve as governor of a state. This record is deferred because this pass did not verify the exact November 4, 1924 election date from a directly reviewable non-Wikipedia source.",
-    "detail": "The National Governors Association confirms Nellie Tayloe Ross was the first woman to take the oath of office and serve as governor of a state. This record is deferred because this pass did not verify the exact November 4, 1924 election date from a directly reviewable non-Wikipedia source.",
-    "deep_dive": "The National Governors Association confirms Nellie Tayloe Ross was the first woman to take the oath of office and serve as governor of a state. This record is deferred because this pass did not verify the exact November 4, 1924 election date from a directly reviewable non-Wikipedia source.",
-    "why_it_matters": "The milestone is historically important, but the visible-feed date should not rely on unsupported chronology lineage.",
-    "category": "politics",
-    "tags": [
-      "politics",
-      "Wyoming",
-      "women_in_politics",
-      "governor"
-    ],
-    "tone": "balanced",
-    "sources": [
-      "https://www.nga.org/governor/nellie-tayloe-ross/"
-    ],
-    "provenance": "source_repair=APP-189-best-next-visible-feed-source-posture-repair; date=1924-11-04; editorial_status=defer; defer_reason=source_confirms_first_woman_governor_and_term_but_not_exact_election_date; no_wikipedia_or_wikimedia; source_domain=nga.org; reviewed_utc=2026-05-30T20:19:29Z",
-    "source_confidence": 0.58,
-    "editorial_status": "defer"
   },
   {
     "id": "november-04-2010-83ffd874739e56b8",
@@ -39992,35 +39786,6 @@
     "provenance": "source_warning_reduction_app159; date=1956-12-31; confirmed_non_wiki_sources=agerpres.ro; tvr.ro; prior_source_lineage=legacy_remote_feed; reviewed_utc=2026-05-27T07:47:14Z",
     "source_confidence": 0.97,
     "editorial_status": "ready"
-  },
-  {
-    "id": "december-31-1983-905a79487fb500d2",
-    "month": 12,
-    "day": 31,
-    "year": 1983,
-    "title": "Benjamin Ward Appointment Date Needs Review",
-    "one_liner": "A source review supports Mayor Edward Koch naming Benjamin Ward on November 7, 1983, not this December 31 record date.",
-    "description": "A source review supports Mayor Edward Koch naming Benjamin Ward on November 7, 1983, not this December 31 record date.",
-    "short_summary": "Benjamin Ward appointment record held because the sourced appointment date conflicts with this calendar date.",
-    "summary": "A reputable newspaper archive supports Mayor Edward Koch naming Benjamin Ward as New York City police commissioner on November 7, 1983. This December 31 record is hidden until the date can be moved or separately sourced.",
-    "detail": "A reputable newspaper archive supports Mayor Edward Koch naming Benjamin Ward as New York City police commissioner on November 7, 1983. This December 31 record is hidden until the date can be moved or separately sourced.",
-    "deep_dive": "Source review found support for Benjamin Ward being named New York City police commissioner in November 1983, with no exact independent support for a December 31 appointment event. The item is held out of the visible feed rather than source-laundered.",
-    "why_it_matters": "Holding the record protects the feed from presenting a civil-rights and law-enforcement milestone on an unsupported date.",
-    "category": "politics",
-    "tags": [
-      "politics",
-      "law_enforcement",
-      "new_york_city",
-      "civil_rights",
-      "nypd"
-    ],
-    "tone": "balanced",
-    "sources": [
-      "https://www.washingtonpost.com/archive/national/1983/11/08/new-york-taps-black-for-top-police-post/f4c8c6f1-79f7-4834-a39d-7a58cff7af21/"
-    ],
-    "provenance": "source_repair=today-ios-best-next-2026-06-07; artifact=today-ios-best-next-source-repair-2026-06-07; source_posture=external_source_repair; date=1983-12-31",
-    "source_confidence": 0.42,
-    "editorial_status": "defer"
   },
   {
     "id": "app167-0501-1930-lowell-proposes-pluto-name",

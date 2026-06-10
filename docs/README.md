@@ -23,7 +23,7 @@ xcodebuild -project Today.xcodeproj -scheme Today -destination 'platform=iOS Sim
 - `DataLoader` maps each record into `HistoricalEvent`. Views consume only `HistoricalEvent` and stay decoupled from corpus internals.
 - Invalid records are skipped; if the file is missing or has no valid records, the app falls back to a single local placeholder event.
 - Records with `editorial_status` of `duplicate`, `weak_event`, or `defer` are hidden.
-- As of 2026-06-01, `sample-data/events.json` carries **1646 records**: 1644 app-publishable records after status filtering, plus 2 deferred records that are hidden at runtime. Statuses: `ready` 1605, `app_ready_merged` 31, `app_ready_merged_append` 8, `defer` 2. Tones: balanced 736, uplifting 638, somber 272.
+- As of 2026-06-09, `sample-data/events.json` carries **1638 records**, all app-publishable with no bundled deferred records. Statuses: `ready` 1599, `app_ready_merged` 31, `app_ready_merged_append` 8. Tones: balanced 743, uplifting 629, somber 266. The 8 deferred rows were quarantined under `docs/editorial-source-scout/deferred-quarantine-20260610T010630Z/`.
 - Older local exports are not copied into the app bundle and are ignored from public source control.
 - Upstream source-access details live in the private editorial workspace, not in this public app repo.
 
