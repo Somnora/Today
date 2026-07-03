@@ -4,9 +4,10 @@ struct SavedView: View {
     @EnvironmentObject var dataStore: DataStore
     @EnvironmentObject var preferences: UserPreferences
     @EnvironmentObject var savedStore: SavedStore
+    @ScaledMetric(relativeTo: .body) private var typeScale: CGFloat = 1
 
     private var metrics: ReadingMetrics {
-        ReadingMetrics(density: preferences.currentReadingDensity)
+        ReadingMetrics(density: preferences.currentReadingDensity, typeScale: typeScale)
     }
 
     private var savedEvents: [HistoricalEvent] {

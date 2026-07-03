@@ -5,6 +5,7 @@ struct TodayFeedView: View {
     @EnvironmentObject var dataStore: DataStore
     @EnvironmentObject var preferences: UserPreferences
     @Environment(\.scenePhase) private var scenePhase
+    @ScaledMetric(relativeTo: .body) private var typeScale: CGFloat = 1
     @State private var currentDate = Date()
 
     private var events: [HistoricalEvent] {
@@ -12,7 +13,7 @@ struct TodayFeedView: View {
     }
 
     private var metrics: ReadingMetrics {
-        ReadingMetrics(density: preferences.currentReadingDensity)
+        ReadingMetrics(density: preferences.currentReadingDensity, typeScale: typeScale)
     }
 
     var body: some View {
@@ -196,7 +197,7 @@ struct TodayFeedView: View {
                     .tracking(0.5)
             }
 
-            Text("Open a card, follow the thread, and let one strange or beautiful detail change the shape of the day.")
+            Text(morningNoteText)
                 .font(.system(size: 15, weight: .regular, design: .serif))
                 .foregroundStyle(Color("TextSecondary"))
                 .lineSpacing(4)
@@ -369,6 +370,21 @@ struct TodayFeedView: View {
         }
 
         return "\(events.count) \(events.count == 1 ? "moment" : "moments")"
+    }
+
+    private static let morningNoteLines = [
+        "Open a card, follow the thread, and let one strange or beautiful detail change the shape of the day.",
+        "Every date carries more than one story. Start with the one that surprises you.",
+        "History rarely announces itself. Somewhere in today's record is a detail worth carrying around.",
+        "Read one entry slowly. The past tends to reward the unhurried.",
+        "A good almanac is a conversation with everyone who kept notes before you.",
+        "Some of these moments were front-page news; others were barely noticed. Both kinds last.",
+        "Pick a card at random and see how far the thread runs."
+    ]
+
+    private var morningNoteText: String {
+        let day = Calendar.current.ordinality(of: .day, in: .year, for: currentDate) ?? 1
+        return Self.morningNoteLines[day % Self.morningNoteLines.count]
     }
 
     private static let headerDateFormatter: DateFormatter = {

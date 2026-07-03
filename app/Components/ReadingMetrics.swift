@@ -2,9 +2,19 @@ import SwiftUI
 
 struct ReadingMetrics {
     let density: ReadingDensity
+    private let typeScale: CGFloat
 
-    init(density: ReadingDensity) {
+    /// `typeScale` comes from `@ScaledMetric` in the owning view so reading
+    /// type follows the system Dynamic Type setting. It is clamped so the
+    /// editorial layout keeps its shape at the extreme accessibility sizes;
+    /// spacing and padding intentionally stay fixed.
+    init(density: ReadingDensity, typeScale: CGFloat = 1) {
         self.density = density
+        self.typeScale = min(max(typeScale, 0.9), 1.5)
+    }
+
+    private func scaled(_ size: CGFloat) -> CGFloat {
+        (size * typeScale).rounded()
     }
 
     // MARK: Root screens
@@ -27,13 +37,13 @@ struct ReadingMetrics {
 
     var rootTitleSize: CGFloat {
         switch density {
-        case .compact: return 38
-        case .standard: return 42
-        case .comfortable: return 44
+        case .compact: return scaled(38)
+        case .standard: return scaled(42)
+        case .comfortable: return scaled(44)
         }
     }
 
-    var rootSubtitleSize: CGFloat { 13 }
+    var rootSubtitleSize: CGFloat { scaled(13) }
 
     /// Spacing around the small archive header used on Explore and Preferences.
     var archiveHeaderSpacing: CGFloat {
@@ -66,33 +76,33 @@ struct ReadingMetrics {
 
     var cardYearSize: CGFloat {
         switch density {
-        case .compact: return 31
-        case .standard: return 34
-        case .comfortable: return 36
+        case .compact: return scaled(31)
+        case .standard: return scaled(34)
+        case .comfortable: return scaled(36)
         }
     }
 
     var cardTitleSize: CGFloat {
         switch density {
-        case .compact: return 23
-        case .standard: return 25
-        case .comfortable: return 27
+        case .compact: return scaled(23)
+        case .standard: return scaled(25)
+        case .comfortable: return scaled(27)
         }
     }
 
     var cardSummarySize: CGFloat {
         switch density {
-        case .compact: return 15
-        case .standard: return 16
-        case .comfortable: return 17
+        case .compact: return scaled(15)
+        case .standard: return scaled(16)
+        case .comfortable: return scaled(17)
         }
     }
 
     var cardContextSize: CGFloat {
         switch density {
-        case .compact: return 14
-        case .standard: return 15
-        case .comfortable: return 16
+        case .compact: return scaled(14)
+        case .standard: return scaled(15)
+        case .comfortable: return scaled(16)
         }
     }
 
@@ -122,17 +132,17 @@ struct ReadingMetrics {
 
     var cardSummaryLineSpacing: CGFloat {
         switch density {
-        case .compact: return 4
-        case .standard: return 5
-        case .comfortable: return 6
+        case .compact: return scaled(4)
+        case .standard: return scaled(5)
+        case .comfortable: return scaled(6)
         }
     }
 
     var cardContextLineSpacing: CGFloat {
         switch density {
-        case .compact: return 2
-        case .standard: return 3
-        case .comfortable: return 4
+        case .compact: return scaled(2)
+        case .standard: return scaled(3)
+        case .comfortable: return scaled(4)
         }
     }
 
@@ -164,41 +174,41 @@ struct ReadingMetrics {
 
     var detailYearSize: CGFloat {
         switch density {
-        case .compact: return 40
-        case .standard: return 44
-        case .comfortable: return 46
+        case .compact: return scaled(40)
+        case .standard: return scaled(44)
+        case .comfortable: return scaled(46)
         }
     }
 
     var detailTitleSize: CGFloat {
         switch density {
-        case .compact: return 28
-        case .standard: return 30
-        case .comfortable: return 32
+        case .compact: return scaled(28)
+        case .standard: return scaled(30)
+        case .comfortable: return scaled(32)
         }
     }
 
     var detailLeadSize: CGFloat {
         switch density {
-        case .compact: return 18
-        case .standard: return 20
-        case .comfortable: return 21
+        case .compact: return scaled(18)
+        case .standard: return scaled(20)
+        case .comfortable: return scaled(21)
         }
     }
 
     var detailBodySize: CGFloat {
         switch density {
-        case .compact: return 16
-        case .standard: return 17
-        case .comfortable: return 18
+        case .compact: return scaled(16)
+        case .standard: return scaled(17)
+        case .comfortable: return scaled(18)
         }
     }
 
     var detailContextSize: CGFloat {
         switch density {
-        case .compact: return 16
-        case .standard: return 17
-        case .comfortable: return 18
+        case .compact: return scaled(16)
+        case .standard: return scaled(17)
+        case .comfortable: return scaled(18)
         }
     }
 
@@ -212,41 +222,41 @@ struct ReadingMetrics {
 
     var detailLeadLineSpacing: CGFloat {
         switch density {
-        case .compact: return 6
-        case .standard: return 7
-        case .comfortable: return 8
+        case .compact: return scaled(6)
+        case .standard: return scaled(7)
+        case .comfortable: return scaled(8)
         }
     }
 
     var detailBodyLineSpacing: CGFloat {
         switch density {
-        case .compact: return 7
-        case .standard: return 8
-        case .comfortable: return 9
+        case .compact: return scaled(7)
+        case .standard: return scaled(8)
+        case .comfortable: return scaled(9)
         }
     }
 
     var detailContextLineSpacing: CGFloat {
         switch density {
-        case .compact: return 3
-        case .standard: return 4
-        case .comfortable: return 5
+        case .compact: return scaled(3)
+        case .standard: return scaled(4)
+        case .comfortable: return scaled(5)
         }
     }
 
     var detailEditorialBodySize: CGFloat {
         switch density {
-        case .compact: return 15
-        case .standard: return 16
-        case .comfortable: return 17
+        case .compact: return scaled(15)
+        case .standard: return scaled(16)
+        case .comfortable: return scaled(17)
         }
     }
 
     var detailEditorialBodyLineSpacing: CGFloat {
         switch density {
-        case .compact: return 6
-        case .standard: return 7
-        case .comfortable: return 8
+        case .compact: return scaled(6)
+        case .standard: return scaled(7)
+        case .comfortable: return scaled(8)
         }
     }
 }

@@ -52,18 +52,7 @@ struct TodayWidgetProvider: AppIntentTimelineProvider {
             return result.events.first
         }
 
-        let dated = result.events.filter { $0.matches(month: month, day: day) }
-        let preferred = DataLoader.filterByTone(dated, preference: .balanced)
-        return preferred.min(by: sortForDisplay) ?? result.events.min(by: sortForDisplay)
-    }
-
-    private func sortForDisplay(_ left: HistoricalEvent, _ right: HistoricalEvent) -> Bool {
-        let leftYear = left.year ?? 0
-        let rightYear = right.year ?? 0
-        if leftYear == rightYear {
-            return left.title < right.title
-        }
-        return leftYear < rightYear
+        return DataLoader.displayEvent(month: month, day: day, from: result.events)
     }
 
     private var placeholderEvent: HistoricalEvent {
@@ -127,9 +116,37 @@ struct TodayWidgetEntryView: View {
         switch widgetFamily {
         case .systemSmall:
             smallWidgetView(event: event)
+        case .accessoryInline:
+            inlineAccessoryView(event: event)
+        case .accessoryRectangular:
+            rectangularAccessoryView(event: event)
         default:
             mediumWidgetView(event: event)
         }
+    }
+
+    private func inlineAccessoryView(event: HistoricalEvent) -> some View {
+        Text("\(event.yearLabel) · \(event.title)")
+    }
+
+    private func rectangularAccessoryView(event: HistoricalEvent) -> some View {
+        VStack(alignment: .leading, spacing: 2) {
+            HStack(spacing: 5) {
+                Text(event.yearLabel)
+                    .font(.system(size: 13, weight: .semibold, design: .serif))
+
+                Text(event.monthDayString.uppercased())
+                    .font(.system(size: 10, weight: .semibold, design: .rounded))
+                    .tracking(0.8)
+                    .foregroundStyle(.secondary)
+            }
+
+            Text(event.title)
+                .font(.system(size: 12, weight: .medium, design: .serif))
+                .lineLimit(2)
+                .minimumScaleFactor(0.9)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
     }
 
     private func smallWidgetView(event: HistoricalEvent) -> some View {
@@ -244,7 +261,7 @@ struct TodayWidget: Widget {
         }
         .configurationDisplayName("Today Card")
         .description("A quietly kept historical note for the day.")
-        .supportedFamilies([.systemSmall, .systemMedium])
+        .supportedFamilies([.systemSmall, .systemMedium, .accessoryInline, .accessoryRectangular])
     }
 }
 

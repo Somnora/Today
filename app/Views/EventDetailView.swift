@@ -7,6 +7,7 @@ struct EventDetailView: View {
     @EnvironmentObject var thumbsStore: ThumbsStore
     @EnvironmentObject var preferences: UserPreferences
     @EnvironmentObject var savedStore: SavedStore
+    @ScaledMetric(relativeTo: .body) private var typeScale: CGFloat = 1
     @State private var isProvenanceExpanded = false
 
     private var currentReaction: Reaction? {
@@ -14,7 +15,7 @@ struct EventDetailView: View {
     }
 
     private var metrics: ReadingMetrics {
-        ReadingMetrics(density: preferences.currentReadingDensity)
+        ReadingMetrics(density: preferences.currentReadingDensity, typeScale: typeScale)
     }
 
     private var isSaved: Bool {
@@ -168,9 +169,23 @@ struct EventDetailView: View {
                 Rectangle()
                     .fill(Color("AccentWarm").opacity(0.40))
                     .frame(width: 22, height: 0.8)
+
+                if let yearsAgoLabel {
+                    Text(yearsAgoLabel)
+                        .font(.system(size: 12, weight: .regular, design: .serif))
+                        .italic()
+                        .foregroundStyle(Color("TextTertiary"))
+                }
             }
             .padding(.bottom, 6)
         }
+    }
+
+    private var yearsAgoLabel: String? {
+        guard let year = event.year else { return nil }
+        let span = Calendar.current.component(.year, from: Date()) - year
+        guard span > 0 else { return nil }
+        return span == 1 ? "1 year ago" : "\(span) years ago"
     }
 
     private var summaryBlock: some View {

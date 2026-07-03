@@ -2,6 +2,8 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var dataStore: DataStore
+    @EnvironmentObject var preferences: UserPreferences
+    @Environment(\.scenePhase) private var scenePhase
     @State private var selectedTab = 0
 
     var body: some View {
@@ -34,7 +36,23 @@ struct ContentView: View {
         .onOpenURL(perform: handleDeepLink)
         .task {
             await dataStore.loadEvents()
+            await refreshMorningNotifications()
         }
+        .onChange(of: scenePhase) { _, newPhase in
+            if newPhase == .active {
+                Task {
+                    await refreshMorningNotifications()
+                }
+            }
+        }
+    }
+
+    /// Keeps the 7-day Morning Edition window sliding forward.
+    private func refreshMorningNotifications() async {
+        await NotificationScheduler.refresh(
+            enabled: preferences.morningNotificationsEnabled,
+            events: dataStore.allEvents
+        )
     }
 
     private func handleDeepLink(_ url: URL) {

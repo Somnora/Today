@@ -51,6 +51,24 @@ class DataLoader {
         }
     }
 
+    /// The single event surfaced for a given day on ambient surfaces
+    /// (widget timeline, morning notification): balanced tone policy,
+    /// then the earliest year with title as tiebreaker.
+    static func displayEvent(month: Int, day: Int, from events: [HistoricalEvent]) -> HistoricalEvent? {
+        let dated = events.filter { $0.matches(month: month, day: day) }
+        let preferred = filterByTone(dated, preference: .balanced)
+        return preferred.min(by: displayOrder) ?? events.min(by: displayOrder)
+    }
+
+    static func displayOrder(_ left: HistoricalEvent, _ right: HistoricalEvent) -> Bool {
+        let leftYear = left.year ?? 0
+        let rightYear = right.year ?? 0
+        if leftYear == rightYear {
+            return left.title < right.title
+        }
+        return leftYear < rightYear
+    }
+
     private static func bundleEvents(from bundle: RobBundleEnvelope) -> [HistoricalEvent] {
         let combined = bundle.publishableUplifting + bundle.publishableBalanced
         return combined.compactMap(HistoricalEvent.init(bundleRecord:))
