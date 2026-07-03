@@ -1,11 +1,14 @@
+import Combine
 import SwiftUI
 
 struct TodayFeedView: View {
     @EnvironmentObject var dataStore: DataStore
     @EnvironmentObject var preferences: UserPreferences
+    @Environment(\.scenePhase) private var scenePhase
+    @State private var currentDate = Date()
 
     private var events: [HistoricalEvent] {
-        dataStore.eventsForToday(tonePreference: preferences.currentTonePreference)
+        dataStore.eventsFor(date: currentDate, tonePreference: preferences.currentTonePreference)
     }
 
     private var metrics: ReadingMetrics {
@@ -25,6 +28,21 @@ struct TodayFeedView: View {
             }
             .background(paperBackground.ignoresSafeArea())
             .toolbar(.hidden, for: .navigationBar)
+        }
+        .onChange(of: scenePhase) { _, newPhase in
+            if newPhase == .active {
+                refreshCurrentDate()
+            }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .NSCalendarDayChanged).receive(on: RunLoop.main)) { _ in
+            refreshCurrentDate()
+        }
+    }
+
+    private func refreshCurrentDate() {
+        let now = Date()
+        if !Calendar.current.isDate(now, inSameDayAs: currentDate) {
+            currentDate = now
         }
     }
 
@@ -100,8 +118,6 @@ struct TodayFeedView: View {
     private var contentSection: some View {
         if dataStore.isLoading {
             loadingState
-        } else if let error = dataStore.error, dataStore.allEvents.isEmpty {
-            errorState(error)
         } else if events.isEmpty {
             emptyState
         } else {
@@ -325,26 +341,6 @@ struct TodayFeedView: View {
         }
     }
 
-    private func errorState(_ error: Error) -> some View {
-        VStack(spacing: 16) {
-            Image(systemName: "exclamationmark.triangle")
-                .font(.system(size: 34, weight: .light))
-                .foregroundStyle(Color("AccentWarm"))
-
-            Text("The archive needs attention")
-                .font(.system(size: 18, weight: .semibold, design: .serif))
-                .foregroundStyle(Color("TextPrimary"))
-
-            Text(error.localizedDescription)
-                .font(.system(size: 14, weight: .regular, design: .rounded))
-                .foregroundStyle(Color("TextSecondary"))
-                .multilineTextAlignment(.center)
-        }
-        .frame(maxWidth: .infinity)
-        .padding(28)
-        .background(Color("CardBackground"), in: RoundedRectangle(cornerRadius: 24, style: .continuous))
-    }
-
     private func collectionNotice(_ issue: EventLoadIssue) -> some View {
         HStack(alignment: .top, spacing: 12) {
             Image(systemName: "exclamationmark.triangle")
@@ -375,14 +371,18 @@ struct TodayFeedView: View {
         return "\(events.count) \(events.count == 1 ? "moment" : "moments")"
     }
 
-    private var todayDateString: String {
+    private static let headerDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "EEEE, MMMM d"
-        return formatter.string(from: Date())
+        return formatter
+    }()
+
+    private var todayDateString: String {
+        Self.headerDateFormatter.string(from: currentDate)
     }
 
     private var editionNumber: String {
-        let day = Calendar.current.ordinality(of: .day, in: .year, for: Date()) ?? 1
+        let day = Calendar.current.ordinality(of: .day, in: .year, for: currentDate) ?? 1
         return String(format: "%03d", day)
     }
 }
@@ -392,4 +392,5 @@ struct TodayFeedView: View {
         .environmentObject(DataStore())
         .environmentObject(UserPreferences())
         .environmentObject(ThumbsStore())
+        .environmentObject(SavedStore())
 }

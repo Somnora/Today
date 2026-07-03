@@ -90,9 +90,8 @@ def tone_filtered(events: list[dict], preference: str) -> list[dict]:
     if preference == "balanced":
         return balanced(events) or events
     if preference == "unflinching":
-        somber = [event for event in events if normalized_value(event, "tone") == "somber"]
-        non_uplifting = [event for event in events if normalized_value(event, "tone") != "uplifting"]
-        return somber or non_uplifting or balanced(events) or events
+        # Unflinching is the complete record: every tone, nothing filtered.
+        return list(events)
     raise ValueError(preference)
 
 
@@ -160,13 +159,26 @@ def validate_widget_bundle_contract() -> list[str]:
     widget_target = _target_block(text, "TodayWidgetExtension")
     widget_sources_section = _phase_block(text, widget_target, "PBXSourcesBuildPhase")
     widget_resources_section = _phase_block(text, widget_target, "PBXResourcesBuildPhase")
+    app_target = _target_block(text, "Today")
+    app_resources_section = _phase_block(text, app_target, "PBXResourcesBuildPhase")
 
     if not widget_target:
         errors.append("project must contain a TodayWidgetExtension target")
     if "DataLoader.swift in Sources" not in widget_sources_section:
         errors.append("widget target must compile DataLoader.swift so its timeline can load real events")
-    if "events.json in Resources" not in widget_resources_section:
-        errors.append("widget target must bundle events.json so WidgetKit is not limited to placeholder content")
+    if "widget-events.json in Resources" not in widget_resources_section:
+        errors.append("widget target must bundle widget-events.json so WidgetKit is not limited to placeholder content")
+    if " /* events.json in Resources */" in widget_resources_section:
+        errors.append("widget target must not bundle the full events.json corpus; it ships the compact widget-events.json slice")
+
+    if not app_target:
+        errors.append("project must contain a Today app target")
+    if " /* events.json in Resources */" not in app_resources_section:
+        errors.append("app target must bundle the full events.json corpus")
+    if "PBXTargetDependency" not in app_target:
+        errors.append("Today target must depend on TodayWidgetExtension so the widget builds with the app")
+    if "TodayWidgetExtension.appex in Embed Foundation Extensions" not in text:
+        errors.append("Today target must embed TodayWidgetExtension.appex or the widget will not ship in archives")
 
     return errors
 

@@ -14,12 +14,7 @@ struct EventCardView: View {
     }
 
     private var toneAccent: Color {
-        switch event.tone {
-        case .uplifting, .balanced:
-            return Color("AccentWarm")
-        case .somber:
-            return Color("AccentWarm")
-        }
+        Color("AccentWarm")
     }
 
     private var toneWashOpacity: Double {

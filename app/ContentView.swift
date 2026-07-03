@@ -18,11 +18,17 @@ struct ContentView: View {
                 }
                 .tag(1)
 
+            SavedView()
+                .tabItem {
+                    Label("Saved", systemImage: "bookmark")
+                }
+                .tag(2)
+
             PreferencesView()
                 .tabItem {
                     Label("Settings", systemImage: "gearshape")
                 }
-                .tag(2)
+                .tag(3)
         }
         .accentColor(Color("AccentWarm"))
         .onOpenURL(perform: handleDeepLink)
@@ -43,8 +49,10 @@ struct ContentView: View {
             selectedTab = 0
         case "explore":
             selectedTab = 1
-        case "preferences", "settings":
+        case "saved", "bookmarks":
             selectedTab = 2
+        case "preferences", "settings":
+            selectedTab = 3
         default:
             break
         }
@@ -56,4 +64,5 @@ struct ContentView: View {
         .environmentObject(DataStore())
         .environmentObject(UserPreferences())
         .environmentObject(ThumbsStore())
+        .environmentObject(SavedStore())
 }

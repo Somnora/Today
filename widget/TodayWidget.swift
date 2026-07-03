@@ -46,7 +46,7 @@ struct TodayWidgetProvider: AppIntentTimelineProvider {
     }
 
     private func loadWidgetEvent(date: Date = Date()) async -> HistoricalEvent? {
-        let result = await DataLoader.loadEvents()
+        let result = await DataLoader.loadEvents(resourceCandidates: ["widget-events", "events"])
         let components = Calendar.current.dateComponents([.month, .day], from: date)
         guard let month = components.month, let day = components.day else {
             return result.events.first
@@ -54,7 +54,7 @@ struct TodayWidgetProvider: AppIntentTimelineProvider {
 
         let dated = result.events.filter { $0.matches(month: month, day: day) }
         let preferred = DataLoader.filterByTone(dated, preference: .balanced)
-        return preferred.sorted(by: sortForDisplay).first ?? result.events.sorted(by: sortForDisplay).first
+        return preferred.min(by: sortForDisplay) ?? result.events.min(by: sortForDisplay)
     }
 
     private func sortForDisplay(_ left: HistoricalEvent, _ right: HistoricalEvent) -> Bool {

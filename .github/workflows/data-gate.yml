@@ -22,5 +22,8 @@ jobs:
       - name: Validate sample-data/events.json
         run: python3 .github/scripts/validate_events.py
 
+      - name: Check widget slice freshness
+        run: python3 .github/scripts/generate_widget_events.py --check
+
       - name: Validate runtime contracts
         run: python3 .github/scripts/validate_runtime_contracts.py

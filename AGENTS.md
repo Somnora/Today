@@ -28,17 +28,22 @@ This is a first-pass iPhone-only SwiftUI proof app for "Today" — a historical 
 
 **Data Flow:**
 ```
-sample-data/events.json → DataLoader → DataStore → Views
+sample-data/events.json → DataLoader → DataStore → Views (app target)
+sample-data/widget-events.json → DataLoader → TodayWidget (widget target)
                                      ↓
                           UserPreferences (AppStorage)
                           ThumbsStore (AppStorage)
+                          SavedStore (AppStorage)
 ```
 
-`sample-data/events.json` is the **only** path bundled into the iOS app
-(via the `Resources` build phase). For the active data contract, validation
-command, and backup policy, see [`sample-data/README.md`](sample-data/README.md).
-Historical local exports and upstream pipeline workspaces are intentionally
-kept outside public source control.
+`sample-data/events.json` is the only corpus bundled into the iOS app; the
+widget extension bundles `sample-data/widget-events.json`, a generated
+one-record-per-day slice (regenerate with
+`python3 .github/scripts/generate_widget_events.py`; CI checks freshness).
+For the active data contract, validation command, and backup policy, see
+[`sample-data/README.md`](sample-data/README.md). Historical local exports
+and upstream pipeline workspaces are intentionally kept outside public
+source control.
 
 **Key Components:**
 
@@ -113,7 +118,8 @@ kept outside public source control.
 ✅ Thumbs up/down local storage
 ✅ Widget shell with timeline provider
 ✅ Color system and typography
-✅ 1638-record app-publishable bundled event corpus; deferred records are quarantined outside the app bundle
+✅ 2642-record app-publishable bundled event corpus; deferred records are quarantined outside the app bundle
+✅ Widget extension embedded in the app target and fed by a compact generated per-day slice (`sample-data/widget-events.json`)
 
 ### Data / Editorial Work Still Needed
 - Continued source-truth review and source-quality hardening of the bundled corpus

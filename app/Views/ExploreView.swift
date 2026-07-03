@@ -22,12 +22,8 @@ struct ExploreView: View {
     }
 
     private var suggestedDates: [DateSuggestion] {
-        let uniqueDates = Dictionary(grouping: dataStore.allEvents) { event in
-            DateSuggestion(month: event.month, day: event.day)
-        }
-        .keys
-
-        return uniqueDates
+        dataStore.representedDates
+            .map { DateSuggestion(month: $0.month, day: $0.day) }
             .sorted { left, right in
                 forwardDistance(to: left) < forwardDistance(to: right)
             }
@@ -492,14 +488,17 @@ private struct DateSuggestion: Hashable, Identifiable {
     let month: Int
     let day: Int
 
+    private static let labelFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d"
+        return formatter
+    }()
+
     var id: String {
         "\(month)-\(day)"
     }
 
     var shortLabel: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMM d"
-
         var components = DateComponents()
         components.year = 2024
         components.month = month
@@ -509,7 +508,7 @@ private struct DateSuggestion: Hashable, Identifiable {
             return "\(month)/\(day)"
         }
 
-        return formatter.string(from: date)
+        return Self.labelFormatter.string(from: date)
     }
 }
 
@@ -518,4 +517,5 @@ private struct DateSuggestion: Hashable, Identifiable {
         .environmentObject(DataStore())
         .environmentObject(UserPreferences())
         .environmentObject(ThumbsStore())
+        .environmentObject(SavedStore())
 }

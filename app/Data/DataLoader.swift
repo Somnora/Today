@@ -1,8 +1,16 @@
 import Foundation
 
 class DataLoader {
-    static func loadEvents() async -> EventLoadResult {
-        guard let url = Bundle.main.url(forResource: "events", withExtension: "json") else {
+    /// Loads the first bundled collection found among `resourceCandidates`.
+    /// The app bundles the full corpus as "events"; the widget extension
+    /// bundles the compact per-day slice as "widget-events".
+    static func loadEvents(resourceCandidates: [String] = ["events"]) async -> EventLoadResult {
+        let url = resourceCandidates
+            .lazy
+            .compactMap { Bundle.main.url(forResource: $0, withExtension: "json") }
+            .first
+
+        guard let url else {
             return EventLoadResult(events: fallbackEvents(), issue: .missingCollection)
         }
 
@@ -39,15 +47,7 @@ class DataLoader {
             }
             return events
         case .unflinching:
-            let somber = events.filter { $0.tone == .somber }
-            if !somber.isEmpty {
-                return somber
-            }
-            let nonUplifting = events.filter { $0.tone != .uplifting }
-            if !nonUplifting.isEmpty {
-                return nonUplifting
-            }
-            return filterByTone(events, preference: .balanced)
+            return events
         }
     }
 
@@ -139,7 +139,7 @@ enum TonePreference: String, CaseIterable {
         switch self {
         case .uplifting: return "lighter, steadier, more hopeful"
         case .balanced: return "the full, tasteful spread of the day"
-        case .unflinching: return "conflict, consequence, and harder truths"
+        case .unflinching: return "the whole record, harder truths included"
         }
     }
 }

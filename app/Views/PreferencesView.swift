@@ -257,7 +257,7 @@ struct PreferencesView: View {
         case .balanced:
             return "Keep the record thoughtful, clear, and even-handed."
         case .unflinching:
-            return "Lean into the conflict, consequence, and harder truths."
+            return "Read the whole record, including conflict, consequence, and harder truths."
         }
     }
 

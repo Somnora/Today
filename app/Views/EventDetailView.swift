@@ -6,7 +6,7 @@ struct EventDetailView: View {
 
     @EnvironmentObject var thumbsStore: ThumbsStore
     @EnvironmentObject var preferences: UserPreferences
-    @AppStorage("savedEventIDs") private var savedEventIDsData = "[]"
+    @EnvironmentObject var savedStore: SavedStore
     @State private var isProvenanceExpanded = false
 
     private var currentReaction: Reaction? {
@@ -18,15 +18,7 @@ struct EventDetailView: View {
     }
 
     private var isSaved: Bool {
-        savedIDs.contains(event.id)
-    }
-
-    private var savedIDs: Set<String> {
-        guard let data = savedEventIDsData.data(using: .utf8),
-              let decoded = try? JSONDecoder().decode([String].self, from: data) else {
-            return []
-        }
-        return Set(decoded)
+        savedStore.isSaved(event.id)
     }
 
     var body: some View {
@@ -513,18 +505,7 @@ struct EventDetailView: View {
 
     private func toggleSaved() {
         UIImpactFeedbackGenerator(style: .soft).impactOccurred()
-
-        var ids = savedIDs
-        if ids.contains(event.id) {
-            ids.remove(event.id)
-        } else {
-            ids.insert(event.id)
-        }
-
-        let ordered = ids.sorted()
-        if let data = try? JSONEncoder().encode(ordered), let string = String(data: data, encoding: .utf8) {
-            savedEventIDsData = string
-        }
+        savedStore.toggle(event.id)
     }
 }
 
@@ -603,5 +584,6 @@ private struct FlowLayout: Layout {
         )
         .environmentObject(ThumbsStore())
         .environmentObject(UserPreferences())
+        .environmentObject(SavedStore())
     }
 }

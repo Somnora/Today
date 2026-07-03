@@ -1,22 +1,25 @@
 # `sample-data/` — Today iOS bundled data
 
 This directory is the **active app data surface** for Today iOS.
-Xcode copies one file out of here into the iOS app bundle on every build;
-nothing else in the repo replaces it at build time.
+Xcode copies two files out of here on every build — the full corpus into the
+app bundle, and a compact per-day slice into the widget extension. Nothing
+else in the repo replaces them at build time.
 
 ## What gets shipped
 
 | Output path | What it is |
 | --- | --- |
-| `sample-data/events.json` | Top-level JSON array of `HistoricalEvent` records (1638 records, all app-publishable, no bundled deferred records, as of 2026-06-09). |
-| `<App>.app/events.json` | Same file, copied verbatim by Xcode's `Resources` build phase. |
+| `sample-data/events.json` | Top-level JSON array of `HistoricalEvent` records (2642 records, all app-publishable, no bundled deferred records, as of 2026-07-02). |
+| `<App>.app/events.json` | Same file, copied verbatim by Xcode's `Resources` build phase (app target). |
+| `sample-data/widget-events.json` | Generated slice: one record per calendar day (366 records), trimmed to the fields the widget renders. Regenerate with `python3 .github/scripts/generate_widget_events.py` whenever `events.json` changes; CI fails if it is stale. |
+| `<App>.app/PlugIns/…appex/widget-events.json` | Same slice, copied by the widget target's `Resources` build phase. |
 
-The Xcode file reference is the lone `events.json` row inside the
-`sample-data` group in `Today.xcodeproj` — see the `PBXBuildFile`
-entry tagged `events.json in Resources`. `app/Data/DataLoader.swift`
-reads it via `Bundle.main.url(forResource: "events", withExtension: "json")`.
+`app/Data/DataLoader.swift` reads whichever resource its bundle carries:
+the app resolves `events.json`; the widget extension resolves
+`widget-events.json` (falling back to `events.json` if a full corpus is
+ever bundled there again).
 
-There is **no other resource path** that the running app reads for
+There is **no other resource path** that the running app or widget reads for
 historical events. Other local JSON exports are reference material, not bundle
 input, and are ignored from public source control.
 
@@ -24,7 +27,7 @@ input, and are ignored from public source control.
 
 `events.json` is the cumulative artifact of a multi-step editorial pipeline
 that lives outside this public app repo. The chain that built the current
-1638-record file:
+2642-record file:
 
 1. **Upstream promoted bundles** — one JSON file per calendar date in the
    private editorial workspace. Remote hostnames and operator paths are not
@@ -46,9 +49,10 @@ that lives outside this public app repo. The chain that built the current
    `future_source_rescue_batch_*`, `undercovered-category-date-rescue-batch-*`,
    and later `app*` source-repair passes.
 
-There is **no master orchestrator**. The 1638-record current state is
+There is **no master orchestrator**. The 2642-record current state is
 not reproducible by a single command — it is the sum of all those
-batches in chronological order.
+batches in chronological order (most recently the June 2026 2x-expansion
+merge of 1,004 source-confirmed records).
 
 ## The one command to rebuild the app data package
 
@@ -63,7 +67,10 @@ cd path/to/today-ios
 #    and at least one source per record. This mirrors the CI data gate.
 python3 .github/scripts/validate_events.py
 
-# 2. Re-bundle into the iOS app.
+# 2. Regenerate the widget slice from the (possibly changed) corpus.
+python3 .github/scripts/generate_widget_events.py
+
+# 3. Re-bundle into the iOS app.
 xcodebuild \
   -project Today.xcodeproj \
   -scheme Today \
@@ -125,6 +132,6 @@ Common optional: `year`, `one_liner`, `short_summary`, `description`,
 `editorial_status`.
 
 `DataLoader` filters out records where `editorial_status` is
-`duplicate`, `weak_event`, or `defer`. The current bundle contains 1638
+`duplicate`, `weak_event`, or `defer`. The current bundle contains 2642
 app-publishable records and no bundled deferred records. Deferred rows are
 retained only as audit/rework artifacts under `docs/editorial-source-scout/`.
