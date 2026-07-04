@@ -24,22 +24,30 @@ struct EventDetailView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: metrics.detailRootSpacing) {
-                headingBlock
+            VStack(alignment: .leading, spacing: 0) {
+                EventHeroImage(event: event, height: 248, corners: .none)
 
-                divider
+                VStack(alignment: .leading, spacing: metrics.detailRootSpacing) {
+                    if event.imageURL != nil {
+                        EventImageCredit(event: event)
+                    }
 
-                summaryBlock
-                detailBlock
-                whyItMattersBlock
-                deepDiveBlock
-                reactionBlock
-                provenanceBlock
-                colophon
+                    headingBlock
+
+                    divider
+
+                    summaryBlock
+                    detailBlock
+                    whyItMattersBlock
+                    deepDiveBlock
+                    reactionBlock
+                    provenanceBlock
+                    colophon
+                }
+                .padding(.horizontal, 24)
+                .padding(.top, event.imageURL == nil ? metrics.detailTopPadding : 14)
+                .padding(.bottom, 40)
             }
-            .padding(.horizontal, 24)
-            .padding(.top, metrics.detailTopPadding)
-            .padding(.bottom, 40)
         }
         .background(detailBackground.ignoresSafeArea())
         .navigationBarTitleDisplayMode(.inline)

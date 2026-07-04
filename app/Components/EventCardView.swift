@@ -31,16 +31,21 @@ struct EventCardView: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: metrics.cardStackSpacing) {
-            headerRow
-            yearBlock
-            titleBlock
-            contextBlock
-            footerRow
+        VStack(alignment: .leading, spacing: 0) {
+            EventHeroImage(event: event, height: 168, corners: .topOnly)
+
+            VStack(alignment: .leading, spacing: metrics.cardStackSpacing) {
+                headerRow
+                yearBlock
+                titleBlock
+                contextBlock
+                footerRow
+            }
+            .padding(metrics.cardPadding)
         }
-        .padding(metrics.cardPadding)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(cardSurface)
+        .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
         .overlay(alignment: .top) {
             RoundedRectangle(cornerRadius: 24, style: .continuous)
                 .strokeBorder(
