@@ -9,7 +9,7 @@ else in the repo replaces them at build time.
 
 | Output path | What it is |
 | --- | --- |
-| `sample-data/events.json` | Top-level JSON array of `HistoricalEvent` records (2642 records, all app-publishable, no bundled deferred records, as of 2026-07-02). |
+| `sample-data/events.json` | Top-level JSON array of `HistoricalEvent` records (4420 records, all app-publishable, no bundled deferred records, as of 2026-07-03). |
 | `<App>.app/events.json` | Same file, copied verbatim by Xcode's `Resources` build phase (app target). |
 | `sample-data/widget-events.json` | Generated slice: one record per calendar day (366 records), trimmed to the fields the widget renders. Regenerate with `python3 .github/scripts/generate_widget_events.py` whenever `events.json` changes; CI fails if it is stale. |
 | `<App>.app/PlugIns/…appex/widget-events.json` | Same slice, copied by the widget target's `Resources` build phase. |
@@ -27,7 +27,7 @@ input, and are ignored from public source control.
 
 `events.json` is the cumulative artifact of a multi-step editorial pipeline
 that lives outside this public app repo. The chain that built the current
-2642-record file:
+4420-record file:
 
 1. **Upstream promoted bundles** — one JSON file per calendar date in the
    private editorial workspace. Remote hostnames and operator paths are not
@@ -49,10 +49,19 @@ that lives outside this public app repo. The chain that built the current
    `future_source_rescue_batch_*`, `undercovered-category-date-rescue-batch-*`,
    and later `app*` source-repair passes.
 
-There is **no master orchestrator**. The 2642-record current state is
+5. **On This Day landmark batch (2026-07-03)** — appended 1,778 curated
+   landmark records (`id` prefix `otd-`, `provenance` batch
+   `onthisday-landmark-2026-07`) from the Wikimedia "On This Day" feed, tone-
+   classified with a positive lean and a hard violence veto, with one fame-
+   ranked "Born Today" figure per day (Wikidata sitelink count). Each record
+   also carries a `notability` field (topic sitelink count) the widget picker
+   uses. This is the batch that added the July 4 1776 Declaration.
+
+There is **no master orchestrator**. The 4420-record current state is
 not reproducible by a single command — it is the sum of all those
-batches in chronological order (most recently the June 2026 2x-expansion
-merge of 1,004 source-confirmed records).
+batches in chronological order (most recently the July 2026 On This Day
+landmark merge of 1,778 curated records, including 5 hand-authored marquee
+landmarks such as the Wright brothers' first flight and MLK's "I Have a Dream").
 
 ## The one command to rebuild the app data package
 
@@ -129,9 +138,14 @@ cp sample-data/events.backup-before-future-queue-rescue-batch04-20260508T053720Z
 Required: `id`, `month`, `day`, `title`, `summary`, `category`, `tone`.
 Common optional: `year`, `one_liner`, `short_summary`, `description`,
 `detail`, `deep_dive`, `why_it_matters`, `tags`, `provenance`, `sources`,
-`editorial_status`.
+`editorial_status`, `image_url`, `image_attribution`, `image_credit_url`.
+
+`image_url` is a remote lead image (currently a Wikimedia Commons thumbnail);
+the app loads it via `AsyncImage` and falls back to a tone-aware placeholder
+when absent. `image_attribution` / `image_credit_url` back the credit caption
+on the detail screen.
 
 `DataLoader` filters out records where `editorial_status` is
-`duplicate`, `weak_event`, or `defer`. The current bundle contains 2642
+`duplicate`, `weak_event`, or `defer`. The current bundle contains 4420
 app-publishable records and no bundled deferred records. Deferred rows are
 retained only as audit/rework artifacts under `docs/editorial-source-scout/`.

@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -123,9 +124,109 @@ def balanced_pool(events: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return kept or events
 
 
+TONE_WEIGHT = {"uplifting": 10, "balanced": 6, "somber": 0}
+DOMAIN_BONUS = {"science", "technology", "exploration", "arts", "world", "history", "culture"}
+
+
+def has_source_url(event: dict[str, Any]) -> bool:
+    sources = event.get("sources")
+    if isinstance(sources, list) and any(
+        isinstance(s, str) and s.strip().lower().startswith("http") for s in sources
+    ):
+        return True
+    source = event.get("source")
+    return isinstance(source, str) and source.strip().lower().startswith("http")
+
+
+def prominence(event: dict[str, Any]) -> int:
+    # Longer linked-article text is a rough proxy for how well-known the topic is.
+    for key in ("detail", "deep_dive", "description", "summary"):
+        value = event.get(key)
+        if isinstance(value, str) and value.strip():
+            return len(value)
+    return 0
+
+
+def notability(event: dict[str, Any]) -> int:
+    # Wikidata sitelink count of the event's linked topic (how many language
+    # Wikipedias cover it) — a strong proxy for how iconic the event is.
+    value = event.get("notability")
+    return value if isinstance(value, int) else 0
+
+
+def widget_score(event: dict[str, Any]) -> int:
+    """Rank the day's candidates for the single widget slot: notable + positive."""
+    score = TONE_WEIGHT[normalized_tone(event)]
+    category = normalized_category(event)
+    if str(event.get("id") or "").startswith("otd-"):
+        score += 3  # curated On This Day landmark (notability-gated)
+    if has_source_url(event):
+        score += 1  # concrete, verifiable source
+    if category in DOMAIN_BONUS:
+        score += 1
+    # famous "Born Today" figures make a fine headline, but shouldn't crowd out
+    # historical events, so their fame only breaks near-ties (via notability).
+    return score
+
+
+# On a handful of famous days the algorithmic pick can favor a delightful
+# secondary landmark over the event people expect. These overrides pin the
+# canonical event (matched by year + keyword so they survive corpus rebuilds).
+MARQUEE_OVERRIDES: dict[tuple[int, int], tuple[int, str]] = {
+    (2, 12): (1809, r"lincoln"),
+    (2, 20): (1962, r"glenn|friendship 7"),
+    (3, 14): (1879, r"einstein"),
+    (4, 12): (1961, r"gagarin"),
+    (5, 20): (1927, r"lindbergh"),
+    (5, 29): (1953, r"everest"),
+    (6, 19): (1865, r"juneteenth|galveston|emancipation"),
+    (7, 4): (1776, r"declaration of independence"),
+    (7, 14): (1789, r"bastille"),
+    (7, 20): (1969, r"moon|apollo"),
+    (8, 15): (1947, r"independence|nehru"),
+    (8, 28): (1963, r"i have a dream|luther king"),
+    (9, 17): (1787, r"constitution"),
+    (10, 12): (1492, r"columbus"),
+    (11, 11): (1918, r"armistice"),
+    (11, 19): (1863, r"gettysburg"),
+    (12, 1): (1955, r"rosa parks"),
+    (12, 17): (1903, r"wright"),
+    (12, 25): (1642, r"newton"),
+}
+
+
+def marquee_pick(events: list[dict[str, Any]]) -> dict[str, Any] | None:
+    if not events:
+        return None
+    key = (events[0].get("month"), events[0].get("day"))
+    override = MARQUEE_OVERRIDES.get(key)
+    if not override:
+        return None
+    year, pattern = override
+    regex = re.compile(pattern, re.IGNORECASE)
+
+    def text(event: dict[str, Any]) -> str:
+        return f"{event.get('title', '')} {summary_text(event)}"
+
+    exact = [e for e in events if e.get("year") == year and regex.search(text(e))]
+    loose = exact or [e for e in events if regex.search(text(e))]
+    if not loose:
+        return None
+    # among matches, prefer non-somber, then the most iconic (topic sitelinks)
+    loose.sort(key=lambda e: (normalized_tone(e) != "somber", notability(e), prominence(e)), reverse=True)
+    return loose[0]
+
+
 def pick_for_day(events: list[dict[str, Any]]) -> dict[str, Any]:
+    # Canonical event on marquee days; otherwise the best notable, positive landmark.
+    forced = marquee_pick(events)
+    if forced is not None:
+        return forced
     pool = balanced_pool(events)
-    return min(pool, key=lambda e: (e.get("year") or 0, str(e.get("title") or "")))
+    return max(
+        pool,
+        key=lambda e: (widget_score(e), notability(e), prominence(e), str(e.get("title") or "")),
+    )
 
 
 def slice_record(event: dict[str, Any]) -> dict[str, Any]:
@@ -142,6 +243,9 @@ def slice_record(event: dict[str, Any]) -> dict[str, Any]:
     year = event.get("year")
     if isinstance(year, int):
         record["year"] = year
+    image_url = event.get("image_url")
+    if isinstance(image_url, str) and image_url.strip():
+        record["image_url"] = image_url.strip()
     return record
 
 

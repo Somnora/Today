@@ -118,7 +118,7 @@ source control.
 ✅ Thumbs up/down local storage
 ✅ Widget shell with timeline provider
 ✅ Color system and typography
-✅ 2642-record app-publishable bundled event corpus; deferred records are quarantined outside the app bundle
+✅ 4420-record app-publishable bundled event corpus; deferred records are quarantined outside the app bundle
 ✅ Widget extension embedded in the app target and fed by a compact generated per-day slice (`sample-data/widget-events.json`)
 
 ### Data / Editorial Work Still Needed
