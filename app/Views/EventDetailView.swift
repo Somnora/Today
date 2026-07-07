@@ -9,6 +9,7 @@ struct EventDetailView: View {
     @EnvironmentObject var savedStore: SavedStore
     @ScaledMetric(relativeTo: .body) private var typeScale: CGFloat = 1
     @State private var isProvenanceExpanded = false
+    @State private var shareImage: Image?
 
     private var currentReaction: Reaction? {
         thumbsStore.reactionFor(eventID: event.id)
@@ -62,10 +63,27 @@ struct EventDetailView: View {
                 }
                 .accessibilityLabel(isSaved ? "Remove bookmark" : "Bookmark")
 
-                ShareLink(item: event.shareText) {
-                    Image(systemName: "square.and.arrow.up")
+                if let shareImage {
+                    ShareLink(
+                        item: shareImage,
+                        subject: Text(event.title),
+                        message: Text(event.shareText),
+                        preview: SharePreview(event.title, image: shareImage)
+                    ) {
+                        Image(systemName: "square.and.arrow.up")
+                    }
+                    .accessibilityLabel("Share")
+                } else {
+                    ShareLink(item: event.shareText) {
+                        Image(systemName: "square.and.arrow.up")
+                    }
+                    .accessibilityLabel("Share")
                 }
-                .accessibilityLabel("Share")
+            }
+        }
+        .onAppear {
+            if shareImage == nil {
+                shareImage = ShareCardRenderer.image(for: event)
             }
         }
     }

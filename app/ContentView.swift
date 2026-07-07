@@ -34,6 +34,11 @@ struct ContentView: View {
         }
         .accentColor(Color("AccentWarm"))
         .onOpenURL(perform: handleDeepLink)
+        .onReceive(NotificationRouter.shared.$pendingEventID) { eventID in
+            if eventID != nil {
+                selectedTab = 0
+            }
+        }
         .task {
             await dataStore.loadEvents()
             await refreshMorningNotifications()

@@ -2,6 +2,10 @@ import SwiftUI
 
 @main
 struct TodayApp: App {
+    init() {
+        NotificationRouter.shared.activate()
+    }
+
     @StateObject private var dataStore = DataStore()
     @StateObject private var preferences = UserPreferences()
     @StateObject private var thumbsStore = ThumbsStore()

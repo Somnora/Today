@@ -10,6 +10,8 @@ struct TodayFeedView: View {
     @State private var currentDate = Date()
     @State private var weeklyQuiz: WeeklyQuiz?
     @State private var presentedQuiz: WeeklyQuiz?
+    @State private var navigationPath = NavigationPath()
+    @ObservedObject private var notificationRouter = NotificationRouter.shared
 
     private var events: [HistoricalEvent] {
         dataStore.eventsFor(date: currentDate, tonePreference: preferences.currentTonePreference)
@@ -20,7 +22,7 @@ struct TodayFeedView: View {
     }
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $navigationPath) {
             ScrollView {
                 VStack(alignment: .leading, spacing: metrics.rootStackSpacing) {
                     headerSection
@@ -32,6 +34,10 @@ struct TodayFeedView: View {
             }
             .background(paperBackground.ignoresSafeArea())
             .toolbar(.hidden, for: .navigationBar)
+            .navigationDestination(for: HistoricalEvent.self) { event in
+                EventDetailView(event: event)
+                    .toolbar(.hidden, for: .tabBar)
+            }
         }
         .onChange(of: scenePhase) { _, newPhase in
             if newPhase == .active {
@@ -44,12 +50,26 @@ struct TodayFeedView: View {
         .onChange(of: dataStore.isLoading) { _, isLoading in
             if !isLoading {
                 refreshQuiz()
+                consumePendingNotificationEvent()
             }
+        }
+        .onReceive(notificationRouter.$pendingEventID) { _ in
+            consumePendingNotificationEvent()
         }
         .onAppear(perform: refreshQuiz)
         .sheet(item: $presentedQuiz) { quiz in
             QuizView(quiz: quiz)
         }
+    }
+
+    /// Opens the event a Morning Edition notification was tapped for, once
+    /// the catalog is available.
+    private func consumePendingNotificationEvent() {
+        guard let eventID = notificationRouter.pendingEventID,
+              let event = dataStore.allEvents.first(where: { $0.id == eventID }) else { return }
+        notificationRouter.pendingEventID = nil
+        presentedQuiz = nil
+        navigationPath = NavigationPath([event])
     }
 
     private func refreshCurrentDate() {
@@ -179,10 +199,6 @@ struct TodayFeedView: View {
 
                     closingRule
                 }
-            }
-            .navigationDestination(for: HistoricalEvent.self) { event in
-                EventDetailView(event: event)
-                    .toolbar(.hidden, for: .tabBar)
             }
             .animation(.snappy(duration: 0.28), value: events)
         }

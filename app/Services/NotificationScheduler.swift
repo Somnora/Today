@@ -61,6 +61,7 @@ enum NotificationScheduler {
             content.title = "Morning Edition · \(event.monthDayString)"
             content.body = "\(event.yearLabel) · \(event.title)"
             content.sound = .default
+            content.userInfo = ["eventID": event.id]
 
             let trigger = UNCalendarNotificationTrigger(dateMatching: fireComponents, repeats: false)
             let request = UNNotificationRequest(
