@@ -12,6 +12,9 @@
 		1A2B3C4D5E6F718293A4B5C7 /* SavedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B2C3D4E5F718293A4B5C6 /* SavedStore.swift */; };
 		8F9A0B1C2D3E4F5061728394 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F9A0B1C2D3E4F50617283 /* NotificationScheduler.swift */; };
 		3A4B5C6D7E8F910213A4B5C9 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B4C5D6E7F819203A4B5C8 /* SavedView.swift */; };
+		B2C3D4E5F60718293040506A /* QuizEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6071829304050 /* QuizEngine.swift */; };
+		D4E5F60718293040506A7B8C /* QuizStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D4E5F60718293040506A7B /* QuizStore.swift */; };
+		F60718293040506A7B8C9DAE /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F60718293040506A7B8C9D /* QuizView.swift */; };
 		3D07199E8782E2CB54C766EE /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F1CE1B62E91E5B4D35DA66 /* UserPreferences.swift */; };
 		4507128BFAE09D4A54176E64 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D37F381CBCADA2D0748DC1 /* DataStore.swift */; };
 		4DE6D5B9BB1C60CB7EBF66B5 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E93F1EB0CBDC627A6AAFFF /* DataLoader.swift */; };
@@ -68,6 +71,9 @@
 		0A1B2C3D4E5F718293A4B5C6 /* SavedStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SavedStore.swift; sourceTree = "<group>"; };
 		7E8F9A0B1C2D3E4F50617283 /* NotificationScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
 		2A3B4C5D6E7F819203A4B5C8 /* SavedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
+		A1B2C3D4E5F6071829304050 /* QuizEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizEngine.swift; sourceTree = "<group>"; };
+		C3D4E5F60718293040506A7B /* QuizStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizStore.swift; sourceTree = "<group>"; };
+		E5F60718293040506A7B8C9D /* QuizView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		0514E382CE00F4E8DBD921BC /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D03FC49561D5AA10FBC9E69 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1ECE5B7CFDF1C9276C9C5CAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -141,6 +147,7 @@
 				762A9127006DC156D765FC48 /* EventDetailView.swift */,
 				026EA7772DB4CF52A916EB71 /* ExploreView.swift */,
 				2A3B4C5D6E7F819203A4B5C8 /* SavedView.swift */,
+				E5F60718293040506A7B8C9D /* QuizView.swift */,
 				62FDEF1405684A9A2B23DA4D /* PreferencesView.swift */,
 			);
 			path = Views;
@@ -168,6 +175,7 @@
 				53F1CE1B62E91E5B4D35DA66 /* UserPreferences.swift */,
 				02B80B45EA0D3CE30F68023B /* ThumbsStore.swift */,
 				0A1B2C3D4E5F718293A4B5C6 /* SavedStore.swift */,
+				C3D4E5F60718293040506A7B /* QuizStore.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -176,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				7E8F9A0B1C2D3E4F50617283 /* NotificationScheduler.swift */,
+				A1B2C3D4E5F6071829304050 /* QuizEngine.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -389,6 +398,9 @@
 				1A2B3C4D5E6F718293A4B5C7 /* SavedStore.swift in Sources */,
 				3A4B5C6D7E8F910213A4B5C9 /* SavedView.swift in Sources */,
 				8F9A0B1C2D3E4F5061728394 /* NotificationScheduler.swift in Sources */,
+				B2C3D4E5F60718293040506A /* QuizEngine.swift in Sources */,
+				D4E5F60718293040506A7B8C /* QuizStore.swift in Sources */,
+				F60718293040506A7B8C9DAE /* QuizView.swift in Sources */,
 				668BC9F885657D8D7D75ED13 /* EventCardView.swift in Sources */,
 				FE1A2B3C4D5E6F7081920011 /* EventImageView.swift in Sources */,
 				A8B7C6D5E4F30219384756AB /* ReadingMetrics.swift in Sources */,

@@ -4,9 +4,12 @@ import SwiftUI
 struct TodayFeedView: View {
     @EnvironmentObject var dataStore: DataStore
     @EnvironmentObject var preferences: UserPreferences
+    @EnvironmentObject var quizStore: QuizStore
     @Environment(\.scenePhase) private var scenePhase
     @ScaledMetric(relativeTo: .body) private var typeScale: CGFloat = 1
     @State private var currentDate = Date()
+    @State private var weeklyQuiz: WeeklyQuiz?
+    @State private var presentedQuiz: WeeklyQuiz?
 
     private var events: [HistoricalEvent] {
         dataStore.eventsFor(date: currentDate, tonePreference: preferences.currentTonePreference)
@@ -38,13 +41,39 @@ struct TodayFeedView: View {
         .onReceive(NotificationCenter.default.publisher(for: .NSCalendarDayChanged).receive(on: RunLoop.main)) { _ in
             refreshCurrentDate()
         }
+        .onChange(of: dataStore.isLoading) { _, isLoading in
+            if !isLoading {
+                refreshQuiz()
+            }
+        }
+        .onAppear(perform: refreshQuiz)
+        .sheet(item: $presentedQuiz) { quiz in
+            QuizView(quiz: quiz)
+        }
     }
 
     private func refreshCurrentDate() {
         let now = Date()
         if !Calendar.current.isDate(now, inSameDayAs: currentDate) {
             currentDate = now
+            refreshQuiz()
         }
+    }
+
+    private func refreshQuiz() {
+        guard QuizEngine.isQuizDay(currentDate), !dataStore.allEvents.isEmpty else {
+            weeklyQuiz = nil
+            return
+        }
+        let key = QuizEngine.weekKey(for: currentDate)
+        if weeklyQuiz?.weekKey != key {
+            weeklyQuiz = QuizEngine.quiz(for: currentDate, events: dataStore.allEvents)
+        }
+        #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains("-quiz-open"), presentedQuiz == nil {
+            presentedQuiz = weeklyQuiz
+        }
+        #endif
     }
 
     private var paperBackground: some View {
@@ -94,6 +123,19 @@ struct TodayFeedView: View {
             }
 
             morningNote
+
+            if let quiz = weeklyQuiz {
+                Button {
+                    presentedQuiz = quiz
+                } label: {
+                    QuizCardView(
+                        quiz: quiz,
+                        result: quizStore.result(for: quiz.weekKey),
+                        streak: quizStore.streak(asOf: currentDate)
+                    )
+                }
+                .buttonStyle(.plain)
+            }
         }
     }
 
@@ -409,4 +451,5 @@ struct TodayFeedView: View {
         .environmentObject(UserPreferences())
         .environmentObject(ThumbsStore())
         .environmentObject(SavedStore())
+        .environmentObject(QuizStore())
 }

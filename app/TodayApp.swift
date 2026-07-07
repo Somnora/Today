@@ -6,6 +6,7 @@ struct TodayApp: App {
     @StateObject private var preferences = UserPreferences()
     @StateObject private var thumbsStore = ThumbsStore()
     @StateObject private var savedStore = SavedStore()
+    @StateObject private var quizStore = QuizStore()
 
     var body: some Scene {
         WindowGroup {
@@ -14,6 +15,7 @@ struct TodayApp: App {
                 .environmentObject(preferences)
                 .environmentObject(thumbsStore)
                 .environmentObject(savedStore)
+                .environmentObject(quizStore)
         }
     }
 }

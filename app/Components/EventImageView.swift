@@ -114,9 +114,11 @@ struct EventImageCredit: View {
 }
 
 /// Type-erased insettable shape so `clipShape`/`strokeBorder` can share one value.
-struct AnyInsettableShape: InsettableShape {
-    private let pathBuilder: (CGRect) -> Path
-    private let insetBuilder: (CGFloat) -> AnyInsettableShape
+/// The closures only capture the wrapped shape, a value type, so the
+/// Sendable conformance inherited from Shape is sound.
+struct AnyInsettableShape: InsettableShape, @unchecked Sendable {
+    private let pathBuilder: @Sendable (CGRect) -> Path
+    private let insetBuilder: @Sendable (CGFloat) -> AnyInsettableShape
 
     init<S: InsettableShape>(_ shape: S) {
         pathBuilder = { shape.path(in: $0) }
