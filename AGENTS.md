@@ -135,6 +135,15 @@ source control.
 3. Build and run the "Today" scheme
 4. The widget extension will be built automatically
 
+**Running Tests:**
+- The `TodayTests` unit-test target (host: Today.app) covers `DataLoader`
+  tone filtering, ambient `displayEvent` selection, `QuizEngine`
+  determinism/structure, `QuizStore` streaks, `SavedStore` persistence, and
+  share-card rendering.
+- CLI: `xcodebuild -project Today.xcodeproj -scheme Today -destination 'platform=iOS Simulator,name=<sim>' test`
+- Tests are part of the shared `Today` scheme, so they run in CI and from
+  Xcode's Test action (⌘U).
+
 **Known Build Considerations:**
 - Requires iOS 17.0+ deployment target
 - iPhone-only (not universal)
@@ -159,6 +168,8 @@ today-ios/
 │   └── Info.plist               # Widget configuration
 ├── sample-data/
 │   └── events.json              # Sample fixture data
+├── tests/
+│   └── TodayTests.swift         # Unit tests (TodayTests target)
 ├── docs/                        # Documentation directory
 ├── Today.xcodeproj/             # Xcode project
 └── AGENTS.md                    # This file
