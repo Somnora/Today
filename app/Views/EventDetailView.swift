@@ -6,47 +6,49 @@ struct EventDetailView: View {
 
     @EnvironmentObject var thumbsStore: ThumbsStore
     @EnvironmentObject var preferences: UserPreferences
-    @AppStorage("savedEventIDs") private var savedEventIDsData = "[]"
+    @EnvironmentObject var savedStore: SavedStore
+    @ScaledMetric(relativeTo: .body) private var typeScale: CGFloat = 1
     @State private var isProvenanceExpanded = false
+    @State private var shareImage: Image?
 
     private var currentReaction: Reaction? {
         thumbsStore.reactionFor(eventID: event.id)
     }
 
     private var metrics: ReadingMetrics {
-        ReadingMetrics(density: preferences.currentReadingDensity)
+        ReadingMetrics(density: preferences.currentReadingDensity, typeScale: typeScale)
     }
 
     private var isSaved: Bool {
-        savedIDs.contains(event.id)
-    }
-
-    private var savedIDs: Set<String> {
-        guard let data = savedEventIDsData.data(using: .utf8),
-              let decoded = try? JSONDecoder().decode([String].self, from: data) else {
-            return []
-        }
-        return Set(decoded)
+        savedStore.isSaved(event.id)
     }
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: metrics.detailRootSpacing) {
-                headingBlock
+            VStack(alignment: .leading, spacing: 0) {
+                EventHeroImage(event: event, height: 248, corners: .none)
 
-                divider
+                VStack(alignment: .leading, spacing: metrics.detailRootSpacing) {
+                    if event.imageURL != nil {
+                        EventImageCredit(event: event)
+                    }
 
-                summaryBlock
-                detailBlock
-                whyItMattersBlock
-                deepDiveBlock
-                reactionBlock
-                provenanceBlock
-                colophon
+                    headingBlock
+
+                    divider
+
+                    summaryBlock
+                    detailBlock
+                    whyItMattersBlock
+                    deepDiveBlock
+                    reactionBlock
+                    provenanceBlock
+                    colophon
+                }
+                .padding(.horizontal, 24)
+                .padding(.top, event.imageURL == nil ? metrics.detailTopPadding : 14)
+                .padding(.bottom, 40)
             }
-            .padding(.horizontal, 24)
-            .padding(.top, metrics.detailTopPadding)
-            .padding(.bottom, 40)
         }
         .background(detailBackground.ignoresSafeArea())
         .navigationBarTitleDisplayMode(.inline)
@@ -61,10 +63,27 @@ struct EventDetailView: View {
                 }
                 .accessibilityLabel(isSaved ? "Remove bookmark" : "Bookmark")
 
-                ShareLink(item: event.shareText) {
-                    Image(systemName: "square.and.arrow.up")
+                if let shareImage {
+                    ShareLink(
+                        item: shareImage,
+                        subject: Text(event.title),
+                        message: Text(event.shareText),
+                        preview: SharePreview(event.title, image: shareImage)
+                    ) {
+                        Image(systemName: "square.and.arrow.up")
+                    }
+                    .accessibilityLabel("Share")
+                } else {
+                    ShareLink(item: event.shareText) {
+                        Image(systemName: "square.and.arrow.up")
+                    }
+                    .accessibilityLabel("Share")
                 }
-                .accessibilityLabel("Share")
+            }
+        }
+        .onAppear {
+            if shareImage == nil {
+                shareImage = ShareCardRenderer.image(for: event)
             }
         }
     }
@@ -176,9 +195,23 @@ struct EventDetailView: View {
                 Rectangle()
                     .fill(Color("AccentWarm").opacity(0.40))
                     .frame(width: 22, height: 0.8)
+
+                if let yearsAgoLabel {
+                    Text(yearsAgoLabel)
+                        .font(.system(size: 12, weight: .regular, design: .serif))
+                        .italic()
+                        .foregroundStyle(Color("TextTertiary"))
+                }
             }
             .padding(.bottom, 6)
         }
+    }
+
+    private var yearsAgoLabel: String? {
+        guard let year = event.year else { return nil }
+        let span = Calendar.current.component(.year, from: Date()) - year
+        guard span > 0 else { return nil }
+        return span == 1 ? "1 year ago" : "\(span) years ago"
     }
 
     private var summaryBlock: some View {
@@ -513,18 +546,7 @@ struct EventDetailView: View {
 
     private func toggleSaved() {
         UIImpactFeedbackGenerator(style: .soft).impactOccurred()
-
-        var ids = savedIDs
-        if ids.contains(event.id) {
-            ids.remove(event.id)
-        } else {
-            ids.insert(event.id)
-        }
-
-        let ordered = ids.sorted()
-        if let data = try? JSONEncoder().encode(ordered), let string = String(data: data, encoding: .utf8) {
-            savedEventIDsData = string
-        }
+        savedStore.toggle(event.id)
     }
 }
 
@@ -603,5 +625,6 @@ private struct FlowLayout: Layout {
         )
         .environmentObject(ThumbsStore())
         .environmentObject(UserPreferences())
+        .environmentObject(SavedStore())
     }
 }

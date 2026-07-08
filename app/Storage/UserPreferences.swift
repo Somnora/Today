@@ -13,6 +13,7 @@ enum ReadingDensity: String, CaseIterable, Identifiable {
 class UserPreferences: ObservableObject {
     @AppStorage("tonePreference") var tonePreference: String = TonePreference.balanced.rawValue
     @AppStorage("readingDensity") var readingDensity: String = ReadingDensity.standard.rawValue
+    @AppStorage("morningNotificationsEnabled") var morningNotificationsEnabled: Bool = false
 
     var currentTonePreference: TonePreference {
         get {

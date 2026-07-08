@@ -1,6 +1,7 @@
 import WidgetKit
 import SwiftUI
 import AppIntents
+import UIKit
 
 enum TodayWidgetDensity: String, AppEnum {
     case standard
@@ -26,6 +27,7 @@ struct TodayWidgetEntry: TimelineEntry {
     let date: Date
     let event: HistoricalEvent?
     let density: TodayWidgetDensity
+    var imageData: Data? = nil
 }
 
 struct TodayWidgetProvider: AppIntentTimelineProvider {
@@ -34,36 +36,47 @@ struct TodayWidgetProvider: AppIntentTimelineProvider {
     }
 
     func snapshot(for configuration: TodayWidgetConfigurationIntent, in context: Context) async -> TodayWidgetEntry {
-        TodayWidgetEntry(date: Date(), event: context.isPreview ? placeholderEvent : await loadWidgetEvent(), density: configuration.density)
+        if context.isPreview {
+            return TodayWidgetEntry(date: Date(), event: placeholderEvent, density: configuration.density)
+        }
+        let event = await loadWidgetEvent()
+        return TodayWidgetEntry(date: Date(), event: event, density: configuration.density, imageData: await loadImageData(for: event))
     }
 
     func timeline(for configuration: TodayWidgetConfigurationIntent, in context: Context) async -> Timeline<TodayWidgetEntry> {
         let now = Date()
-        let entry = TodayWidgetEntry(date: now, event: await loadWidgetEvent(date: now), density: configuration.density)
+        let event = await loadWidgetEvent(date: now)
+        let entry = TodayWidgetEntry(date: now, event: event, density: configuration.density, imageData: await loadImageData(for: event))
         let startOfToday = Calendar.current.startOfDay(for: now)
         let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: startOfToday) ?? now.addingTimeInterval(24 * 60 * 60)
         return Timeline(entries: [entry], policy: .after(tomorrow))
     }
 
+    /// WidgetKit cannot use AsyncImage, so the lead image is fetched here and
+    /// carried in the entry. Kept small and best-effort: any failure just falls
+    /// back to the text-only card.
+    private func loadImageData(for event: HistoricalEvent?) async -> Data? {
+        guard let url = event?.imageURL else { return nil }
+        var request = URLRequest(url: url, timeoutInterval: 8)
+        request.setValue("TodayAlmanac/1.0 (info@somnora.app)", forHTTPHeaderField: "User-Agent")
+        do {
+            let (data, response) = try await URLSession.shared.data(for: request)
+            guard let http = response as? HTTPURLResponse, http.statusCode == 200,
+                  data.count < 2_500_000, UIImage(data: data) != nil else { return nil }
+            return data
+        } catch {
+            return nil
+        }
+    }
+
     private func loadWidgetEvent(date: Date = Date()) async -> HistoricalEvent? {
-        let result = await DataLoader.loadEvents()
+        let result = await DataLoader.loadEvents(resourceCandidates: ["widget-events", "events"])
         let components = Calendar.current.dateComponents([.month, .day], from: date)
         guard let month = components.month, let day = components.day else {
             return result.events.first
         }
 
-        let dated = result.events.filter { $0.matches(month: month, day: day) }
-        let preferred = DataLoader.filterByTone(dated, preference: .balanced)
-        return preferred.sorted(by: sortForDisplay).first ?? result.events.sorted(by: sortForDisplay).first
-    }
-
-    private func sortForDisplay(_ left: HistoricalEvent, _ right: HistoricalEvent) -> Bool {
-        let leftYear = left.year ?? 0
-        let rightYear = right.year ?? 0
-        if leftYear == rightYear {
-            return left.title < right.title
-        }
-        return leftYear < rightYear
+        return DataLoader.displayEvent(month: month, day: day, from: result.events)
     }
 
     private var placeholderEvent: HistoricalEvent {
@@ -111,15 +124,51 @@ struct TodayWidgetEntryView: View {
         WidgetMetrics(density: entry.density)
     }
 
+    private var uiImage: UIImage? {
+        guard let data = entry.imageData else { return nil }
+        return UIImage(data: data)
+    }
+
+    /// Photo backgrounds only apply to the home-screen families; lock-screen
+    /// accessories stay monochrome.
+    private var showsImageBackground: Bool {
+        uiImage != nil && (widgetFamily == .systemSmall || widgetFamily == .systemMedium)
+    }
+
+    private var primaryText: Color { showsImageBackground ? .white : .primary }
+    private var secondaryText: Color { showsImageBackground ? Color.white.opacity(0.82) : .secondary }
+
     var body: some View {
         Group {
             if let event = entry.event {
                 content(for: event)
+                    .shadow(color: showsImageBackground ? .black.opacity(0.45) : .clear, radius: 3, x: 0, y: 1)
             } else {
                 emptyStateView
             }
         }
         .widgetURL(URL(string: "today://today"))
+        .containerBackground(for: .widget) {
+            widgetBackground
+        }
+    }
+
+    @ViewBuilder
+    private var widgetBackground: some View {
+        if let image = uiImage, showsImageBackground {
+            ZStack {
+                Image(uiImage: image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                LinearGradient(
+                    colors: [.black.opacity(0.20), .black.opacity(0.32), .black.opacity(0.74)],
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+            }
+        } else {
+            Rectangle().fill(.fill.tertiary)
+        }
     }
 
     @ViewBuilder
@@ -127,9 +176,37 @@ struct TodayWidgetEntryView: View {
         switch widgetFamily {
         case .systemSmall:
             smallWidgetView(event: event)
+        case .accessoryInline:
+            inlineAccessoryView(event: event)
+        case .accessoryRectangular:
+            rectangularAccessoryView(event: event)
         default:
             mediumWidgetView(event: event)
         }
+    }
+
+    private func inlineAccessoryView(event: HistoricalEvent) -> some View {
+        Text("\(event.yearLabel) · \(event.title)")
+    }
+
+    private func rectangularAccessoryView(event: HistoricalEvent) -> some View {
+        VStack(alignment: .leading, spacing: 2) {
+            HStack(spacing: 5) {
+                Text(event.yearLabel)
+                    .font(.system(size: 13, weight: .semibold, design: .serif))
+
+                Text(event.monthDayString.uppercased())
+                    .font(.system(size: 10, weight: .semibold, design: .rounded))
+                    .tracking(0.8)
+                    .foregroundStyle(.secondary)
+            }
+
+            Text(event.title)
+                .font(.system(size: 12, weight: .medium, design: .serif))
+                .lineLimit(2)
+                .minimumScaleFactor(0.9)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
     }
 
     private func smallWidgetView(event: HistoricalEvent) -> some View {
@@ -137,10 +214,10 @@ struct TodayWidgetEntryView: View {
             HStack(spacing: 6) {
                 Text(event.yearLabel)
                     .font(.system(size: widgetMetrics.smallMetaSize, weight: .semibold, design: .serif))
-                    .foregroundStyle(.primary)
+                    .foregroundStyle(primaryText)
 
                 Rectangle()
-                    .fill(.secondary.opacity(0.5))
+                    .fill(secondaryText.opacity(0.5))
                     .frame(height: 0.6)
             }
 
@@ -148,7 +225,7 @@ struct TodayWidgetEntryView: View {
 
             Text(event.title)
                 .font(.system(size: widgetMetrics.smallTitleSize, weight: .semibold, design: .serif))
-                .foregroundStyle(.primary)
+                .foregroundStyle(primaryText)
                 .lineLimit(widgetMetrics.smallTitleLineLimit)
                 .lineSpacing(widgetMetrics.smallTitleLineSpacing)
                 .minimumScaleFactor(0.82)
@@ -156,7 +233,7 @@ struct TodayWidgetEntryView: View {
             Text(event.category.displayName.uppercased())
                 .font(.system(size: widgetMetrics.smallMetaSize - 1, weight: .semibold, design: .rounded))
                 .tracking(1.2)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(secondaryText)
                 .lineLimit(1)
                 .minimumScaleFactor(0.82)
         }
@@ -170,7 +247,7 @@ struct TodayWidgetEntryView: View {
                 Label(event.category.displayName.uppercased(), systemImage: event.category.icon)
                     .font(.system(size: widgetMetrics.mediumMetaSize - 1, weight: .semibold, design: .rounded))
                     .tracking(1.2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(secondaryText)
                     .labelStyle(.titleAndIcon)
                     .lineLimit(1)
                     .minimumScaleFactor(0.82)
@@ -179,20 +256,20 @@ struct TodayWidgetEntryView: View {
 
                 Text(event.yearLabel)
                     .font(.system(size: widgetMetrics.mediumMetaSize, weight: .semibold, design: .serif))
-                    .foregroundStyle(.primary)
+                    .foregroundStyle(primaryText)
                     .lineLimit(1)
                     .minimumScaleFactor(0.82)
             }
 
             Text(event.title)
                 .font(.system(size: widgetMetrics.mediumTitleSize, weight: .semibold, design: .serif))
-                .foregroundStyle(.primary)
+                .foregroundStyle(primaryText)
                 .lineLimit(2)
                 .minimumScaleFactor(0.86)
 
             Text(event.summary)
                 .font(.system(size: widgetMetrics.mediumSummarySize, weight: .regular, design: .serif))
-                .foregroundStyle(.secondary)
+                .foregroundStyle(secondaryText)
                 .lineLimit(widgetMetrics.mediumSummaryLineLimit)
                 .lineSpacing(widgetMetrics.mediumSummaryLineSpacing)
                 .minimumScaleFactor(0.90)
@@ -201,13 +278,13 @@ struct TodayWidgetEntryView: View {
 
             HStack(spacing: 8) {
                 Rectangle()
-                    .fill(.secondary.opacity(0.5))
+                    .fill(secondaryText.opacity(0.5))
                     .frame(width: 14, height: 0.6)
 
                 Text(event.monthDayString.uppercased())
                     .font(.system(size: widgetMetrics.mediumDateSize - 1, weight: .semibold, design: .rounded))
                     .tracking(1.2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(secondaryText)
                     .lineLimit(1)
                     .minimumScaleFactor(0.82)
             }
@@ -240,11 +317,10 @@ struct TodayWidget: Widget {
             provider: TodayWidgetProvider()
         ) { entry in
             TodayWidgetEntryView(entry: entry)
-                .containerBackground(.fill.tertiary, for: .widget)
         }
         .configurationDisplayName("Today Card")
         .description("A quietly kept historical note for the day.")
-        .supportedFamilies([.systemSmall, .systemMedium])
+        .supportedFamilies([.systemSmall, .systemMedium, .accessoryInline, .accessoryRectangular])
     }
 }
 

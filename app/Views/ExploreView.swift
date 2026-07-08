@@ -4,9 +4,11 @@ struct ExploreView: View {
     @EnvironmentObject var dataStore: DataStore
     @EnvironmentObject var preferences: UserPreferences
 
+    @ScaledMetric(relativeTo: .body) private var typeScale: CGFloat = 1
     @State private var selectedMonth: Int = Calendar.current.component(.month, from: Date())
     @State private var selectedDay: Int = Calendar.current.component(.day, from: Date())
     @State private var selectedCategory: EventCategory?
+    @State private var searchText = ""
 
     private var events: [HistoricalEvent] {
         dataStore.eventsFor(
@@ -18,16 +20,12 @@ struct ExploreView: View {
     }
 
     private var metrics: ReadingMetrics {
-        ReadingMetrics(density: preferences.currentReadingDensity)
+        ReadingMetrics(density: preferences.currentReadingDensity, typeScale: typeScale)
     }
 
     private var suggestedDates: [DateSuggestion] {
-        let uniqueDates = Dictionary(grouping: dataStore.allEvents) { event in
-            DateSuggestion(month: event.month, day: event.day)
-        }
-        .keys
-
-        return uniqueDates
+        dataStore.representedDates
+            .map { DateSuggestion(month: $0.month, day: $0.day) }
             .sorted { left, right in
                 forwardDistance(to: left) < forwardDistance(to: right)
             }
@@ -41,14 +39,20 @@ struct ExploreView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: metrics.rootStackSpacing) {
                     headerSection
-                    dateJumpCard
-                    categoryRail
-                    resultsSection
+                    searchField
+                    if isSearching {
+                        searchResultsSection
+                    } else {
+                        dateJumpCard
+                        categoryRail
+                        resultsSection
+                    }
                 }
                 .padding(.horizontal, 20)
                 .padding(.top, metrics.rootTopPadding)
                 .padding(.bottom, 40)
             }
+            .scrollDismissesKeyboard(.interactively)
             .background(paperBackground.ignoresSafeArea())
             .toolbar(.hidden, for: .navigationBar)
             .navigationDestination(for: HistoricalEvent.self) { event in
@@ -105,6 +109,137 @@ struct ExploreView: View {
         }
     }
 
+    private var trimmedQuery: String {
+        searchText.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
+    private var isSearching: Bool {
+        !trimmedQuery.isEmpty
+    }
+
+    private var searchResults: [HistoricalEvent] {
+        let query = trimmedQuery
+        guard !query.isEmpty else { return [] }
+
+        return dataStore.allEvents
+            .filter { event in
+                event.title.localizedCaseInsensitiveContains(query)
+                    || event.summary.localizedCaseInsensitiveContains(query)
+                    || event.yearLabel == query
+                    || event.tags.contains { $0.localizedCaseInsensitiveContains(query) }
+            }
+            .sorted { left, right in
+                let leftInTitle = left.title.localizedCaseInsensitiveContains(query)
+                let rightInTitle = right.title.localizedCaseInsensitiveContains(query)
+                if leftInTitle != rightInTitle {
+                    return leftInTitle
+                }
+                if left.month != right.month {
+                    return left.month < right.month
+                }
+                if left.day != right.day {
+                    return left.day < right.day
+                }
+                return (left.year ?? 0, left.title) < (right.year ?? 0, right.title)
+            }
+    }
+
+    private var searchField: some View {
+        HStack(spacing: 10) {
+            Image(systemName: "magnifyingglass")
+                .font(.system(size: 14, weight: .semibold))
+                .foregroundStyle(Color("AccentWarm"))
+
+            TextField("Search the archive", text: $searchText)
+                .font(.system(size: 15, weight: .regular, design: .serif))
+                .foregroundStyle(Color("TextPrimary"))
+                .autocorrectionDisabled()
+                .submitLabel(.search)
+
+            if !searchText.isEmpty {
+                Button {
+                    searchText = ""
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .font(.system(size: 15))
+                        .foregroundStyle(Color("TextTertiary"))
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Clear search")
+            }
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 13)
+        .background(
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .fill(Color("CardBackground"))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .strokeBorder(Color("AccentWarm").opacity(0.20), lineWidth: 0.6)
+        )
+        .shadow(color: Color("AccentWarm").opacity(0.06), radius: 8, x: 0, y: 4)
+    }
+
+    private var searchResultsSection: some View {
+        LazyVStack(alignment: .leading, spacing: 18) {
+            Text(searchCountLabel)
+                .font(.system(size: 13, weight: .medium, design: .rounded))
+                .foregroundStyle(Color("TextSecondary"))
+
+            ForEach(searchResults.prefix(60)) { event in
+                NavigationLink(value: event) {
+                    EventCardView(event: event)
+                }
+                .buttonStyle(.plain)
+            }
+
+            if searchResults.count > 60 {
+                Text("Showing the first 60. Narrow the search to see the rest.")
+                    .font(.system(size: 12, weight: .regular, design: .serif))
+                    .italic()
+                    .foregroundStyle(Color("TextTertiary"))
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .padding(.top, 4)
+            }
+
+            if searchResults.isEmpty {
+                emptySearchState
+            }
+        }
+    }
+
+    private var searchCountLabel: String {
+        let count = searchResults.count
+        return "\(count) \(count == 1 ? "entry" : "entries") for \u{201C}\(trimmedQuery)\u{201D}"
+    }
+
+    private var emptySearchState: some View {
+        VStack(spacing: 10) {
+            Image(systemName: "text.magnifyingglass")
+                .font(.system(size: 26, weight: .light))
+                .foregroundStyle(Color("AccentWarm"))
+
+            Text("Nothing in the archive matches yet")
+                .font(.system(size: 16, weight: .semibold, design: .serif))
+                .foregroundStyle(Color("TextPrimary"))
+
+            Text("Try a name, a place, a year, or a single strong word.")
+                .font(.system(size: 14, weight: .regular, design: .serif))
+                .italic()
+                .foregroundStyle(Color("TextSecondary"))
+                .multilineTextAlignment(.center)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 36)
+        .padding(.horizontal, 24)
+        .background(Color("CardBackground"), in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
+                .strokeBorder(Color("AccentWarm").opacity(0.14), lineWidth: 0.6)
+        )
+    }
+
     private var dateJumpCard: some View {
         VStack(alignment: .leading, spacing: 16) {
             Text("Wander to another date")
@@ -121,11 +256,15 @@ struct ExploreView: View {
                 HStack(spacing: 12) {
                     monthSelector
                     daySelector
+                    surpriseButton
                 }
 
                 VStack(alignment: .leading, spacing: 12) {
-                    monthSelector
-                    daySelector
+                    HStack(spacing: 12) {
+                        monthSelector
+                        daySelector
+                    }
+                    surpriseButton
                 }
             }
 
@@ -373,6 +512,39 @@ struct ExploreView: View {
         )
     }
 
+    private var surpriseButton: some View {
+        Button(action: surpriseMe) {
+            HStack(spacing: 6) {
+                Image(systemName: "shuffle")
+                    .font(.system(size: 12, weight: .semibold))
+
+                Text("Surprise me")
+                    .font(.system(size: 13, weight: .semibold, design: .rounded))
+                    .lineLimit(1)
+            }
+            .foregroundStyle(Color("AccentWarm"))
+            .padding(.horizontal, 14)
+            .padding(.vertical, 12)
+            .background(Color("AccentWarm").opacity(0.10), in: Capsule())
+            .overlay(
+                Capsule()
+                    .stroke(Color("AccentWarm").opacity(0.22), lineWidth: 0.5)
+            )
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("Jump to a surprise date")
+    }
+
+    private func surpriseMe() {
+        let candidates = dataStore.representedDates.filter {
+            $0.month != selectedMonth || $0.day != selectedDay
+        }
+        guard let random = candidates.randomElement() else { return }
+        selectedMonth = random.month
+        selectedDay = random.day
+        selectedCategory = nil
+    }
+
     private func suggestionDateButton(_ suggestion: DateSuggestion) -> some View {
         Button(suggestion.shortLabel) {
             selectedMonth = suggestion.month
@@ -492,14 +664,17 @@ private struct DateSuggestion: Hashable, Identifiable {
     let month: Int
     let day: Int
 
+    private static let labelFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d"
+        return formatter
+    }()
+
     var id: String {
         "\(month)-\(day)"
     }
 
     var shortLabel: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMM d"
-
         var components = DateComponents()
         components.year = 2024
         components.month = month
@@ -509,7 +684,7 @@ private struct DateSuggestion: Hashable, Identifiable {
             return "\(month)/\(day)"
         }
 
-        return formatter.string(from: date)
+        return Self.labelFormatter.string(from: date)
     }
 }
 
@@ -518,4 +693,5 @@ private struct DateSuggestion: Hashable, Identifiable {
         .environmentObject(DataStore())
         .environmentObject(UserPreferences())
         .environmentObject(ThumbsStore())
+        .environmentObject(SavedStore())
 }

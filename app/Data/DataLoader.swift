@@ -1,8 +1,16 @@
 import Foundation
 
 class DataLoader {
-    static func loadEvents() async -> EventLoadResult {
-        guard let url = Bundle.main.url(forResource: "events", withExtension: "json") else {
+    /// Loads the first bundled collection found among `resourceCandidates`.
+    /// The app bundles the full corpus as "events"; the widget extension
+    /// bundles the compact per-day slice as "widget-events".
+    static func loadEvents(resourceCandidates: [String] = ["events"]) async -> EventLoadResult {
+        let url = resourceCandidates
+            .lazy
+            .compactMap { Bundle.main.url(forResource: $0, withExtension: "json") }
+            .first
+
+        guard let url else {
             return EventLoadResult(events: fallbackEvents(), issue: .missingCollection)
         }
 
@@ -39,16 +47,26 @@ class DataLoader {
             }
             return events
         case .unflinching:
-            let somber = events.filter { $0.tone == .somber }
-            if !somber.isEmpty {
-                return somber
-            }
-            let nonUplifting = events.filter { $0.tone != .uplifting }
-            if !nonUplifting.isEmpty {
-                return nonUplifting
-            }
-            return filterByTone(events, preference: .balanced)
+            return events
         }
+    }
+
+    /// The single event surfaced for a given day on ambient surfaces
+    /// (widget timeline, morning notification): balanced tone policy,
+    /// then the earliest year with title as tiebreaker.
+    static func displayEvent(month: Int, day: Int, from events: [HistoricalEvent]) -> HistoricalEvent? {
+        let dated = events.filter { $0.matches(month: month, day: day) }
+        let preferred = filterByTone(dated, preference: .balanced)
+        return preferred.min(by: displayOrder) ?? events.min(by: displayOrder)
+    }
+
+    static func displayOrder(_ left: HistoricalEvent, _ right: HistoricalEvent) -> Bool {
+        let leftYear = left.year ?? 0
+        let rightYear = right.year ?? 0
+        if leftYear == rightYear {
+            return left.title < right.title
+        }
+        return leftYear < rightYear
     }
 
     private static func bundleEvents(from bundle: RobBundleEnvelope) -> [HistoricalEvent] {
@@ -139,7 +157,7 @@ enum TonePreference: String, CaseIterable {
         switch self {
         case .uplifting: return "lighter, steadier, more hopeful"
         case .balanced: return "the full, tasteful spread of the day"
-        case .unflinching: return "conflict, consequence, and harder truths"
+        case .unflinching: return "the whole record, harder truths included"
         }
     }
 }

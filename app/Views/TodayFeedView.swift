@@ -1,19 +1,28 @@
+import Combine
 import SwiftUI
 
 struct TodayFeedView: View {
     @EnvironmentObject var dataStore: DataStore
     @EnvironmentObject var preferences: UserPreferences
+    @EnvironmentObject var quizStore: QuizStore
+    @Environment(\.scenePhase) private var scenePhase
+    @ScaledMetric(relativeTo: .body) private var typeScale: CGFloat = 1
+    @State private var currentDate = Date()
+    @State private var weeklyQuiz: WeeklyQuiz?
+    @State private var presentedQuiz: WeeklyQuiz?
+    @State private var navigationPath = NavigationPath()
+    @ObservedObject private var notificationRouter = NotificationRouter.shared
 
     private var events: [HistoricalEvent] {
-        dataStore.eventsForToday(tonePreference: preferences.currentTonePreference)
+        dataStore.eventsFor(date: currentDate, tonePreference: preferences.currentTonePreference)
     }
 
     private var metrics: ReadingMetrics {
-        ReadingMetrics(density: preferences.currentReadingDensity)
+        ReadingMetrics(density: preferences.currentReadingDensity, typeScale: typeScale)
     }
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $navigationPath) {
             ScrollView {
                 VStack(alignment: .leading, spacing: metrics.rootStackSpacing) {
                     headerSection
@@ -25,7 +34,66 @@ struct TodayFeedView: View {
             }
             .background(paperBackground.ignoresSafeArea())
             .toolbar(.hidden, for: .navigationBar)
+            .navigationDestination(for: HistoricalEvent.self) { event in
+                EventDetailView(event: event)
+                    .toolbar(.hidden, for: .tabBar)
+            }
         }
+        .onChange(of: scenePhase) { _, newPhase in
+            if newPhase == .active {
+                refreshCurrentDate()
+            }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .NSCalendarDayChanged).receive(on: RunLoop.main)) { _ in
+            refreshCurrentDate()
+        }
+        .onChange(of: dataStore.isLoading) { _, isLoading in
+            if !isLoading {
+                refreshQuiz()
+                consumePendingNotificationEvent()
+            }
+        }
+        .onReceive(notificationRouter.$pendingEventID) { _ in
+            consumePendingNotificationEvent()
+        }
+        .onAppear(perform: refreshQuiz)
+        .sheet(item: $presentedQuiz) { quiz in
+            QuizView(quiz: quiz)
+        }
+    }
+
+    /// Opens the event a Morning Edition notification was tapped for, once
+    /// the catalog is available.
+    private func consumePendingNotificationEvent() {
+        guard let eventID = notificationRouter.pendingEventID,
+              let event = dataStore.allEvents.first(where: { $0.id == eventID }) else { return }
+        notificationRouter.pendingEventID = nil
+        presentedQuiz = nil
+        navigationPath = NavigationPath([event])
+    }
+
+    private func refreshCurrentDate() {
+        let now = Date()
+        if !Calendar.current.isDate(now, inSameDayAs: currentDate) {
+            currentDate = now
+            refreshQuiz()
+        }
+    }
+
+    private func refreshQuiz() {
+        guard QuizEngine.isQuizDay(currentDate), !dataStore.allEvents.isEmpty else {
+            weeklyQuiz = nil
+            return
+        }
+        let key = QuizEngine.weekKey(for: currentDate)
+        if weeklyQuiz?.weekKey != key {
+            weeklyQuiz = QuizEngine.quiz(for: currentDate, events: dataStore.allEvents)
+        }
+        #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains("-quiz-open"), presentedQuiz == nil {
+            presentedQuiz = weeklyQuiz
+        }
+        #endif
     }
 
     private var paperBackground: some View {
@@ -75,6 +143,19 @@ struct TodayFeedView: View {
             }
 
             morningNote
+
+            if let quiz = weeklyQuiz {
+                Button {
+                    presentedQuiz = quiz
+                } label: {
+                    QuizCardView(
+                        quiz: quiz,
+                        result: quizStore.result(for: quiz.weekKey),
+                        streak: quizStore.streak(asOf: currentDate)
+                    )
+                }
+                .buttonStyle(.plain)
+            }
         }
     }
 
@@ -100,8 +181,6 @@ struct TodayFeedView: View {
     private var contentSection: some View {
         if dataStore.isLoading {
             loadingState
-        } else if let error = dataStore.error, dataStore.allEvents.isEmpty {
-            errorState(error)
         } else if events.isEmpty {
             emptyState
         } else {
@@ -120,10 +199,6 @@ struct TodayFeedView: View {
 
                     closingRule
                 }
-            }
-            .navigationDestination(for: HistoricalEvent.self) { event in
-                EventDetailView(event: event)
-                    .toolbar(.hidden, for: .tabBar)
             }
             .animation(.snappy(duration: 0.28), value: events)
         }
@@ -180,7 +255,7 @@ struct TodayFeedView: View {
                     .tracking(0.5)
             }
 
-            Text("Open a card, follow the thread, and let one strange or beautiful detail change the shape of the day.")
+            Text(morningNoteText)
                 .font(.system(size: 15, weight: .regular, design: .serif))
                 .foregroundStyle(Color("TextSecondary"))
                 .lineSpacing(4)
@@ -325,26 +400,6 @@ struct TodayFeedView: View {
         }
     }
 
-    private func errorState(_ error: Error) -> some View {
-        VStack(spacing: 16) {
-            Image(systemName: "exclamationmark.triangle")
-                .font(.system(size: 34, weight: .light))
-                .foregroundStyle(Color("AccentWarm"))
-
-            Text("The archive needs attention")
-                .font(.system(size: 18, weight: .semibold, design: .serif))
-                .foregroundStyle(Color("TextPrimary"))
-
-            Text(error.localizedDescription)
-                .font(.system(size: 14, weight: .regular, design: .rounded))
-                .foregroundStyle(Color("TextSecondary"))
-                .multilineTextAlignment(.center)
-        }
-        .frame(maxWidth: .infinity)
-        .padding(28)
-        .background(Color("CardBackground"), in: RoundedRectangle(cornerRadius: 24, style: .continuous))
-    }
-
     private func collectionNotice(_ issue: EventLoadIssue) -> some View {
         HStack(alignment: .top, spacing: 12) {
             Image(systemName: "exclamationmark.triangle")
@@ -375,14 +430,33 @@ struct TodayFeedView: View {
         return "\(events.count) \(events.count == 1 ? "moment" : "moments")"
     }
 
-    private var todayDateString: String {
+    private static let morningNoteLines = [
+        "Open a card, follow the thread, and let one strange or beautiful detail change the shape of the day.",
+        "Every date carries more than one story. Start with the one that surprises you.",
+        "History rarely announces itself. Somewhere in today's record is a detail worth carrying around.",
+        "Read one entry slowly. The past tends to reward the unhurried.",
+        "A good almanac is a conversation with everyone who kept notes before you.",
+        "Some of these moments were front-page news; others were barely noticed. Both kinds last.",
+        "Pick a card at random and see how far the thread runs."
+    ]
+
+    private var morningNoteText: String {
+        let day = Calendar.current.ordinality(of: .day, in: .year, for: currentDate) ?? 1
+        return Self.morningNoteLines[day % Self.morningNoteLines.count]
+    }
+
+    private static let headerDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "EEEE, MMMM d"
-        return formatter.string(from: Date())
+        return formatter
+    }()
+
+    private var todayDateString: String {
+        Self.headerDateFormatter.string(from: currentDate)
     }
 
     private var editionNumber: String {
-        let day = Calendar.current.ordinality(of: .day, in: .year, for: Date()) ?? 1
+        let day = Calendar.current.ordinality(of: .day, in: .year, for: currentDate) ?? 1
         return String(format: "%03d", day)
     }
 }
@@ -392,4 +466,6 @@ struct TodayFeedView: View {
         .environmentObject(DataStore())
         .environmentObject(UserPreferences())
         .environmentObject(ThumbsStore())
+        .environmentObject(SavedStore())
+        .environmentObject(QuizStore())
 }

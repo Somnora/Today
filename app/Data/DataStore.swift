@@ -6,16 +6,18 @@ import SwiftUI
 class DataStore: ObservableObject {
     @Published var allEvents: [HistoricalEvent] = []
     @Published var isLoading = false
-    @Published var error: Error?
     @Published var loadIssue: EventLoadIssue?
 
     private var eventsByDate: [String: [HistoricalEvent]] = [:]
+
+    /// Every distinct month/day with at least one event, sorted by calendar
+    /// order. Built once per load so views don't regroup the full corpus.
+    private(set) var representedDates: [MonthDay] = []
 
     func loadEvents() async {
         guard allEvents.isEmpty || loadIssue != nil else { return }
 
         isLoading = true
-        error = nil
         loadIssue = nil
 
         let result = await DataLoader.loadEvents()
@@ -33,7 +35,7 @@ class DataStore: ObservableObject {
     }
 
     var representedDateCount: Int {
-        Set(allEvents.map { dateKey(month: $0.month, day: $0.day) }).count
+        representedDates.count
     }
 
     func eventsFor(month: Int, day: Int, tonePreference: TonePreference = .balanced, category: EventCategory? = nil) -> [HistoricalEvent] {
@@ -51,9 +53,8 @@ class DataStore: ObservableObject {
         }
     }
 
-    func eventsForToday(tonePreference: TonePreference = .balanced, category: EventCategory? = nil) -> [HistoricalEvent] {
-        let today = Date()
-        let components = Calendar.current.dateComponents([.month, .day], from: today)
+    func eventsFor(date: Date, tonePreference: TonePreference = .balanced, category: EventCategory? = nil) -> [HistoricalEvent] {
+        let components = Calendar.current.dateComponents([.month, .day], from: date)
         return eventsFor(
             month: components.month ?? 1,
             day: components.day ?? 1,
@@ -64,12 +65,22 @@ class DataStore: ObservableObject {
 
     private func buildDateIndex() {
         eventsByDate.removeAll()
+        var seenDates = Set<MonthDay>()
         for event in allEvents {
             eventsByDate[dateKey(month: event.month, day: event.day), default: []].append(event)
+            seenDates.insert(MonthDay(month: event.month, day: event.day))
+        }
+        representedDates = seenDates.sorted {
+            ($0.month, $0.day) < ($1.month, $1.day)
         }
     }
 
     private func dateKey(month: Int, day: Int) -> String {
         String(format: "%02d-%02d", month, day)
     }
+}
+
+struct MonthDay: Hashable {
+    let month: Int
+    let day: Int
 }

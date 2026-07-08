@@ -1,0 +1,124 @@
+{
+ "date": "2026-07-08",
+ "pass": "reverify-write-only",
+ "reverified": 405,
+ "changed": 12,
+ "changes": [
+  {
+   "id": "otd-1112-1920-5f7f8b8ec781",
+   "from": "Italy and its neighbor sign the Treaty of Rapallo",
+   "to": "Italy and the Kingdom of Serbs, Croats and Slovenes sign the Treaty of Rapallo",
+   "issue": "Draft's vague 'its neighbor' reads poorly and hides the named party; restored the actual signatory from the sentence (78 chars, within limit)."
+  },
+  {
+   "id": "otd-1013-1908-96c2af031391",
+   "from": "Margaret Travers Symons speaks in the House of Commons",
+   "to": "Margaret Travers Symons is first woman to speak in the House of Commons",
+   "issue": "Draft dropped the notable main point (she was the FIRST woman to speak); restored it, still under 80 chars."
+  },
+  {
+   "id": "otd-0817-1876-74fde58bb2f0",
+   "from": "Gotterdammerung closes the first Bayreuth Festival",
+   "to": "Götterdämmerung closes the first Bayreuth Festival",
+   "issue": "Restored accurate work-title spelling with umlauts (rule 3); sentence spells it Götterdämmerung."
+  },
+  {
+   "id": "otd-1021-1910-4a91cb6a0316",
+   "from": "HMS Niobe arrives as the first Royal Canadian Navy ship",
+   "to": "HMS Niobe arrives as the first large Royal Canadian Navy ship",
+   "issue": "Restored 'large': sentence says first LARGE ship, not first ship of the RCN."
+  },
+  {
+   "id": "otd-1023-1906-c03cbb173b17",
+   "from": "Santos-Dumont flies his biplane 14-bis 50 metres",
+   "to": "Santos-Dumont flies his 14-bis biplane 50 metres",
+   "issue": "Reordered so '50 metres' reads as distance; original adjacency '14-bis 50 metres' read clunkily."
+  },
+  {
+   "id": "otd-0913-1899-04a2d0b77a5e",
+   "from": "Mackinder makes the first ascent of Mount Kenya's Batian",
+   "to": "Mackinder's party makes the first ascent of Mount Kenya's Batian",
+   "issue": "Sentence credits three climbers (Mackinder, Ollier, Brocherel); softened solo attribution to 'party' to stay faithful while keeping the named leader"
+  },
+  {
+   "id": "otd-1213-1636-c77dc9fb711a",
+   "from": "Massachusetts Bay Colony organizes its first militia regiments",
+   "to": "Massachusetts Bay Colony organizes three militia regiments",
+   "issue": "Draft's 'its first' invents a fact not in the sentence; the sentence says three regiments, not that they were the colony's first."
+  },
+  {
+   "id": "otd-1126-1977-3b05d15cd9ac",
+   "from": "A hoax alien broadcast interrupts Southern Television",
+   "to": "An 'Intergalactic Association' speaker interrupts Southern Television",
+   "issue": "Draft's 'hoax' and 'alien' assert an outcome/identity not stated in the sentence; kept the sentence's quoted 'Intergalactic Association' instead."
+  },
+  {
+   "id": "otd-1130-1803-167720ee4b02",
+   "from": "The Balmis smallpox vaccination expedition departs A Coruna",
+   "to": "The Balmis smallpox vaccination expedition departs A Coruña",
+   "issue": "Restored correct place spelling 'A Coruña' (draft dropped the ñ); rule 3 requires accurate place names."
+  },
+  {
+   "id": "otd-1201-1640-75d3391261c4",
+   "from": "Portugal acclaims Joao IV, ending the Iberian Union",
+   "to": "Portugal acclaims João IV, ending the Iberian Union",
+   "issue": "Restored correct spelling 'João IV' (draft dropped the ã); rule 3 requires accurate names."
+  },
+  {
+   "id": "otd-1219-1776-e208e5e753d1",
+   "from": "Thomas Paine publishes the first American Crisis",
+   "to": "Thomas Paine publishes the first American Crisis pamphlet",
+   "issue": "'the first American Crisis' reads as first crisis; added 'pamphlet' to reflect it is the first in the series."
+  },
+  {
+   "id": "otd-1220-1248-91449fabe100",
+   "from": "Louis IX meets Mongol envoys en route to the Crusade",
+   "to": "Louis IX meets Mongol envoys en route to the Seventh Crusade",
+   "issue": "Sentence specifies the Seventh Crusade; named it for accuracy instead of generic 'the Crusade'."
+  }
+ ],
+ "diacritic_restorations": [
+  {
+   "id": "otd-0112-1616-abe2be8ad626",
+   "to": "Belém is founded on the Amazon delta"
+  },
+  {
+   "id": "otd-0121-1525-fb38975d364d",
+   "to": "Swiss Anabaptist Movement is founded in Zürich"
+  },
+  {
+   "id": "otd-0313-1697-0c4f2fa924e9",
+   "to": "Nojpetén, the last Maya capital, falls to Spain"
+  },
+  {
+   "id": "otd-0616-1407-cd7fd79e1ca9",
+   "to": "Ming forces conquer Dai Ngu and capture Hồ Quý Ly"
+  },
+  {
+   "id": "otd-0622-2023-a10030231277",
+   "to": "RTÉ admits undisclosed payments to Ryan Tubridy"
+  },
+  {
+   "id": "otd-0716-1782-3528d7b50503",
+   "to": "Mozart's Die Entführung aus dem Serail premieres in Vienna"
+  },
+  {
+   "id": "otd-0719-1817-680c1e8fdd16",
+   "to": "Schäffer's bid to seize Hawaii for Russia fails"
+  },
+  {
+   "id": "otd-0720-1807-e4d2d0af08e0",
+   "to": "The Niépce brothers patent the Pyréolophore engine"
+  },
+  {
+   "id": "otd-1030-1983-d918930a98f4",
+   "to": "Raúl Alfonsín is elected president of Argentina"
+  },
+  {
+   "id": "otd-1129-1777-2d9617bbf3ba",
+   "to": "San José is founded as the first pueblo in Alta California"
+  }
+ ],
+ "diacritic_count": 10,
+ "note": "Second verify pass over the 405 write-only headlines flagged 12 edits (facts/clarity); a follow-up diacritic sweep restored 10 accented proper nouns/titles the write stage had ASCII-folded, for consistency with the summary text."
+}

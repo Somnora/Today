@@ -4,9 +4,11 @@ struct PreferencesView: View {
     @EnvironmentObject var preferences: UserPreferences
     @EnvironmentObject var dataStore: DataStore
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    @ScaledMetric(relativeTo: .body) private var typeScale: CGFloat = 1
+    @State private var showsPermissionDeniedHint = false
 
     private var metrics: ReadingMetrics {
-        ReadingMetrics(density: preferences.currentReadingDensity)
+        ReadingMetrics(density: preferences.currentReadingDensity, typeScale: typeScale)
     }
 
     var body: some View {
@@ -16,6 +18,7 @@ struct PreferencesView: View {
                     headerSection
                     toneSection
                     densitySection
+                    notificationSection
                     librarySection
                     aboutSection
                 }
@@ -108,6 +111,61 @@ struct PreferencesView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(elevatedSurface)
         }
+    }
+
+    private var notificationSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            sectionLabel("Morning Notification")
+
+            VStack(alignment: .leading, spacing: 14) {
+                Toggle(isOn: notificationBinding) {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Morning Edition")
+                            .font(.system(size: 15, weight: .medium, design: .serif))
+                            .foregroundStyle(Color("TextPrimary"))
+
+                        Text("One event from this day in history, around 8 each morning.")
+                            .font(.system(size: 13, weight: .regular, design: .serif))
+                            .italic()
+                            .foregroundStyle(Color("TextSecondary"))
+                            .lineSpacing(3)
+                    }
+                }
+                .tint(Color("AccentWarm"))
+
+                if showsPermissionDeniedHint {
+                    Text("Notifications are turned off for Today in Time in iOS Settings. Allow them there, then flip this switch again.")
+                        .font(.system(size: 13, weight: .regular, design: .serif))
+                        .foregroundStyle(Color("TextSecondary"))
+                        .lineSpacing(3)
+                }
+            }
+            .padding(18)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(elevatedSurface)
+        }
+    }
+
+    private var notificationBinding: Binding<Bool> {
+        Binding(
+            get: { preferences.morningNotificationsEnabled },
+            set: { enabled in
+                if enabled {
+                    Task {
+                        let granted = await NotificationScheduler.requestAuthorization()
+                        preferences.morningNotificationsEnabled = granted
+                        showsPermissionDeniedHint = !granted
+                        await NotificationScheduler.refresh(enabled: granted, events: dataStore.allEvents)
+                    }
+                } else {
+                    preferences.morningNotificationsEnabled = false
+                    showsPermissionDeniedHint = false
+                    Task {
+                        await NotificationScheduler.refresh(enabled: false, events: [])
+                    }
+                }
+            }
+        )
     }
 
     private var librarySection: some View {
@@ -257,7 +315,7 @@ struct PreferencesView: View {
         case .balanced:
             return "Keep the record thoughtful, clear, and even-handed."
         case .unflinching:
-            return "Lean into the conflict, consequence, and harder truths."
+            return "Read the whole record, including conflict, consequence, and harder truths."
         }
     }
 

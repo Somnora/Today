@@ -4,22 +4,18 @@ struct EventCardView: View {
     let event: HistoricalEvent
     @EnvironmentObject var thumbsStore: ThumbsStore
     @EnvironmentObject var preferences: UserPreferences
+    @ScaledMetric(relativeTo: .body) private var typeScale: CGFloat = 1
 
     private var currentReaction: Reaction? {
         thumbsStore.reactionFor(eventID: event.id)
     }
 
     private var metrics: ReadingMetrics {
-        ReadingMetrics(density: preferences.currentReadingDensity)
+        ReadingMetrics(density: preferences.currentReadingDensity, typeScale: typeScale)
     }
 
     private var toneAccent: Color {
-        switch event.tone {
-        case .uplifting, .balanced:
-            return Color("AccentWarm")
-        case .somber:
-            return Color("AccentWarm")
-        }
+        Color("AccentWarm")
     }
 
     private var toneWashOpacity: Double {
@@ -35,16 +31,21 @@ struct EventCardView: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: metrics.cardStackSpacing) {
-            headerRow
-            yearBlock
-            titleBlock
-            contextBlock
-            footerRow
+        VStack(alignment: .leading, spacing: 0) {
+            EventHeroImage(event: event, height: 168, corners: .topOnly)
+
+            VStack(alignment: .leading, spacing: metrics.cardStackSpacing) {
+                headerRow
+                yearBlock
+                titleBlock
+                contextBlock
+                footerRow
+            }
+            .padding(metrics.cardPadding)
         }
-        .padding(metrics.cardPadding)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(cardSurface)
+        .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
         .overlay(alignment: .top) {
             RoundedRectangle(cornerRadius: 24, style: .continuous)
                 .strokeBorder(

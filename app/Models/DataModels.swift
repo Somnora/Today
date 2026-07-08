@@ -18,6 +18,9 @@ struct HistoricalEvent: Identifiable, Codable, Hashable {
     let whyItMatters: String?
     let provenance: String?
     let editorialStatus: String?
+    let imageURLString: String?
+    let imageAttribution: String?
+    let imageCreditURLString: String?
 
     init(
         id: String,
@@ -36,7 +39,10 @@ struct HistoricalEvent: Identifiable, Codable, Hashable {
         deepDive: String? = nil,
         whyItMatters: String? = nil,
         provenance: String? = nil,
-        editorialStatus: String? = nil
+        editorialStatus: String? = nil,
+        imageURLString: String? = nil,
+        imageAttribution: String? = nil,
+        imageCreditURLString: String? = nil
     ) {
         self.id = id
         self.month = month
@@ -55,6 +61,21 @@ struct HistoricalEvent: Identifiable, Codable, Hashable {
         self.whyItMatters = whyItMatters?.nilIfBlank
         self.provenance = provenance?.nilIfBlank
         self.editorialStatus = editorialStatus?.nilIfBlank
+        self.imageURLString = imageURLString?.nilIfBlank
+        self.imageAttribution = imageAttribution?.nilIfBlank
+        self.imageCreditURLString = imageCreditURLString?.nilIfBlank
+    }
+
+    /// Remote lead image for the event, when one is available.
+    var imageURL: URL? {
+        guard let imageURLString, let url = URL(string: imageURLString) else { return nil }
+        return url
+    }
+
+    /// Link to the source page the image came from (for attribution tap-through).
+    var imageCreditURL: URL? {
+        guard let imageCreditURLString, let url = URL(string: imageCreditURLString) else { return nil }
+        return url
     }
 
     var dateString: String {
@@ -135,6 +156,9 @@ struct HistoricalEvent: Identifiable, Codable, Hashable {
         case sources
         case provenance
         case editorialStatus = "editorial_status"
+        case imageURLString = "image_url"
+        case imageAttribution = "image_attribution"
+        case imageCreditURLString = "image_credit_url"
     }
 
     init(from decoder: Decoder) throws {
@@ -170,6 +194,9 @@ struct HistoricalEvent: Identifiable, Codable, Hashable {
         let tags = try container.decodeStringArrayIfPresent(forKey: .tags) ?? []
         let provenance = try container.decodeTrimmedStringIfPresent(forKey: .provenance)
         let editorialStatus = try container.decodeTrimmedStringIfPresent(forKey: .editorialStatus)
+        let imageURLString = try container.decodeTrimmedStringIfPresent(forKey: .imageURLString)
+        let imageAttribution = try container.decodeTrimmedStringIfPresent(forKey: .imageAttribution)
+        let imageCreditURLString = try container.decodeTrimmedStringIfPresent(forKey: .imageCreditURLString)
 
         guard (1...12).contains(month), (1...31).contains(day), !title.isEmpty, !summary.isEmpty else {
             throw DecodingError.dataCorrupted(
@@ -194,7 +221,10 @@ struct HistoricalEvent: Identifiable, Codable, Hashable {
             deepDive: deepDive,
             whyItMatters: whyItMatters,
             provenance: provenance,
-            editorialStatus: editorialStatus
+            editorialStatus: editorialStatus,
+            imageURLString: imageURLString,
+            imageAttribution: imageAttribution,
+            imageCreditURLString: imageCreditURLString
         )
     }
 
@@ -217,6 +247,9 @@ struct HistoricalEvent: Identifiable, Codable, Hashable {
         try container.encode(sources, forKey: .sources)
         try container.encodeIfPresent(provenance, forKey: .provenance)
         try container.encodeIfPresent(editorialStatus, forKey: .editorialStatus)
+        try container.encodeIfPresent(imageURLString, forKey: .imageURLString)
+        try container.encodeIfPresent(imageAttribution, forKey: .imageAttribution)
+        try container.encodeIfPresent(imageCreditURLString, forKey: .imageCreditURLString)
     }
 }
 
