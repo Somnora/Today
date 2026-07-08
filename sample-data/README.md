@@ -9,7 +9,7 @@ else in the repo replaces them at build time.
 
 | Output path | What it is |
 | --- | --- |
-| `sample-data/events.json` | Top-level JSON array of `HistoricalEvent` records (4389 records, all app-publishable, no bundled deferred records, as of 2026-07-07). |
+| `sample-data/events.json` | Top-level JSON array of `HistoricalEvent` records (3826 records, all app-publishable, no bundled deferred records, as of 2026-07-08). |
 | `<App>.app/events.json` | Same file, copied verbatim by Xcode's `Resources` build phase (app target). |
 | `sample-data/widget-events.json` | Generated slice: one record per calendar day (366 records), trimmed to the fields the widget renders. Regenerate with `python3 .github/scripts/generate_widget_events.py` whenever `events.json` changes; CI fails if it is stale. |
 | `<App>.app/PlugIns/…appex/widget-events.json` | Same slice, copied by the widget target's `Resources` build phase. |
@@ -27,7 +27,7 @@ input, and are ignored from public source control.
 
 `events.json` is the cumulative artifact of a multi-step editorial pipeline
 that lives outside this public app repo. The chain that built the current
-4389-record file:
+3826-record file:
 
 1. **Upstream promoted bundles** — one JSON file per calendar date in the
    private editorial workspace. Remote hostnames and operator paths are not
@@ -57,7 +57,7 @@ that lives outside this public app repo. The chain that built the current
    also carries a `notability` field (topic sitelink count) the widget picker
    uses. This is the batch that added the July 4 1776 Declaration.
 
-There is **no master orchestrator**. The 4389-record current state is
+There is **no master orchestrator**. The 3826-record current state is
 not reproducible by a single command — it is the sum of all those
 batches in chronological order (most recently the July 2026 On This Day
 landmark merge of 1,778 curated records, including 5 hand-authored marquee
@@ -146,6 +146,6 @@ when absent. `image_attribution` / `image_credit_url` back the credit caption
 on the detail screen.
 
 `DataLoader` filters out records where `editorial_status` is
-`duplicate`, `weak_event`, or `defer`. The current bundle contains 4389
+`duplicate`, `weak_event`, or `defer`. The current bundle contains 3826
 app-publishable records and no bundled deferred records. Deferred rows are
 retained only as audit/rework artifacts under `docs/editorial-source-scout/`.

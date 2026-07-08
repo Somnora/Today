@@ -181,7 +181,7 @@ final class QuizEngineTests: XCTestCase {
     func testQuizGeneratesFromTheBundledCorpus() async {
         let result = await DataLoader.loadEvents()
         XCTAssertNil(result.issue)
-        XCTAssertGreaterThan(result.events.count, 4_000)
+        XCTAssertGreaterThan(result.events.count, 3_500)
         let quiz = QuizEngine.quiz(for: date(2026, 7, 10), events: result.events)
         XCTAssertNotNil(quiz)
     }
