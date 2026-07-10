@@ -103,7 +103,7 @@
     "month": 1,
     "one_liner": "Aelia Eudoxia is officially crowned empress of the Eastern Roman Empire.",
     "source": "https://en.wikipedia.org/wiki/Aelia_Eudoxia",
-    "title": "Aelia Eudoxia is officially crowned empress of the Eastern Roman Empire.",
+    "title": "Aelia Eudoxia is crowned Eastern Roman empress",
     "tone": "uplifting",
     "year": 400
   },
@@ -187,7 +187,7 @@
     "month": 1,
     "one_liner": "Emir Abd-ar-Rahman III establishes the Caliphate of Córdoba.",
     "source": "https://en.wikipedia.org/wiki/Emir",
-    "title": "Emir Abd-ar-Rahman III establishes the Caliphate of Córdoba.",
+    "title": "Abd-ar-Rahman III founds the Caliphate of Córdoba",
     "tone": "uplifting",
     "year": 929
   },
@@ -295,7 +295,7 @@
     "month": 1,
     "one_liner": "Thomas Edison and Alexander Graham Bell form the Oriental Telephone Company.",
     "source": "https://en.wikipedia.org/wiki/Thomas_Edison",
-    "title": "Thomas Edison and Alexander Graham Bell form the Oriental Telephone Company.",
+    "title": "Edison and Bell form the Oriental Telephone Company",
     "tone": "uplifting",
     "year": 1881
   },
@@ -595,7 +595,7 @@
     "month": 2,
     "one_liner": "British explorer William Smith discovers the South Shetland Islands.",
     "source": "https://en.wikipedia.org/wiki/British_Empire",
-    "title": "British explorer William Smith discovers the South Shetland Islands.",
+    "title": "William Smith discovers the South Shetland Islands",
     "tone": "uplifting",
     "year": 1819
   },
@@ -655,7 +655,7 @@
     "month": 2,
     "one_liner": "China and Russia sign the Sino-Russian Ili Treaty.",
     "source": "https://en.wikipedia.org/wiki/Qing_dynasty",
-    "title": "China and Russia sign the Sino-Russian Ili Treaty.",
+    "title": "China and Russia sign the Ili Treaty",
     "tone": "uplifting",
     "year": 1881
   },
@@ -667,7 +667,7 @@
     "month": 2,
     "one_liner": "George Frideric Handel's opera Nero premiered in Hamburg.",
     "source": "https://en.wikipedia.org/wiki/George_Frideric_Handel",
-    "title": "George Frideric Handel's opera Nero premiered in Hamburg.",
+    "title": "Handel's opera Nero premieres in Hamburg",
     "tone": "uplifting",
     "year": 1705
   },
@@ -811,7 +811,7 @@
     "month": 3,
     "one_liner": "Ferdowsi completes his epic poem Shahnameh.",
     "source": "https://en.wikipedia.org/wiki/Ferdowsi",
-    "title": "Ferdowsi completes his epic poem Shahnameh.",
+    "title": "Ferdowsi completes his epic Shahnameh",
     "tone": "uplifting",
     "year": 1010
   },
@@ -1074,7 +1074,7 @@
     "month": 3,
     "one_liner": "The National Bank of Greece is founded in Athens.",
     "source": "https://en.wikipedia.org/wiki/National_Bank_of_Greece",
-    "title": "The National Bank of Greece is founded in Athens.",
+    "title": "The National Bank of Greece opens in Athens",
     "tone": "uplifting",
     "year": 1841
   },
@@ -1109,7 +1109,7 @@
     "month": 4,
     "one_liner": "Ludwig van Beethoven leads the premiere of his First Symphony in Vienna.",
     "source": "https://en.wikipedia.org/wiki/Ludwig_van_Beethoven",
-    "title": "Ludwig van Beethoven leads the premiere of his First Symphony in Vienna.",
+    "title": "Beethoven premieres his First Symphony in Vienna",
     "tone": "uplifting",
     "year": 1800
   },
@@ -1467,7 +1467,7 @@
     "month": 5,
     "one_liner": "King Richard I of England gave the city of Portsmouth its first royal charter.",
     "source": "https://en.wikipedia.org/wiki/Richard_I_of_England",
-    "title": "King Richard I of England gave the city of Portsmouth its first royal charter.",
+    "title": "Richard I grants Portsmouth its first royal charter",
     "tone": "uplifting",
     "year": 1194
   },
@@ -1503,7 +1503,7 @@
     "month": 5,
     "one_liner": "In France, the Estates-General convenes for the first time since 1614.",
     "source": "https://en.wikipedia.org/wiki/France",
-    "title": "In France, the Estates-General convenes for the first time since 1614.",
+    "title": "France's Estates-General meets for the first time since 1614",
     "tone": "uplifting",
     "year": 1789
   },
@@ -1515,7 +1515,7 @@
     "month": 5,
     "one_liner": "Steve Jobs unveiled the iMac G3' personal computer.",
     "source": "https://en.wikipedia.org/wiki/Steve_Jobs",
-    "title": "Steve Jobs unveiled the iMac G3' personal computer.",
+    "title": "Steve Jobs unveils the iMac G3",
     "tone": "uplifting",
     "year": 1998
   },
@@ -1539,7 +1539,7 @@
     "month": 5,
     "one_liner": "William Coddington founds Newport, Rhode Island.",
     "source": "https://en.wikipedia.org/wiki/William_Coddington",
-    "title": "William Coddington founds Newport, Rhode Island.",
+    "title": "Coddington founds Newport, Rhode Island",
     "tone": "uplifting",
     "year": 1639
   },
@@ -1598,7 +1598,7 @@
     "month": 5,
     "one_liner": "Mexican authorities discovered 49 dismembered bodies in Cadereyta Jiménez.",
     "source": "https://en.wikipedia.org/wiki/Cadereyta_Jim%C3%A9nez_massacre",
-    "title": "Mexican authorities discovered 49 dismembered bodies in Cadereyta Jiménez.",
+    "title": "Mexican authorities find 49 bodies in Cadereyta Jiménez",
     "tone": "uplifting",
     "year": 2012
   },
@@ -1694,7 +1694,7 @@
     "month": 5,
     "one_liner": "Coronation of James I of Scotland at Scone.",
     "source": "https://en.wikipedia.org/wiki/James_I_of_Scotland",
-    "title": "Coronation of James I of Scotland at Scone.",
+    "title": "James I of Scotland is crowned at Scone",
     "tone": "uplifting",
     "year": 1424
   },
@@ -1838,7 +1838,7 @@
     "month": 6,
     "one_liner": "The Colony of Virginia gets a charter, extending borders from \"sea to sea\".",
     "source": "https://en.wikipedia.org/wiki/Colony_of_Virginia",
-    "title": "The Colony of Virginia gets a charter, extending borders from \"sea to sea\".",
+    "title": "The Colony of Virginia receives a sea-to-sea charter",
     "tone": "uplifting",
     "year": 1608
   },
@@ -1934,7 +1934,7 @@
     "month": 6,
     "one_liner": "The United States Naval Academy graduates its first class of students.",
     "source": "https://en.wikipedia.org/wiki/United_States_Naval_Academy",
-    "title": "The United States Naval Academy graduates its first class of students.",
+    "title": "The US Naval Academy graduates its first class",
     "tone": "uplifting",
     "year": 1854
   },
@@ -1958,7 +1958,7 @@
     "month": 6,
     "one_liner": "A ceasefire is negotiated between Bolivia and Paraguay, ending the Chaco War.",
     "source": "https://en.wikipedia.org/wiki/Bolivia",
-    "title": "A ceasefire is negotiated between Bolivia and Paraguay, ending the Chaco War.",
+    "title": "Bolivia and Paraguay agree a ceasefire, ending the Chaco War",
     "tone": "uplifting",
     "year": 1935
   },
@@ -2066,7 +2066,7 @@
     "month": 6,
     "one_liner": "Rudyard Kipling's poem Mandalay was published.",
     "source": "https://en.wikipedia.org/wiki/Rudyard_Kipling",
-    "title": "Rudyard Kipling's poem Mandalay was published.",
+    "title": "Kipling publishes his poem Mandalay",
     "tone": "uplifting",
     "year": 1890
   },
@@ -2090,7 +2090,7 @@
     "month": 6,
     "one_liner": "A peace treaty between the Flemish and the French is signed at Athis-sur-Orge.",
     "source": "https://en.wikipedia.org/wiki/Flanders",
-    "title": "A peace treaty between the Flemish and the French is signed at Athis-sur-Orge.",
+    "title": "The Flemish and French sign peace at Athis-sur-Orge",
     "tone": "uplifting",
     "year": 1305
   },
@@ -2330,7 +2330,7 @@
     "month": 7,
     "one_liner": "The Carabinieri, the national gendarmerie of Italy, is established.",
     "source": "https://en.wikipedia.org/wiki/Carabinieri",
-    "title": "The Carabinieri, the national gendarmerie of Italy, is established.",
+    "title": "Italy's Carabinieri gendarmerie is established",
     "tone": "uplifting",
     "year": 1814
   },
@@ -2366,7 +2366,7 @@
     "month": 7,
     "one_liner": "The first banknotes in Europe are issued by the Swedish bank Stockholms Banco.",
     "source": "https://en.wikipedia.org/wiki/Banknote",
-    "title": "The first banknotes in Europe are issued by the Swedish bank Stockholms Banco.",
+    "title": "Stockholms Banco issues Europe's first banknotes",
     "tone": "uplifting",
     "year": 1661
   },
@@ -2484,7 +2484,7 @@
     "month": 7,
     "one_liner": "Premiere of Richard Wagner's opera Parsifal at Bayreuth.",
     "source": "https://en.wikipedia.org/wiki/Richard_Wagner",
-    "title": "Premiere of Richard Wagner's opera Parsifal at Bayreuth.",
+    "title": "Wagner's Parsifal premieres at Bayreuth",
     "tone": "uplifting",
     "year": 1882
   },
@@ -2520,7 +2520,7 @@
     "month": 7,
     "one_liner": "The Neo-Babylonian Empire sacks Jerusalem and destroys the First Temple.",
     "source": "https://en.wikipedia.org/wiki/Neo-Babylonian_Empire",
-    "title": "The Neo-Babylonian Empire sacks Jerusalem and destroys the First Temple.",
+    "title": "Babylonians sack Jerusalem and destroy the First Temple",
     "tone": "uplifting",
     "year": -587
   },
@@ -2544,7 +2544,7 @@
     "month": 7,
     "one_liner": "Christchurch, New Zealand, is chartered as a city.",
     "source": "https://en.wikipedia.org/wiki/Christchurch",
-    "title": "Christchurch, New Zealand, is chartered as a city.",
+    "title": "Christchurch receives its city charter",
     "tone": "uplifting",
     "year": 1856
   },
@@ -2628,7 +2628,7 @@
     "month": 8,
     "one_liner": "The first federal Indian Reservation is created by the United States.",
     "source": "https://en.wikipedia.org/wiki/Indian_reservation",
-    "title": "The first federal Indian Reservation is created by the United States.",
+    "title": "The United States creates the first federal Indian Reservation",
     "tone": "uplifting",
     "year": 1786
   },
@@ -3332,7 +3332,7 @@
     "month": 10,
     "one_liner": "Dr. No, the first James Bond film, was released.",
     "source": "https://en.wikipedia.org/wiki/Dr._No_(film)",
-    "title": "Dr. No, the first James Bond film, was released.",
+    "title": "James Bond makes his film debut in Dr. No",
     "tone": "uplifting",
     "year": 1962
   },
@@ -3356,7 +3356,7 @@
     "month": 10,
     "one_liner": "The charter for the Province of Massachusetts Bay is issued.",
     "source": "https://en.wikipedia.org/wiki/Province_of_Massachusetts_Bay",
-    "title": "The charter for the Province of Massachusetts Bay is issued.",
+    "title": "The Province of Massachusetts Bay receives its charter",
     "tone": "uplifting",
     "year": 1691
   },
@@ -3368,7 +3368,7 @@
     "month": 10,
     "one_liner": "The first session of the Council of Chalcedon begins.",
     "source": "https://en.wikipedia.org/wiki/Council_of_Chalcedon",
-    "title": "The first session of the Council of Chalcedon begins.",
+    "title": "The Council of Chalcedon opens its first session",
     "tone": "uplifting",
     "year": 451
   },
@@ -3404,7 +3404,7 @@
     "month": 10,
     "one_liner": "In Washington, D.C., the Daughters of the American Revolution was founded.",
     "source": "https://en.wikipedia.org/wiki/Washington%2C_D.C.",
-    "title": "In Washington, D.C., the Daughters of the American Revolution was founded.",
+    "title": "The Daughters of the American Revolution is founded",
     "tone": "uplifting",
     "year": 1890
   },
@@ -3428,7 +3428,7 @@
     "month": 10,
     "one_liner": "First known conversation in modern Hebrew by Eliezer Ben-Yehuda and friends.",
     "source": "https://en.wikipedia.org/wiki/Revival_of_the_Hebrew_language",
-    "title": "First known conversation in modern Hebrew by Eliezer Ben-Yehuda and friends.",
+    "title": "Eliezer Ben-Yehuda holds the first modern Hebrew conversation",
     "tone": "uplifting",
     "year": 1881
   },
@@ -3488,7 +3488,7 @@
     "month": 10,
     "one_liner": "African-American poet Phillis Wheatley is freed from slavery.",
     "source": "https://en.wikipedia.org/wiki/African_Americans",
-    "title": "African-American poet Phillis Wheatley is freed from slavery.",
+    "title": "Poet Phillis Wheatley is freed from slavery",
     "tone": "uplifting",
     "year": 1775
   },
@@ -3512,7 +3512,7 @@
     "month": 10,
     "one_liner": "Space Shuttle Columbia launches on STS-73.",
     "source": "https://en.wikipedia.org/wiki/Space_Shuttle_Columbia",
-    "title": "Space Shuttle Columbia launches on STS-73.",
+    "title": "Space Shuttle Columbia lifts off on STS-73",
     "tone": "uplifting",
     "year": 1995
   },
@@ -3644,7 +3644,7 @@
     "month": 10,
     "one_liner": "Leiden University Library opens its doors after its founding in 1575.",
     "source": "https://en.wikipedia.org/wiki/Leiden_University_Library",
-    "title": "Leiden University Library opens its doors after its founding in 1575.",
+    "title": "Leiden University Library opens its doors",
     "tone": "uplifting",
     "year": 1587
   },
@@ -3680,7 +3680,7 @@
     "month": 11,
     "one_liner": "Christopher Columbus first sights the island of Dominica in the Caribbean Sea.",
     "source": "https://en.wikipedia.org/wiki/Christopher_Columbus",
-    "title": "Christopher Columbus first sights the island of Dominica in the Caribbean Sea.",
+    "title": "Columbus sights the island of Dominica",
     "tone": "uplifting",
     "year": 1493
   },
@@ -3740,7 +3740,7 @@
     "month": 11,
     "one_liner": "The Bodleian Library at the University of Oxford is opened to the public.",
     "source": "https://en.wikipedia.org/wiki/Bodleian_Library",
-    "title": "The Bodleian Library at the University of Oxford is opened to the public.",
+    "title": "The Bodleian Library opens to the public",
     "tone": "uplifting",
     "year": 1602
   },
@@ -3860,7 +3860,7 @@
     "month": 11,
     "one_liner": "Christopher Columbus first sights the island now known as Puerto Rico.",
     "source": "https://en.wikipedia.org/wiki/Christopher_Columbus",
-    "title": "Christopher Columbus first sights the island now known as Puerto Rico.",
+    "title": "Columbus sights the island now known as Puerto Rico",
     "tone": "uplifting",
     "year": 1493
   },
@@ -3884,7 +3884,7 @@
     "month": 11,
     "one_liner": "New Jersey becomes the first U.S. state to ratify the Bill of Rights.",
     "source": "https://en.wikipedia.org/wiki/New_Jersey",
-    "title": "New Jersey becomes the first U.S. state to ratify the Bill of Rights.",
+    "title": "New Jersey is first to ratify the Bill of Rights",
     "tone": "uplifting",
     "year": 1789
   },
@@ -3944,7 +3944,7 @@
     "month": 11,
     "one_liner": "Gustav Mahler's Symphony No. 4 premiered in Munich.",
     "source": "https://en.wikipedia.org/wiki/Gustav_Mahler",
-    "title": "Gustav Mahler's Symphony No. 4 premiered in Munich.",
+    "title": "Mahler's Symphony No. 4 premieres in Munich",
     "tone": "uplifting",
     "year": 1901
   },
@@ -3980,7 +3980,7 @@
     "month": 11,
     "one_liner": "Beethoven's Piano Concerto No. 5 premiered at the Gewandhaus in Leipzig.",
     "source": "https://en.wikipedia.org/wiki/Ludwig_van_Beethoven",
-    "title": "Beethoven's Piano Concerto No. 5 premiered at the Gewandhaus in Leipzig.",
+    "title": "Beethoven's Piano Concerto No. 5 premieres in Leipzig",
     "tone": "uplifting",
     "year": 1811
   },
@@ -3992,7 +3992,7 @@
     "month": 11,
     "one_liner": "Michael Jackson's Thriller, the best-selling album of all time, was released.",
     "source": "https://en.wikipedia.org/wiki/Michael_Jackson",
-    "title": "Michael Jackson's Thriller, the best-selling album of all time, was released.",
+    "title": "Michael Jackson's Thriller is released",
     "tone": "uplifting",
     "year": 1982
   },
@@ -4076,7 +4076,7 @@
     "month": 12,
     "one_liner": "The Washington Monument in Washington, D.C., is completed.",
     "source": "https://en.wikipedia.org/wiki/Washington_Monument",
-    "title": "The Washington Monument in Washington, D.C., is completed.",
+    "title": "The Washington Monument is completed",
     "tone": "uplifting",
     "year": 1884
   },
@@ -4148,7 +4148,7 @@
     "month": 12,
     "one_liner": "Kenya declares independence from Great Britain.",
     "source": "https://en.wikipedia.org/wiki/Kenya",
-    "title": "Kenya declares independence from Great Britain.",
+    "title": "Kenya declares independence from Britain",
     "tone": "uplifting",
     "year": 1963
   },
@@ -4244,7 +4244,7 @@
     "month": 12,
     "one_liner": "The Louisiana Purchase is completed at a ceremony in New Orleans.",
     "source": "https://en.wikipedia.org/wiki/Louisiana_Purchase",
-    "title": "The Louisiana Purchase is completed at a ceremony in New Orleans.",
+    "title": "The Louisiana Purchase is completed in New Orleans",
     "tone": "uplifting",
     "year": 1803
   },

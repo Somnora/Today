@@ -1,0 +1,1612 @@
+{
+  "date": "2026-07-10",
+  "count": 178,
+  "verified": 178,
+  "verify_changed": 8,
+  "reason": "titles were word-for-word copies of the summary, rendering duplicated text on cards and the medium widget",
+  "method": "multi-agent write+verify workflow with shared style guide (same playbook as headline-rewrite-20260708), plus programmatic style gate: length<=80, no trailing period/ellipsis/dashes/emoji, no residual title==summary, diacritic fidelity vs source sentence",
+  "changes": [
+    {
+      "id": "june-24-2010-57d02eb06a0fd660",
+      "year": 2010,
+      "category": "politics",
+      "sentence_source": "Julia Gillard becomes Australia's first woman prime minister.",
+      "old_title": "Julia Gillard becomes Australia's first woman prime minister",
+      "new_title": "Julia Gillard becomes Australia's first woman PM",
+      "verify_changed": false
+    },
+    {
+      "id": "march-01-2002-e215679a91127c05",
+      "year": 2002,
+      "category": "science",
+      "sentence_source": "Space Shuttle Columbia is launched on STS-109 to service the Hubble Space Telescope",
+      "old_title": "Space Shuttle Columbia is launched on STS-109 to service the Hubble Space Telescope",
+      "new_title": "Shuttle Columbia launches to service Hubble",
+      "verify_changed": false
+    },
+    {
+      "id": "march-30-2017-bc534234484ec92e",
+      "year": 2017,
+      "category": "science",
+      "sentence_source": "SpaceX conducts the world's first reflight of an orbital class rocket",
+      "old_title": "SpaceX conducts the world's first reflight of an orbital class rocket",
+      "new_title": "SpaceX achieves the first reflight of an orbital class rocket",
+      "verify_changed": false
+    },
+    {
+      "id": "february-07-1940-28617ae3e7feeaf7",
+      "year": 1940,
+      "category": "arts",
+      "sentence_source": "Disney's Pinocchio premieres in New York",
+      "old_title": "Disney's Pinocchio premieres in New York",
+      "new_title": "Disney's Pinocchio debuts in New York",
+      "verify_changed": false
+    },
+    {
+      "id": "february-09-1971-8801fd4014bfc010",
+      "year": 1971,
+      "category": "science",
+      "sentence_source": "Apollo program: Apollo 14 returns to Earth after the third human Moon landing",
+      "old_title": "Apollo program: Apollo 14 returns to Earth after the third human Moon landing",
+      "new_title": "Apollo 14 returns to Earth after the third Moon landing",
+      "verify_changed": false
+    },
+    {
+      "id": "january-01-1990-b56956b18b0aba18",
+      "year": 1990,
+      "category": "politics",
+      "sentence_source": "David Dinkins is sworn in as New York City mayor.",
+      "old_title": "David Dinkins is sworn in as New York City mayor",
+      "new_title": "David Dinkins is sworn in as mayor of New York City",
+      "verify_changed": false
+    },
+    {
+      "id": "january-13-1990-1e893c7c5878b8cb",
+      "year": 1990,
+      "category": "politics",
+      "sentence_source": "Douglas Wilder is inaugurated governor of Virginia.",
+      "old_title": "Douglas Wilder is inaugurated governor of Virginia",
+      "new_title": "Douglas Wilder takes office as governor of Virginia",
+      "verify_changed": false
+    },
+    {
+      "id": "july-10-2007-f21453e39d9ac93d",
+      "year": 2007,
+      "category": "exploration",
+      "sentence_source": "Erden Eruç begins the first solo human-powered circumnavigation of the world",
+      "old_title": "Erden Eruç begins the first solo human-powered circumnavigation of the world",
+      "new_title": "Erden Eruç begins first solo human-powered circumnavigation",
+      "verify_changed": false
+    },
+    {
+      "id": "august-09-2012-15fee8be7696a0b9",
+      "year": 2012,
+      "category": "sports",
+      "sentence_source": "Shannon Eastin becomes the first woman to officiate an NFL game",
+      "old_title": "Shannon Eastin becomes the first woman to officiate an NFL game",
+      "new_title": "Shannon Eastin is the first woman to officiate an NFL game",
+      "verify_changed": false
+    },
+    {
+      "id": "august-23-2023-1019d02748f085e7",
+      "year": 2023,
+      "category": "science",
+      "sentence_source": "Chandrayaan-3 mission lands on the Moon for the first time in Indian history",
+      "old_title": "Chandrayaan-3 mission lands on the Moon for the first time in Indian history",
+      "new_title": "Chandrayaan-3 makes India's first Moon landing",
+      "verify_changed": false
+    },
+    {
+      "id": "november-06-2012-dc7ee6f2c6e33836",
+      "year": 2012,
+      "category": "politics",
+      "sentence_source": "Tammy Baldwin becomes the first openly gay politician to be elected to the United States Senate",
+      "old_title": "Tammy Baldwin becomes the first openly gay politician to be elected to the United States Senate",
+      "new_title": "Tammy Baldwin is the first openly gay politician elected to the Senate",
+      "verify_changed": false
+    },
+    {
+      "id": "november-11-1981-17aa15ef8f6052c7",
+      "year": 1981,
+      "category": "arts",
+      "sentence_source": "Antigua and Barbuda joins the United Nations",
+      "old_title": "Antigua and Barbuda joins the United Nations",
+      "new_title": "Antigua and Barbuda joins the UN",
+      "verify_changed": false
+    },
+    {
+      "id": "november-17-1940-20fcc74b2ae72b7a",
+      "year": 1940,
+      "category": "arts",
+      "sentence_source": "The Tartu Art Museum is established in Tartu, Estonia",
+      "old_title": "The Tartu Art Museum is established in Tartu, Estonia",
+      "new_title": "The Tartu Art Museum is founded in Estonia",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0102-1788-b0b87c831c72",
+      "year": 1788,
+      "category": "politics",
+      "sentence_source": "Georgia becomes the fourth state to ratify the United States Constitution.",
+      "old_title": "Georgia becomes the fourth state to ratify the United States Constitution.",
+      "new_title": "Georgia ratifies the US Constitution as the fourth state",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0109-1788-7e71891750ef",
+      "year": 1788,
+      "category": "politics",
+      "sentence_source": "Connecticut becomes the fifth state to ratify the United States Constitution.",
+      "old_title": "Connecticut becomes the fifth state to ratify the United States Constitution.",
+      "new_title": "Connecticut ratifies the US Constitution as the fifth state",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0109-1816-cda0853fe1e6",
+      "year": 1816,
+      "category": "science",
+      "sentence_source": "Humphry Davy tests his safety lamp for miners at Hebburn Colliery.",
+      "old_title": "Humphry Davy tests his safety lamp for miners at Hebburn Colliery.",
+      "new_title": "Humphry Davy tests his miners' safety lamp at Hebburn Colliery",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0109-400-0e52b7ba648d",
+      "year": 400,
+      "category": "world",
+      "sentence_source": "Aelia Eudoxia is officially crowned empress of the Eastern Roman Empire.",
+      "old_title": "Aelia Eudoxia is officially crowned empress of the Eastern Roman Empire.",
+      "new_title": "Aelia Eudoxia is crowned Eastern Roman empress",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0111-1569-10a5deb605ac",
+      "year": 1569,
+      "category": "history",
+      "sentence_source": "First recorded lottery in England.",
+      "old_title": "First recorded lottery in England.",
+      "new_title": "England holds its first recorded lottery",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0112-1865-4975b6ca4e26",
+      "year": 1865,
+      "category": "history",
+      "sentence_source": "The foundation stone of Saint Fin Barre's Cathedral in Cork was laid.",
+      "old_title": "The foundation stone of Saint Fin Barre's Cathedral in Cork was laid.",
+      "new_title": "Foundation stone laid for Saint Fin Barre's Cathedral in Cork",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0116-929-5fea3eb9f9b0",
+      "year": 929,
+      "category": "history",
+      "sentence_source": "Emir Abd-ar-Rahman III establishes the Caliphate of Córdoba.",
+      "old_title": "Emir Abd-ar-Rahman III establishes the Caliphate of Córdoba.",
+      "new_title": "Abd-ar-Rahman III founds the Caliphate of Córdoba",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0119-1788-6bedcba2ff61",
+      "year": 1788,
+      "category": "history",
+      "sentence_source": "The second group of ships of the First Fleet arrive at Botany Bay.",
+      "old_title": "The second group of ships of the First Fleet arrive at Botany Bay.",
+      "new_title": "First Fleet's second group of ships reaches Botany Bay",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0122-1890-c0dd3d42c8f7",
+      "year": 1890,
+      "category": "history",
+      "sentence_source": "The United Mine Workers of America is founded in Columbus, Ohio.",
+      "old_title": "The United Mine Workers of America is founded in Columbus, Ohio.",
+      "new_title": "United Mine Workers of America is founded in Ohio",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0125-1765-c5f341a30200",
+      "year": 1765,
+      "category": "exploration",
+      "sentence_source": "Port Egmont, the first British colony in the Falkland Islands, was founded.",
+      "old_title": "Port Egmont, the first British colony in the Falkland Islands, was founded.",
+      "new_title": "Britain founds Port Egmont, its first Falklands colony",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0125-1881-5c1ca510f2b2",
+      "year": 1881,
+      "category": "technology",
+      "sentence_source": "Thomas Edison and Alexander Graham Bell form the Oriental Telephone Company.",
+      "old_title": "Thomas Edison and Alexander Graham Bell form the Oriental Telephone Company.",
+      "new_title": "Edison and Bell form the Oriental Telephone Company",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0128-1851-4ed47b9a10bd",
+      "year": 1851,
+      "category": "culture",
+      "sentence_source": "Northwestern University becomes the first chartered university in Illinois.",
+      "old_title": "Northwestern University becomes the first chartered university in Illinois.",
+      "new_title": "Northwestern becomes Illinois's first chartered university",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0129-1959-8b1a91eb0e9f",
+      "year": 1959,
+      "category": "arts",
+      "sentence_source": "The first Melodifestivalen is held at Cirkus in Stockholm, Sweden.",
+      "old_title": "The first Melodifestivalen is held at Cirkus in Stockholm, Sweden.",
+      "new_title": "The first Melodifestivalen is held in Stockholm",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0130-1847-b89982a32191",
+      "year": 1847,
+      "category": "exploration",
+      "sentence_source": "Yerba Buena, California is renamed San Francisco, California.",
+      "old_title": "Yerba Buena, California is renamed San Francisco, California.",
+      "new_title": "Yerba Buena is renamed San Francisco",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0203-1690-e0075c560176",
+      "year": 1690,
+      "category": "history",
+      "sentence_source": "The colony of Massachusetts issues the first paper money in the Americas.",
+      "old_title": "The colony of Massachusetts issues the first paper money in the Americas.",
+      "new_title": "Massachusetts issues the first paper money in the Americas",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0203-1783-2f48458569b1",
+      "year": 1783,
+      "category": "history",
+      "sentence_source": "Spain–United States relations are first established.",
+      "old_title": "Spain–United States relations are first established.",
+      "new_title": "Spain and the United States establish relations",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0204-1859-73d4068c9d45",
+      "year": 1859,
+      "category": "science",
+      "sentence_source": "The Codex Sinaiticus is discovered in Egypt.",
+      "old_title": "The Codex Sinaiticus is discovered in Egypt.",
+      "new_title": "Codex Sinaiticus found in Egypt",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0212-1889-7483856b51bb",
+      "year": 1889,
+      "category": "arts",
+      "sentence_source": "Antonín Dvořák's Jakobín is premiered at the National Theater in Prague.",
+      "old_title": "Antonín Dvořák's Jakobín is premiered at the National Theater in Prague.",
+      "new_title": "Dvořák's Jakobín premieres at Prague's National Theater",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0216-1899-1bf42d7015ca",
+      "year": 1899,
+      "category": "sports",
+      "sentence_source": "Iceland's first football club, Knattspyrnufélag Reykjavíkur, is founded.",
+      "old_title": "Iceland's first football club, Knattspyrnufélag Reykjavíkur, is founded.",
+      "new_title": "Knattspyrnufélag Reykjavíkur founded as Iceland's first football club",
+      "verify_changed": true
+    },
+    {
+      "id": "otd-0217-1894-7c08c31d9b81",
+      "year": 1894,
+      "category": "technology",
+      "sentence_source": "Rudolf Diesel's first working diesel engine ran for one minute.",
+      "old_title": "Rudolf Diesel's first working diesel engine ran for one minute.",
+      "new_title": "Rudolf Diesel's first diesel engine runs for one minute",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0219-1819-c7d6fac058bd",
+      "year": 1819,
+      "category": "science",
+      "sentence_source": "British explorer William Smith discovers the South Shetland Islands.",
+      "old_title": "British explorer William Smith discovers the South Shetland Islands.",
+      "new_title": "William Smith discovers the South Shetland Islands",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0221-1878-7dc9be77d339",
+      "year": 1878,
+      "category": "technology",
+      "sentence_source": "The first telephone directory is issued in New Haven, Connecticut.",
+      "old_title": "The first telephone directory is issued in New Haven, Connecticut.",
+      "new_title": "The first telephone directory appears in New Haven",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0221-1885-9c78d4131d49",
+      "year": 1885,
+      "category": "world",
+      "sentence_source": "The newly completed Washington Monument is dedicated.",
+      "old_title": "The newly completed Washington Monument is dedicated.",
+      "new_title": "The completed Washington Monument is dedicated",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0222-1371-aefe6016ac3c",
+      "year": 1371,
+      "category": "history",
+      "sentence_source": "Robert II became King of Scots as the first monarch of the House of Stewart.",
+      "old_title": "Robert II became King of Scots as the first monarch of the House of Stewart.",
+      "new_title": "Robert II becomes first Stewart King of Scots",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0223-1883-47e3d210cdd2",
+      "year": 1883,
+      "category": "politics",
+      "sentence_source": "Alabama becomes the first U.S. state to enact an anti-trust law.",
+      "old_title": "Alabama becomes the first U.S. state to enact an anti-trust law.",
+      "new_title": "Alabama enacts the first US state anti-trust law",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0224-1868-e7c0c5db7a65",
+      "year": 1868,
+      "category": "politics",
+      "sentence_source": "Andrew Johnson became the first U.S. president to be impeached.",
+      "old_title": "Andrew Johnson became the first U.S. president to be impeached.",
+      "new_title": "Andrew Johnson is the first US president to be impeached",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0224-1881-d11a6535cc41",
+      "year": 1881,
+      "category": "world",
+      "sentence_source": "China and Russia sign the Sino-Russian Ili Treaty.",
+      "old_title": "China and Russia sign the Sino-Russian Ili Treaty.",
+      "new_title": "China and Russia sign the Ili Treaty",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0225-1705-7a0a8df0416d",
+      "year": 1705,
+      "category": "arts",
+      "sentence_source": "George Frideric Handel's opera Nero premiered in Hamburg.",
+      "old_title": "George Frideric Handel's opera Nero premiered in Hamburg.",
+      "new_title": "Handel's opera Nero premieres in Hamburg",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0226-320-5ba12d672fc9",
+      "year": 320,
+      "category": "politics",
+      "sentence_source": "Chandragupta I is officially crowned as the first Gupta Emperor.",
+      "old_title": "Chandragupta I is officially crowned as the first Gupta Emperor.",
+      "new_title": "Chandragupta I is crowned first Gupta emperor",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0227-1844-ebd3cdce97a6",
+      "year": 1844,
+      "category": "world",
+      "sentence_source": "The Dominican Republic gains independence from Haiti.",
+      "old_title": "The Dominican Republic gains independence from Haiti.",
+      "new_title": "The Dominican Republic wins independence from Haiti",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0227-1594-3c1bf70eb565",
+      "year": 1594,
+      "category": "politics",
+      "sentence_source": "Henry IV is crowned King of France.",
+      "old_title": "Henry IV is crowned King of France.",
+      "new_title": "Henry IV crowned King of France",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0301-1872-658db94fc2e4",
+      "year": 1872,
+      "category": "nature",
+      "sentence_source": "Yellowstone National Park is established as the world's first national park.",
+      "old_title": "Yellowstone National Park is established as the world's first national park.",
+      "new_title": "Yellowstone becomes the world's first national park",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0308-1736-772e40d14351",
+      "year": 1736,
+      "category": "politics",
+      "sentence_source": "Nader Shah, the founder of the Afsharid dynasty, was crowned Shah of Iran.",
+      "old_title": "Nader Shah, the founder of the Afsharid dynasty, was crowned Shah of Iran.",
+      "new_title": "Nader Shah is crowned Shah of Iran",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0308-1010-6223b45216b2",
+      "year": 1010,
+      "category": "arts",
+      "sentence_source": "Ferdowsi completes his epic poem Shahnameh.",
+      "old_title": "Ferdowsi completes his epic poem Shahnameh.",
+      "new_title": "Ferdowsi completes his epic Shahnameh",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0310-947-f2a785a69694",
+      "year": 947,
+      "category": "history",
+      "sentence_source": "The Later Han is founded by Liu Zhiyuan. He declares himself emperor.",
+      "old_title": "The Later Han is founded by Liu Zhiyuan. He declares himself emperor.",
+      "new_title": "Liu Zhiyuan founds the Later Han and declares himself emperor",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0312-1088-14773d1d8b29",
+      "year": 1088,
+      "category": "politics",
+      "sentence_source": "Odo of Châtillon was elected as the 159th pope of the Catholic Church.",
+      "old_title": "Odo of Châtillon was elected as the 159th pope of the Catholic Church.",
+      "new_title": "Odo of Châtillon is elected pope",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0314-1794-034eec81864a",
+      "year": 1794,
+      "category": "technology",
+      "sentence_source": "Eli Whitney is granted a patent for the cotton gin.",
+      "old_title": "Eli Whitney is granted a patent for the cotton gin.",
+      "new_title": "Eli Whitney patents the cotton gin",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0318-1608-e262b818f016",
+      "year": 1608,
+      "category": "politics",
+      "sentence_source": "Susenyos I was formally crowned Emperor of Ethiopia.",
+      "old_title": "Susenyos I was formally crowned Emperor of Ethiopia.",
+      "new_title": "Susenyos I is crowned Emperor of Ethiopia",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0321-1788-f168c48823ef",
+      "year": 1788,
+      "category": "history",
+      "sentence_source": "A large fire destroyed 856 of the 1,100 structures in New Orleans.",
+      "old_title": "A large fire destroyed 856 of the 1,100 structures in New Orleans.",
+      "new_title": "Fire destroys 856 buildings in New Orleans",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0323-2021-3969c5c7f0a5",
+      "year": 2021,
+      "category": "history",
+      "sentence_source": "A container ship ran aground and obstructed the Suez Canal for six days.",
+      "old_title": "A container ship ran aground and obstructed the Suez Canal for six days.",
+      "new_title": "Container ship blocks the Suez Canal for six days",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0326-1169-588d5bc1d722",
+      "year": 1169,
+      "category": "politics",
+      "sentence_source": "Saladin (depicted on coin) was inaugurated as vizier of Egypt.",
+      "old_title": "Saladin (depicted on coin) was inaugurated as vizier of Egypt.",
+      "new_title": "Saladin is inaugurated as vizier of Egypt",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0330-1841-1e149f53815a",
+      "year": 1841,
+      "category": "world",
+      "sentence_source": "The National Bank of Greece is founded in Athens.",
+      "old_title": "The National Bank of Greece is founded in Athens.",
+      "new_title": "The National Bank of Greece opens in Athens",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0402-1800-dce8c6646a03",
+      "year": 1800,
+      "category": "arts",
+      "sentence_source": "Ludwig van Beethoven leads the premiere of his First Symphony in Vienna.",
+      "old_title": "Ludwig van Beethoven leads the premiere of his First Symphony in Vienna.",
+      "new_title": "Beethoven premieres his First Symphony in Vienna",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0408-1605-8784a4426dcb",
+      "year": 1605,
+      "category": "technology",
+      "sentence_source": "The city of Oulu, Finland, is founded by Charles IX of Sweden.",
+      "old_title": "The city of Oulu, Finland, is founded by Charles IX of Sweden.",
+      "new_title": "Charles IX of Sweden founds the city of Oulu",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0412-1877-30b23152a131",
+      "year": 1877,
+      "category": "history",
+      "sentence_source": "The United Kingdom annexes the Transvaal.",
+      "old_title": "The United Kingdom annexes the Transvaal.",
+      "new_title": "Britain annexes the Transvaal",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0422-960-4cbae284946d",
+      "year": 960,
+      "category": "world",
+      "sentence_source": "Basil II is crowned co-Emperor of the Byzantine Empire.",
+      "old_title": "Basil II is crowned co-Emperor of the Byzantine Empire.",
+      "new_title": "Basil II is crowned Byzantine co-emperor",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0427-1565-6f7e9fffa4ba",
+      "year": 1565,
+      "category": "exploration",
+      "sentence_source": "Cebu is established becoming the first Spanish settlement in the Philippines.",
+      "old_title": "Cebu is established becoming the first Spanish settlement in the Philippines.",
+      "new_title": "Cebu becomes the first Spanish settlement in the Philippines",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0428-1788-7fdaffc9291e",
+      "year": 1788,
+      "category": "politics",
+      "sentence_source": "Maryland becomes the seventh state to ratify the United States Constitution.",
+      "old_title": "Maryland becomes the seventh state to ratify the United States Constitution.",
+      "new_title": "Maryland ratifies the United States Constitution",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0502-1194-2e15d5ef585c",
+      "year": 1194,
+      "category": "history",
+      "sentence_source": "King Richard I of England gave the city of Portsmouth its first royal charter.",
+      "old_title": "King Richard I of England gave the city of Portsmouth its first royal charter.",
+      "new_title": "Richard I grants Portsmouth its first royal charter",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0505-1789-4335f4f8bc52",
+      "year": 1789,
+      "category": "history",
+      "sentence_source": "In France, the Estates-General convenes for the first time since 1614.",
+      "old_title": "In France, the Estates-General convenes for the first time since 1614.",
+      "new_title": "France's Estates-General meets for the first time since 1614",
+      "verify_changed": true
+    },
+    {
+      "id": "otd-0505-1835-95bb287ef0ce",
+      "year": 1835,
+      "category": "technology",
+      "sentence_source": "The first railway in continental Europe opens between Brussels and Mechelen.",
+      "old_title": "The first railway in continental Europe opens between Brussels and Mechelen.",
+      "new_title": "Continental Europe's first railway links Brussels and Mechelen",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0505-1821-48d7b89bca3c",
+      "year": 1821,
+      "category": "world",
+      "sentence_source": "The first edition of The Manchester Guardian, now The Guardian, is published.",
+      "old_title": "The first edition of The Manchester Guardian, now The Guardian, is published.",
+      "new_title": "The Manchester Guardian publishes its first edition",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0506-1998-44dc0a9469b4",
+      "year": 1998,
+      "category": "technology",
+      "sentence_source": "Steve Jobs unveiled the iMac G3' personal computer.",
+      "old_title": "Steve Jobs unveiled the iMac G3' personal computer.",
+      "new_title": "Steve Jobs unveils the iMac G3",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0508-1639-c8b84b1c2816",
+      "year": 1639,
+      "category": "history",
+      "sentence_source": "William Coddington founds Newport, Rhode Island.",
+      "old_title": "William Coddington founds Newport, Rhode Island.",
+      "new_title": "Coddington founds Newport, Rhode Island",
+      "verify_changed": true
+    },
+    {
+      "id": "otd-0510-1881-84f2bdb6ff27",
+      "year": 1881,
+      "category": "politics",
+      "sentence_source": "Carol I is crowned the King of the Romanian Kingdom.",
+      "old_title": "Carol I is crowned the King of the Romanian Kingdom.",
+      "new_title": "Carol I is crowned King of Romania",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0512-1888-3e095f16fe83",
+      "year": 1888,
+      "category": "history",
+      "sentence_source": "North Borneo was established as a British protectorate.",
+      "old_title": "North Borneo was established as a British protectorate.",
+      "new_title": "North Borneo becomes a British protectorate",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0513-2012-bba779ed7771",
+      "year": 2012,
+      "category": "science",
+      "sentence_source": "Mexican authorities discovered 49 dismembered bodies in Cadereyta Jiménez.",
+      "old_title": "Mexican authorities discovered 49 dismembered bodies in Cadereyta Jiménez.",
+      "new_title": "Mexican authorities find 49 bodies in Cadereyta Jiménez",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0514-1857-844c7e12fdaa",
+      "year": 1857,
+      "category": "politics",
+      "sentence_source": "Mindon Min was crowned as King of Burma.",
+      "old_title": "Mindon Min was crowned as King of Burma.",
+      "new_title": "Mindon Min is crowned King of Burma",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0521-1871-f924ee2cac40",
+      "year": 1871,
+      "category": "technology",
+      "sentence_source": "Opening of the first rack railway in Europe, the Rigi Bahnen on Mount Rigi.",
+      "old_title": "Opening of the first rack railway in Europe, the Rigi Bahnen on Mount Rigi.",
+      "new_title": "Europe's first rack railway opens on Mount Rigi",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0521-1424-f7a4bc4b6ab1",
+      "year": 1424,
+      "category": "world",
+      "sentence_source": "Coronation of James I of Scotland at Scone.",
+      "old_title": "Coronation of James I of Scotland at Scone.",
+      "new_title": "James I of Scotland is crowned at Scone",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0523-1829-6511458a3528",
+      "year": 1829,
+      "category": "technology",
+      "sentence_source": "Accordion patent granted to Cyrill Demian in Vienna, Austrian Empire.",
+      "old_title": "Accordion patent granted to Cyrill Demian in Vienna, Austrian Empire.",
+      "new_title": "Cyrill Demian patents the accordion in Vienna",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0524-1607-7d8266a51ee1",
+      "year": 1607,
+      "category": "history",
+      "sentence_source": "Jamestown, the first permanent English colony in North America, is founded.",
+      "old_title": "Jamestown, the first permanent English colony in North America, is founded.",
+      "new_title": "England's first permanent North American colony is founded at Jamestown",
+      "verify_changed": true
+    },
+    {
+      "id": "otd-0527-1153-ccf4684c47e3",
+      "year": 1153,
+      "category": "politics",
+      "sentence_source": "Malcolm IV was crowned King of Scotland at the age of twelve.",
+      "old_title": "Malcolm IV was crowned King of Scotland at the age of twelve.",
+      "new_title": "Malcolm IV, aged twelve, is crowned King of Scotland",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0601-1796-eaea7a3a8e9d",
+      "year": 1796,
+      "category": "history",
+      "sentence_source": "Tennessee was admitted as the 16th state of the United States.",
+      "old_title": "Tennessee was admitted as the 16th state of the United States.",
+      "new_title": "Tennessee becomes the 16th US state",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0602-1608-7a3d57fa9c9a",
+      "year": 1608,
+      "category": "world",
+      "sentence_source": "The Colony of Virginia gets a charter, extending borders from \"sea to sea\".",
+      "old_title": "The Colony of Virginia gets a charter, extending borders from \"sea to sea\".",
+      "new_title": "The Colony of Virginia receives a sea-to-sea charter",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0606-1844-0e421d5cdf5b",
+      "year": 1844,
+      "category": "history",
+      "sentence_source": "The Young Men's Christian Association (YMCA) is founded in London.",
+      "old_title": "The Young Men's Christian Association (YMCA) is founded in London.",
+      "new_title": "The YMCA is founded in London",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0610-1854-4c557ad5463d",
+      "year": 1854,
+      "category": "history",
+      "sentence_source": "The United States Naval Academy graduates its first class of students.",
+      "old_title": "The United States Naval Academy graduates its first class of students.",
+      "new_title": "The US Naval Academy graduates its first class",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0612-1994-5d725db38e7f",
+      "year": 1994,
+      "category": "history",
+      "sentence_source": "The Boeing 777, the world's largest twinjet, made its maiden flight.",
+      "old_title": "The Boeing 777, the world's largest twinjet, made its maiden flight.",
+      "new_title": "The Boeing 777 makes its maiden flight",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0612-1935-478a1904a375",
+      "year": 1935,
+      "category": "history",
+      "sentence_source": "A ceasefire is negotiated between Bolivia and Paraguay, ending the Chaco War.",
+      "old_title": "A ceasefire is negotiated between Bolivia and Paraguay, ending the Chaco War.",
+      "new_title": "Bolivia and Paraguay agree a ceasefire, ending the Chaco War",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0620-1756-efaea2b47ce8",
+      "year": 1756,
+      "category": "history",
+      "sentence_source": "A British garrison is imprisoned in the Black Hole of Calcutta.",
+      "old_title": "A British garrison is imprisoned in the Black Hole of Calcutta.",
+      "new_title": "A British garrison is locked in the Black Hole of Calcutta",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0621-1890-4d2dd5b76aaa",
+      "year": 1890,
+      "category": "arts",
+      "sentence_source": "Rudyard Kipling's poem Mandalay was published.",
+      "old_title": "Rudyard Kipling's poem Mandalay was published.",
+      "new_title": "Kipling publishes his poem Mandalay",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0622-1812-cc075414dce2",
+      "year": 1812,
+      "category": "history",
+      "sentence_source": "France declared war on Russia, starting Napoleon's invasion two days later.",
+      "old_title": "France declared war on Russia, starting Napoleon's invasion two days later.",
+      "new_title": "France declares war on Russia",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0623-1305-f1bcd3a2c882",
+      "year": 1305,
+      "category": "world",
+      "sentence_source": "A peace treaty between the Flemish and the French is signed at Athis-sur-Orge.",
+      "old_title": "A peace treaty between the Flemish and the French is signed at Athis-sur-Orge.",
+      "new_title": "The Flemish and French sign peace at Athis-sur-Orge",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0625-1788-e4cea28122b5",
+      "year": 1788,
+      "category": "politics",
+      "sentence_source": "Virginia becomes the tenth state to ratify the United States Constitution.",
+      "old_title": "Virginia becomes the tenth state to ratify the United States Constitution.",
+      "new_title": "Virginia ratifies the United States Constitution",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0628-1461-e143e3ea147e",
+      "year": 1461,
+      "category": "history",
+      "sentence_source": "Edward IV was crowned King of England at Westminster Abbey.",
+      "old_title": "Edward IV was crowned King of England at Westminster Abbey.",
+      "new_title": "Edward IV is crowned at Westminster Abbey",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0701-1885-d0aef6dedef1",
+      "year": 1885,
+      "category": "history",
+      "sentence_source": "The Congo Free State is established by King Leopold II of Belgium.",
+      "old_title": "The Congo Free State is established by King Leopold II of Belgium.",
+      "new_title": "Leopold II establishes the Congo Free State",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0704-1827-49919834b084",
+      "year": 1827,
+      "category": "history",
+      "sentence_source": "Slavery is abolished in the State of New York.",
+      "old_title": "Slavery is abolished in the State of New York.",
+      "new_title": "Slavery is abolished in New York",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0705-1687-d1c8de8dbe57",
+      "year": 1687,
+      "category": "science",
+      "sentence_source": "Isaac Newton publishes Philosophiæ Naturalis Principia Mathematica.",
+      "old_title": "Isaac Newton publishes Philosophiæ Naturalis Principia Mathematica.",
+      "new_title": "Newton publishes the Principia Mathematica",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0706-1253-b380fa7a65db",
+      "year": 1253,
+      "category": "politics",
+      "sentence_source": "Mindaugas is crowned King of Lithuania.",
+      "old_title": "Mindaugas is crowned King of Lithuania.",
+      "new_title": "Mindaugas takes the crown of Lithuania",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0711-1405-27be3406187d",
+      "year": 1405,
+      "category": "exploration",
+      "sentence_source": "Ming admiral Zheng He sets sail to explore the world for the first time.",
+      "old_title": "Ming admiral Zheng He sets sail to explore the world for the first time.",
+      "new_title": "Zheng He sets sail on his first voyage",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0713-1814-a54414d8c7b1",
+      "year": 1814,
+      "category": "world",
+      "sentence_source": "The Carabinieri, the national gendarmerie of Italy, is established.",
+      "old_title": "The Carabinieri, the national gendarmerie of Italy, is established.",
+      "new_title": "Italy's Carabinieri gendarmerie is established",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0713-1249-5c1b4229c1b2",
+      "year": 1249,
+      "category": "world",
+      "sentence_source": "Coronation of Alexander III as King of Scots.",
+      "old_title": "Coronation of Alexander III as King of Scots.",
+      "new_title": "Alexander III is crowned King of Scots",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0714-1223-f24a6f55e1bd",
+      "year": 1223,
+      "category": "history",
+      "sentence_source": "Louis VIII (seal pictured) became King of France and began a three-year reign.",
+      "old_title": "Louis VIII (seal pictured) became King of France and began a three-year reign.",
+      "new_title": "Louis VIII becomes King of France",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0716-1377-a7951102253f",
+      "year": 1377,
+      "category": "politics",
+      "sentence_source": "The ten-year-old Richard II was crowned King of England at Westminster Abbey.",
+      "old_title": "The ten-year-old Richard II was crowned King of England at Westminster Abbey.",
+      "new_title": "Ten-year-old Richard II is crowned at Westminster",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0716-1661-814e1e11d716",
+      "year": 1661,
+      "category": "history",
+      "sentence_source": "The first banknotes in Europe are issued by the Swedish bank Stockholms Banco.",
+      "old_title": "The first banknotes in Europe are issued by the Swedish bank Stockholms Banco.",
+      "new_title": "Stockholms Banco issues Europe's first banknotes",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0717-1048-10e55e93044d",
+      "year": 1048,
+      "category": "politics",
+      "sentence_source": "Four year-old Henry IV is crowned as king of Germany in Aachen.",
+      "old_title": "Four year-old Henry IV is crowned as king of Germany in Aachen.",
+      "new_title": "Four-year-old Henry IV is crowned king of Germany",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0726-1882-60b9794bf45f",
+      "year": 1882,
+      "category": "arts",
+      "sentence_source": "Premiere of Richard Wagner's opera Parsifal at Bayreuth.",
+      "old_title": "Premiere of Richard Wagner's opera Parsifal at Bayreuth.",
+      "new_title": "Wagner's Parsifal premieres at Bayreuth",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0729--587-93b3d2b400a7",
+      "year": -587,
+      "category": "world",
+      "sentence_source": "The Neo-Babylonian Empire sacks Jerusalem and destroys the First Temple.",
+      "old_title": "The Neo-Babylonian Empire sacks Jerusalem and destroys the First Temple.",
+      "new_title": "Babylonians sack Jerusalem and destroy the First Temple",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0729-1567-312be4a9c5b7",
+      "year": 1567,
+      "category": "politics",
+      "sentence_source": "The infant James VI was crowned King of Scotland at Stirling.",
+      "old_title": "The infant James VI was crowned King of Scotland at Stirling.",
+      "new_title": "The infant James VI is crowned at Stirling",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0731-1856-c1407d7b3376",
+      "year": 1856,
+      "category": "culture",
+      "sentence_source": "Christchurch, New Zealand, is chartered as a city.",
+      "old_title": "Christchurch, New Zealand, is chartered as a city.",
+      "new_title": "Christchurch receives its city charter",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0802-1784-d44cf412ec4e",
+      "year": 1784,
+      "category": "history",
+      "sentence_source": "The first British mail coach service runs from Bristol to London.",
+      "old_title": "The first British mail coach service runs from Bristol to London.",
+      "new_title": "Britain's first mail coach runs from Bristol to London",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0805-1100-c505f526adf1",
+      "year": 1100,
+      "category": "politics",
+      "sentence_source": "Henry I was crowned King of England in Westminster Abbey.",
+      "old_title": "Henry I was crowned King of England in Westminster Abbey.",
+      "new_title": "Henry I is crowned at Westminster Abbey",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0806-1538-05c46a661aa5",
+      "year": 1538,
+      "category": "history",
+      "sentence_source": "Bogotá, Colombia, is founded by Gonzalo Jiménez de Quesada.",
+      "old_title": "Bogotá, Colombia, is founded by Gonzalo Jiménez de Quesada.",
+      "new_title": "Gonzalo Jiménez de Quesada founds Bogotá",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0807-1786-8b4f0cdea6fe",
+      "year": 1786,
+      "category": "world",
+      "sentence_source": "The first federal Indian Reservation is created by the United States.",
+      "old_title": "The first federal Indian Reservation is created by the United States.",
+      "new_title": "The United States creates the first federal Indian Reservation",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0812-1851-ac812ba72ad7",
+      "year": 1851,
+      "category": "technology",
+      "sentence_source": "Isaac Singer is granted a patent for his sewing machine.",
+      "old_title": "Isaac Singer is granted a patent for his sewing machine.",
+      "new_title": "Isaac Singer patents his sewing machine",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0814-1592-93fbb2f1e15e",
+      "year": 1592,
+      "category": "history",
+      "sentence_source": "The first sighting of the Falkland Islands by John Davis.",
+      "old_title": "The first sighting of the Falkland Islands by John Davis.",
+      "new_title": "John Davis sights the Falkland Islands",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0815-1261-782945871e79",
+      "year": 1261,
+      "category": "politics",
+      "sentence_source": "Michael VIII Palaiologos was crowned Byzantine emperor in Constantinople.",
+      "old_title": "Michael VIII Palaiologos was crowned Byzantine emperor in Constantinople.",
+      "new_title": "Michael VIII Palaiologos is crowned in Constantinople",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0820-1882-15bd6bf30038",
+      "year": 1882,
+      "category": "arts",
+      "sentence_source": "Tchaikovsky's 1812 Overture debuts in Moscow, Russia.",
+      "old_title": "Tchaikovsky's 1812 Overture debuts in Moscow, Russia.",
+      "new_title": "Tchaikovsky's 1812 Overture debuts in Moscow",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0821-1789-cd96865b178d",
+      "year": 1789,
+      "category": "world",
+      "sentence_source": "The national colours of Italy first appeared on a tricolour cockade in Genoa.",
+      "old_title": "The national colours of Italy first appeared on a tricolour cockade in Genoa.",
+      "new_title": "Italy's national colours debut on a cockade in Genoa",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0821-1878-549c0f22e173",
+      "year": 1878,
+      "category": "politics",
+      "sentence_source": "The American Bar Association is founded in Saratoga Springs, New York.",
+      "old_title": "The American Bar Association is founded in Saratoga Springs, New York.",
+      "new_title": "The American Bar Association is founded",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0823-1873-4c660d07fdd9",
+      "year": 1873,
+      "category": "nature",
+      "sentence_source": "The Albert Bridge, spanning the River Thames in London, opened to traffic.",
+      "old_title": "The Albert Bridge, spanning the River Thames in London, opened to traffic.",
+      "new_title": "The Albert Bridge opens over the Thames in London",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0826-1778-2848a987c7f9",
+      "year": 1778,
+      "category": "history",
+      "sentence_source": "The first recorded ascent of Triglav, the highest mountain in Slovenia.",
+      "old_title": "The first recorded ascent of Triglav, the highest mountain in Slovenia.",
+      "new_title": "First recorded ascent of Triglav, Slovenia's highest peak",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0827-410-d3868014c878",
+      "year": 410,
+      "category": "history",
+      "sentence_source": "The sacking of Rome by the Visigoths ended after three days.",
+      "old_title": "The sacking of Rome by the Visigoths ended after three days.",
+      "new_title": "The Visigoth sack of Rome ends after three days",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0828-1850-e3a2ef71a0e2",
+      "year": 1850,
+      "category": "arts",
+      "sentence_source": "Richard Wagner's Lohengrin premieres at the Staatskapelle Weimar.",
+      "old_title": "Richard Wagner's Lohengrin premieres at the Staatskapelle Weimar.",
+      "new_title": "Wagner's Lohengrin premieres in Weimar",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0830-1836-7822a26a43c1",
+      "year": 1836,
+      "category": "history",
+      "sentence_source": "The city of Houston is founded by Augustus Chapman Allen and John Kirby Allen.",
+      "old_title": "The city of Houston is founded by Augustus Chapman Allen and John Kirby Allen.",
+      "new_title": "Augustus and John Allen found the city of Houston",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0831-1895-9b3bce45e002",
+      "year": 1895,
+      "category": "technology",
+      "sentence_source": "German Count Ferdinand von Zeppelin patents his navigable balloon.",
+      "old_title": "German Count Ferdinand von Zeppelin patents his navigable balloon.",
+      "new_title": "Count Zeppelin patents his navigable balloon",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0902-2002-67ac98b93178",
+      "year": 2002,
+      "category": "history",
+      "sentence_source": "American animated edutainment show Liberty's Kids aired its first episode.",
+      "old_title": "American animated edutainment show Liberty's Kids aired its first episode.",
+      "new_title": "Liberty's Kids airs its first episode",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0905-1798-08473fc265ea",
+      "year": 1798,
+      "category": "history",
+      "sentence_source": "Conscription is made mandatory in France by the Jourdan law.",
+      "old_title": "Conscription is made mandatory in France by the Jourdan law.",
+      "new_title": "The Jourdan law makes conscription mandatory in France",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0907-878-665a8b6ffcaf",
+      "year": 878,
+      "category": "politics",
+      "sentence_source": "Louis the Stammerer is crowned as king of West Francia by Pope John VIII.",
+      "old_title": "Louis the Stammerer is crowned as king of West Francia by Pope John VIII.",
+      "new_title": "Pope John VIII crowns Louis the Stammerer king of West Francia",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0908-1504-1475cb640744",
+      "year": 1504,
+      "category": "history",
+      "sentence_source": "Michelangelo's David is unveiled in Piazza della Signoria in Florence.",
+      "old_title": "Michelangelo's David is unveiled in Piazza della Signoria in Florence.",
+      "new_title": "Michelangelo's David is unveiled in Florence",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0912-1890-f6e3a5af1ee3",
+      "year": 1890,
+      "category": "history",
+      "sentence_source": "Salisbury, Rhodesia, is founded.",
+      "old_title": "Salisbury, Rhodesia, is founded.",
+      "new_title": "Salisbury is founded in Rhodesia",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0919-1778-688f3430c3e5",
+      "year": 1778,
+      "category": "politics",
+      "sentence_source": "The Continental Congress passes the first United States federal budget.",
+      "old_title": "The Continental Congress passes the first United States federal budget.",
+      "new_title": "The Continental Congress passes the first US federal budget",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0926-1087-36da4b6327dc",
+      "year": 1087,
+      "category": "politics",
+      "sentence_source": "William II, son of William the Conqueror, was crowned king of England.",
+      "old_title": "William II, son of William the Conqueror, was crowned king of England.",
+      "new_title": "William II is crowned king of England",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0927-1540-6ebbb66cd1fe",
+      "year": 1540,
+      "category": "culture",
+      "sentence_source": "The Society of Jesus (Jesuits) receives its charter from Pope Paul III.",
+      "old_title": "The Society of Jesus (Jesuits) receives its charter from Pope Paul III.",
+      "new_title": "Pope Paul III charters the Society of Jesus",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0929-1990-193752c67232",
+      "year": 1990,
+      "category": "technology",
+      "sentence_source": "The Lockheed YF-22, the prototype for the F-22 Raptor, made its first flight.",
+      "old_title": "The Lockheed YF-22, the prototype for the F-22 Raptor, made its first flight.",
+      "new_title": "The Lockheed YF-22 prototype makes its first flight",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-0930-1791-01a98fee1d41",
+      "year": 1791,
+      "category": "arts",
+      "sentence_source": "Mozart conducted the premiere of his last opera, The Magic Flute, in Vienna.",
+      "old_title": "Mozart conducted the premiere of his last opera, The Magic Flute, in Vienna.",
+      "new_title": "Mozart premieres The Magic Flute in Vienna",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1002-1913-5cff1f052326",
+      "year": 1913,
+      "category": "arts",
+      "sentence_source": "The Shubert Theatre opened on Broadway with a production of Hamlet.",
+      "old_title": "The Shubert Theatre opened on Broadway with a production of Hamlet.",
+      "new_title": "The Shubert Theatre opens on Broadway with Hamlet",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1004-2004-152942fe6afb",
+      "year": 2004,
+      "category": "science",
+      "sentence_source": "SpaceShipOne wins the Ansari X Prize for private spaceflight.",
+      "old_title": "SpaceShipOne wins the Ansari X Prize for private spaceflight.",
+      "new_title": "SpaceShipOne wins the Ansari X Prize",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1005-1962-6ab484eb9d10",
+      "year": 1962,
+      "category": "arts",
+      "sentence_source": "Dr. No, the first James Bond film, was released.",
+      "old_title": "Dr. No, the first James Bond film, was released.",
+      "new_title": "James Bond makes his film debut in Dr. No",
+      "verify_changed": true
+    },
+    {
+      "id": "otd-1007-1691-b20c6e88811a",
+      "year": 1691,
+      "category": "history",
+      "sentence_source": "The charter for the Province of Massachusetts Bay is issued.",
+      "old_title": "The charter for the Province of Massachusetts Bay is issued.",
+      "new_title": "The Province of Massachusetts Bay receives its charter",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1008-451-c4f92525c0df",
+      "year": 451,
+      "category": "history",
+      "sentence_source": "The first session of the Council of Chalcedon begins.",
+      "old_title": "The first session of the Council of Chalcedon begins.",
+      "new_title": "The Council of Chalcedon opens its first session",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1008-1645-fd56ac4085cd",
+      "year": 1645,
+      "category": "history",
+      "sentence_source": "Jeanne Mance opens the first lay hospital of North America in Montreal.",
+      "old_title": "Jeanne Mance opens the first lay hospital of North America in Montreal.",
+      "new_title": "Jeanne Mance opens North America's first lay hospital in Montreal",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1008-1829-2cda769347f2",
+      "year": 1829,
+      "category": "technology",
+      "sentence_source": "Stephenson's Rocket wins the Rainhill Trials.",
+      "old_title": "Stephenson's Rocket wins the Rainhill Trials.",
+      "new_title": "Stephenson's Rocket triumphs at the Rainhill Trials",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1009-1238-aa060385f214",
+      "year": 1238,
+      "category": "world",
+      "sentence_source": "James I of Aragon founds the Kingdom of Valencia.",
+      "old_title": "James I of Aragon founds the Kingdom of Valencia.",
+      "new_title": "James I of Aragon establishes the Kingdom of Valencia",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1011-1890-eeff069bd23c",
+      "year": 1890,
+      "category": "history",
+      "sentence_source": "In Washington, D.C., the Daughters of the American Revolution was founded.",
+      "old_title": "In Washington, D.C., the Daughters of the American Revolution was founded.",
+      "new_title": "The Daughters of the American Revolution is founded",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1012-1398-cc759520b39e",
+      "year": 1398,
+      "category": "world",
+      "sentence_source": "In the Treaty of Salynas, Lithuania cedes Samogitia to the Teutonic Knights.",
+      "old_title": "In the Treaty of Salynas, Lithuania cedes Samogitia to the Teutonic Knights.",
+      "new_title": "Lithuania cedes Samogitia to the Teutonic Knights",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1013-1881-a2b41feb7d3c",
+      "year": 1881,
+      "category": "history",
+      "sentence_source": "First known conversation in modern Hebrew by Eliezer Ben-Yehuda and friends.",
+      "old_title": "First known conversation in modern Hebrew by Eliezer Ben-Yehuda and friends.",
+      "new_title": "Eliezer Ben-Yehuda holds the first modern Hebrew conversation",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1018-1775-c1254c951392",
+      "year": 1775,
+      "category": "history",
+      "sentence_source": "African-American poet Phillis Wheatley is freed from slavery.",
+      "old_title": "African-American poet Phillis Wheatley is freed from slavery.",
+      "new_title": "Poet Phillis Wheatley is freed from slavery",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1020-1995-c0a7837cf9e4",
+      "year": 1995,
+      "category": "exploration",
+      "sentence_source": "Space Shuttle Columbia launches on STS-73.",
+      "old_title": "Space Shuttle Columbia launches on STS-73.",
+      "new_title": "Space Shuttle Columbia lifts off on STS-73",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1020-1803-b98048aa6464",
+      "year": 1803,
+      "category": "history",
+      "sentence_source": "The United States Senate ratifies the Louisiana Purchase.",
+      "old_title": "The United States Senate ratifies the Louisiana Purchase.",
+      "new_title": "The Senate ratifies the Louisiana Purchase",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1023-1707-83f90b8a78c6",
+      "year": 1707,
+      "category": "world",
+      "sentence_source": "The First Parliament of the Kingdom of Great Britain convenes.",
+      "old_title": "The First Parliament of the Kingdom of Great Britain convenes.",
+      "new_title": "The first Parliament of Great Britain convenes",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1026-1520-50d6ed17a999",
+      "year": 1520,
+      "category": "politics",
+      "sentence_source": "Charles V was crowned as Holy Roman Emperor.",
+      "old_title": "Charles V was crowned as Holy Roman Emperor.",
+      "new_title": "Charles V is crowned Holy Roman Emperor",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1026-1377-796dcab9e861",
+      "year": 1377,
+      "category": "politics",
+      "sentence_source": "Tvrtko I is crowned the first king of Bosnia.",
+      "old_title": "Tvrtko I is crowned the first king of Bosnia.",
+      "new_title": "Tvrtko I becomes the first king of Bosnia",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1027-1682-5724e8a83f9a",
+      "year": 1682,
+      "category": "history",
+      "sentence_source": "Philadelphia is founded in the Commonwealth of Pennsylvania.",
+      "old_title": "Philadelphia is founded in the Commonwealth of Pennsylvania.",
+      "new_title": "Philadelphia is founded in Pennsylvania",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1028-1726-84b84dff928f",
+      "year": 1726,
+      "category": "arts",
+      "sentence_source": "The novel Gulliver's Travels written by Jonathan Swift is published.",
+      "old_title": "The novel Gulliver's Travels written by Jonathan Swift is published.",
+      "new_title": "Jonathan Swift's Gulliver's Travels is published",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1031-1587-441c25fe865b",
+      "year": 1587,
+      "category": "culture",
+      "sentence_source": "Leiden University Library opens its doors after its founding in 1575.",
+      "old_title": "Leiden University Library opens its doors after its founding in 1575.",
+      "new_title": "Leiden University Library opens its doors",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1101-1179-8d6b98e5e01b",
+      "year": 1179,
+      "category": "politics",
+      "sentence_source": "Philip II is crowned King of France.",
+      "old_title": "Philip II is crowned King of France.",
+      "new_title": "Philip II is crowned as King of France",
+      "verify_changed": true
+    },
+    {
+      "id": "otd-1103-1493-281370a3a869",
+      "year": 1493,
+      "category": "exploration",
+      "sentence_source": "Christopher Columbus first sights the island of Dominica in the Caribbean Sea.",
+      "old_title": "Christopher Columbus first sights the island of Dominica in the Caribbean Sea.",
+      "new_title": "Columbus sights the island of Dominica",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1107-1861-0c43c4afaef4",
+      "year": 1861,
+      "category": "history",
+      "sentence_source": "The first Melbourne Cup horse race is held in Melbourne, Australia.",
+      "old_title": "The first Melbourne Cup horse race is held in Melbourne, Australia.",
+      "new_title": "The first Melbourne Cup horse race is held",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1108-1602-7315d7e8a06a",
+      "year": 1602,
+      "category": "culture",
+      "sentence_source": "The Bodleian Library at the University of Oxford is opened to the public.",
+      "old_title": "The Bodleian Library at the University of Oxford is opened to the public.",
+      "new_title": "The Bodleian Library opens to the public",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1109-1905-b2e37f65ee15",
+      "year": 1905,
+      "category": "politics",
+      "sentence_source": "The Province of Alberta, Canada, holds its first general election.",
+      "old_title": "The Province of Alberta, Canada, holds its first general election.",
+      "new_title": "Alberta holds its first general election",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1110-1969-d6de96c62629",
+      "year": 1969,
+      "category": "technology",
+      "sentence_source": "The children's television series Sesame Street premiered in the United States.",
+      "old_title": "The children's television series Sesame Street premiered in the United States.",
+      "new_title": "Sesame Street premieres in the United States",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1118-1493-08f072605e50",
+      "year": 1493,
+      "category": "exploration",
+      "sentence_source": "Christopher Columbus first sights the island now known as Puerto Rico.",
+      "old_title": "Christopher Columbus first sights the island now known as Puerto Rico.",
+      "new_title": "Columbus sights the island now known as Puerto Rico",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1120-1789-1bfc78bca651",
+      "year": 1789,
+      "category": "history",
+      "sentence_source": "New Jersey becomes the first U.S. state to ratify the Bill of Rights.",
+      "old_title": "New Jersey becomes the first U.S. state to ratify the Bill of Rights.",
+      "new_title": "New Jersey is first to ratify the Bill of Rights",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1124-1877-6f9923a220f4",
+      "year": 1877,
+      "category": "arts",
+      "sentence_source": "Anna Sewell's animal welfare novel Black Beauty is published.",
+      "old_title": "Anna Sewell's animal welfare novel Black Beauty is published.",
+      "new_title": "Anna Sewell's Black Beauty is published",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1125-1901-e27558986441",
+      "year": 1901,
+      "category": "arts",
+      "sentence_source": "Gustav Mahler's Symphony No. 4 premiered in Munich.",
+      "old_title": "Gustav Mahler's Symphony No. 4 premiered in Munich.",
+      "new_title": "Mahler's Symphony No. 4 premieres in Munich",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1128-1811-096b18fd80aa",
+      "year": 1811,
+      "category": "arts",
+      "sentence_source": "Beethoven's Piano Concerto No. 5 premiered at the Gewandhaus in Leipzig.",
+      "old_title": "Beethoven's Piano Concerto No. 5 premiered at the Gewandhaus in Leipzig.",
+      "new_title": "Beethoven's Piano Concerto No. 5 premieres in Leipzig",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1129-1982-5082bf87cffe",
+      "year": 1982,
+      "category": "arts",
+      "sentence_source": "Michael Jackson's Thriller, the best-selling album of all time, was released.",
+      "old_title": "Michael Jackson's Thriller, the best-selling album of all time, was released.",
+      "new_title": "Michael Jackson's Thriller is released",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1203-915-a0e483fec6bd",
+      "year": 915,
+      "category": "culture",
+      "sentence_source": "Pope John X crowns Berengar I of Italy as Holy Roman Emperor (probable date).",
+      "old_title": "Pope John X crowns Berengar I of Italy as Holy Roman Emperor (probable date).",
+      "new_title": "Pope John X crowns Berengar I Holy Roman Emperor",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1206-1865-8660c05cda07",
+      "year": 1865,
+      "category": "politics",
+      "sentence_source": "Georgia ratifies the 13th Amendment to the U.S. Constitution.",
+      "old_title": "Georgia ratifies the 13th Amendment to the U.S. Constitution.",
+      "new_title": "Georgia ratifies the 13th Amendment",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1206-1884-ed60230ae102",
+      "year": 1884,
+      "category": "world",
+      "sentence_source": "The Washington Monument in Washington, D.C., is completed.",
+      "old_title": "The Washington Monument in Washington, D.C., is completed.",
+      "new_title": "The Washington Monument is completed",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1207-1842-b6742069b2a7",
+      "year": 1842,
+      "category": "arts",
+      "sentence_source": "First concert of the New York Philharmonic, founded by Ureli Corelli Hill.",
+      "old_title": "First concert of the New York Philharmonic, founded by Ureli Corelli Hill.",
+      "new_title": "The New York Philharmonic gives its first concert",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1210-1768-dbd310714dfa",
+      "year": 1768,
+      "category": "history",
+      "sentence_source": "The first edition of the Encyclopædia Britannica was released in Edinburgh.",
+      "old_title": "The first edition of the Encyclopædia Britannica was released in Edinburgh.",
+      "new_title": "The Encyclopædia Britannica debuts in Edinburgh",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1212-1787-9f1b2087a286",
+      "year": 1787,
+      "category": "politics",
+      "sentence_source": "Pennsylvania becomes the second state to ratify the US Constitution.",
+      "old_title": "Pennsylvania becomes the second state to ratify the US Constitution.",
+      "new_title": "Pennsylvania is second to ratify the US Constitution",
+      "verify_changed": true
+    },
+    {
+      "id": "otd-1212-1964-d1cc9ea48ce9",
+      "year": 1964,
+      "category": "world",
+      "sentence_source": "Jomo Kenyatta became the first president of the Republic of Kenya.",
+      "old_title": "Jomo Kenyatta became the first president of the Republic of Kenya.",
+      "new_title": "Jomo Kenyatta becomes Kenya's first president",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1212-1963-ccba02d6496b",
+      "year": 1963,
+      "category": "world",
+      "sentence_source": "Kenya declares independence from Great Britain.",
+      "old_title": "Kenya declares independence from Great Britain.",
+      "new_title": "Kenya declares independence from Britain",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1218-1787-5bf422d411d8",
+      "year": 1787,
+      "category": "politics",
+      "sentence_source": "New Jersey becomes the third state to ratify the U.S. Constitution.",
+      "old_title": "New Jersey becomes the third state to ratify the U.S. Constitution.",
+      "new_title": "New Jersey is third to ratify the U.S. Constitution",
+      "verify_changed": true
+    },
+    {
+      "id": "otd-1219-1154-57c60306c86d",
+      "year": 1154,
+      "category": "politics",
+      "sentence_source": "Henry II (depicted) was crowned king of England in Westminster Abbey, London.",
+      "old_title": "Henry II (depicted) was crowned king of England in Westminster Abbey, London.",
+      "new_title": "Henry II is crowned king of England at Westminster Abbey",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1220-1803-2d5c3b260605",
+      "year": 1803,
+      "category": "history",
+      "sentence_source": "The Louisiana Purchase is completed at a ceremony in New Orleans.",
+      "old_title": "The Louisiana Purchase is completed at a ceremony in New Orleans.",
+      "new_title": "The Louisiana Purchase is completed in New Orleans",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1222-401-7225b1c94144",
+      "year": 401,
+      "category": "culture",
+      "sentence_source": "Pope Innocent I began his papacy, succeeding Anastasius I.",
+      "old_title": "Pope Innocent I began his papacy, succeeding Anastasius I.",
+      "new_title": "Pope Innocent I begins his papacy",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1224-1871-bffed240d89a",
+      "year": 1871,
+      "category": "arts",
+      "sentence_source": "The opera Aida premieres in Cairo, Egypt.",
+      "old_title": "The opera Aida premieres in Cairo, Egypt.",
+      "new_title": "The opera Aida premieres in Cairo",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1225-1870-8ee10f408f37",
+      "year": 1870,
+      "category": "arts",
+      "sentence_source": "Wagner's Siegfried Idyll is first performed.",
+      "old_title": "Wagner's Siegfried Idyll is first performed.",
+      "new_title": "Wagner's Siegfried Idyll receives its first performance",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1227-537-90a597f20f27",
+      "year": 537,
+      "category": "culture",
+      "sentence_source": "The second Hagia Sophia in Constantinople is consecrated.",
+      "old_title": "The second Hagia Sophia in Constantinople is consecrated.",
+      "new_title": "The second Hagia Sophia is consecrated in Constantinople",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1228-1836-4f265f2bf8b2",
+      "year": 1836,
+      "category": "history",
+      "sentence_source": "South Australia and Adelaide are founded.",
+      "old_title": "South Australia and Adelaide are founded.",
+      "new_title": "South Australia and the city of Adelaide are founded",
+      "verify_changed": false
+    },
+    {
+      "id": "otd-1231-1687-c127ffd0f5c9",
+      "year": 1687,
+      "category": "politics",
+      "sentence_source": "The first Huguenots set sail from France to the Cape of Good Hope.",
+      "old_title": "The first Huguenots set sail from France to the Cape of Good Hope.",
+      "new_title": "The first Huguenots sail from France for the Cape of Good Hope",
+      "verify_changed": false
+    }
+  ]
+}
