@@ -43,13 +43,36 @@ struct TodayWidgetProvider: AppIntentTimelineProvider {
         return TodayWidgetEntry(date: Date(), event: event, density: configuration.density, imageData: await loadImageData(for: event))
     }
 
+    /// Emits entries for today plus the next two days so the card still rolls
+    /// over at midnight when WidgetKit defers the requested reload.
     func timeline(for configuration: TodayWidgetConfigurationIntent, in context: Context) async -> Timeline<TodayWidgetEntry> {
         let now = Date()
-        let event = await loadWidgetEvent(date: now)
-        let entry = TodayWidgetEntry(date: now, event: event, density: configuration.density, imageData: await loadImageData(for: event))
-        let startOfToday = Calendar.current.startOfDay(for: now)
-        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: startOfToday) ?? now.addingTimeInterval(24 * 60 * 60)
-        return Timeline(entries: [entry], policy: .after(tomorrow))
+        let calendar = Calendar.current
+        let startOfToday = calendar.startOfDay(for: now)
+        let result = await DataLoader.loadEvents(resourceCandidates: ["widget-events", "events"])
+
+        var entries: [TodayWidgetEntry] = []
+        for offset in 0..<3 {
+            guard let day = calendar.date(byAdding: .day, value: offset, to: startOfToday) else { continue }
+            let components = calendar.dateComponents([.month, .day], from: day)
+            guard let month = components.month, let dayOfMonth = components.day,
+                  let event = DataLoader.displayEvent(month: month, day: dayOfMonth, from: result.events) else {
+                continue
+            }
+            entries.append(TodayWidgetEntry(
+                date: offset == 0 ? now : day,
+                event: event,
+                density: configuration.density,
+                imageData: await loadImageData(for: event)
+            ))
+        }
+
+        if entries.isEmpty {
+            entries = [TodayWidgetEntry(date: now, event: nil, density: configuration.density)]
+        }
+
+        let tomorrow = calendar.date(byAdding: .day, value: 1, to: startOfToday) ?? now.addingTimeInterval(24 * 60 * 60)
+        return Timeline(entries: entries, policy: .after(tomorrow))
     }
 
     /// WidgetKit cannot use AsyncImage, so the lead image is fetched here and
