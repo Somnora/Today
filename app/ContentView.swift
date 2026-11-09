@@ -92,4 +92,5 @@ struct ContentView: View {
         .environmentObject(UserPreferences())
         .environmentObject(ThumbsStore())
         .environmentObject(SavedStore())
+        .environmentObject(HabitStore())
 }

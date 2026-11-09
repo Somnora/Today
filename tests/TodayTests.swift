@@ -337,11 +337,12 @@ final class QuizEngineTests: XCTestCase {
         Self.calendar.date(from: DateComponents(year: year, month: month, day: day))!
     }
 
-    func testQuizDaysAreFridayAndSunday() {
+    func testQuizDaysAreFridayThroughSunday() {
         XCTAssertTrue(QuizEngine.isQuizDay(date(2026, 7, 10)))   // Friday
+        XCTAssertTrue(QuizEngine.isQuizDay(date(2026, 7, 11)))   // Saturday
         XCTAssertTrue(QuizEngine.isQuizDay(date(2026, 7, 12)))   // Sunday
         XCTAssertFalse(QuizEngine.isQuizDay(date(2026, 7, 7)))   // Tuesday
-        XCTAssertFalse(QuizEngine.isQuizDay(date(2026, 7, 11)))  // Saturday
+        XCTAssertFalse(QuizEngine.isQuizDay(date(2026, 7, 9)))   // Thursday
     }
 
     func testWeekKeyMatchesISOWeek() {
@@ -396,6 +397,121 @@ final class QuizEngineTests: XCTestCase {
         XCTAssertGreaterThan(result.events.count, 3_500)
         let quiz = QuizEngine.quiz(for: date(2026, 7, 10), events: result.events)
         XCTAssertNotNil(quiz)
+    }
+}
+
+// MARK: - Daily question
+
+final class DailyQuestionTests: XCTestCase {
+    private static let calendar = Calendar(identifier: .gregorian)
+
+    private func date(_ year: Int, _ month: Int, _ day: Int) -> Date {
+        Self.calendar.date(from: DateComponents(year: year, month: month, day: day, hour: 12))!
+    }
+
+    func testSameDayAlwaysYieldsTheSameQuestion() {
+        let corpus = makeQuizCorpus()
+        let morning = QuizEngine.dailyQuestion(for: date(2026, 7, 10), events: corpus, calendar: Self.calendar)
+        let shuffled = QuizEngine.dailyQuestion(for: date(2026, 7, 10), events: corpus.shuffled(), calendar: Self.calendar)
+        XCTAssertNotNil(morning)
+        XCTAssertEqual(morning, shuffled)
+    }
+
+    func testQuestionsChangeFromDayToDayAndRotateShape() {
+        let corpus = makeQuizCorpus()
+        let week = (10...16).compactMap { QuizEngine.dailyQuestion(for: date(2026, 7, $0), events: corpus, calendar: Self.calendar) }
+        XCTAssertEqual(week.count, 7)
+        XCTAssertEqual(Set(week.map { $0.prompt + "|" + $0.options.joined() }).count, 7)
+        XCTAssertGreaterThanOrEqual(Set(week.map(\.kicker)).count, 2)
+    }
+
+    func testQuestionIsWellFormedAndNeverAboutTodaysOwnDate() throws {
+        let corpus = makeQuizCorpus()
+        let byID = Dictionary(uniqueKeysWithValues: corpus.map { ($0.id, $0) })
+        for day in 1...28 {
+            let question = try XCTUnwrap(QuizEngine.dailyQuestion(for: date(2026, 7, day), events: corpus, calendar: Self.calendar))
+            XCTAssertEqual(Set(question.options).count, question.options.count)
+            XCTAssertTrue(question.options.indices.contains(question.correctIndex))
+            XCTAssertFalse(question.note.isEmpty)
+            let subject = try XCTUnwrap(question.eventID.flatMap { byID[$0] })
+            XCTAssertFalse(subject.matches(month: 7, day: day), "day \(day) asks about its own date")
+        }
+    }
+
+    func testThinCatalogYieldsNoQuestion() {
+        XCTAssertNil(QuizEngine.dailyQuestion(for: date(2026, 7, 10), events: Array(makeQuizCorpus().prefix(20)), calendar: Self.calendar))
+    }
+}
+
+// MARK: - Reading streak
+
+final class ReadingStreakTests: XCTestCase {
+    private var calendar: Calendar = {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(identifier: "America/New_York")!
+        return calendar
+    }()
+
+    private func date(_ year: Int, _ month: Int, _ day: Int, hour: Int = 9) -> Date {
+        calendar.date(from: DateComponents(year: year, month: month, day: day, hour: hour))!
+    }
+
+    func testDayKeyUsesTheLocalCalendarDay() {
+        XCTAssertEqual(ReadingStreak.dayKey(for: date(2026, 3, 8, hour: 23), calendar: calendar), "2026-03-08")
+        XCTAssertEqual(ReadingStreak.dayKey(for: date(2027, 1, 1, hour: 0), calendar: calendar), "2027-01-01")
+    }
+
+    func testStreakCountsConsecutiveDaysAndSurvivesUntilTheDayEnds() {
+        var state = HabitState()
+        XCTAssertEqual(state.streak(asOf: date(2026, 7, 10), calendar: calendar), ReadingStreakStatus(count: 0, readToday: false, longest: 0))
+
+        XCTAssertTrue(state.recordRead(on: date(2026, 7, 8), calendar: calendar))
+        XCTAssertTrue(state.recordRead(on: date(2026, 7, 9), calendar: calendar))
+        // Not read yet on the 10th: yesterday's run is still alive.
+        XCTAssertEqual(state.streak(asOf: date(2026, 7, 10), calendar: calendar), ReadingStreakStatus(count: 2, readToday: false, longest: 2))
+
+        XCTAssertTrue(state.recordRead(on: date(2026, 7, 10), calendar: calendar))
+        XCTAssertFalse(state.recordRead(on: date(2026, 7, 10, hour: 22), calendar: calendar))
+        XCTAssertEqual(state.streak(asOf: date(2026, 7, 10), calendar: calendar), ReadingStreakStatus(count: 3, readToday: true, longest: 3))
+    }
+
+    func testAMissedDayResetsTheStreakButKeepsTheLongest() {
+        var state = HabitState()
+        for day in 1...5 { _ = state.recordRead(on: date(2026, 7, day), calendar: calendar) }
+        // Nothing on the 6th; by the 7th the run is over.
+        XCTAssertEqual(state.streak(asOf: date(2026, 7, 7), calendar: calendar), ReadingStreakStatus(count: 0, readToday: false, longest: 5))
+        _ = state.recordRead(on: date(2026, 7, 7), calendar: calendar)
+        XCTAssertEqual(state.streak(asOf: date(2026, 7, 7), calendar: calendar), ReadingStreakStatus(count: 1, readToday: true, longest: 5))
+    }
+
+    func testStreakCrossesMonthYearAndDaylightSavingBoundaries() {
+        var state = HabitState()
+        for (y, m, d) in [(2026, 12, 30), (2026, 12, 31), (2027, 1, 1)] { _ = state.recordRead(on: date(y, m, d), calendar: calendar) }
+        XCTAssertEqual(state.streak(asOf: date(2027, 1, 1), calendar: calendar).count, 3)
+
+        var spring = HabitState()
+        for day in 7...9 { _ = spring.recordRead(on: date(2026, 3, day, hour: 23), calendar: calendar) }
+        XCTAssertEqual(spring.streak(asOf: date(2026, 3, 9, hour: 23), calendar: calendar).count, 3)
+    }
+
+    func testOnlyTheFirstAnswerOfADayCounts() {
+        var state = HabitState()
+        XCTAssertTrue(state.recordAnswer(choice: 2, correct: true, on: date(2026, 7, 10), calendar: calendar))
+        XCTAssertFalse(state.recordAnswer(choice: 0, correct: false, on: date(2026, 7, 10, hour: 20), calendar: calendar))
+        XCTAssertTrue(state.recordAnswer(choice: 1, correct: false, on: date(2026, 7, 11), calendar: calendar))
+        XCTAssertEqual(state.answers["2026-07-10"], DailyAnswer(choice: 2, correct: true))
+        XCTAssertEqual(state.questionsAnswered, 2)
+        XCTAssertEqual(state.questionsCorrect, 1)
+    }
+
+    func testStateSurvivesEncodingAndOldStoredValues() throws {
+        var state = HabitState()
+        _ = state.recordRead(on: date(2026, 7, 10), calendar: calendar)
+        _ = state.recordAnswer(choice: 1, correct: true, on: date(2026, 7, 10), calendar: calendar)
+        let decoded = try JSONDecoder().decode(HabitState.self, from: JSONEncoder().encode(state))
+        XCTAssertEqual(decoded, state)
+        XCTAssertEqual(try JSONDecoder().decode(HabitState.self, from: Data("{}".utf8)), HabitState())
+        XCTAssertEqual(state.streak(asOf: date(2026, 7, 10), calendar: calendar).summaryLine, "Day 1 of a new reading streak.")
     }
 }
 

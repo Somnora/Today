@@ -3,6 +3,7 @@ import SwiftUI
 struct PreferencesView: View {
     @EnvironmentObject var preferences: UserPreferences
     @EnvironmentObject var dataStore: DataStore
+    @EnvironmentObject var habitStore: HabitStore
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @ScaledMetric(relativeTo: .body) private var typeScale: CGFloat = 1
     @State private var showsPermissionDeniedHint = false
@@ -18,6 +19,7 @@ struct PreferencesView: View {
                     headerSection
                     toneSection
                     densitySection
+                    habitSection
                     widgetSection
                     notificationSection
                     librarySection
@@ -112,6 +114,45 @@ struct PreferencesView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(elevatedSurface)
         }
+    }
+
+    private var habitSection: some View {
+        let status = habitStore.streak()
+        let answered = habitStore.state.questionsAnswered
+        return VStack(alignment: .leading, spacing: 12) {
+            sectionLabel("Your Reading")
+
+            VStack(spacing: 0) {
+                statRow(title: "Reading streak", value: dayCount(status.count), systemImage: status.readToday ? "flame.fill" : "flame")
+
+                Divider()
+                    .background(Color("AccentWarm").opacity(0.10))
+                    .padding(.leading, 18)
+
+                statRow(title: "Longest streak", value: dayCount(status.longest), systemImage: "trophy")
+
+                Divider()
+                    .background(Color("AccentWarm").opacity(0.10))
+                    .padding(.leading, 18)
+
+                statRow(
+                    title: "Daily questions",
+                    value: answered == 0 ? "None yet" : "\(habitStore.state.questionsCorrect) of \(answered) right",
+                    systemImage: "questionmark.circle"
+                )
+            }
+            .background(elevatedSurface)
+
+            Text("Opening any entry counts for the day. This stays on your device.")
+                .font(.system(size: 12, weight: .regular, design: .serif))
+                .italic()
+                .foregroundStyle(Color("TextTertiary"))
+                .padding(.leading, 4)
+        }
+    }
+
+    private func dayCount(_ days: Int) -> String {
+        days == 1 ? "1 day" : "\(days) days"
     }
 
     private var widgetSection: some View {
@@ -388,4 +429,5 @@ struct PreferencesView: View {
     PreferencesView()
         .environmentObject(UserPreferences())
         .environmentObject(DataStore())
+        .environmentObject(HabitStore())
 }

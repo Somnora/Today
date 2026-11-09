@@ -8,6 +8,7 @@ struct EventDetailView: View {
     @EnvironmentObject var thumbsStore: ThumbsStore
     @EnvironmentObject var preferences: UserPreferences
     @EnvironmentObject var savedStore: SavedStore
+    @EnvironmentObject var habitStore: HabitStore
     @ScaledMetric(relativeTo: .body) private var typeScale: CGFloat = 1
     @State private var isProvenanceExpanded = false
     @State private var shareImage: Image?
@@ -88,6 +89,8 @@ struct EventDetailView: View {
             }
         }
         .onAppear {
+            // Opening an entry is what counts toward the reading streak.
+            habitStore.recordRead()
             if shareImage == nil {
                 shareImage = ShareCardRenderer.image(for: event)
             }
@@ -636,5 +639,6 @@ private struct FlowLayout: Layout {
         .environmentObject(ThumbsStore())
         .environmentObject(UserPreferences())
         .environmentObject(SavedStore())
+        .environmentObject(HabitStore())
     }
 }

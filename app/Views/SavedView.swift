@@ -192,4 +192,5 @@ struct SavedView: View {
         .environmentObject(UserPreferences())
         .environmentObject(SavedStore())
         .environmentObject(ThumbsStore())
+        .environmentObject(HabitStore())
 }

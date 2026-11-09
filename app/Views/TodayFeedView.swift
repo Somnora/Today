@@ -6,11 +6,15 @@ struct TodayFeedView: View {
     @EnvironmentObject var dataStore: DataStore
     @EnvironmentObject var preferences: UserPreferences
     @EnvironmentObject var quizStore: QuizStore
+    @EnvironmentObject var habitStore: HabitStore
     @Environment(\.scenePhase) private var scenePhase
     @ScaledMetric(relativeTo: .body) private var typeScale: CGFloat = 1
     @State private var currentDate = Date()
     @State private var weeklyQuiz: WeeklyQuiz?
     @State private var presentedQuiz: WeeklyQuiz?
+    @State private var dailyQuestion: QuizQuestion?
+    @State private var dailyQuestionEvent: HistoricalEvent?
+    @State private var dailyQuestionDay: String?
     @State private var navigationPath = NavigationPath()
     @ObservedObject private var notificationRouter = NotificationRouter.shared
 
@@ -87,7 +91,26 @@ struct TodayFeedView: View {
         }
     }
 
+    /// Builds the day's question once per calendar day and catalog load.
+    private func refreshDailyQuestion() {
+        guard !dataStore.allEvents.isEmpty else {
+            dailyQuestion = nil
+            dailyQuestionEvent = nil
+            dailyQuestionDay = nil
+            return
+        }
+        let day = ReadingStreak.dayKey(for: currentDate)
+        guard dailyQuestionDay != day else { return }
+        let question = QuizEngine.dailyQuestion(for: currentDate, events: dataStore.allEvents)
+        dailyQuestion = question
+        dailyQuestionEvent = question?.eventID.flatMap { id in
+            dataStore.allEvents.first(where: { $0.id == id })
+        }
+        dailyQuestionDay = day
+    }
+
     private func refreshQuiz() {
+        refreshDailyQuestion()
         guard QuizEngine.isQuizDay(currentDate), !dataStore.allEvents.isEmpty else {
             weeklyQuiz = nil
             return
@@ -197,11 +220,27 @@ struct TodayFeedView: View {
                 }
 
                 LazyVStack(spacing: 18) {
-                    ForEach(events) { event in
+                    ForEach(Array(events.enumerated()), id: \.element.id) { index, event in
                         NavigationLink(value: event) {
                             EventCardView(event: event)
                         }
                         .buttonStyle(.plain)
+
+                        // The day's question sits just below the lead story.
+                        if index == 0, let question = dailyQuestion {
+                            DailyQuestionCard(
+                                question: question,
+                                answer: habitStore.answer(on: currentDate),
+                                linkedEvent: dailyQuestionEvent,
+                                onAnswer: { choice in
+                                    habitStore.recordAnswer(
+                                        choice: choice,
+                                        correct: choice == question.correctIndex,
+                                        on: currentDate
+                                    )
+                                }
+                            )
+                        }
                     }
 
                     closingRule
@@ -266,6 +305,8 @@ struct TodayFeedView: View {
                 .font(.system(size: 15, weight: .regular, design: .serif))
                 .foregroundStyle(Color("TextSecondary"))
                 .lineSpacing(4)
+
+            streakLine
         }
         .padding(18)
         .background(
@@ -305,6 +346,21 @@ struct TodayFeedView: View {
                 .strokeBorder(Color("AccentWarm").opacity(0.22), lineWidth: 0.6)
         )
         .shadow(color: Color("AccentWarm").opacity(0.10), radius: 14, x: 0, y: 6)
+    }
+
+    private var streakLine: some View {
+        let status = habitStore.streak(asOf: currentDate)
+        return HStack(spacing: 8) {
+            Image(systemName: status.readToday ? "flame.fill" : "flame")
+                .font(.system(size: 12, weight: .semibold))
+                .foregroundStyle(Color("AccentWarm").opacity(status.count == 0 ? 0.55 : 1))
+
+            Text(status.summaryLine)
+                .font(.system(size: 13, weight: status.readToday ? .medium : .regular, design: .serif))
+                .foregroundStyle(status.readToday ? Color("AccentWarm") : Color("TextTertiary"))
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .accessibilityElement(children: .combine)
     }
 
     private var loadingState: some View {
@@ -475,4 +531,5 @@ struct TodayFeedView: View {
         .environmentObject(ThumbsStore())
         .environmentObject(SavedStore())
         .environmentObject(QuizStore())
+        .environmentObject(HabitStore())
 }

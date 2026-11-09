@@ -49,6 +49,8 @@ sample-data/feed-order.json → DataLoader.feedRank → DataStore sort + Morning
                           UserPreferences (AppStorage)
                           ThumbsStore (AppStorage)
                           SavedStore (AppStorage)
+                          QuizStore (AppStorage, weekend quiz results)
+                          HabitStore (AppStorage, reading streak + daily question answers)
 ```
 
 `sample-data/events.json` is the only corpus bundled into the iOS app; the
