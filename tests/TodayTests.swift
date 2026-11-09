@@ -116,6 +116,29 @@ final class DisplayEventTests: XCTestCase {
     }
 }
 
+// MARK: - Hero image URLs
+
+final class ImageURLTests: XCTestCase {
+    private let retired = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Turgenev_by_Repin.jpg/640px-Turgenev_by_Repin.jpg"
+    private let served = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Turgenev_by_Repin.jpg/960px-Turgenev_by_Repin.jpg"
+
+    func testRetiredWikimediaWidthIsMappedToServedWidth() {
+        XCTAssertEqual(makeEvent(imageURL: retired).imageURL?.absoluteString, served)
+        XCTAssertEqual(HistoricalEvent.servedWikimediaThumbnailURLString(retired.replacingOccurrences(of: "640px", with: "800px")), served)
+    }
+
+    func testServedWidthsOriginalsAndOtherHostsAreLeftAlone() {
+        XCTAssertEqual(makeEvent(imageURL: served).imageURL?.absoluteString, served)
+        let small = served.replacingOccurrences(of: "960px", with: "330px")
+        XCTAssertEqual(makeEvent(imageURL: small).imageURL?.absoluteString, small)
+        let original = "https://upload.wikimedia.org/wikipedia/commons/7/72/Turgenev_by_Repin.jpg"
+        XCTAssertEqual(makeEvent(imageURL: original).imageURL?.absoluteString, original)
+        let other = "https://example.com/thumb/640px-photo.jpg"
+        XCTAssertEqual(makeEvent(imageURL: other).imageURL?.absoluteString, other)
+        XCTAssertNil(makeEvent(imageURL: nil).imageURL)
+    }
+}
+
 // MARK: - Widget dates and ranked highlights
 
 final class WidgetDayTests: XCTestCase {

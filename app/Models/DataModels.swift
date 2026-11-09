@@ -67,9 +67,31 @@ struct HistoricalEvent: Identifiable, Codable, Hashable {
     }
 
     /// Remote lead image for the event, when one is available.
+    ///
+    /// Wikimedia serves only a fixed set of thumbnail widths and answers any
+    /// other width with HTTP 400, so widths the corpus has used that are no
+    /// longer served are mapped onto a width that is.
     var imageURL: URL? {
-        guard let imageURLString, let url = URL(string: imageURLString) else { return nil }
-        return url
+        guard let imageURLString else { return nil }
+        return URL(string: Self.servedWikimediaThumbnailURLString(imageURLString))
+    }
+
+    /// Thumbnail widths Wikimedia stopped serving (verified 2026-11-09), and
+    /// the served width they are rewritten to. See https://w.wiki/GHai.
+    static let retiredWikimediaThumbnailWidths = ["480", "640", "800", "1024"]
+    static let servedWikimediaThumbnailWidth = "960"
+
+    static func servedWikimediaThumbnailURLString(_ urlString: String) -> String {
+        guard urlString.contains("upload.wikimedia.org/"), urlString.contains("/thumb/") else {
+            return urlString
+        }
+        for width in retiredWikimediaThumbnailWidths {
+            let marker = "/\(width)px-"
+            if urlString.contains(marker) {
+                return urlString.replacingOccurrences(of: marker, with: "/\(servedWikimediaThumbnailWidth)px-")
+            }
+        }
+        return urlString
     }
 
     /// Link to the source page the image came from (for attribution tap-through).

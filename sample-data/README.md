@@ -143,7 +143,10 @@ Common optional: `year`, `one_liner`, `short_summary`, `description`,
 
 `image_url` is a remote lead image (currently a Wikimedia Commons thumbnail);
 the app loads it via `AsyncImage` and falls back to a tone-aware placeholder
-when absent. `image_attribution` / `image_credit_url` back the credit caption
+when absent.
+Wikimedia serves only fixed thumbnail widths and answers others with HTTP 400,
+so `validate_events.py` rejects any Wikimedia thumbnail width other than 250,
+330, 960 or 1280; the corpus uses 960. `image_attribution` / `image_credit_url` back the credit caption
 on the detail screen.
 
 `DataLoader` filters out records where `editorial_status` is
