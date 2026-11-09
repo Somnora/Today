@@ -13,6 +13,21 @@ class DataStore: ObservableObject {
     /// Event ID -> editorial position within its day (see feed-order.json).
     private(set) var feedRank: [String: Int] = [:]
 
+    /// Comparison keys of "why it matters" notes shared by several records;
+    /// the detail screen hides those as category filler.
+    private(set) var genericNotes: Set<String> = []
+    private var entryCopyCache: [String: EntryCopy] = [:]
+
+    /// Display copy for the detail screen, computed once per event.
+    func entryCopy(for event: HistoricalEvent) -> EntryCopy {
+        if let cached = entryCopyCache[event.id] {
+            return cached
+        }
+        let copy = event.entryCopy(genericNotes: genericNotes)
+        entryCopyCache[event.id] = copy
+        return copy
+    }
+
     /// Every distinct month/day with at least one event, sorted by calendar
     /// order. Built once per load so views don't regroup the full corpus.
     private(set) var representedDates: [MonthDay] = []
@@ -25,6 +40,8 @@ class DataStore: ObservableObject {
 
         let result = await DataLoader.loadEvents()
         feedRank = await DataLoader.loadFeedRank()
+        genericNotes = HistoricalEvent.genericNotes(in: result.events)
+        entryCopyCache.removeAll()
         allEvents = result.events
         loadIssue = result.issue
         buildDateIndex()

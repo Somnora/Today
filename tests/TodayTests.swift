@@ -170,6 +170,116 @@ final class ImageURLTests: XCTestCase {
     }
 }
 
+// MARK: - Detail screen copy
+
+final class EntryCopyTests: XCTestCase {
+    private func entry(
+        summary: String,
+        detail: String,
+        deepDive: String? = nil,
+        whyItMatters: String? = nil,
+        contextLine: String = "Fixture context line."
+    ) -> HistoricalEvent {
+        HistoricalEvent(
+            id: UUID().uuidString, month: 7, day: 10, year: 1900, title: "Fixture",
+            summary: summary, contextLine: contextLine, detail: detail,
+            category: .science, tone: .balanced, source: "https://example.com",
+            deepDive: deepDive, whyItMatters: whyItMatters
+        )
+    }
+
+    func testDistinctBlocksAreAllKept() {
+        let copy = entry(
+            summary: "A lens was ground.",
+            detail: "The workshop spent a winter on it.",
+            deepDive: "Decades later the design was copied across Europe.",
+            whyItMatters: "It made distant things measurable."
+        ).entryCopy()
+        XCTAssertEqual(copy, EntryCopy(
+            lead: "A lens was ground.",
+            body: "The workshop spent a winter on it.",
+            whyItMatters: "It made distant things measurable.",
+            deeperStory: "Decades later the design was copied across Europe."
+        ))
+    }
+
+    func testRepeatedBodyAndDeeperStoryAreHidden() {
+        let text = "A lens was ground in the workshop."
+        let copy = entry(summary: text, detail: text + " ", deepDive: text).entryCopy()
+        XCTAssertEqual(copy.lead, text)
+        XCTAssertNil(copy.body)
+        XCTAssertNil(copy.deeperStory)
+    }
+
+    func testBodyThatOpensWithTheLeadShowsOnlyWhatFollows() {
+        let copy = entry(
+            summary: "A lens was ground.",
+            detail: "A lens was ground. The workshop spent a winter on it.",
+            deepDive: "A lens was ground. The workshop spent a winter on it. Decades later the design was copied across Europe."
+        ).entryCopy()
+        XCTAssertEqual(copy.lead, "A lens was ground.")
+        XCTAssertEqual(copy.body, "The workshop spent a winter on it.")
+        XCTAssertEqual(copy.deeperStory, "Decades later the design was copied across Europe.")
+    }
+
+    func testClippedSummaryIsReplacedByTheFullFirstSentence() {
+        let copy = entry(
+            summary: "A judge enjoins administrators from hindering the admission",
+            detail: "A judge enjoins administrators from hindering the admission after two rulings. The campus stayed tense for weeks."
+        ).entryCopy()
+        XCTAssertEqual(copy.lead, "A judge enjoins administrators from hindering the admission after two rulings.")
+        XCTAssertEqual(copy.body, "The campus stayed tense for weeks.")
+    }
+
+    func testShortTailStaysAttachedToTheLead() {
+        let copy = entry(
+            summary: "Families read the poem A Visit from St.",
+            detail: "Families read the poem A Visit from St. Nicholas."
+        ).entryCopy()
+        XCTAssertEqual(copy.lead, "Families read the poem A Visit from St. Nicholas.")
+        XCTAssertNil(copy.body)
+    }
+
+    func testEditorialProcessNotesAreRemoved() {
+        let copy = entry(
+            summary: "China conducts its first thermonuclear test.",
+            detail: "The device was dropped from an aircraft. The repaired wording says conducted rather than announced.",
+            deepDive: "This entry is drawn from example.org; the date reflects the recorded civil date.",
+            whyItMatters: "It broadens the app beyond politics with source-backed coverage."
+        ).entryCopy()
+        XCTAssertEqual(copy.body, "The device was dropped from an aircraft.")
+        XCTAssertNil(copy.deeperStory)
+        XCTAssertNil(copy.whyItMatters)
+        XCTAssertFalse(EntryText.isEditorialNote("The presidential candidate set a record for turnout."))
+    }
+
+    func testGenericAndRepeatedNotesAreHidden() {
+        let filler = "Even a small dated note can reopen the texture of an era."
+        let events = (0..<3).map { _ in entry(summary: "S.", detail: "D.", whyItMatters: filler) }
+            + [entry(summary: "S.", detail: "D.", whyItMatters: "A specific consequence followed.")]
+        let generic = HistoricalEvent.genericNotes(in: events)
+        XCTAssertEqual(generic, [EntryText.key(filler)])
+        XCTAssertNil(events[0].entryCopy(genericNotes: generic).whyItMatters)
+        XCTAssertEqual(events[3].entryCopy(genericNotes: generic).whyItMatters, "A specific consequence followed.")
+        // A note that only repeats the italic context line is hidden too.
+        let echo = entry(summary: "S.", detail: "D.", whyItMatters: "Fixture context line").entryCopy()
+        XCTAssertNil(echo.whyItMatters)
+    }
+
+    func testBundledCorpusNeverShowsARepeatedOrInternalBlock() async {
+        let events = await DataLoader.loadEvents().events
+        let generic = HistoricalEvent.genericNotes(in: events)
+        for event in events {
+            let copy = event.entryCopy(genericNotes: generic)
+            XCTAssertFalse(copy.lead.isEmpty, event.id)
+            let blocks = [copy.body, copy.whyItMatters, copy.deeperStory].compactMap { $0 }
+            let keys = ([copy.lead] + blocks).map(EntryText.key)
+            XCTAssertEqual(Set(keys).count, keys.count, "repeated block in \(event.id)")
+            XCTAssertFalse(blocks.contains(where: EntryText.isEditorialNote), "internal note in \(event.id)")
+        }
+    }
+}
+
 // MARK: - Widget dates and ranked highlights
 
 final class WidgetDayTests: XCTestCase {

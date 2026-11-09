@@ -15,6 +15,7 @@ INFO_PLIST_PATH = ROOT / "app" / "Info.plist"
 CONTENT_VIEW_PATH = ROOT / "app" / "ContentView.swift"
 DATA_MODELS_PATH = ROOT / "app" / "Models" / "DataModels.swift"
 DATA_STORE_PATH = ROOT / "app" / "Data" / "DataStore.swift"
+EVENT_DETAIL_VIEW_PATH = ROOT / "app" / "Views" / "EventDetailView.swift"
 EXPLORE_VIEW_PATH = ROOT / "app" / "Views" / "ExploreView.swift"
 PREFERENCES_VIEW_PATH = ROOT / "app" / "Views" / "PreferencesView.swift"
 THUMBS_STORE_PATH = ROOT / "app" / "Storage" / "ThumbsStore.swift"
@@ -143,6 +144,10 @@ def validate_app_code_contracts() -> list[str]:
 
     if "boundedMonthName" not in data_models or "monthSymbols[max(0, month - 1)]" in data_models:
         errors.append("HistoricalEvent date labels must clamp invalid month values without indexing monthSymbols directly")
+
+    detail_view = EVENT_DETAIL_VIEW_PATH.read_text()
+    if "entryCopy(for: event)" not in detail_view or "Text(event.detail)" in detail_view or "event.deepDive" in detail_view:
+        errors.append("EventDetailView must render EntryCopy blocks so repeated or internal text stays hidden")
 
     if "@MainActor" not in thumbs_store:
         errors.append("ThumbsStore must stay on the main actor for AppStorage and ObservableObject updates")
