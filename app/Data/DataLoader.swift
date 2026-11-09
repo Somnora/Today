@@ -51,13 +51,56 @@ class DataLoader {
         }
     }
 
-    /// The single event surfaced for a given day on ambient surfaces
-    /// (widget timeline, morning notification): balanced tone policy,
-    /// then the earliest year with title as tiebreaker.
-    static func displayEvent(month: Int, day: Int, from events: [HistoricalEvent]) -> HistoricalEvent? {
+    /// The single event surfaced for a given day on ambient surfaces (the
+    /// morning notification): balanced tone policy, then the editorial feed
+    /// order, so it matches the lead card and the widget. Without a rank it
+    /// falls back to the earliest year with title as tiebreaker.
+    static func displayEvent(
+        month: Int,
+        day: Int,
+        from events: [HistoricalEvent],
+        feedRank: [String: Int] = [:]
+    ) -> HistoricalEvent? {
         let dated = events.filter { $0.matches(month: month, day: day) }
         let preferred = filterByTone(dated, preference: .balanced)
-        return preferred.min(by: displayOrder) ?? events.min(by: displayOrder)
+        return feedOrdered(preferred, rank: feedRank).first
+    }
+
+    /// Editorial order for a day's events: ranked records first, in rank
+    /// order, then any unranked records by year and title.
+    static func feedOrdered(_ events: [HistoricalEvent], rank: [String: Int]) -> [HistoricalEvent] {
+        events.sorted { left, right in
+            switch (rank[left.id], rank[right.id]) {
+            case let (leftRank?, rightRank?) where leftRank != rightRank:
+                return leftRank < rightRank
+            case (.some, nil):
+                return true
+            case (nil, .some):
+                return false
+            default:
+                return displayOrder(left, right)
+            }
+        }
+    }
+
+    /// Loads the bundled editorial feed order as event ID -> position within
+    /// its day. Returns an empty map when the file is missing or malformed;
+    /// callers then fall back to chronological order.
+    static func loadFeedRank(resource: String = "feed-order") async -> [String: Int] {
+        guard let url = Bundle.main.url(forResource: resource, withExtension: "json"),
+              let data = try? Data(contentsOf: url) else { return [:] }
+        return feedRank(from: data)
+    }
+
+    static func feedRank(from data: Data) -> [String: Int] {
+        guard let order = try? JSONDecoder().decode(FeedOrder.self, from: data) else { return [:] }
+        var rank: [String: Int] = [:]
+        for ids in order.days.values {
+            for (position, id) in ids.enumerated() where rank[id] == nil {
+                rank[id] = position
+            }
+        }
+        return rank
     }
 
     static func displayOrder(_ left: HistoricalEvent, _ right: HistoricalEvent) -> Bool {
@@ -127,6 +170,11 @@ class DataLoader {
             )
         ]
     }
+}
+
+struct FeedOrder: Decodable {
+    let version: Int
+    let days: [String: [String]]
 }
 
 struct WidgetDay {

@@ -187,7 +187,7 @@ struct PreferencesView: View {
                         let granted = await NotificationScheduler.requestAuthorization()
                         preferences.morningNotificationsEnabled = granted
                         showsPermissionDeniedHint = !granted
-                        await NotificationScheduler.refresh(enabled: granted, events: dataStore.allEvents)
+                        await NotificationScheduler.refresh(enabled: granted, events: dataStore.allEvents, feedRank: dataStore.feedRank)
                     }
                 } else {
                     preferences.morningNotificationsEnabled = false

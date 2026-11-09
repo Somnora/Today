@@ -12,6 +12,7 @@ else in the repo replaces them at build time.
 | `sample-data/events.json` | Top-level JSON array of `HistoricalEvent` records (3826 records, all app-publishable, no bundled deferred records, as of 2026-07-08). |
 | `<App>.app/events.json` | Same file, copied verbatim by Xcode's `Resources` build phase (app target). |
 | `sample-data/widget-events.json` | Generated slice: three highlights per calendar day (1,098 records), trimmed to the fields the widget renders. The established lead event stays first; small/medium and Lock Screen widgets use that lead, and the large widget shows all three. Regenerate with `python3 .github/scripts/generate_widget_events.py` whenever `events.json` changes; CI fails if it is stale. |
+| `sample-data/feed-order.json` | Generated editorial order of every day's feed: event IDs per `MM-DD`, widget lead first, formulaic filler last. The app sorts each day by it and the Morning Edition notification uses its lead. Regenerate with `python3 .github/scripts/generate_feed_order.py` whenever `events.json` changes; CI fails if it is stale. Bundled in the app only. |
 | `<App>.app/PlugIns/…appex/widget-events.json` | Same slice, copied by the widget target's `Resources` build phase. |
 
 `app/Data/DataLoader.swift` reads whichever resource its bundle carries:
@@ -77,8 +78,9 @@ cd path/to/today-ios
 #    and at least one source per record. This mirrors the CI data gate.
 python3 .github/scripts/validate_events.py
 
-# 2. Regenerate the widget slice from the (possibly changed) corpus.
+# 2. Regenerate the widget slice and the feed order from the (possibly changed) corpus.
 python3 .github/scripts/generate_widget_events.py
+python3 .github/scripts/generate_feed_order.py
 
 # 3. Re-bundle into the iOS app.
 xcodebuild \

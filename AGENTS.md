@@ -44,6 +44,7 @@ This is a first-pass iPhone-only SwiftUI proof app for "Today" — a historical 
 ```
 sample-data/events.json → DataLoader → DataStore → Views (app target)
 sample-data/widget-events.json → DataLoader → TodayWidget (widget target)
+sample-data/feed-order.json → DataLoader.feedRank → DataStore sort + Morning Edition lead
                                      ↓
                           UserPreferences (AppStorage)
                           ThumbsStore (AppStorage)

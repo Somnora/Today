@@ -106,6 +106,37 @@ final class DisplayEventTests: XCTestCase {
         XCTAssertEqual(pick?.id, "earlier")
     }
 
+    func testFeedRankOverridesChronologyForFeedAndAmbientPick() {
+        let events = [
+            makeEvent(id: "old", year: 1200),
+            makeEvent(id: "headline", year: 1989),
+            makeEvent(id: "second", year: 1905),
+            makeEvent(id: "unranked-late", year: 2001),
+            makeEvent(id: "unranked-early", year: 1500),
+            makeEvent(id: "somber-top", year: 1950, tone: .somber, category: .science)
+        ]
+        let rank = ["somber-top": 0, "headline": 1, "second": 2, "old": 3]
+        XCTAssertEqual(
+            DataLoader.feedOrdered(events, rank: rank).map(\.id),
+            ["somber-top", "headline", "second", "old", "unranked-early", "unranked-late"]
+        )
+        // The ambient pick applies the balanced tone policy before ranking.
+        XCTAssertEqual(DataLoader.displayEvent(month: 7, day: 10, from: events, feedRank: rank)?.id, "headline")
+    }
+
+    func testFeedRankDecodesAndToleratesBadData() {
+        let json = #"{"version": 1, "days": {"07-10": ["a", "b"], "07-11": ["c"]}}"#
+        XCTAssertEqual(DataLoader.feedRank(from: Data(json.utf8)), ["a": 0, "b": 1, "c": 0])
+        XCTAssertTrue(DataLoader.feedRank(from: Data("not json".utf8)).isEmpty)
+    }
+
+    func testBundledFeedOrderRanksEveryBundledEvent() async {
+        let result = await DataLoader.loadEvents()
+        let rank = await DataLoader.loadFeedRank()
+        XCTAssertEqual(rank.count, result.events.count)
+        XCTAssertTrue(result.events.allSatisfy { rank[$0.id] != nil })
+    }
+
     func testTitleBreaksYearTies() {
         let events = [
             makeEvent(id: "z", year: 1900, title: "Zebra crossing opens"),

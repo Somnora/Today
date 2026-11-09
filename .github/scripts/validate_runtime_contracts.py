@@ -14,6 +14,7 @@ PROJECT_PATH = ROOT / "Today.xcodeproj" / "project.pbxproj"
 INFO_PLIST_PATH = ROOT / "app" / "Info.plist"
 CONTENT_VIEW_PATH = ROOT / "app" / "ContentView.swift"
 DATA_MODELS_PATH = ROOT / "app" / "Models" / "DataModels.swift"
+DATA_STORE_PATH = ROOT / "app" / "Data" / "DataStore.swift"
 EXPLORE_VIEW_PATH = ROOT / "app" / "Views" / "ExploreView.swift"
 PREFERENCES_VIEW_PATH = ROOT / "app" / "Views" / "PreferencesView.swift"
 THUMBS_STORE_PATH = ROOT / "app" / "Storage" / "ThumbsStore.swift"
@@ -176,6 +177,10 @@ def validate_widget_bundle_contract() -> list[str]:
         errors.append("project must contain a Today app target")
     if " /* events.json in Resources */" not in app_resources_section:
         errors.append("app target must bundle the full events.json corpus")
+    if " /* feed-order.json in Resources */" not in app_resources_section:
+        errors.append("app target must bundle feed-order.json or the feed falls back to oldest-first")
+    if "DataLoader.feedOrdered" not in DATA_STORE_PATH.read_text():
+        errors.append("DataStore must sort a day's events with DataLoader.feedOrdered, not by year")
     if "PBXTargetDependency" not in app_target:
         errors.append("Today target must depend on TodayWidgetExtension so the widget builds with the app")
     if "TodayWidgetExtension.appex in Embed Foundation Extensions" not in app_extensions_section:

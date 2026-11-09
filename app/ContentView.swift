@@ -57,7 +57,8 @@ struct ContentView: View {
     private func refreshMorningNotifications() async {
         await NotificationScheduler.refresh(
             enabled: preferences.morningNotificationsEnabled,
-            events: dataStore.allEvents
+            events: dataStore.allEvents,
+            feedRank: dataStore.feedRank
         )
     }
 

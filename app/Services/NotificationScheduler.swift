@@ -2,7 +2,8 @@ import Foundation
 import UserNotifications
 
 /// Schedules the local "Morning Edition" notification for the next several
-/// days, using the same per-day pick as the widget. Re-run whenever the app
+/// days, using the day's lead from the editorial feed order (the same
+/// headline the feed and the widget show). Re-run whenever the app
 /// becomes active so the scheduled window keeps sliding forward. Everything
 /// stays on-device; there is no push infrastructure.
 enum NotificationScheduler {
@@ -29,7 +30,7 @@ enum NotificationScheduler {
 
     /// Replaces all pending Morning Edition notifications. When `enabled` is
     /// false (or authorization is missing) it only clears them.
-    static func refresh(enabled: Bool, events: [HistoricalEvent]) async {
+    static func refresh(enabled: Bool, events: [HistoricalEvent], feedRank: [String: Int] = [:]) async {
         let center = UNUserNotificationCenter.current()
         let pending = await center.pendingNotificationRequests()
         let ownedIDs = pending.map(\.identifier).filter { $0.hasPrefix(notificationIDPrefix) }
@@ -53,7 +54,7 @@ enum NotificationScheduler {
 
             guard let month = fireComponents.month,
                   let dayOfMonth = fireComponents.day,
-                  let event = DataLoader.displayEvent(month: month, day: dayOfMonth, from: events) else {
+                  let event = DataLoader.displayEvent(month: month, day: dayOfMonth, from: events, feedRank: feedRank) else {
                 continue
             }
 
