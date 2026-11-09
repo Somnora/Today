@@ -5,10 +5,11 @@ struct ContentView: View {
     @EnvironmentObject var preferences: UserPreferences
     @Environment(\.scenePhase) private var scenePhase
     @State private var selectedTab = 0
+    @State private var todayOpenRequest = 0
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            TodayFeedView()
+            TodayFeedView(openTodayRequest: todayOpenRequest)
                 .tabItem {
                     Label("Today", systemImage: "calendar")
                 }
@@ -63,6 +64,7 @@ struct ContentView: View {
     private func handleDeepLink(_ url: URL) {
         if url.absoluteString == "today://today" {
             selectedTab = 0
+            todayOpenRequest &+= 1
             return
         }
 
@@ -70,6 +72,7 @@ struct ContentView: View {
         switch url.host?.lowercased() {
         case "today", nil:
             selectedTab = 0
+            todayOpenRequest &+= 1
         case "explore":
             selectedTab = 1
         case "saved", "bookmarks":

@@ -69,6 +69,23 @@ class DataLoader {
         return leftYear < rightYear
     }
 
+    /// The slice is already editorially ranked. Preserve its order and never
+    /// substitute an unrelated date when a day is missing. Empty days still
+    /// receive an entry so yesterday's history is cleared at midnight.
+    static func widgetDays(from events: [HistoricalEvent], startingAt now: Date, timeZone: TimeZone = .current) -> [WidgetDay] {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = timeZone
+        let start = calendar.startOfDay(for: now)
+        return (0..<3).compactMap { offset in
+            guard let date = calendar.date(byAdding: .day, value: offset, to: start) else { return nil }
+            let components = calendar.dateComponents([.month, .day], from: date)
+            let highlights = events.filter {
+                $0.isPublishable && $0.month == components.month && $0.day == components.day
+            }
+            return WidgetDay(date: offset == 0 ? now : date, events: Array(highlights.prefix(3)))
+        }
+    }
+
     private static func bundleEvents(from bundle: RobBundleEnvelope) -> [HistoricalEvent] {
         let combined = bundle.publishableUplifting + bundle.publishableBalanced
         return combined.compactMap(HistoricalEvent.init(bundleRecord:))
@@ -110,6 +127,11 @@ class DataLoader {
             )
         ]
     }
+}
+
+struct WidgetDay {
+    let date: Date
+    let events: [HistoricalEvent]
 }
 
 struct EventLoadResult {

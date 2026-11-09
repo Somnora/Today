@@ -11,13 +11,14 @@ else in the repo replaces them at build time.
 | --- | --- |
 | `sample-data/events.json` | Top-level JSON array of `HistoricalEvent` records (3826 records, all app-publishable, no bundled deferred records, as of 2026-07-08). |
 | `<App>.app/events.json` | Same file, copied verbatim by Xcode's `Resources` build phase (app target). |
-| `sample-data/widget-events.json` | Generated slice: one record per calendar day (366 records), trimmed to the fields the widget renders. Regenerate with `python3 .github/scripts/generate_widget_events.py` whenever `events.json` changes; CI fails if it is stale. |
+| `sample-data/widget-events.json` | Generated slice: three highlights per calendar day (1,098 records), trimmed to the fields the widget renders. The established lead event stays first; small/medium and Lock Screen widgets use that lead, and the large widget shows all three. Regenerate with `python3 .github/scripts/generate_widget_events.py` whenever `events.json` changes; CI fails if it is stale. |
 | `<App>.app/PlugIns/…appex/widget-events.json` | Same slice, copied by the widget target's `Resources` build phase. |
 
 `app/Data/DataLoader.swift` reads whichever resource its bundle carries:
 the app resolves `events.json`; the widget extension resolves
-`widget-events.json` (falling back to `events.json` if a full corpus is
-ever bundled there again).
+`widget-events.json`. Widget selection preserves the generated editorial order.
+Missing dates show an invitation to open the app, never an event from a different
+date. The timeline includes three days using local Gregorian calendar midnights.
 
 There is **no other resource path** that the running app or widget reads for
 historical events. Other local JSON exports are reference material, not bundle

@@ -1,4 +1,18 @@
 # AGENTS.md
+## Project context
+
+Project: Today iOS
+Expected repository root: /Users/jamesmcshane/Desktop/today-ios
+Canonical Obsidian context file: /Users/jamesmcshane/Desktop/obsidian-vault/the-eye/Projects/today-ios/claude-context.md
+
+Before planning or editing:
+
+1. Confirm the repository root with git rev-parse --show-toplevel.
+2. Read the canonical Obsidian context file above.
+3. Report the repository root and context file in the first response.
+4. Treat the context file as project memory and provenance, not current code truth. Verify current behavior in this repository.
+5. If the path is missing or the repository root does not match this mapping, report Vault context link failed and do not guess another context folder.
+
 
 ## Today iOS - 21-Day Proof Build
 
@@ -38,7 +52,7 @@ sample-data/widget-events.json → DataLoader → TodayWidget (widget target)
 
 `sample-data/events.json` is the only corpus bundled into the iOS app; the
 widget extension bundles `sample-data/widget-events.json`, a generated
-one-record-per-day slice (regenerate with
+three-highlights-per-day slice with the editorial lead first (regenerate with
 `python3 .github/scripts/generate_widget_events.py`; CI checks freshness).
 For the active data contract, validation command, and backup policy, see
 [`sample-data/README.md`](sample-data/README.md). Historical local exports
@@ -67,9 +81,9 @@ source control.
    - `PreferencesView`: Tone preference toggle
 
 5. **Widget** (`widget/`)
-   - `TodayWidget`: Basic home screen widget showing one event
-   - Timeline provider updates daily at midnight
-   - Supports small and medium widget families
+   - Daily highlight on small/medium Home Screen and inline/rectangular Lock Screen widgets
+   - Large Home Screen widget shows three brief historical summaries
+   - Three-day timeline rolls over at local midnight; tapping returns to today's feed
 
 ### Data Contract
 
@@ -119,7 +133,7 @@ source control.
 ✅ Widget shell with timeline provider
 ✅ Color system and typography
 ✅ 3826-record app-publishable bundled event corpus; deferred records are quarantined outside the app bundle
-✅ Widget extension embedded in the app target and fed by a compact generated per-day slice (`sample-data/widget-events.json`)
+✅ Widget extension embedded in the app target and fed by a compact generated three-highlights-per-day slice (`sample-data/widget-events.json`)
 
 ### Data / Editorial Work Still Needed
 - Continued source-truth review and source-quality hardening of the bundled corpus

@@ -161,6 +161,7 @@ def validate_widget_bundle_contract() -> list[str]:
     widget_resources_section = _phase_block(text, widget_target, "PBXResourcesBuildPhase")
     app_target = _target_block(text, "Today")
     app_resources_section = _phase_block(text, app_target, "PBXResourcesBuildPhase")
+    app_extensions_section = _phase_block(text, app_target, "PBXCopyFilesBuildPhase")
 
     if not widget_target:
         errors.append("project must contain a TodayWidgetExtension target")
@@ -177,7 +178,7 @@ def validate_widget_bundle_contract() -> list[str]:
         errors.append("app target must bundle the full events.json corpus")
     if "PBXTargetDependency" not in app_target:
         errors.append("Today target must depend on TodayWidgetExtension so the widget builds with the app")
-    if "TodayWidgetExtension.appex in Embed Foundation Extensions" not in text:
+    if "TodayWidgetExtension.appex in Embed Foundation Extensions" not in app_extensions_section:
         errors.append("Today target must embed TodayWidgetExtension.appex or the widget will not ship in archives")
 
     return errors

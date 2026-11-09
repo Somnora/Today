@@ -116,6 +116,54 @@ final class DisplayEventTests: XCTestCase {
     }
 }
 
+// MARK: - Widget dates and ranked highlights
+
+final class WidgetDayTests: XCTestCase {
+    private let zone = TimeZone(identifier: "America/New_York")!
+
+    private func date(_ year: Int, _ month: Int, _ day: Int, hour: Int = 12) -> Date {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = zone
+        return calendar.date(from: DateComponents(year: year, month: month, day: day, hour: hour))!
+    }
+
+    func testKeepsEditorialLeadAndCapsRoundupAtThree() {
+        let events = [makeEvent(id: "lead", year: 2000), makeEvent(id: "second", year: 1800),
+                      makeEvent(id: "third"), makeEvent(id: "fourth")]
+        let days = DataLoader.widgetDays(from: events, startingAt: date(2026, 7, 10), timeZone: zone)
+        XCTAssertEqual(days.first?.events.map(\.id), ["lead", "second", "third"])
+    }
+
+    func testMissingDayClearsPreviousHistoryInsteadOfUsingAnotherDate() {
+        let days = DataLoader.widgetDays(from: [makeEvent()], startingAt: date(2026, 7, 9), timeZone: zone)
+        XCTAssertEqual(days.count, 3)
+        XCTAssertTrue(days[0].events.isEmpty)
+        XCTAssertEqual(days[1].events.count, 1)
+        XCTAssertTrue(days[2].events.isEmpty)
+    }
+
+    func testMidnightRolloverAcrossBothDaylightSavingChanges() {
+        for (month, day, hours) in [(3, 8, 23), (11, 1, 25)] {
+            let now = date(2026, month, day - 1)
+            let days = DataLoader.widgetDays(from: [], startingAt: now, timeZone: zone)
+            XCTAssertEqual(days[0].date, now)
+            XCTAssertEqual(days[1].date, date(2026, month, day, hour: 0))
+            XCTAssertEqual(days[2].date, date(2026, month, day + 1, hour: 0))
+            XCTAssertEqual(days[2].date.timeIntervalSince(days[1].date), Double(hours * 3600))
+        }
+    }
+
+    func testLeapDayAndYearBoundaryUseTheCorrectRecords() {
+        let leap = DataLoader.widgetDays(from: [makeEvent(id: "leap", month: 2, day: 29)],
+                                        startingAt: date(2028, 2, 28), timeZone: zone)
+        XCTAssertEqual(leap[1].events.map(\.id), ["leap"])
+        let year = DataLoader.widgetDays(from: [makeEvent(id: "new-year", month: 1, day: 1)],
+                                        startingAt: date(2026, 12, 31), timeZone: zone)
+        XCTAssertEqual(year[1].events.map(\.id), ["new-year"])
+        XCTAssertEqual(year[1].date, date(2027, 1, 1, hour: 0))
+    }
+}
+
 // MARK: - Quiz engine
 
 final class QuizEngineTests: XCTestCase {
