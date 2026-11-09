@@ -58,3 +58,7 @@ screenshots/
 docs/app-store-screenshots/
 docs/icon-concepts/
 docs/release-assets/
+
+# Python bytecode
+__pycache__/
+*.pyc
