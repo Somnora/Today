@@ -28,14 +28,27 @@ struct TodayFeedView: View {
 
     var body: some View {
         NavigationStack(path: $navigationPath) {
-            ScrollView {
-                VStack(alignment: .leading, spacing: metrics.rootStackSpacing) {
-                    headerSection
-                    contentSection
+            ScrollViewReader { proxy in
+                ScrollView {
+                    VStack(alignment: .leading, spacing: metrics.rootStackSpacing) {
+                        headerSection
+                        contentSection
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.top, metrics.rootTopPadding)
+                    .padding(.bottom, 40)
                 }
-                .padding(.horizontal, 20)
-                .padding(.top, metrics.rootTopPadding)
-                .padding(.bottom, 40)
+                #if DEBUG
+                .onChange(of: dailyQuestionDay) { _, _ in
+                    // Visual QA: `-debugScrollToQuestion YES` brings the
+                    // day's question into view without a manual scroll.
+                    guard UserDefaults.standard.bool(forKey: "debugScrollToQuestion") else { return }
+                    Task { @MainActor in
+                        try? await Task.sleep(for: .milliseconds(600))
+                        proxy.scrollTo(Self.dailyQuestionAnchor, anchor: .top)
+                    }
+                }
+                #endif
             }
             .background(paperBackground.ignoresSafeArea())
             .toolbar(.hidden, for: .navigationBar)
@@ -58,8 +71,11 @@ struct TodayFeedView: View {
                 consumePendingNotificationEvent()
             }
         }
-        .onReceive(notificationRouter.$pendingEventID) { _ in
-            consumePendingNotificationEvent()
+        .onReceive(notificationRouter.$pendingEventID) { eventID in
+            // A published property emits before it is stored, so the new
+            // value has to come from the publisher, not from the router.
+            guard let eventID else { return }
+            consumePendingNotificationEvent(eventID)
         }
         .onAppear(perform: refreshQuiz)
         .onChange(of: openTodayRequest) { _, _ in
@@ -75,10 +91,16 @@ struct TodayFeedView: View {
 
     /// Opens the event a Morning Edition notification was tapped for, once
     /// the catalog is available.
-    private func consumePendingNotificationEvent() {
-        guard let eventID = notificationRouter.pendingEventID,
+    private func consumePendingNotificationEvent(_ published: String? = nil) {
+        guard let eventID = published ?? notificationRouter.pendingEventID,
               let event = dataStore.allEvents.first(where: { $0.id == eventID }) else { return }
-        notificationRouter.pendingEventID = nil
+        // Clear on the next turn: when called from the publisher the pending
+        // value has not been stored yet, so clearing now would be overwritten.
+        Task { @MainActor in
+            if notificationRouter.pendingEventID == eventID {
+                notificationRouter.pendingEventID = nil
+            }
+        }
         presentedQuiz = nil
         navigationPath = NavigationPath([event])
     }
@@ -90,6 +112,8 @@ struct TodayFeedView: View {
             refreshQuiz()
         }
     }
+
+    private static let dailyQuestionAnchor = "daily-question"
 
     /// Builds the day's question once per calendar day and catalog load.
     private func refreshDailyQuestion() {
@@ -240,6 +264,7 @@ struct TodayFeedView: View {
                                     )
                                 }
                             )
+                            .id(Self.dailyQuestionAnchor)
                         }
                     }
 

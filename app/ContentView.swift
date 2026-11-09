@@ -43,6 +43,9 @@ struct ContentView: View {
         .task {
             await dataStore.loadEvents()
             await refreshMorningNotifications()
+            #if DEBUG
+            applyDebugLaunchOptions()
+            #endif
         }
         .onChange(of: scenePhase) { _, newPhase in
             if newPhase == .active {
@@ -61,6 +64,21 @@ struct ContentView: View {
             feedRank: dataStore.feedRank
         )
     }
+
+    #if DEBUG
+    /// Visual QA switches, read from launch arguments (for example
+    /// `-debugTab 3` or `-debugOpenEvent <event id>`), so a headless
+    /// simulator can be pointed at a screen without taps.
+    private func applyDebugLaunchOptions() {
+        let defaults = UserDefaults.standard
+        if defaults.object(forKey: "debugTab") != nil {
+            selectedTab = min(max(defaults.integer(forKey: "debugTab"), 0), 3)
+        }
+        if let eventID = defaults.string(forKey: "debugOpenEvent"), !eventID.isEmpty {
+            NotificationRouter.shared.pendingEventID = eventID
+        }
+    }
+    #endif
 
     private func handleDeepLink(_ url: URL) {
         if url.absoluteString == "today://today" {
