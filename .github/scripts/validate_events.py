@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import calendar
 import json
+import re
 import sys
 from collections import Counter
 from pathlib import Path
@@ -58,6 +59,13 @@ ALLOWED_STATUSES = {
 NON_PUBLISHABLE_STATUSES = {"duplicate", "weak_event", "defer"}
 SUMMARY_KEYS = ("one_liner", "description", "short_summary", "summary")
 
+# Wikimedia only serves a fixed set of thumbnail widths and answers any other
+# width with HTTP 400 ("Use thumbnail sizes listed on https://w.wiki/GHai").
+# These widths were verified to return 200 on 2026-11-09; extend the set only
+# after checking a live URL at the new width.
+SERVED_WIKIMEDIA_THUMB_WIDTHS = {"250", "330", "960", "1280"}
+WIKIMEDIA_THUMB_WIDTH_PATTERN = re.compile(r"/(\d+)px-")
+
 
 def is_non_empty_string(value: Any) -> bool:
     return isinstance(value, str) and bool(value.strip())
@@ -71,6 +79,14 @@ def source_count(record: dict[str, Any]) -> int:
     if isinstance(sources, list):
         count += sum(1 for source in sources if is_non_empty_string(source))
     return count
+
+
+def wikimedia_thumb_width(url: str) -> str | None:
+    """Width requested by a Wikimedia thumbnail URL, or None for other URLs."""
+    if "upload.wikimedia.org/" not in url or "/thumb/" not in url:
+        return None
+    match = WIKIMEDIA_THUMB_WIDTH_PATTERN.search(url)
+    return match.group(1) if match else None
 
 
 def load_events() -> list[dict[str, Any]]:
@@ -148,6 +164,18 @@ def validate(events: list[dict[str, Any]]) -> tuple[list[str], list[str]]:
         if source_count(event) == 0:
             errors.append(f"{label}: missing source or sources")
 
+        image_url = event.get("image_url")
+        if image_url is not None:
+            if not is_non_empty_string(image_url):
+                errors.append(f"{label}: image_url must be a non-empty string when present")
+            else:
+                width = wikimedia_thumb_width(str(image_url).strip())
+                if width is not None and width not in SERVED_WIKIMEDIA_THUMB_WIDTHS:
+                    errors.append(
+                        f"{label}: image_url requests a {width}px Wikimedia thumbnail, which "
+                        f"Wikimedia no longer serves; use one of {sorted(SERVED_WIKIMEDIA_THUMB_WIDTHS)}"
+                    )
+
         tags = event.get("tags")
         if tags is not None and not isinstance(tags, list):
             errors.append(f"{label}: tags must be an array when present")
@@ -202,6 +230,7 @@ def main() -> int:
             {
                 "records": len(events),
                 "publishable_records": publishable_count,
+                "image_urls": sum(1 for event in events if is_non_empty_string(event.get("image_url"))),
                 "statuses": dict(statuses),
                 "categories": dict(categories),
                 "tones": dict(tones),

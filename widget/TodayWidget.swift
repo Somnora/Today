@@ -16,7 +16,7 @@ enum TodayWidgetDensity: String, AppEnum {
 }
 
 struct TodayWidgetConfigurationIntent: WidgetConfigurationIntent {
-    static var title: LocalizedStringResource = "Today Card"
+    static var title: LocalizedStringResource = "Today in Time"
     static var description = IntentDescription("Choose how tightly the widget reads.")
 
     @Parameter(title: "Density", default: .standard)
@@ -25,31 +25,54 @@ struct TodayWidgetConfigurationIntent: WidgetConfigurationIntent {
 
 struct TodayWidgetEntry: TimelineEntry {
     let date: Date
-    let event: HistoricalEvent?
+    let events: [HistoricalEvent]
     let density: TodayWidgetDensity
     var imageData: Data? = nil
+
+    var event: HistoricalEvent? { events.first }
 }
 
 struct TodayWidgetProvider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> TodayWidgetEntry {
-        TodayWidgetEntry(date: Date(), event: placeholderEvent, density: .standard)
+        TodayWidgetEntry(date: Date(), events: [placeholderEvent], density: .standard)
     }
 
     func snapshot(for configuration: TodayWidgetConfigurationIntent, in context: Context) async -> TodayWidgetEntry {
-        if context.isPreview {
-            return TodayWidgetEntry(date: Date(), event: placeholderEvent, density: configuration.density)
-        }
-        let event = await loadWidgetEvent()
-        return TodayWidgetEntry(date: Date(), event: event, density: configuration.density, imageData: await loadImageData(for: event))
+        let now = Date()
+        let result = await DataLoader.loadEvents(resourceCandidates: ["widget-events"])
+        let events = result.issue == nil ? DataLoader.widgetDays(from: result.events, startingAt: now).first?.events ?? [] : []
+        return TodayWidgetEntry(date: now, events: events, density: configuration.density,
+                                imageData: context.isPreview ? nil : await imageData(for: events.first, family: context.family))
     }
 
+    /// Emits entries for today plus the next two days so the card still rolls
+    /// over at midnight when WidgetKit defers the requested reload.
     func timeline(for configuration: TodayWidgetConfigurationIntent, in context: Context) async -> Timeline<TodayWidgetEntry> {
         let now = Date()
-        let event = await loadWidgetEvent(date: now)
-        let entry = TodayWidgetEntry(date: now, event: event, density: configuration.density, imageData: await loadImageData(for: event))
-        let startOfToday = Calendar.current.startOfDay(for: now)
-        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: startOfToday) ?? now.addingTimeInterval(24 * 60 * 60)
-        return Timeline(entries: [entry], policy: .after(tomorrow))
+        let result = await DataLoader.loadEvents(resourceCandidates: ["widget-events"])
+        let days = DataLoader.widgetDays(from: result.issue == nil ? result.events : [], startingAt: now)
+
+        var entries: [TodayWidgetEntry] = []
+        for day in days {
+            entries.append(TodayWidgetEntry(
+                date: day.date,
+                events: day.events,
+                density: configuration.density,
+                imageData: await imageData(for: day.events.first, family: context.family)
+            ))
+        }
+
+        if entries.isEmpty {
+            entries = [TodayWidgetEntry(date: now, events: [], density: configuration.density)]
+        }
+
+        let tomorrow = days.dropFirst().first?.date ?? now.addingTimeInterval(60 * 60)
+        return Timeline(entries: entries, policy: .after(tomorrow))
+    }
+
+    private func imageData(for event: HistoricalEvent?, family: WidgetFamily) async -> Data? {
+        guard family == .systemSmall || family == .systemMedium else { return nil }
+        return await loadImageData(for: event)
     }
 
     /// WidgetKit cannot use AsyncImage, so the lead image is fetched here and
@@ -67,16 +90,6 @@ struct TodayWidgetProvider: AppIntentTimelineProvider {
         } catch {
             return nil
         }
-    }
-
-    private func loadWidgetEvent(date: Date = Date()) async -> HistoricalEvent? {
-        let result = await DataLoader.loadEvents(resourceCandidates: ["widget-events", "events"])
-        let components = Calendar.current.dateComponents([.month, .day], from: date)
-        guard let month = components.month, let day = components.day else {
-            return result.events.first
-        }
-
-        return DataLoader.displayEvent(month: month, day: day, from: result.events)
     }
 
     private var placeholderEvent: HistoricalEvent {
@@ -102,7 +115,7 @@ private struct WidgetMetrics {
     var smallPadding: CGFloat { density == .compact ? 12 : 16 }
     var smallStackSpacing: CGFloat { density == .compact ? 6 : 9 }
     var smallTitleSize: CGFloat { density == .compact ? 14 : 15 }
-    var smallTitleLineLimit: Int { density == .compact ? 4 : 3 }
+    var smallTitleLineLimit: Int { 2 }
     var smallTitleLineSpacing: CGFloat { density == .compact ? 1.5 : 2 }
     var smallMetaSize: CGFloat { 11 }
 
@@ -119,6 +132,7 @@ private struct WidgetMetrics {
 struct TodayWidgetEntryView: View {
     var entry: TodayWidgetProvider.Entry
     @Environment(\.widgetFamily) private var widgetFamily
+    @Environment(\.widgetRenderingMode) private var renderingMode
 
     private var widgetMetrics: WidgetMetrics {
         WidgetMetrics(density: entry.density)
@@ -132,7 +146,7 @@ struct TodayWidgetEntryView: View {
     /// Photo backgrounds only apply to the home-screen families; lock-screen
     /// accessories stay monochrome.
     private var showsImageBackground: Bool {
-        uiImage != nil && (widgetFamily == .systemSmall || widgetFamily == .systemMedium)
+        renderingMode == .fullColor && uiImage != nil && (widgetFamily == .systemSmall || widgetFamily == .systemMedium)
     }
 
     private var primaryText: Color { showsImageBackground ? .white : .primary }
@@ -167,7 +181,7 @@ struct TodayWidgetEntryView: View {
                 )
             }
         } else {
-            Rectangle().fill(.fill.tertiary)
+            Color("WidgetBackground")
         }
     }
 
@@ -176,6 +190,8 @@ struct TodayWidgetEntryView: View {
         switch widgetFamily {
         case .systemSmall:
             smallWidgetView(event: event)
+        case .systemLarge:
+            largeWidgetView
         case .accessoryInline:
             inlineAccessoryView(event: event)
         case .accessoryRectangular:
@@ -195,15 +211,15 @@ struct TodayWidgetEntryView: View {
                 Text(event.yearLabel)
                     .font(.system(size: 13, weight: .semibold, design: .serif))
 
-                Text(event.monthDayString.uppercased())
+                Text("TODAY IN TIME")
                     .font(.system(size: 10, weight: .semibold, design: .rounded))
                     .tracking(0.8)
                     .foregroundStyle(.secondary)
             }
 
-            Text(event.title)
+            Text(event.summary)
                 .font(.system(size: 12, weight: .medium, design: .serif))
-                .lineLimit(2)
+                .lineLimit(3)
                 .minimumScaleFactor(0.9)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
@@ -230,12 +246,14 @@ struct TodayWidgetEntryView: View {
                 .lineSpacing(widgetMetrics.smallTitleLineSpacing)
                 .minimumScaleFactor(0.82)
 
-            Text(event.category.displayName.uppercased())
-                .font(.system(size: widgetMetrics.smallMetaSize - 1, weight: .semibold, design: .rounded))
-                .tracking(1.2)
+            Text(event.summary)
+                .font(.system(size: 11, design: .serif))
                 .foregroundStyle(secondaryText)
-                .lineLimit(1)
-                .minimumScaleFactor(0.82)
+                .lineLimit(2)
+
+            Text(entry.date, format: .dateTime.month(.abbreviated).day())
+                .font(.system(size: 10, weight: .semibold, design: .rounded))
+                .foregroundStyle(secondaryText)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         .padding(widgetMetrics.smallPadding)
@@ -281,28 +299,72 @@ struct TodayWidgetEntryView: View {
                     .fill(secondaryText.opacity(0.5))
                     .frame(width: 14, height: 0.6)
 
-                Text(event.monthDayString.uppercased())
+                Text(entry.date, format: .dateTime.month(.abbreviated).day())
                     .font(.system(size: widgetMetrics.mediumDateSize - 1, weight: .semibold, design: .rounded))
                     .tracking(1.2)
                     .foregroundStyle(secondaryText)
                     .lineLimit(1)
                     .minimumScaleFactor(0.82)
+
+                Spacer()
+                Text("Read today's collection")
+                    .font(.system(size: 10, design: .serif))
+                    .foregroundStyle(secondaryText)
+                    .lineLimit(1)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         .padding(widgetMetrics.mediumPadding)
     }
 
-    private var emptyStateView: some View {
-        VStack(spacing: 10) {
-            Image(systemName: "calendar")
-                .font(.system(size: 24))
-            Text("Today")
-                .font(.system(size: 15, weight: .semibold, design: .serif))
+    private var largeWidgetView: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(alignment: .firstTextBaseline) {
+                Text("Today in Time")
+                    .font(.system(size: 20, weight: .semibold, design: .serif))
+                Spacer()
+                Text(entry.date, format: .dateTime.month(.abbreviated).day())
+                    .font(.system(size: 12, weight: .medium, design: .rounded))
+                    .foregroundStyle(.secondary)
+            }
+
+            ForEach(entry.events) { event in
+                Divider()
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("\(event.yearLabel) · \(event.title)")
+                        .font(.system(size: entry.density == .compact ? 14 : 15, weight: .semibold, design: .serif))
+                        .lineLimit(2)
+                    Text(event.summary)
+                        .font(.system(size: 12, design: .serif))
+                        .foregroundStyle(.secondary)
+                        .lineLimit(2)
+                }
+                .accessibilityElement(children: .combine)
+            }
+
+            Spacer(minLength: 0)
+            Label("Read today's collection", systemImage: "arrow.up.right")
+                .font(.system(size: 11, weight: .medium, design: .rounded))
+                .foregroundStyle(.secondary)
         }
-        .foregroundStyle(.secondary)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding()
+        .padding(16)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+    }
+
+    @ViewBuilder
+    private var emptyStateView: some View {
+        if widgetFamily == .accessoryInline {
+            Text("Today in Time · Open today's collection")
+        } else {
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Today in Time")
+                    .font(.headline)
+                Text("Open today's collection")
+                    .font(.caption)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+            .padding(widgetFamily == .accessoryRectangular ? 0 : 16)
+        }
     }
 }
 
@@ -318,9 +380,10 @@ struct TodayWidget: Widget {
         ) { entry in
             TodayWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("Today Card")
-        .description("A quietly kept historical note for the day.")
-        .supportedFamilies([.systemSmall, .systemMedium, .accessoryInline, .accessoryRectangular])
+        .configurationDisplayName("Today in Time")
+        .description("Daily history at a glance. Choose a highlight or a three-event roundup, then tap to read today's collection.")
+        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge, .accessoryInline, .accessoryRectangular])
+        .contentMarginsDisabled()
     }
 }
 
@@ -329,7 +392,7 @@ struct TodayWidget: Widget {
 } timeline: {
     TodayWidgetEntry(
         date: Date(),
-        event: HistoricalEvent(
+        events: [HistoricalEvent(
             id: "preview",
             month: 4,
             day: 19,
@@ -341,7 +404,7 @@ struct TodayWidget: Widget {
             category: .science,
             tone: .uplifting,
             source: "Today"
-        ),
+        )],
         density: .standard
     )
 }

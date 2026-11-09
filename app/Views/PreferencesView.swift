@@ -18,6 +18,7 @@ struct PreferencesView: View {
                     headerSection
                     toneSection
                     densitySection
+                    widgetSection
                     notificationSection
                     librarySection
                     aboutSection
@@ -107,6 +108,37 @@ struct PreferencesView: View {
                     .foregroundStyle(Color("TextSecondary"))
                     .lineSpacing(3)
             }
+            .padding(18)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(elevatedSurface)
+        }
+    }
+
+    private var widgetSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            sectionLabel("Daily Widgets")
+
+            VStack(alignment: .leading, spacing: 14) {
+                Text("A little history, every day")
+                    .font(.system(size: 17, weight: .semibold, design: .serif))
+                    .foregroundStyle(Color("TextPrimary"))
+
+                Text("Keep a daily highlight on your Home Screen or Lock Screen, or choose the large widget for three moments from this date. Tap any widget to read today's collection.")
+
+                Text("Home Screen")
+                    .fontWeight(.semibold)
+                Text("Touch and hold an empty area, tap Edit, then Add Widget. Search for Today in Time and choose a size.")
+
+                Text("Lock Screen")
+                    .fontWeight(.semibold)
+                Text("Touch and hold your Lock Screen, tap Customize, then choose the Lock Screen. Tap Add Widgets and select Today in Time. For a single line above the clock, tap the date area instead.")
+
+                Text("If Today in Time is missing, update the app and open it once, then check the widget gallery again.")
+                    .italic()
+            }
+            .font(.system(size: 14, design: .serif))
+            .foregroundStyle(Color("TextSecondary"))
+            .lineSpacing(3)
             .padding(18)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(elevatedSurface)

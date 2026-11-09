@@ -11,13 +11,14 @@ else in the repo replaces them at build time.
 | --- | --- |
 | `sample-data/events.json` | Top-level JSON array of `HistoricalEvent` records (3826 records, all app-publishable, no bundled deferred records, as of 2026-07-08). |
 | `<App>.app/events.json` | Same file, copied verbatim by Xcode's `Resources` build phase (app target). |
-| `sample-data/widget-events.json` | Generated slice: one record per calendar day (366 records), trimmed to the fields the widget renders. Regenerate with `python3 .github/scripts/generate_widget_events.py` whenever `events.json` changes; CI fails if it is stale. |
+| `sample-data/widget-events.json` | Generated slice: three highlights per calendar day (1,098 records), trimmed to the fields the widget renders. The established lead event stays first; small/medium and Lock Screen widgets use that lead, and the large widget shows all three. Regenerate with `python3 .github/scripts/generate_widget_events.py` whenever `events.json` changes; CI fails if it is stale. |
 | `<App>.app/PlugIns/…appex/widget-events.json` | Same slice, copied by the widget target's `Resources` build phase. |
 
 `app/Data/DataLoader.swift` reads whichever resource its bundle carries:
 the app resolves `events.json`; the widget extension resolves
-`widget-events.json` (falling back to `events.json` if a full corpus is
-ever bundled there again).
+`widget-events.json`. Widget selection preserves the generated editorial order.
+Missing dates show an invitation to open the app, never an event from a different
+date. The timeline includes three days using local Gregorian calendar midnights.
 
 There is **no other resource path** that the running app or widget reads for
 historical events. Other local JSON exports are reference material, not bundle
@@ -142,7 +143,10 @@ Common optional: `year`, `one_liner`, `short_summary`, `description`,
 
 `image_url` is a remote lead image (currently a Wikimedia Commons thumbnail);
 the app loads it via `AsyncImage` and falls back to a tone-aware placeholder
-when absent. `image_attribution` / `image_credit_url` back the credit caption
+when absent.
+Wikimedia serves only fixed thumbnail widths and answers others with HTTP 400,
+so `validate_events.py` rejects any Wikimedia thumbnail width other than 250,
+330, 960 or 1280; the corpus uses 960. `image_attribution` / `image_credit_url` back the credit caption
 on the detail screen.
 
 `DataLoader` filters out records where `editorial_status` is

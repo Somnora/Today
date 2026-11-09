@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """Generate sample-data/widget-events.json, the compact per-day widget slice.
 
-The widget extension only ever renders one event per calendar day, so instead
-of bundling (and decoding) the full events.json corpus inside the extension,
-this script precomputes that one record per day using the same selection the
-widget previously performed at runtime: publishable records for the date,
-balanced-tone policy, then the earliest year (title as tiebreaker).
+The widget shows a lead event in small sizes and three highlights in the large
+daily roundup. Precompute those records instead of decoding the full corpus
+inside the extension. Order is significant: the established marquee/notability
+pick stays first, followed by the next two balanced-policy candidates.
 
 Records are trimmed to the fields the widget actually renders. Output is
 deterministic; CI runs `--check` to fail if the committed slice is stale.
@@ -229,6 +228,16 @@ def pick_for_day(events: list[dict[str, Any]]) -> dict[str, Any]:
     )
 
 
+def highlights_for_day(events: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    lead = pick_for_day(events)
+    remaining = sorted(
+        (event for event in balanced_pool(events) if event["id"] != lead["id"]),
+        key=lambda e: (widget_score(e), notability(e), prominence(e), str(e.get("title") or "")),
+        reverse=True,
+    )
+    return [lead, *remaining[:2]]
+
+
 def slice_record(event: dict[str, Any]) -> dict[str, Any]:
     record = {
         "id": str(event["id"]).strip(),
@@ -264,7 +273,11 @@ def build_slice() -> str:
             continue
         grouped[(event["month"], event["day"])].append(event)
 
-    records = [slice_record(pick_for_day(grouped[key])) for key in sorted(grouped)]
+    records = [
+        slice_record(event)
+        for key in sorted(grouped)
+        for event in highlights_for_day(grouped[key])
+    ]
     return json.dumps(records, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
 
 

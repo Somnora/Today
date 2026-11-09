@@ -2,6 +2,7 @@ import Combine
 import SwiftUI
 
 struct TodayFeedView: View {
+    var openTodayRequest = 0
     @EnvironmentObject var dataStore: DataStore
     @EnvironmentObject var preferences: UserPreferences
     @EnvironmentObject var quizStore: QuizStore
@@ -57,6 +58,12 @@ struct TodayFeedView: View {
             consumePendingNotificationEvent()
         }
         .onAppear(perform: refreshQuiz)
+        .onChange(of: openTodayRequest) { _, _ in
+            notificationRouter.pendingEventID = nil
+            presentedQuiz = nil
+            navigationPath = NavigationPath()
+            refreshCurrentDate()
+        }
         .sheet(item: $presentedQuiz) { quiz in
             QuizView(quiz: quiz)
         }
