@@ -14,6 +14,8 @@ class UserPreferences: ObservableObject {
     @AppStorage("tonePreference") var tonePreference: String = TonePreference.balanced.rawValue
     @AppStorage("readingDensity") var readingDensity: String = ReadingDensity.standard.rawValue
     @AppStorage("morningNotificationsEnabled") var morningNotificationsEnabled: Bool = false
+    /// Morning Edition delivery time, as minutes after midnight.
+    @AppStorage("morningNotificationMinutes") var morningNotificationMinutes: Int = NotificationScheduler.defaultDeliveryMinutes
 
     var currentTonePreference: TonePreference {
         get {

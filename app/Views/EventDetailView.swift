@@ -4,9 +4,11 @@ import UIKit
 struct EventDetailView: View {
     let event: HistoricalEvent
 
+    @EnvironmentObject var dataStore: DataStore
     @EnvironmentObject var thumbsStore: ThumbsStore
     @EnvironmentObject var preferences: UserPreferences
     @EnvironmentObject var savedStore: SavedStore
+    @EnvironmentObject var habitStore: HabitStore
     @ScaledMetric(relativeTo: .body) private var typeScale: CGFloat = 1
     @State private var isProvenanceExpanded = false
     @State private var shareImage: Image?
@@ -17,6 +19,11 @@ struct EventDetailView: View {
 
     private var metrics: ReadingMetrics {
         ReadingMetrics(density: preferences.currentReadingDensity, typeScale: typeScale)
+    }
+
+    /// Display copy with repeated paragraphs and filler notes removed.
+    private var copy: EntryCopy {
+        dataStore.entryCopy(for: event)
     }
 
     private var isSaved: Bool {
@@ -82,6 +89,8 @@ struct EventDetailView: View {
             }
         }
         .onAppear {
+            // Opening an entry is what counts toward the reading streak.
+            habitStore.recordRead()
             if shareImage == nil {
                 shareImage = ShareCardRenderer.image(for: event)
             }
@@ -216,7 +225,7 @@ struct EventDetailView: View {
 
     private var summaryBlock: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text(event.summary)
+            Text(copy.lead)
                 .font(.system(size: metrics.detailLeadSize, weight: .regular, design: .serif))
                 .foregroundStyle(Color("TextPrimary"))
                 .lineSpacing(metrics.detailLeadLineSpacing)
@@ -247,23 +256,26 @@ struct EventDetailView: View {
         }
     }
 
+    @ViewBuilder
     private var detailBlock: some View {
-        Text(event.detail)
-            .font(.system(size: metrics.detailBodySize, weight: .regular, design: .serif))
-            .foregroundStyle(Color("TextPrimary"))
-            .lineSpacing(metrics.detailBodyLineSpacing)
+        if let body = copy.body {
+            Text(body)
+                .font(.system(size: metrics.detailBodySize, weight: .regular, design: .serif))
+                .foregroundStyle(Color("TextPrimary"))
+                .lineSpacing(metrics.detailBodyLineSpacing)
+        }
     }
 
     @ViewBuilder
     private var whyItMattersBlock: some View {
-        if let whyItMatters = event.whyItMatters {
+        if let whyItMatters = copy.whyItMatters {
             editorialBlock(title: "Why It Matters", systemImage: "sparkle.magnifyingglass", text: whyItMatters)
         }
     }
 
     @ViewBuilder
     private var deepDiveBlock: some View {
-        if let deepDive = event.deepDive {
+        if let deepDive = copy.deeperStory {
             VStack(alignment: .leading, spacing: 12) {
                 Label("Deeper Story", systemImage: "text.book.closed")
                     .font(.system(size: 12, weight: .semibold, design: .rounded))
@@ -623,8 +635,10 @@ private struct FlowLayout: Layout {
                 source: "University observatory record"
             )
         )
+        .environmentObject(DataStore())
         .environmentObject(ThumbsStore())
         .environmentObject(UserPreferences())
         .environmentObject(SavedStore())
+        .environmentObject(HabitStore())
     }
 }

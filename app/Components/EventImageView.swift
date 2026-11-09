@@ -11,6 +11,9 @@ struct EventHeroImage: View {
     var height: CGFloat
     var corners: Corners = .topOnly
 
+    /// Vertical point of a tall image that is centered in the banner.
+    private static let portraitFocus: CGFloat = 0.36
+
     enum Corners {
         case topOnly      // card banner: round the top edge only
         case all          // framed photo
@@ -25,9 +28,20 @@ struct EventHeroImage: View {
             ) { phase in
                 switch phase {
                 case .success(let image):
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
+                    // Most lead images are portraits, cropped here to a wide
+                    // banner. Centering the crop about a third of the way
+                    // down keeps the face; images that already fit the
+                    // banner's height are unaffected.
+                    Color.clear
+                        .overlay(alignment: .center) {
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .alignmentGuide(VerticalAlignment.center) { dimensions in
+                                    let half = height / 2
+                                    return min(max(dimensions.height * Self.portraitFocus, half), max(dimensions.height - half, half))
+                                }
+                        }
                         .transition(.opacity)
                 case .empty:
                     placeholder.overlay(

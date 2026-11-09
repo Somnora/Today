@@ -694,4 +694,5 @@ private struct DateSuggestion: Hashable, Identifiable {
         .environmentObject(UserPreferences())
         .environmentObject(ThumbsStore())
         .environmentObject(SavedStore())
+        .environmentObject(HabitStore())
 }

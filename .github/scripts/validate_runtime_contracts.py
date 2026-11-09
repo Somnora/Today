@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -14,6 +15,9 @@ PROJECT_PATH = ROOT / "Today.xcodeproj" / "project.pbxproj"
 INFO_PLIST_PATH = ROOT / "app" / "Info.plist"
 CONTENT_VIEW_PATH = ROOT / "app" / "ContentView.swift"
 DATA_MODELS_PATH = ROOT / "app" / "Models" / "DataModels.swift"
+DATA_STORE_PATH = ROOT / "app" / "Data" / "DataStore.swift"
+EVENT_DETAIL_VIEW_PATH = ROOT / "app" / "Views" / "EventDetailView.swift"
+NOTIFICATION_SCHEDULER_PATH = ROOT / "app" / "Services" / "NotificationScheduler.swift"
 EXPLORE_VIEW_PATH = ROOT / "app" / "Views" / "ExploreView.swift"
 PREFERENCES_VIEW_PATH = ROOT / "app" / "Views" / "PreferencesView.swift"
 THUMBS_STORE_PATH = ROOT / "app" / "Storage" / "ThumbsStore.swift"
@@ -143,6 +147,17 @@ def validate_app_code_contracts() -> list[str]:
     if "boundedMonthName" not in data_models or "monthSymbols[max(0, month - 1)]" in data_models:
         errors.append("HistoricalEvent date labels must clamp invalid month values without indexing monthSymbols directly")
 
+    scheduler = NOTIFICATION_SCHEDULER_PATH.read_text()
+    horizon = re.search(r"static let scheduledDayCount = (\d+)", scheduler)
+    if not horizon or not 14 <= int(horizon.group(1)) < 64:
+        errors.append("Morning Edition must schedule at least 14 days ahead and stay under the 64 pending notification limit")
+    if "removeAllPendingNotificationRequests" in scheduler:
+        errors.append("NotificationScheduler must only touch its own today-morning- requests")
+
+    detail_view = EVENT_DETAIL_VIEW_PATH.read_text()
+    if "entryCopy(for: event)" not in detail_view or "Text(event.detail)" in detail_view or "event.deepDive" in detail_view:
+        errors.append("EventDetailView must render EntryCopy blocks so repeated or internal text stays hidden")
+
     if "@MainActor" not in thumbs_store:
         errors.append("ThumbsStore must stay on the main actor for AppStorage and ObservableObject updates")
     if "@Published private(set) var reactions" not in thumbs_store:
@@ -176,6 +191,10 @@ def validate_widget_bundle_contract() -> list[str]:
         errors.append("project must contain a Today app target")
     if " /* events.json in Resources */" not in app_resources_section:
         errors.append("app target must bundle the full events.json corpus")
+    if " /* feed-order.json in Resources */" not in app_resources_section:
+        errors.append("app target must bundle feed-order.json or the feed falls back to oldest-first")
+    if "DataLoader.feedOrdered" not in DATA_STORE_PATH.read_text():
+        errors.append("DataStore must sort a day's events with DataLoader.feedOrdered, not by year")
     if "PBXTargetDependency" not in app_target:
         errors.append("Today target must depend on TodayWidgetExtension so the widget builds with the app")
     if "TodayWidgetExtension.appex in Embed Foundation Extensions" not in app_extensions_section:

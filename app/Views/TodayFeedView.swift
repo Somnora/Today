@@ -6,11 +6,15 @@ struct TodayFeedView: View {
     @EnvironmentObject var dataStore: DataStore
     @EnvironmentObject var preferences: UserPreferences
     @EnvironmentObject var quizStore: QuizStore
+    @EnvironmentObject var habitStore: HabitStore
     @Environment(\.scenePhase) private var scenePhase
     @ScaledMetric(relativeTo: .body) private var typeScale: CGFloat = 1
     @State private var currentDate = Date()
     @State private var weeklyQuiz: WeeklyQuiz?
     @State private var presentedQuiz: WeeklyQuiz?
+    @State private var dailyQuestion: QuizQuestion?
+    @State private var dailyQuestionEvent: HistoricalEvent?
+    @State private var dailyQuestionDay: String?
     @State private var navigationPath = NavigationPath()
     @ObservedObject private var notificationRouter = NotificationRouter.shared
 
@@ -24,14 +28,27 @@ struct TodayFeedView: View {
 
     var body: some View {
         NavigationStack(path: $navigationPath) {
-            ScrollView {
-                VStack(alignment: .leading, spacing: metrics.rootStackSpacing) {
-                    headerSection
-                    contentSection
+            ScrollViewReader { proxy in
+                ScrollView {
+                    VStack(alignment: .leading, spacing: metrics.rootStackSpacing) {
+                        headerSection
+                        contentSection
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.top, metrics.rootTopPadding)
+                    .padding(.bottom, 40)
                 }
-                .padding(.horizontal, 20)
-                .padding(.top, metrics.rootTopPadding)
-                .padding(.bottom, 40)
+                #if DEBUG
+                .onChange(of: dailyQuestionDay) { _, _ in
+                    // Visual QA: `-debugScrollToQuestion YES` brings the
+                    // day's question into view without a manual scroll.
+                    guard UserDefaults.standard.bool(forKey: "debugScrollToQuestion") else { return }
+                    Task { @MainActor in
+                        try? await Task.sleep(for: .milliseconds(600))
+                        proxy.scrollTo(Self.dailyQuestionAnchor, anchor: .top)
+                    }
+                }
+                #endif
             }
             .background(paperBackground.ignoresSafeArea())
             .toolbar(.hidden, for: .navigationBar)
@@ -54,8 +71,11 @@ struct TodayFeedView: View {
                 consumePendingNotificationEvent()
             }
         }
-        .onReceive(notificationRouter.$pendingEventID) { _ in
-            consumePendingNotificationEvent()
+        .onReceive(notificationRouter.$pendingEventID) { eventID in
+            // A published property emits before it is stored, so the new
+            // value has to come from the publisher, not from the router.
+            guard let eventID else { return }
+            consumePendingNotificationEvent(eventID)
         }
         .onAppear(perform: refreshQuiz)
         .onChange(of: openTodayRequest) { _, _ in
@@ -71,10 +91,16 @@ struct TodayFeedView: View {
 
     /// Opens the event a Morning Edition notification was tapped for, once
     /// the catalog is available.
-    private func consumePendingNotificationEvent() {
-        guard let eventID = notificationRouter.pendingEventID,
+    private func consumePendingNotificationEvent(_ published: String? = nil) {
+        guard let eventID = published ?? notificationRouter.pendingEventID,
               let event = dataStore.allEvents.first(where: { $0.id == eventID }) else { return }
-        notificationRouter.pendingEventID = nil
+        // Clear on the next turn: when called from the publisher the pending
+        // value has not been stored yet, so clearing now would be overwritten.
+        Task { @MainActor in
+            if notificationRouter.pendingEventID == eventID {
+                notificationRouter.pendingEventID = nil
+            }
+        }
         presentedQuiz = nil
         navigationPath = NavigationPath([event])
     }
@@ -87,7 +113,28 @@ struct TodayFeedView: View {
         }
     }
 
+    private static let dailyQuestionAnchor = "daily-question"
+
+    /// Builds the day's question once per calendar day and catalog load.
+    private func refreshDailyQuestion() {
+        guard !dataStore.allEvents.isEmpty else {
+            dailyQuestion = nil
+            dailyQuestionEvent = nil
+            dailyQuestionDay = nil
+            return
+        }
+        let day = ReadingStreak.dayKey(for: currentDate)
+        guard dailyQuestionDay != day else { return }
+        let question = QuizEngine.dailyQuestion(for: currentDate, events: dataStore.allEvents)
+        dailyQuestion = question
+        dailyQuestionEvent = question?.eventID.flatMap { id in
+            dataStore.allEvents.first(where: { $0.id == id })
+        }
+        dailyQuestionDay = day
+    }
+
     private func refreshQuiz() {
+        refreshDailyQuestion()
         guard QuizEngine.isQuizDay(currentDate), !dataStore.allEvents.isEmpty else {
             weeklyQuiz = nil
             return
@@ -197,11 +244,28 @@ struct TodayFeedView: View {
                 }
 
                 LazyVStack(spacing: 18) {
-                    ForEach(events) { event in
+                    ForEach(Array(events.enumerated()), id: \.element.id) { index, event in
                         NavigationLink(value: event) {
                             EventCardView(event: event)
                         }
                         .buttonStyle(.plain)
+
+                        // The day's question sits just below the lead story.
+                        if index == 0, let question = dailyQuestion {
+                            DailyQuestionCard(
+                                question: question,
+                                answer: habitStore.answer(on: currentDate),
+                                linkedEvent: dailyQuestionEvent,
+                                onAnswer: { choice in
+                                    habitStore.recordAnswer(
+                                        choice: choice,
+                                        correct: choice == question.correctIndex,
+                                        on: currentDate
+                                    )
+                                }
+                            )
+                            .id(Self.dailyQuestionAnchor)
+                        }
                     }
 
                     closingRule
@@ -266,6 +330,8 @@ struct TodayFeedView: View {
                 .font(.system(size: 15, weight: .regular, design: .serif))
                 .foregroundStyle(Color("TextSecondary"))
                 .lineSpacing(4)
+
+            streakLine
         }
         .padding(18)
         .background(
@@ -305,6 +371,21 @@ struct TodayFeedView: View {
                 .strokeBorder(Color("AccentWarm").opacity(0.22), lineWidth: 0.6)
         )
         .shadow(color: Color("AccentWarm").opacity(0.10), radius: 14, x: 0, y: 6)
+    }
+
+    private var streakLine: some View {
+        let status = habitStore.streak(asOf: currentDate)
+        return HStack(spacing: 8) {
+            Image(systemName: status.readToday ? "flame.fill" : "flame")
+                .font(.system(size: 12, weight: .semibold))
+                .foregroundStyle(Color("AccentWarm").opacity(status.count == 0 ? 0.55 : 1))
+
+            Text(status.summaryLine)
+                .font(.system(size: 13, weight: status.readToday ? .medium : .regular, design: .serif))
+                .foregroundStyle(status.readToday ? Color("AccentWarm") : Color("TextTertiary"))
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .accessibilityElement(children: .combine)
     }
 
     private var loadingState: some View {
@@ -475,4 +556,5 @@ struct TodayFeedView: View {
         .environmentObject(ThumbsStore())
         .environmentObject(SavedStore())
         .environmentObject(QuizStore())
+        .environmentObject(HabitStore())
 }

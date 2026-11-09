@@ -9,6 +9,8 @@ struct QuizQuestion: Identifiable, Equatable {
     let options: [String]
     let correctIndex: Int
     let note: String
+    /// The entry the question is about, so the reader can open it afterwards.
+    var eventID: String? = nil
 }
 
 struct WeeklyQuiz: Identifiable, Equatable {
@@ -19,8 +21,9 @@ struct WeeklyQuiz: Identifiable, Equatable {
 }
 
 /// Deterministic weekly quiz drawn from the bundled corpus. Seeded by the ISO
-/// week, so Friday and Sunday share one quiz and every device generates the
-/// same questions from the same catalog.
+/// week, so the whole weekend shares one quiz and every device generates the
+/// same questions from the same catalog. Also builds the single question shown
+/// on the feed every day.
 enum QuizEngine {
     static let questionCount = 5
 
@@ -36,17 +39,17 @@ enum QuizEngine {
         return String(format: "%d-W%02d", year, week)
     }
 
-    /// Quiz days are Friday and Sunday.
+    /// Quiz days are Friday, Saturday and Sunday.
     static func isQuizDay(_ date: Date) -> Bool {
         #if DEBUG
         if ProcessInfo.processInfo.arguments.contains("-quiz-day") { return true }
         #endif
         let weekday = Calendar.current.component(.weekday, from: date)
-        return weekday == 6 || weekday == 1
+        return weekday == 6 || weekday == 7 || weekday == 1
     }
 
     /// The Friday of the date's ISO week anchors the "match the date"
-    /// question, so Friday and Sunday ask about the same calendar day.
+    /// question, so every quiz day of the week asks about the same calendar day.
     static func anchorDay(for date: Date) -> MonthDay {
         var components = isoCalendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: date)
         components.weekday = 6
@@ -64,26 +67,7 @@ enum QuizEngine {
         var rng = SplitMix64(seed: UInt64(max(year, 1)) &* 1_000 &+ UInt64(week))
         let currentYear = Calendar.current.component(.year, from: date)
 
-        // Illustrated, non-somber records with a concrete year are the
-        // curated, recognizable slice of the catalog. Many curated titles are
-        // truncated blurbs ending in an ellipsis — those read poorly as quiz
-        // options, so only whole titles qualify.
-        let base = events
-            .filter { $0.isPublishable && $0.tone != .somber && $0.year != nil }
-            .sorted { $0.id < $1.id }
-        let clean = base.filter { !$0.title.hasSuffix("…") && !$0.title.hasSuffix("...") }
-        var pool = clean.filter { $0.imageURLString != nil }
-        if pool.count < 120 { pool = clean }
-        guard pool.count >= 120 else { return nil }
-
-        // Titles carrying a long digit run (years, act numbers) would leak
-        // the answer to year-placement and ordering questions.
-        let yearSafe = pool.filter {
-            $0.title.range(of: #"\d{3}"#, options: .regularExpression) == nil
-                && $0.title.count <= 90
-                && ($0.year ?? 0) >= 1000
-        }
-        guard yearSafe.count >= 40 else { return nil }
+        guard let (clean, yearSafe) = questionPools(from: events) else { return nil }
 
         var used = Set<String>()
         var questions: [QuizQuestion] = []
@@ -107,6 +91,74 @@ enum QuizEngine {
         guard questions.count == questionCount else { return nil }
 
         return WeeklyQuiz(weekKey: weekKey(for: date), questions: questions)
+    }
+
+    /// The single question shown on the feed each day. Deterministic per
+    /// calendar day, so reopening the app shows the same question.
+    ///
+    /// It never asks about today's own date, because the answer would be
+    /// sitting in the feed below. The shape rotates daily: place a year,
+    /// order two events, or pick what happened on tomorrow's date, which
+    /// doubles as a preview of the next edition.
+    static func dailyQuestion(for date: Date, events: [HistoricalEvent], calendar: Calendar = .current) -> QuizQuestion? {
+        let today = calendar.dateComponents([.year, .month, .day], from: date)
+        guard let year = today.year, let month = today.month, let day = today.day,
+              let ordinal = calendar.ordinality(of: .day, in: .year, for: date) else { return nil }
+
+        let notToday = events.filter { !$0.matches(month: month, day: day) }
+        guard let (clean, yearSafe) = questionPools(from: notToday) else { return nil }
+
+        var rng = SplitMix64(seed: 0xDA11_0000 &+ UInt64(max(year, 1)) &* 1_000 &+ UInt64(ordinal))
+        var used = Set<String>()
+
+        switch ordinal % 3 {
+        case 1:
+            if let question = orderQuestion(id: 0, pool: yearSafe, used: &used, rng: &rng) {
+                return question
+            }
+        case 2:
+            if let tomorrow = calendar.date(byAdding: .day, value: 1, to: date) {
+                let next = calendar.dateComponents([.month, .day], from: tomorrow)
+                let anchor = MonthDay(month: next.month ?? month, day: next.day ?? day)
+                if let question = dateQuestion(id: 0, pool: clean, anchor: anchor, used: &used, rng: &rng) {
+                    return question
+                }
+            }
+        default:
+            break
+        }
+        return yearQuestion(id: 0, pool: yearSafe, used: &used, currentYear: year, rng: &rng)
+    }
+
+    /// The slices of the catalog that make fair questions, or nil when the
+    /// catalog is too thin.
+    private static func questionPools(from events: [HistoricalEvent]) -> (clean: [HistoricalEvent], yearSafe: [HistoricalEvent])? {
+        // Illustrated, non-somber records with a concrete year are the
+        // curated, recognizable slice of the catalog. Titles truncated with
+        // an ellipsis read poorly as options, so only whole titles qualify.
+        let base = events
+            .filter { $0.isPublishable && $0.tone != .somber && $0.year != nil }
+            .sorted { $0.id < $1.id }
+        let whole = base.filter { !$0.title.hasSuffix("…") && !$0.title.hasSuffix("...") }
+        var pool = whole.filter { $0.imageURLString != nil }
+        if pool.count < 120 { pool = whole }
+        guard pool.count >= 120 else { return nil }
+
+        // Date questions draw on the wider catalog, minus titles that spell
+        // out a year or date (they give the answer away and include formulaic
+        // rows such as "1920 Nobel Prize in Literature awarded").
+        let datedTitle = #"\d{3}"#
+        let clean = whole.filter { $0.title.range(of: datedTitle, options: .regularExpression) == nil }
+
+        // Titles carrying a long digit run (years, act numbers) would leak
+        // the answer to year-placement and ordering questions.
+        let yearSafe = pool.filter {
+            $0.title.range(of: datedTitle, options: .regularExpression) == nil
+                && $0.title.count <= 90
+                && ($0.year ?? 0) >= 1000
+        }
+        guard yearSafe.count >= 40 else { return nil }
+        return (clean, yearSafe)
     }
 
     // MARK: Question shapes
@@ -138,7 +190,8 @@ enum QuizEngine {
             prompt: event.title,
             options: options,
             correctIndex: correctIndex,
-            note: event.summary
+            note: event.summary,
+            eventID: event.id
         )
     }
 
@@ -164,7 +217,8 @@ enum QuizEngine {
             prompt: "Which of these happened first?",
             options: shown.map(\.title),
             correctIndex: correctIndex,
-            note: "\(earlier.title) — \(earlier.yearLabel). \(later.title) — \(later.yearLabel)."
+            note: "\(earlier.title): \(earlier.yearLabel). \(later.title): \(later.yearLabel).",
+            eventID: earlier.id
         )
     }
 
@@ -196,7 +250,8 @@ enum QuizEngine {
             prompt: "Which of these happened on \(correct.monthDayString)?",
             options: shown.map(\.title),
             correctIndex: correctIndex,
-            note: correct.summary
+            note: correct.summary,
+            eventID: correct.id
         )
     }
 

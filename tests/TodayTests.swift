@@ -106,6 +106,37 @@ final class DisplayEventTests: XCTestCase {
         XCTAssertEqual(pick?.id, "earlier")
     }
 
+    func testFeedRankOverridesChronologyForFeedAndAmbientPick() {
+        let events = [
+            makeEvent(id: "old", year: 1200),
+            makeEvent(id: "headline", year: 1989),
+            makeEvent(id: "second", year: 1905),
+            makeEvent(id: "unranked-late", year: 2001),
+            makeEvent(id: "unranked-early", year: 1500),
+            makeEvent(id: "somber-top", year: 1950, tone: .somber, category: .science)
+        ]
+        let rank = ["somber-top": 0, "headline": 1, "second": 2, "old": 3]
+        XCTAssertEqual(
+            DataLoader.feedOrdered(events, rank: rank).map(\.id),
+            ["somber-top", "headline", "second", "old", "unranked-early", "unranked-late"]
+        )
+        // The ambient pick applies the balanced tone policy before ranking.
+        XCTAssertEqual(DataLoader.displayEvent(month: 7, day: 10, from: events, feedRank: rank)?.id, "headline")
+    }
+
+    func testFeedRankDecodesAndToleratesBadData() {
+        let json = #"{"version": 1, "days": {"07-10": ["a", "b"], "07-11": ["c"]}}"#
+        XCTAssertEqual(DataLoader.feedRank(from: Data(json.utf8)), ["a": 0, "b": 1, "c": 0])
+        XCTAssertTrue(DataLoader.feedRank(from: Data("not json".utf8)).isEmpty)
+    }
+
+    func testBundledFeedOrderRanksEveryBundledEvent() async {
+        let result = await DataLoader.loadEvents()
+        let rank = await DataLoader.loadFeedRank()
+        XCTAssertEqual(rank.count, result.events.count)
+        XCTAssertTrue(result.events.allSatisfy { rank[$0.id] != nil })
+    }
+
     func testTitleBreaksYearTies() {
         let events = [
             makeEvent(id: "z", year: 1900, title: "Zebra crossing opens"),
@@ -136,6 +167,116 @@ final class ImageURLTests: XCTestCase {
         let other = "https://example.com/thumb/640px-photo.jpg"
         XCTAssertEqual(makeEvent(imageURL: other).imageURL?.absoluteString, other)
         XCTAssertNil(makeEvent(imageURL: nil).imageURL)
+    }
+}
+
+// MARK: - Detail screen copy
+
+final class EntryCopyTests: XCTestCase {
+    private func entry(
+        summary: String,
+        detail: String,
+        deepDive: String? = nil,
+        whyItMatters: String? = nil,
+        contextLine: String = "Fixture context line."
+    ) -> HistoricalEvent {
+        HistoricalEvent(
+            id: UUID().uuidString, month: 7, day: 10, year: 1900, title: "Fixture",
+            summary: summary, contextLine: contextLine, detail: detail,
+            category: .science, tone: .balanced, source: "https://example.com",
+            deepDive: deepDive, whyItMatters: whyItMatters
+        )
+    }
+
+    func testDistinctBlocksAreAllKept() {
+        let copy = entry(
+            summary: "A lens was ground.",
+            detail: "The workshop spent a winter on it.",
+            deepDive: "Decades later the design was copied across Europe.",
+            whyItMatters: "It made distant things measurable."
+        ).entryCopy()
+        XCTAssertEqual(copy, EntryCopy(
+            lead: "A lens was ground.",
+            body: "The workshop spent a winter on it.",
+            whyItMatters: "It made distant things measurable.",
+            deeperStory: "Decades later the design was copied across Europe."
+        ))
+    }
+
+    func testRepeatedBodyAndDeeperStoryAreHidden() {
+        let text = "A lens was ground in the workshop."
+        let copy = entry(summary: text, detail: text + " ", deepDive: text).entryCopy()
+        XCTAssertEqual(copy.lead, text)
+        XCTAssertNil(copy.body)
+        XCTAssertNil(copy.deeperStory)
+    }
+
+    func testBodyThatOpensWithTheLeadShowsOnlyWhatFollows() {
+        let copy = entry(
+            summary: "A lens was ground.",
+            detail: "A lens was ground. The workshop spent a winter on it.",
+            deepDive: "A lens was ground. The workshop spent a winter on it. Decades later the design was copied across Europe."
+        ).entryCopy()
+        XCTAssertEqual(copy.lead, "A lens was ground.")
+        XCTAssertEqual(copy.body, "The workshop spent a winter on it.")
+        XCTAssertEqual(copy.deeperStory, "Decades later the design was copied across Europe.")
+    }
+
+    func testClippedSummaryIsReplacedByTheFullFirstSentence() {
+        let copy = entry(
+            summary: "A judge enjoins administrators from hindering the admission",
+            detail: "A judge enjoins administrators from hindering the admission after two rulings. The campus stayed tense for weeks."
+        ).entryCopy()
+        XCTAssertEqual(copy.lead, "A judge enjoins administrators from hindering the admission after two rulings.")
+        XCTAssertEqual(copy.body, "The campus stayed tense for weeks.")
+    }
+
+    func testShortTailStaysAttachedToTheLead() {
+        let copy = entry(
+            summary: "Families read the poem A Visit from St.",
+            detail: "Families read the poem A Visit from St. Nicholas."
+        ).entryCopy()
+        XCTAssertEqual(copy.lead, "Families read the poem A Visit from St. Nicholas.")
+        XCTAssertNil(copy.body)
+    }
+
+    func testEditorialProcessNotesAreRemoved() {
+        let copy = entry(
+            summary: "China conducts its first thermonuclear test.",
+            detail: "The device was dropped from an aircraft. The repaired wording says conducted rather than announced.",
+            deepDive: "This entry is drawn from example.org; the date reflects the recorded civil date.",
+            whyItMatters: "It broadens the app beyond politics with source-backed coverage."
+        ).entryCopy()
+        XCTAssertEqual(copy.body, "The device was dropped from an aircraft.")
+        XCTAssertNil(copy.deeperStory)
+        XCTAssertNil(copy.whyItMatters)
+        XCTAssertFalse(EntryText.isEditorialNote("The presidential candidate set a record for turnout."))
+    }
+
+    func testGenericAndRepeatedNotesAreHidden() {
+        let filler = "Even a small dated note can reopen the texture of an era."
+        let events = (0..<3).map { _ in entry(summary: "S.", detail: "D.", whyItMatters: filler) }
+            + [entry(summary: "S.", detail: "D.", whyItMatters: "A specific consequence followed.")]
+        let generic = HistoricalEvent.genericNotes(in: events)
+        XCTAssertEqual(generic, [EntryText.key(filler)])
+        XCTAssertNil(events[0].entryCopy(genericNotes: generic).whyItMatters)
+        XCTAssertEqual(events[3].entryCopy(genericNotes: generic).whyItMatters, "A specific consequence followed.")
+        // A note that only repeats the italic context line is hidden too.
+        let echo = entry(summary: "S.", detail: "D.", whyItMatters: "Fixture context line").entryCopy()
+        XCTAssertNil(echo.whyItMatters)
+    }
+
+    func testBundledCorpusNeverShowsARepeatedOrInternalBlock() async {
+        let events = await DataLoader.loadEvents().events
+        let generic = HistoricalEvent.genericNotes(in: events)
+        for event in events {
+            let copy = event.entryCopy(genericNotes: generic)
+            XCTAssertFalse(copy.lead.isEmpty, event.id)
+            let blocks = [copy.body, copy.whyItMatters, copy.deeperStory].compactMap { $0 }
+            let keys = ([copy.lead] + blocks).map(EntryText.key)
+            XCTAssertEqual(Set(keys).count, keys.count, "repeated block in \(event.id)")
+            XCTAssertFalse(blocks.contains(where: EntryText.isEditorialNote), "internal note in \(event.id)")
+        }
     }
 }
 
@@ -196,11 +337,12 @@ final class QuizEngineTests: XCTestCase {
         Self.calendar.date(from: DateComponents(year: year, month: month, day: day))!
     }
 
-    func testQuizDaysAreFridayAndSunday() {
+    func testQuizDaysAreFridayThroughSunday() {
         XCTAssertTrue(QuizEngine.isQuizDay(date(2026, 7, 10)))   // Friday
+        XCTAssertTrue(QuizEngine.isQuizDay(date(2026, 7, 11)))   // Saturday
         XCTAssertTrue(QuizEngine.isQuizDay(date(2026, 7, 12)))   // Sunday
         XCTAssertFalse(QuizEngine.isQuizDay(date(2026, 7, 7)))   // Tuesday
-        XCTAssertFalse(QuizEngine.isQuizDay(date(2026, 7, 11)))  // Saturday
+        XCTAssertFalse(QuizEngine.isQuizDay(date(2026, 7, 9)))   // Thursday
     }
 
     func testWeekKeyMatchesISOWeek() {
@@ -258,7 +400,287 @@ final class QuizEngineTests: XCTestCase {
     }
 }
 
+// MARK: - Daily question
+
+final class DailyQuestionTests: XCTestCase {
+    private static let calendar = Calendar(identifier: .gregorian)
+
+    private func date(_ year: Int, _ month: Int, _ day: Int) -> Date {
+        Self.calendar.date(from: DateComponents(year: year, month: month, day: day, hour: 12))!
+    }
+
+    func testSameDayAlwaysYieldsTheSameQuestion() {
+        let corpus = makeQuizCorpus()
+        let morning = QuizEngine.dailyQuestion(for: date(2026, 7, 10), events: corpus, calendar: Self.calendar)
+        let shuffled = QuizEngine.dailyQuestion(for: date(2026, 7, 10), events: corpus.shuffled(), calendar: Self.calendar)
+        XCTAssertNotNil(morning)
+        XCTAssertEqual(morning, shuffled)
+    }
+
+    func testQuestionsChangeFromDayToDayAndRotateShape() {
+        let corpus = makeQuizCorpus()
+        let week = (10...16).compactMap { QuizEngine.dailyQuestion(for: date(2026, 7, $0), events: corpus, calendar: Self.calendar) }
+        XCTAssertEqual(week.count, 7)
+        XCTAssertEqual(Set(week.map { $0.prompt + "|" + $0.options.joined() }).count, 7)
+        XCTAssertGreaterThanOrEqual(Set(week.map(\.kicker)).count, 2)
+    }
+
+    func testQuestionIsWellFormedAndNeverAboutTodaysOwnDate() throws {
+        let corpus = makeQuizCorpus()
+        let byID = Dictionary(uniqueKeysWithValues: corpus.map { ($0.id, $0) })
+        for day in 1...28 {
+            let question = try XCTUnwrap(QuizEngine.dailyQuestion(for: date(2026, 7, day), events: corpus, calendar: Self.calendar))
+            XCTAssertEqual(Set(question.options).count, question.options.count)
+            XCTAssertTrue(question.options.indices.contains(question.correctIndex))
+            XCTAssertFalse(question.note.isEmpty)
+            let subject = try XCTUnwrap(question.eventID.flatMap { byID[$0] })
+            XCTAssertFalse(subject.matches(month: 7, day: day), "day \(day) asks about its own date")
+        }
+    }
+
+    func testThinCatalogYieldsNoQuestion() {
+        XCTAssertNil(QuizEngine.dailyQuestion(for: date(2026, 7, 10), events: Array(makeQuizCorpus().prefix(20)), calendar: Self.calendar))
+    }
+}
+
+// MARK: - Reading streak
+
+final class ReadingStreakTests: XCTestCase {
+    private var calendar: Calendar = {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(identifier: "America/New_York")!
+        return calendar
+    }()
+
+    private func date(_ year: Int, _ month: Int, _ day: Int, hour: Int = 9) -> Date {
+        calendar.date(from: DateComponents(year: year, month: month, day: day, hour: hour))!
+    }
+
+    func testDayKeyUsesTheLocalCalendarDay() {
+        XCTAssertEqual(ReadingStreak.dayKey(for: date(2026, 3, 8, hour: 23), calendar: calendar), "2026-03-08")
+        XCTAssertEqual(ReadingStreak.dayKey(for: date(2027, 1, 1, hour: 0), calendar: calendar), "2027-01-01")
+    }
+
+    func testStreakCountsConsecutiveDaysAndSurvivesUntilTheDayEnds() {
+        var state = HabitState()
+        XCTAssertEqual(state.streak(asOf: date(2026, 7, 10), calendar: calendar), ReadingStreakStatus(count: 0, readToday: false, longest: 0))
+
+        XCTAssertTrue(state.recordRead(on: date(2026, 7, 8), calendar: calendar))
+        XCTAssertTrue(state.recordRead(on: date(2026, 7, 9), calendar: calendar))
+        // Not read yet on the 10th: yesterday's run is still alive.
+        XCTAssertEqual(state.streak(asOf: date(2026, 7, 10), calendar: calendar), ReadingStreakStatus(count: 2, readToday: false, longest: 2))
+
+        XCTAssertTrue(state.recordRead(on: date(2026, 7, 10), calendar: calendar))
+        XCTAssertFalse(state.recordRead(on: date(2026, 7, 10, hour: 22), calendar: calendar))
+        XCTAssertEqual(state.streak(asOf: date(2026, 7, 10), calendar: calendar), ReadingStreakStatus(count: 3, readToday: true, longest: 3))
+    }
+
+    func testAMissedDayResetsTheStreakButKeepsTheLongest() {
+        var state = HabitState()
+        for day in 1...5 { _ = state.recordRead(on: date(2026, 7, day), calendar: calendar) }
+        // Nothing on the 6th; by the 7th the run is over.
+        XCTAssertEqual(state.streak(asOf: date(2026, 7, 7), calendar: calendar), ReadingStreakStatus(count: 0, readToday: false, longest: 5))
+        _ = state.recordRead(on: date(2026, 7, 7), calendar: calendar)
+        XCTAssertEqual(state.streak(asOf: date(2026, 7, 7), calendar: calendar), ReadingStreakStatus(count: 1, readToday: true, longest: 5))
+    }
+
+    func testStreakCrossesMonthYearAndDaylightSavingBoundaries() {
+        var state = HabitState()
+        for (y, m, d) in [(2026, 12, 30), (2026, 12, 31), (2027, 1, 1)] { _ = state.recordRead(on: date(y, m, d), calendar: calendar) }
+        XCTAssertEqual(state.streak(asOf: date(2027, 1, 1), calendar: calendar).count, 3)
+
+        var spring = HabitState()
+        for day in 7...9 { _ = spring.recordRead(on: date(2026, 3, day, hour: 23), calendar: calendar) }
+        XCTAssertEqual(spring.streak(asOf: date(2026, 3, 9, hour: 23), calendar: calendar).count, 3)
+    }
+
+    func testOnlyTheFirstAnswerOfADayCounts() {
+        var state = HabitState()
+        XCTAssertTrue(state.recordAnswer(choice: 2, correct: true, on: date(2026, 7, 10), calendar: calendar))
+        XCTAssertFalse(state.recordAnswer(choice: 0, correct: false, on: date(2026, 7, 10, hour: 20), calendar: calendar))
+        XCTAssertTrue(state.recordAnswer(choice: 1, correct: false, on: date(2026, 7, 11), calendar: calendar))
+        XCTAssertEqual(state.answers["2026-07-10"], DailyAnswer(choice: 2, correct: true))
+        XCTAssertEqual(state.questionsAnswered, 2)
+        XCTAssertEqual(state.questionsCorrect, 1)
+    }
+
+    func testStateSurvivesEncodingAndOldStoredValues() throws {
+        var state = HabitState()
+        _ = state.recordRead(on: date(2026, 7, 10), calendar: calendar)
+        _ = state.recordAnswer(choice: 1, correct: true, on: date(2026, 7, 10), calendar: calendar)
+        let decoded = try JSONDecoder().decode(HabitState.self, from: JSONEncoder().encode(state))
+        XCTAssertEqual(decoded, state)
+        XCTAssertEqual(try JSONDecoder().decode(HabitState.self, from: Data("{}".utf8)), HabitState())
+        XCTAssertEqual(state.streak(asOf: date(2026, 7, 10), calendar: calendar).summaryLine, "Day 1 of a new reading streak.")
+    }
+}
+
 // MARK: - Quiz results and streaks
+
+final class MorningEditionPlanTests: XCTestCase {
+    private var calendar: Calendar = {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(identifier: "America/New_York")!
+        return calendar
+    }()
+
+    private func date(_ year: Int, _ month: Int, _ day: Int, hour: Int = 9, minute: Int = 0) -> Date {
+        calendar.date(from: DateComponents(year: year, month: month, day: day, hour: hour, minute: minute))!
+    }
+
+    /// One event on every calendar day, leap day included.
+    private func makeYearCorpus() -> [HistoricalEvent] {
+        let daysInMonth = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+        return daysInMonth.enumerated().flatMap { index, days in
+            (1...days).map { day in
+                makeEvent(
+                    id: String(format: "day-%02d-%02d", index + 1, day),
+                    month: index + 1,
+                    day: day,
+                    year: 1900,
+                    title: "Lead story for \(index + 1)/\(day)"
+                )
+            }
+        }
+    }
+
+    private func plan(
+        now: Date,
+        deliveryMinutes: Int = NotificationScheduler.defaultDeliveryMinutes,
+        streak: ReadingStreakStatus? = nil
+    ) -> [MorningEditionNotification] {
+        NotificationScheduler.plan(
+            now: now,
+            events: makeYearCorpus(),
+            deliveryMinutes: deliveryMinutes,
+            streak: streak,
+            calendar: calendar
+        )
+    }
+
+    func testPlanReachesSixtyMorningsAheadAndStaysUnderTheSystemLimit() {
+        // 05:00, before the default 08:00 delivery: today still counts.
+        let planned = plan(now: date(2026, 12, 20, hour: 5))
+
+        XCTAssertEqual(planned.count, NotificationScheduler.scheduledDayCount)
+        XCTAssertEqual(planned.count, 60)
+        XCTAssertLessThan(planned.count, NotificationScheduler.pendingNotificationLimit)
+        XCTAssertEqual(Set(planned.map(\.identifier)).count, planned.count, "Identifiers must be unique across a year boundary")
+
+        XCTAssertEqual(planned.first?.identifier, "today-morning-2026-12-20")
+        XCTAssertEqual(planned.first?.eventID, "day-12-20")
+        XCTAssertEqual(planned.first?.title, "Morning Edition · December 20")
+        XCTAssertEqual(planned.last?.identifier, "today-morning-2027-2-17")
+        XCTAssertEqual(planned.last?.eventID, "day-02-17")
+
+        let fireDates = planned.compactMap { calendar.date(from: $0.fireComponents) }
+        XCTAssertEqual(fireDates, fireDates.sorted())
+        XCTAssertEqual(fireDates.count, planned.count)
+    }
+
+    func testPlanSkipsTodayOnceTheDeliveryTimeHasPassed() {
+        let planned = plan(now: date(2026, 11, 9, hour: 8, minute: 1))
+
+        XCTAssertEqual(planned.count, 59)
+        XCTAssertEqual(planned.first?.identifier, "today-morning-2026-11-10")
+    }
+
+    func testPlanDeliversAtTheChosenTime() {
+        let planned = plan(now: date(2026, 11, 9, hour: 6), deliveryMinutes: 6 * 60 + 45)
+
+        XCTAssertEqual(planned.count, 60)
+        XCTAssertTrue(planned.allSatisfy { $0.fireComponents.hour == 6 && $0.fireComponents.minute == 45 })
+
+        // An evening reader: 21:30 today is still ahead at 06:00.
+        let evening = plan(now: date(2026, 11, 9, hour: 6), deliveryMinutes: 21 * 60 + 30)
+        XCTAssertEqual(evening.first?.identifier, "today-morning-2026-11-9")
+        XCTAssertEqual(evening.first?.fireComponents.hour, 21)
+        XCTAssertEqual(evening.first?.fireComponents.minute, 30)
+
+        // Out-of-range values are clamped rather than producing bad triggers.
+        let clamped = plan(now: date(2026, 11, 9, hour: 6), deliveryMinutes: 5_000)
+        XCTAssertTrue(clamped.allSatisfy { $0.fireComponents.hour == 23 && $0.fireComponents.minute == 59 })
+    }
+
+    func testPlanLeadsWithTheEditorialFeedLead() {
+        let old = makeEvent(id: "old", month: 11, day: 10, year: 1500, title: "Old footnote")
+        let lead = makeEvent(id: "lead", month: 11, day: 10, year: 1989, title: "Lead headline")
+        let planned = NotificationScheduler.plan(
+            now: date(2026, 11, 9, hour: 12),
+            events: [old, lead],
+            feedRank: ["lead": 0, "old": 1],
+            calendar: calendar
+        )
+
+        XCTAssertEqual(planned.map(\.eventID), ["lead"], "Days without events are skipped")
+        XCTAssertEqual(planned.first?.body, "1989 · Lead headline")
+    }
+
+    func testStreakReminderAppearsOnlyOnTheMorningTheStreakIsAtStake() {
+        // Read today already: the streak next needs tomorrow.
+        let readToday = plan(
+            now: date(2026, 11, 9, hour: 21),
+            streak: ReadingStreakStatus(count: 4, readToday: true, longest: 6)
+        )
+        XCTAssertEqual(readToday.first?.identifier, "today-morning-2026-11-10")
+        XCTAssertEqual(readToday.first?.body, "1900 · Lead story for 11/10\n4 days running. One entry today keeps your reading streak.")
+        XCTAssertFalse(readToday.dropFirst().contains { $0.body.contains("reading streak") })
+
+        // Not read yet today, and this morning's edition is still ahead.
+        let atStakeToday = plan(
+            now: date(2026, 11, 9, hour: 5),
+            streak: ReadingStreakStatus(count: 4, readToday: false, longest: 6)
+        )
+        XCTAssertEqual(atStakeToday.first?.identifier, "today-morning-2026-11-9")
+        XCTAssertTrue(atStakeToday.first?.body.hasSuffix("4 days running. One entry today keeps your reading streak.") ?? false)
+        XCTAssertFalse(atStakeToday.dropFirst().contains { $0.body.contains("reading streak") })
+
+        // Not read yet today, edition already delivered: nothing left to say.
+        let alreadyDelivered = plan(
+            now: date(2026, 11, 9, hour: 9),
+            streak: ReadingStreakStatus(count: 4, readToday: false, longest: 6)
+        )
+        XCTAssertFalse(alreadyDelivered.contains { $0.body.contains("reading streak") })
+    }
+
+    func testStreakReminderWording() {
+        XCTAssertNil(NotificationScheduler.streakLine(streak: nil, dayOffset: 0))
+        XCTAssertNil(NotificationScheduler.streakLine(streak: ReadingStreakStatus(count: 0, readToday: false, longest: 3), dayOffset: 0))
+        XCTAssertEqual(
+            NotificationScheduler.streakLine(streak: ReadingStreakStatus(count: 1, readToday: true, longest: 1), dayOffset: 1),
+            "You read yesterday. One entry today makes it two days running."
+        )
+        XCTAssertNil(NotificationScheduler.streakLine(streak: ReadingStreakStatus(count: 1, readToday: true, longest: 1), dayOffset: 0))
+        XCTAssertNil(NotificationScheduler.streakLine(streak: ReadingStreakStatus(count: 9, readToday: true, longest: 9), dayOffset: 2))
+    }
+
+    func testFridayEditionsAnnounceTheWeekendQuiz() {
+        let planned = plan(now: date(2026, 11, 9, hour: 5))
+        let fridays = planned.filter {
+            calendar.component(.weekday, from: calendar.date(from: $0.fireComponents)!) == 6
+        }
+
+        XCTAssertGreaterThanOrEqual(fridays.count, 8)
+        XCTAssertTrue(fridays.allSatisfy { $0.body.hasSuffix("\n" + NotificationScheduler.quizLine) })
+        XCTAssertEqual(planned.filter { $0.body.contains(NotificationScheduler.quizLine) }.count, fridays.count)
+        XCTAssertTrue(fridays.allSatisfy { QuizEngine.isQuizDay(calendar.date(from: $0.fireComponents)!) })
+    }
+
+    func testStreakReminderTakesTheSlotFromTheQuizLine() {
+        // Thursday evening, so the morning at stake is a Friday.
+        let now = date(2026, 11, 12, hour: 21)
+        XCTAssertEqual(calendar.component(.weekday, from: now), 5)
+
+        let planned = plan(now: now, streak: ReadingStreakStatus(count: 2, readToday: true, longest: 2))
+        XCTAssertEqual(planned.first?.identifier, "today-morning-2026-11-13")
+        XCTAssertTrue(planned.first?.body.contains("2 days running") ?? false)
+        XCTAssertFalse(planned.first?.body.contains(NotificationScheduler.quizLine) ?? true)
+    }
+
+    func testPlanIsEmptyWithoutEvents() {
+        XCTAssertTrue(NotificationScheduler.plan(now: date(2026, 11, 9), events: [], calendar: calendar).isEmpty)
+    }
+}
 
 @MainActor
 final class QuizStoreTests: XCTestCase {

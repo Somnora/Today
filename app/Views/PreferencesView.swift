@@ -3,6 +3,7 @@ import SwiftUI
 struct PreferencesView: View {
     @EnvironmentObject var preferences: UserPreferences
     @EnvironmentObject var dataStore: DataStore
+    @EnvironmentObject var habitStore: HabitStore
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @ScaledMetric(relativeTo: .body) private var typeScale: CGFloat = 1
     @State private var showsPermissionDeniedHint = false
@@ -13,19 +14,31 @@ struct PreferencesView: View {
 
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: metrics.rootStackSpacing) {
-                    headerSection
-                    toneSection
-                    densitySection
-                    widgetSection
-                    notificationSection
-                    librarySection
-                    aboutSection
+            ScrollViewReader { proxy in
+                ScrollView {
+                    VStack(alignment: .leading, spacing: metrics.rootStackSpacing) {
+                        headerSection
+                        toneSection
+                        densitySection
+                        habitSection.id("reading")
+                        widgetSection.id("widgets")
+                        notificationSection.id("notifications")
+                        librarySection.id("library")
+                        aboutSection.id("about")
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.top, metrics.rootTopPadding)
+                    .padding(.bottom, 40)
                 }
-                .padding(.horizontal, 20)
-                .padding(.top, metrics.rootTopPadding)
-                .padding(.bottom, 40)
+                #if DEBUG
+                .task {
+                    // Visual QA: `-debugSettingsSection notifications` brings
+                    // a lower section into view without a manual scroll.
+                    guard let section = UserDefaults.standard.string(forKey: "debugSettingsSection") else { return }
+                    try? await Task.sleep(for: .milliseconds(600))
+                    proxy.scrollTo(section, anchor: .top)
+                }
+                #endif
             }
             .background(paperBackground.ignoresSafeArea())
             .toolbar(.hidden, for: .navigationBar)
@@ -114,6 +127,45 @@ struct PreferencesView: View {
         }
     }
 
+    private var habitSection: some View {
+        let status = habitStore.streak()
+        let answered = habitStore.state.questionsAnswered
+        return VStack(alignment: .leading, spacing: 12) {
+            sectionLabel("Your Reading")
+
+            VStack(spacing: 0) {
+                statRow(title: "Reading streak", value: dayCount(status.count), systemImage: status.readToday ? "flame.fill" : "flame")
+
+                Divider()
+                    .background(Color("AccentWarm").opacity(0.10))
+                    .padding(.leading, 18)
+
+                statRow(title: "Longest streak", value: dayCount(status.longest), systemImage: "trophy")
+
+                Divider()
+                    .background(Color("AccentWarm").opacity(0.10))
+                    .padding(.leading, 18)
+
+                statRow(
+                    title: "Daily questions",
+                    value: answered == 0 ? "None yet" : "\(habitStore.state.questionsCorrect) of \(answered) right",
+                    systemImage: "questionmark.circle"
+                )
+            }
+            .background(elevatedSurface)
+
+            Text("Opening any entry counts for the day. This stays on your device.")
+                .font(.system(size: 12, weight: .regular, design: .serif))
+                .italic()
+                .foregroundStyle(Color("TextTertiary"))
+                .padding(.leading, 4)
+        }
+    }
+
+    private func dayCount(_ days: Int) -> String {
+        days == 1 ? "1 day" : "\(days) days"
+    }
+
     private var widgetSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             sectionLabel("Daily Widgets")
@@ -156,7 +208,7 @@ struct PreferencesView: View {
                             .font(.system(size: 15, weight: .medium, design: .serif))
                             .foregroundStyle(Color("TextPrimary"))
 
-                        Text("One event from this day in history, around 8 each morning.")
+                        Text("The lead story from this day in history, delivered each morning.")
                             .font(.system(size: 13, weight: .regular, design: .serif))
                             .italic()
                             .foregroundStyle(Color("TextSecondary"))
@@ -164,6 +216,18 @@ struct PreferencesView: View {
                     }
                 }
                 .tint(Color("AccentWarm"))
+
+                if preferences.morningNotificationsEnabled {
+                    Divider()
+                        .overlay(Color("TextSecondary").opacity(0.15))
+
+                    DatePicker(selection: deliveryTimeBinding, displayedComponents: .hourAndMinute) {
+                        Text("Delivery time")
+                            .font(.system(size: 15, weight: .medium, design: .serif))
+                            .foregroundStyle(Color("TextPrimary"))
+                    }
+                    .tint(Color("AccentWarm"))
+                }
 
                 if showsPermissionDeniedHint {
                     Text("Notifications are turned off for Today in Time in iOS Settings. Allow them there, then flip this switch again.")
@@ -187,16 +251,52 @@ struct PreferencesView: View {
                         let granted = await NotificationScheduler.requestAuthorization()
                         preferences.morningNotificationsEnabled = granted
                         showsPermissionDeniedHint = !granted
-                        await NotificationScheduler.refresh(enabled: granted, events: dataStore.allEvents)
+                        await refreshMorningNotifications()
                     }
                 } else {
                     preferences.morningNotificationsEnabled = false
                     showsPermissionDeniedHint = false
                     Task {
-                        await NotificationScheduler.refresh(enabled: false, events: [])
+                        await refreshMorningNotifications()
                     }
                 }
             }
+        )
+    }
+
+    /// The delivery time as a `Date` on today's calendar day, which is what
+    /// the picker edits. Only the hour and minute are kept.
+    private var deliveryTimeBinding: Binding<Date> {
+        Binding(
+            get: {
+                let minutes = preferences.morningNotificationMinutes
+                let startOfDay = Calendar.current.startOfDay(for: Date())
+                return Calendar.current.date(
+                    bySettingHour: minutes / 60,
+                    minute: minutes % 60,
+                    second: 0,
+                    of: startOfDay
+                ) ?? startOfDay
+            },
+            set: { newValue in
+                let parts = Calendar.current.dateComponents([.hour, .minute], from: newValue)
+                let minutes = (parts.hour ?? 8) * 60 + (parts.minute ?? 0)
+                guard minutes != preferences.morningNotificationMinutes else { return }
+                preferences.morningNotificationMinutes = minutes
+                Task {
+                    await refreshMorningNotifications()
+                }
+            }
+        )
+    }
+
+    private func refreshMorningNotifications() async {
+        await NotificationScheduler.refresh(
+            enabled: preferences.morningNotificationsEnabled,
+            events: dataStore.allEvents,
+            feedRank: dataStore.feedRank,
+            deliveryMinutes: preferences.morningNotificationMinutes,
+            streak: habitStore.streak()
         )
     }
 
@@ -388,4 +488,5 @@ struct PreferencesView: View {
     PreferencesView()
         .environmentObject(UserPreferences())
         .environmentObject(DataStore())
+        .environmentObject(HabitStore())
 }
