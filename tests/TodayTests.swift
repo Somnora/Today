@@ -517,6 +517,171 @@ final class ReadingStreakTests: XCTestCase {
 
 // MARK: - Quiz results and streaks
 
+final class MorningEditionPlanTests: XCTestCase {
+    private var calendar: Calendar = {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(identifier: "America/New_York")!
+        return calendar
+    }()
+
+    private func date(_ year: Int, _ month: Int, _ day: Int, hour: Int = 9, minute: Int = 0) -> Date {
+        calendar.date(from: DateComponents(year: year, month: month, day: day, hour: hour, minute: minute))!
+    }
+
+    /// One event on every calendar day, leap day included.
+    private func makeYearCorpus() -> [HistoricalEvent] {
+        let daysInMonth = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+        return daysInMonth.enumerated().flatMap { index, days in
+            (1...days).map { day in
+                makeEvent(
+                    id: String(format: "day-%02d-%02d", index + 1, day),
+                    month: index + 1,
+                    day: day,
+                    year: 1900,
+                    title: "Lead story for \(index + 1)/\(day)"
+                )
+            }
+        }
+    }
+
+    private func plan(
+        now: Date,
+        deliveryMinutes: Int = NotificationScheduler.defaultDeliveryMinutes,
+        streak: ReadingStreakStatus? = nil
+    ) -> [MorningEditionNotification] {
+        NotificationScheduler.plan(
+            now: now,
+            events: makeYearCorpus(),
+            deliveryMinutes: deliveryMinutes,
+            streak: streak,
+            calendar: calendar
+        )
+    }
+
+    func testPlanReachesSixtyMorningsAheadAndStaysUnderTheSystemLimit() {
+        // 05:00, before the default 08:00 delivery: today still counts.
+        let planned = plan(now: date(2026, 12, 20, hour: 5))
+
+        XCTAssertEqual(planned.count, NotificationScheduler.scheduledDayCount)
+        XCTAssertEqual(planned.count, 60)
+        XCTAssertLessThan(planned.count, NotificationScheduler.pendingNotificationLimit)
+        XCTAssertEqual(Set(planned.map(\.identifier)).count, planned.count, "Identifiers must be unique across a year boundary")
+
+        XCTAssertEqual(planned.first?.identifier, "today-morning-2026-12-20")
+        XCTAssertEqual(planned.first?.eventID, "day-12-20")
+        XCTAssertEqual(planned.first?.title, "Morning Edition · December 20")
+        XCTAssertEqual(planned.last?.identifier, "today-morning-2027-2-17")
+        XCTAssertEqual(planned.last?.eventID, "day-02-17")
+
+        let fireDates = planned.compactMap { calendar.date(from: $0.fireComponents) }
+        XCTAssertEqual(fireDates, fireDates.sorted())
+        XCTAssertEqual(fireDates.count, planned.count)
+    }
+
+    func testPlanSkipsTodayOnceTheDeliveryTimeHasPassed() {
+        let planned = plan(now: date(2026, 11, 9, hour: 8, minute: 1))
+
+        XCTAssertEqual(planned.count, 59)
+        XCTAssertEqual(planned.first?.identifier, "today-morning-2026-11-10")
+    }
+
+    func testPlanDeliversAtTheChosenTime() {
+        let planned = plan(now: date(2026, 11, 9, hour: 6), deliveryMinutes: 6 * 60 + 45)
+
+        XCTAssertEqual(planned.count, 60)
+        XCTAssertTrue(planned.allSatisfy { $0.fireComponents.hour == 6 && $0.fireComponents.minute == 45 })
+
+        // An evening reader: 21:30 today is still ahead at 06:00.
+        let evening = plan(now: date(2026, 11, 9, hour: 6), deliveryMinutes: 21 * 60 + 30)
+        XCTAssertEqual(evening.first?.identifier, "today-morning-2026-11-9")
+        XCTAssertEqual(evening.first?.fireComponents.hour, 21)
+        XCTAssertEqual(evening.first?.fireComponents.minute, 30)
+
+        // Out-of-range values are clamped rather than producing bad triggers.
+        let clamped = plan(now: date(2026, 11, 9, hour: 6), deliveryMinutes: 5_000)
+        XCTAssertTrue(clamped.allSatisfy { $0.fireComponents.hour == 23 && $0.fireComponents.minute == 59 })
+    }
+
+    func testPlanLeadsWithTheEditorialFeedLead() {
+        let old = makeEvent(id: "old", month: 11, day: 10, year: 1500, title: "Old footnote")
+        let lead = makeEvent(id: "lead", month: 11, day: 10, year: 1989, title: "Lead headline")
+        let planned = NotificationScheduler.plan(
+            now: date(2026, 11, 9, hour: 12),
+            events: [old, lead],
+            feedRank: ["lead": 0, "old": 1],
+            calendar: calendar
+        )
+
+        XCTAssertEqual(planned.map(\.eventID), ["lead"], "Days without events are skipped")
+        XCTAssertEqual(planned.first?.body, "1989 · Lead headline")
+    }
+
+    func testStreakReminderAppearsOnlyOnTheMorningTheStreakIsAtStake() {
+        // Read today already: the streak next needs tomorrow.
+        let readToday = plan(
+            now: date(2026, 11, 9, hour: 21),
+            streak: ReadingStreakStatus(count: 4, readToday: true, longest: 6)
+        )
+        XCTAssertEqual(readToday.first?.identifier, "today-morning-2026-11-10")
+        XCTAssertEqual(readToday.first?.body, "1900 · Lead story for 11/10\n4 days running. One entry today keeps your reading streak.")
+        XCTAssertFalse(readToday.dropFirst().contains { $0.body.contains("reading streak") })
+
+        // Not read yet today, and this morning's edition is still ahead.
+        let atStakeToday = plan(
+            now: date(2026, 11, 9, hour: 5),
+            streak: ReadingStreakStatus(count: 4, readToday: false, longest: 6)
+        )
+        XCTAssertEqual(atStakeToday.first?.identifier, "today-morning-2026-11-9")
+        XCTAssertTrue(atStakeToday.first?.body.hasSuffix("4 days running. One entry today keeps your reading streak.") ?? false)
+        XCTAssertFalse(atStakeToday.dropFirst().contains { $0.body.contains("reading streak") })
+
+        // Not read yet today, edition already delivered: nothing left to say.
+        let alreadyDelivered = plan(
+            now: date(2026, 11, 9, hour: 9),
+            streak: ReadingStreakStatus(count: 4, readToday: false, longest: 6)
+        )
+        XCTAssertFalse(alreadyDelivered.contains { $0.body.contains("reading streak") })
+    }
+
+    func testStreakReminderWording() {
+        XCTAssertNil(NotificationScheduler.streakLine(streak: nil, dayOffset: 0))
+        XCTAssertNil(NotificationScheduler.streakLine(streak: ReadingStreakStatus(count: 0, readToday: false, longest: 3), dayOffset: 0))
+        XCTAssertEqual(
+            NotificationScheduler.streakLine(streak: ReadingStreakStatus(count: 1, readToday: true, longest: 1), dayOffset: 1),
+            "You read yesterday. One entry today makes it two days running."
+        )
+        XCTAssertNil(NotificationScheduler.streakLine(streak: ReadingStreakStatus(count: 1, readToday: true, longest: 1), dayOffset: 0))
+        XCTAssertNil(NotificationScheduler.streakLine(streak: ReadingStreakStatus(count: 9, readToday: true, longest: 9), dayOffset: 2))
+    }
+
+    func testFridayEditionsAnnounceTheWeekendQuiz() {
+        let planned = plan(now: date(2026, 11, 9, hour: 5))
+        let fridays = planned.filter {
+            calendar.component(.weekday, from: calendar.date(from: $0.fireComponents)!) == 6
+        }
+
+        XCTAssertGreaterThanOrEqual(fridays.count, 8)
+        XCTAssertTrue(fridays.allSatisfy { $0.body.hasSuffix("\n" + NotificationScheduler.quizLine) })
+        XCTAssertEqual(planned.filter { $0.body.contains(NotificationScheduler.quizLine) }.count, fridays.count)
+        XCTAssertTrue(fridays.allSatisfy { QuizEngine.isQuizDay(calendar.date(from: $0.fireComponents)!) })
+    }
+
+    func testStreakReminderTakesTheSlotFromTheQuizLine() {
+        // Thursday evening, so the morning at stake is a Friday.
+        let now = date(2026, 11, 12, hour: 21)
+        XCTAssertEqual(calendar.component(.weekday, from: now), 5)
+
+        let planned = plan(now: now, streak: ReadingStreakStatus(count: 2, readToday: true, longest: 2))
+        XCTAssertEqual(planned.first?.identifier, "today-morning-2026-11-13")
+        XCTAssertTrue(planned.first?.body.contains("2 days running") ?? false)
+        XCTAssertFalse(planned.first?.body.contains(NotificationScheduler.quizLine) ?? true)
+    }
+
+    func testPlanIsEmptyWithoutEvents() {
+        XCTAssertTrue(NotificationScheduler.plan(now: date(2026, 11, 9), events: [], calendar: calendar).isEmpty)
+    }
+}
+
 @MainActor
 final class QuizStoreTests: XCTestCase {
     override func setUp() {

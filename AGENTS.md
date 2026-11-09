@@ -155,11 +155,36 @@ source control.
 **Running Tests:**
 - The `TodayTests` unit-test target (host: Today.app) covers `DataLoader`
   tone filtering, ambient `displayEvent` selection, `QuizEngine`
-  determinism/structure, `QuizStore` streaks, `SavedStore` persistence, and
-  share-card rendering.
+  determinism/structure, `QuizStore` streaks, `SavedStore` persistence,
+  share-card rendering, entry copy cleanup, the daily question, the reading
+  streak and the Morning Edition schedule.
 - CLI: `xcodebuild -project Today.xcodeproj -scheme Today -destination 'platform=iOS Simulator,name=<sim>' test`
 - Tests are part of the shared `Today` scheme, so they run in CI and from
   Xcode's Test action (⌘U).
+
+**Morning Edition notification:**
+- `NotificationScheduler.plan` is pure and unit tested. It schedules one
+  local notification per day for 60 days (iOS allows 64 pending) at the
+  reader's delivery time (`morningNotificationMinutes`, minutes after
+  midnight, 08:00 by default), using the day's feed lead.
+- One extra line may follow the headline: a reading streak reminder on the
+  single morning the streak is at stake, otherwise a weekend quiz note on
+  Fridays.
+- `refresh` adds before it removes and skips requests that already match, so
+  the usual refresh on app activation costs no writes. It reruns on app
+  activation, on a delivery time change and after a read.
+
+**Headless visual QA (DEBUG builds only):**
+- Launch arguments: `-debugTab <0-3>`, `-debugOpenEvent <event id>`,
+  `-debugScrollToQuestion YES`, `-debugSettingsSection <reading|widgets|notifications|library|about>`,
+  `-debugNotificationReport YES` (takes provisional authorization, refreshes
+  the schedule and writes `tmp/notification-report.txt` in the app container).
+- Preset state with `xcrun simctl spawn <udid> defaults write app.somnora.today <key> <value>`.
+  A key the app has already saved itself (for example `habitStateV1`) lives in
+  the app container plist and wins, so write that file instead:
+  `defaults write "$(xcrun simctl get_app_container <udid> app.somnora.today data)/Library/Preferences/app.somnora.today.plist" <key> <value>`.
+- Do not use `simctl openurl`; it raises a system dialog that cannot be
+  dismissed without taps.
 
 **Known Build Considerations:**
 - Requires iOS 17.0+ deployment target
