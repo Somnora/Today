@@ -82,3 +82,30 @@ generic iOS Simulator destination.
   corpus: 3,826 events, 1,740 image URLs resolved, 0 at 640px, 1,461 at
   960px. Pre-fix backup read through the fallback: 1,740 resolved, 0 at
   640px, 1,461 at 960px.
+
+## Release
+
+James approved executing the P0 items on 2026-11-09, which included cutting
+build 8.
+
+- Archived Release from commit `5e8e584` with automatic signing (team
+  JGAJMMTQVS), exported with method `app-store-connect`.
+- Archive checks: app and widget both 1.1.0 (8), minimum iOS 17.0, bundled
+  `events.json` and `widget-events.json` byte-identical to the repository,
+  no 640px references, dSYMs for app and extension present, no development
+  host strings in either binary.
+- Exported IPA signed Apple Distribution, `get-task-allow` false on app and
+  extension, `codesign --verify --deep --strict` clean.
+- IPA SHA-256:
+  `577950aa0d41f1315afa454da98ab2ae490be84314f9517e74535ec482b08ff6`
+  (3,278,133 bytes).
+- Uploaded with `altool` at 13:44 Eastern on 2026-11-09; delivery UUID
+  `d32e721f-a46e-4e3e-87fb-f3a69d7bb254`. Apple processing was pending at
+  the time of writing.
+- The 1.1.0 review submission from 2026-11-07 (build 7, WAITING_FOR_REVIEW)
+  was not modified. Swapping build 8 into it is a separate decision for
+  James.
+
+Evidence: `/Volumes/Unreal/TodayWidgetRelease-2026-11-09/` (archive, export,
+`archive.log`, `export.log`, `upload.log`, `archive-validation.txt`,
+`Today.ipa.sha256`, `source-commit.txt`).
